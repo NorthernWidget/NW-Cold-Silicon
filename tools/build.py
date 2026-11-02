@@ -1,0 +1,104 @@
+"""Build nw-cold-silicon.pretty and nw-cold-silicon.kicad_sym from the Eagle libraries.
+
+usage: build.py [--upto KEY] [--workspace DIR]
+
+Converts each source library with kicad-cli (fp upgrade -o, sym upgrade -o),
+then merges them in the precedence order of SOURCES. A name that appears in two
+sources with identical content (uuid lines ignored) is kept once. A name whose
+content differs is kept from the earlier source under its own name and from a
+later PRIMARY source under NAME_<key>, so nothing is lost; from an EXTRAS source
+(an older fork or copy) only names absent so far are added. Every symbol's Footprint field is
+rewritten from the Eagle library name to nw-cold-silicon and to the merged
+footprint name, since the merged library has one nickname. Two symbols that
+differ only in their Description property count as identical and the earlier
+one is kept (a description is neither geometry nor connectivity); COLLISIONS.md
+says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
+every number in them is the build's.
+--upto stops after the named source, for one commit per source.
+"""
+import os,re,sys,shutil,subprocess,tempfile,uuid,datetime
+HERE=os.path.dirname(os.path.abspath(__file__)); REPO=os.path.dirname(HERE)
+args=sys.argv[1:]
+ws=os.path.dirname(REPO); upto=None
+if '--workspace' in args: ws=args[args.index('--workspace')+1]
+if '--upto' in args: upto=args[args.index('--upto')+1]
+SOURCES=[  # key, path under the workspace, kind
+ ('passives','Cold-Silicon/bschulz_passives.lbr','PRIMARY'),
+ ('bschulz','Cold-Silicon/bschulz.lbr','PRIMARY'),
+ ('awickert','NorthernWidget-Eagle-Libraries/awickert.lbr','PRIMARY'),
+ ('csandell','NorthernWidget-Eagle-Libraries/csandell.lbr','PRIMARY'),
+ ('fork','Cold-Silicon-awickert/bschulz.lbr','EXTRAS'),
+ ('old','Cold-Silicon/bschulz_Old.lbr','EXTRAS'),
+]
+if upto: SOURCES=SOURCES[:[s[0] for s in SOURCES].index(upto)+1]
+LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
+def run(cmd):
+    p=subprocess.run(cmd,capture_output=True,text=True); return p.returncode,(p.stdout+p.stderr).strip()
+def git(path,*a):
+    return subprocess.run(['git','-C',os.path.dirname(path)]+list(a),capture_output=True,text=True).stdout.strip()
+def norm(t): return re.sub(r'\n\s*\(uuid "[^"]+"\)','',t)
+def nodesc(t): return re.sub(r'\t\t\(property "Description" "(?:[^"\\]|\\.)*"','',t)
+def refoot(block,fpmap):
+    def rep(m):
+        name=m.group(1).split(':')[-1]; return '(property "Footprint" "%s:%s"'%(LIB,fpmap.get(name,name))
+    return re.sub(r'\(property "Footprint" "([^"]*)"',rep,block)
+def split_syms(t):
+    starts=[m.start() for m in re.finditer(r'^\t\(symbol "',t,re.M)]
+    head=t[:starts[0]]; end=t.rfind('\n)'); blocks={}
+    for i,s in enumerate(starts):
+        e=starts[i+1] if i+1<len(starts) else end+1
+        b=t[s:e]; name=re.match(r'\t\(symbol "([^"]+)"',b).group(1); blocks[name]=b
+    return head,blocks
+def rename_sym(block,old,new):
+    return re.sub(r'\(symbol "'+re.escape(old)+r'(?=["_])',lambda m:'(symbol "'+new,block)
+tmp=tempfile.mkdtemp(prefix='nwcs-'); kv=run(['kicad-cli','version'])[1]
+prov=['# Provenance','',f'Built {datetime.date.today()} by tools/build.py with kicad-cli {kv}. Sources, in precedence order:','',
+      '| key | kind | file | repository commit | packages | symbols | converter warnings |','|---|---|---|---|---|---|---|']
+coll=['# Collisions','','Names that occur in more than one source. "kept once" means the later copy was identical (uuid lines ignored) and was dropped. "both" means the content differs and the later PRIMARY copy is in the library as NAME_key. "older copy skipped" means an EXTRAS source carried a different version of a name already present. Decide and rename at will; rerun build.py after changing SOURCES or this rule.','',
+      '| name | kind | kept from | also in | action |','|---|---|---|---|---|']
+fps={}; fpsrc={}; syms={}; symsrc={}; head=None; fpmap={}
+for key,rel,kind in SOURCES:
+    src=os.path.join(ws,rel); d=os.path.join(tmp,key)
+    rc1,o1=run(['kicad-cli','fp','upgrade','-o',d+'.pretty',src]); rc2,o2=run(['kicad-cli','sym','upgrade','-o',d+'.kicad_sym',src])
+    assert rc1==0 and rc2==0,(key,o1,o2)
+    warn=sorted(set(re.sub(r'^\S+ \S+: ','',l) for l in (o1+'\n'+o2).splitlines() if 'Ignoring' in l))
+    npk=0; nsy=0
+    for f in sorted(os.listdir(d+'.pretty')):
+        if not f.endswith('.kicad_mod'): continue
+        name=f[:-10]; t=open(os.path.join(d+'.pretty',f)).read(); npk+=1; fpmap.setdefault(key,{})[name]=name
+        if name not in fps: fps[name]=t; fpsrc[name]=key; continue
+        if norm(fps[name])==norm(t): coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | kept once |'); continue
+        if kind=='PRIMARY':
+            new=f'{name}_{key}'; fps[new]=t.replace(f'(footprint "{name}"',f'(footprint "{new}"',1); fpsrc[new]=key; fpmap[key][name]=new
+            coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | both: `{new}` |')
+        else: coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | older copy skipped |')
+    h,blocks=split_syms(open(d+'.kicad_sym').read()); head=head or h
+    for name,b in blocks.items():
+        nsy+=1; b=refoot(b,fpmap.get(key,{}))
+        if name not in syms: syms[name]=b; symsrc[name]=key; continue
+        if syms[name]==b: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept once |'); continue
+        if nodesc(syms[name])==nodesc(b): coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept once, description differs |'); continue
+        if kind=='PRIMARY':
+            new=f'{name}_{key}'; syms[new]=rename_sym(b,name,new); symsrc[new]=key
+            coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | both: `{new}` |')
+        else: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | older copy skipped |')
+    prov.append(f'| {key} | {kind} | `{rel}` | {git(src,"log","-1","--format=%h %cs","--",os.path.basename(src))} | {npk} | {nsy} | {"; ".join(warn) or "–"} |')
+if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
+os.makedirs(PRETTY)
+for name,t in fps.items(): open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)
+open(SYM,'w').write(head+''.join(syms[n] for n in sorted(syms))+')\n')
+rc,o=run(['kicad-cli','fp','upgrade','--force',PRETTY]); assert rc==0,o
+rc,o=run(['kicad-cli','sym','upgrade','--force',SYM]); assert rc==0,o
+# idempotence: a second pass must change nothing
+p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','upgrade','--force',p2])
+s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
+chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
+same=open(SYM).read()==open(s2).read()
+prov+=['',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+       f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
+       '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
+open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')
+open(os.path.join(REPO,'COLLISIONS.md'),'w').write('\n'.join(coll)+'\n')
+assert chg==0 and same, ('second pass changed the output',chg,same)
+print(f'{len(fps)} footprints, {len(syms)} symbols; second pass: {chg} fp changed, sym {"identical" if same else "CHANGED"}; collisions {len(coll)-6}')
+shutil.rmtree(tmp)
