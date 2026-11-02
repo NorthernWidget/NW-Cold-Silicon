@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.27 -0.9525 0)
 		(layer "F.SilkS")
-		(uuid "6215d8a6-6428-4c11-bf3c-e5030a5bf04f")
+		(uuid "c7289052-2e26-5476-b850-ad9d6a3dcfe7")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -19,7 +19,7 @@
 	(property "Value" "MINI_MELF-0102AX"
 		(at -1.27 2.2225 0)
 		(layer "F.Fab")
-		(uuid "a6ae5cf2-af91-4ff8-a255-e0ac49402eeb")
+		(uuid "73f5414a-94c4-5610-96ae-a8bf1adadf13")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2752e104-6126-48d5-b29f-776e1f0ea2b2")
+		(uuid "e90fdaed-672f-53dd-a115-6db6106ab003")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "35374cfb-4090-42e5-ba41-d81010562e7f")
+		(uuid "b23b0dfa-0a09-50fc-b3d3-9d6adabae18b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -60,7 +60,7 @@
 		)
 		(fill yes)
 		(layer "B.Fab")
-		(uuid "45376c71-8685-4aba-b356-c1901a9cb1df")
+		(uuid "227493f8-f806-5d1e-b205-027e71c690bd")
 	)
 	(fp_circle
 		(center 0 0)
@@ -71,14 +71,14 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "c804ef1b-ea47-449b-928a-54cfa21f7336")
+		(uuid "0bc56a47-4105-5c09-9eef-1dd57d0a4264")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 0)
 		(size 1.3 1.3)
 		(drill 1.3)
 		(layers "*.Cu" "*.Mask")
-		(uuid "a4bc685c-5a91-4c55-ab4a-cf81622fb125")
+		(uuid "3d014b14-4c6f-5ec4-b2be-c6851d830cc1")
 	)
 	(pad "1" smd roundrect
 		(at 0 0)
@@ -88,7 +88,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "3170bd7b-0d39-4e82-bacd-1749a07b4aff")
+		(uuid "70ac807f-38e3-5d43-b905-8c78e6092a5c")
 	)
 	(pad "2" smd roundrect
 		(at 0 0)
@@ -98,7 +98,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "1401bc12-44f5-4495-8eec-a3a7d2f43b7c")
+		(uuid "5d093333-704c-5356-b600-a4559f72e406")
 	)
 	(embedded_fonts no)
 )

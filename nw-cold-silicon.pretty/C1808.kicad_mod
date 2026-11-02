@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -2.233 -1.827 0)
 		(layer "F.SilkS")
-		(uuid "96318d9a-16c7-4a9e-b231-81c5a916bd6b")
+		(uuid "5d859e52-18a8-525d-8b37-b05877a1d5ee")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -19,7 +19,7 @@
 	(property "Value" "C1808"
 		(at -2.233 2.842 0)
 		(layer "F.Fab")
-		(uuid "12b0cc71-1d44-4034-b34a-ccb3b8751da8")
+		(uuid "2ed875d5-6752-50b9-8dd3-c88e4248e9ef")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "adb6949d-7fa5-41d2-bda9-49348e8dc714")
+		(uuid "5ed2f3d0-65e9-5c6c-ba64-6e8f1af05ed7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "520a5291-8968-417a-bd4f-2b192f778237")
+		(uuid "f6c49be7-f251-5817-b1fd-381dd00d3c4c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "a392d721-f264-4566-a359-32a12cdc7203")
+		(uuid "54ed1e7e-5d83-59bd-ab43-2cda6aa70779")
 	)
 	(fp_line
 		(start -1.4478 0.9502)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "812670a5-0208-436d-95fc-9c989484f22c")
+		(uuid "04301d0d-d78f-586b-a0a6-bc80aebd6366")
 	)
 	(fp_poly
 		(pts
@@ -81,7 +81,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "2961331f-a1d4-4d50-a0d0-767127bfc9ed")
+		(uuid "d3e45d41-7e6e-5005-a85d-8c22dbe00246")
 	)
 	(fp_poly
 		(pts
@@ -93,7 +93,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "a81468b9-876c-49a6-bdc8-d0ca9eec1a0c")
+		(uuid "b6b93e10-91da-52b9-966f-26f77664a060")
 	)
 	(pad "1" smd rect
 		(at -1.95 0)
@@ -102,7 +102,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "009886be-f1eb-4a9d-b96f-601677410d80")
+		(uuid "b73bc697-183b-5932-badc-fbe60e1b6888")
 	)
 	(pad "2" smd rect
 		(at 1.95 0)
@@ -111,7 +111,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "280e030a-2a39-4ee4-874b-27e5b99ff5d0")
+		(uuid "08436dbc-9a66-5012-afda-daccf976921e")
 	)
 	(embedded_fonts no)
 )

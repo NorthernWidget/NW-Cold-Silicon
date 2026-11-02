@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at 0 2.032 0)
 		(layer "F.SilkS")
-		(uuid "32f8546c-bfb3-435a-8044-81cf42614416")
+		(uuid "88c9ede0-fc6b-5066-bc33-768a6de65f26")
 		(effects
 			(font
 				(size 0.51816 0.51816)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "ddf3ffcb-2d58-40d3-91c4-bf0cdd2066d8")
+		(uuid "ab5b2d4e-79e3-5513-8af0-0cfba962a307")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "071bbee5-fbdb-4cb0-9e6b-640ea215e7f7")
+		(uuid "7e7fafc2-c8a5-56a7-9933-520659f10fba")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "95610b3d-06f2-4851-9658-b1e666396af1")
+		(uuid "1ceb1a76-acf9-5e2a-9d61-01ea6f164882")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3443b740-6496-494a-9ed9-3f91d90c1ef7")
+		(uuid "839f3250-d4fa-5e8c-a055-3f157e48599e")
 	)
 	(fp_line
 		(start -1.5 1.5)
@@ -66,7 +66,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1c75ce43-f0d0-4238-977a-1b1997dd39fa")
+		(uuid "379c7e1c-d2b3-5aca-ab4c-97f1d28adba4")
 	)
 	(fp_line
 		(start 1.5 -1.5)
@@ -76,7 +76,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "7456e6d4-1d0b-4f67-811d-56726d9443d9")
+		(uuid "25071787-c483-5843-baec-425d5081b05b")
 	)
 	(fp_line
 		(start 1.5 1.5)
@@ -86,7 +86,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "828e7d40-920d-4c3b-b723-e38222928a3f")
+		(uuid "cefe6209-3560-52a3-841c-4fe974da377f")
 	)
 	(fp_circle
 		(center -1.778 -1.778)
@@ -97,7 +97,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "74a1941c-f160-429a-ad9a-4ef28a46dd76")
+		(uuid "9c5dd59f-62b6-5050-a907-91ee54de1c16")
 	)
 	(fp_poly
 		(pts
@@ -109,7 +109,7 @@
 		)
 		(fill yes)
 		(layer "F.Paste")
-		(uuid "dc534f03-929d-4e56-b7cd-495516c296b8")
+		(uuid "e29ce75c-9169-5104-b012-8c1c0e51348b")
 	)
 	(pad "1" smd rect
 		(at -1.55 -0.75 180)
@@ -118,7 +118,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "127df7b3-e132-4b51-bd4b-c71973b18fb5")
+		(uuid "13abe813-a534-5244-80ce-ccad86cabd99")
 	)
 	(pad "2" smd rect
 		(at -1.55 -0.25 180)
@@ -127,7 +127,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "b735c27d-35d4-461d-85e2-b44c941f070c")
+		(uuid "a9e3ca3e-6c74-5146-a9d1-a1c9b681abfe")
 	)
 	(pad "3" smd rect
 		(at -1.55 0.25 180)
@@ -136,7 +136,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "7a2c0197-6a05-4006-94b8-0c76dbabc490")
+		(uuid "1b915d70-a9a5-5154-b3c5-6e5f7a53e8d8")
 	)
 	(pad "4" smd rect
 		(at -1.55 0.75 180)
@@ -145,7 +145,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "684488a4-4c83-43fc-a701-11e12079e1c6")
+		(uuid "1bf3a720-4653-593d-87bc-1e8d2faaeb11")
 	)
 	(pad "5" smd rect
 		(at 1.55 0.75)
@@ -154,7 +154,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "ce66dffd-df8d-484d-9ee8-120f87e99179")
+		(uuid "f3431c39-31ab-51e4-8a94-4a00313edb4a")
 	)
 	(pad "6" smd rect
 		(at 1.55 0.25)
@@ -163,7 +163,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "93705c94-b914-481e-a55e-6d8b13bcbc3b")
+		(uuid "3d1f084c-3fb5-5761-a828-454cf8381dde")
 	)
 	(pad "7" smd rect
 		(at 1.55 -0.25)
@@ -172,7 +172,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "84108dc0-a84e-4db3-ac26-c201e2d5a188")
+		(uuid "a1243d7a-6c12-55a5-a73b-d4a408591d32")
 	)
 	(pad "8" smd rect
 		(at 1.55 -0.75)
@@ -181,7 +181,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "c4bb7934-94ea-41a5-97a0-35e1b208b6df")
+		(uuid "23744b73-e445-5ec1-a5b2-71162cf4efba")
 	)
 	(pad "EP" smd rect
 		(at 0 0)
@@ -190,7 +190,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "cfa0f742-b8dd-43d7-8394-7dde3e936e0a")
+		(uuid "176f77cf-852b-5ffa-8739-5feff9e63ea9")
 	)
 	(embedded_fonts no)
 )

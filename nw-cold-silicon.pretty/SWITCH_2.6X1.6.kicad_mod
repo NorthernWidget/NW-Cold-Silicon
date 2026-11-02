@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at 0 -1.27 0)
 		(layer "F.SilkS")
-		(uuid "1391be77-df89-45a9-b723-119cbc5a4e1b")
+		(uuid "c69ea322-117b-5ef3-9b16-04841933579f")
 		(effects
 			(font
 				(size 0.51816 0.51816)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "01e133e9-72ea-4644-9a7f-66ba85ae204e")
+		(uuid "bc246d3e-216e-5957-9dda-5874ed91dccd")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e233c2f2-e8e1-4727-9f89-70f18133a6ea")
+		(uuid "cd2e4877-954d-537d-b882-0db6d6caf96b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5b2ba3b1-59f1-4d66-bf97-713d058002ec")
+		(uuid "bf281eda-a1d5-58c0-bcb0-0a080f187c2d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "39f2ace7-ebca-4722-88e7-30ce1740c9c4")
+		(uuid "9d33c80a-eed7-514e-b49c-09a23d1a289a")
 	)
 	(fp_line
 		(start -1.3 0.8)
@@ -66,7 +66,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "80cfb0ec-af17-4fc0-9ac4-736f1c5b864f")
+		(uuid "93a7e94e-25c0-542a-ba1b-c1bb9cdb529e")
 	)
 	(fp_line
 		(start 1.3 -0.8)
@@ -76,7 +76,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "d7e85216-1813-495d-bb91-5763c90540d8")
+		(uuid "40de5ff3-8285-5e77-b3ee-9f438df8fc26")
 	)
 	(fp_line
 		(start 1.3 0.8)
@@ -86,7 +86,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0ffc9791-ad9d-4505-a91d-7d5a7c0fb583")
+		(uuid "4719d727-ec49-5612-b49e-cdaa2091a88c")
 	)
 	(fp_circle
 		(center 0 0)
@@ -97,7 +97,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "ea6bcfe2-1e13-4efe-8da2-08a9b3aca92f")
+		(uuid "e18f8aca-c70b-5620-9d13-e8f4588ad35f")
 	)
 	(pad "A" smd rect
 		(at -1.325 -0.375)
@@ -106,7 +106,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "81893375-1fcf-4d4a-9cde-ae10c77d00a5")
+		(uuid "4e6d0e4d-908b-52aa-8f2a-7d964c1b5ae2")
 	)
 	(pad "A'" smd rect
 		(at -1.325 0.375)
@@ -115,7 +115,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "a2b791e7-6e83-4c16-9af3-16e44a872b02")
+		(uuid "39956815-8c08-511d-b28a-05ac6500b4b2")
 	)
 	(pad "B" smd rect
 		(at 1.325 -0.375)
@@ -124,7 +124,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "43425d49-e29c-4464-99a5-eee3c0036910")
+		(uuid "78fc16b7-9c6f-5057-83b2-99b4dab03f0c")
 	)
 	(pad "B'" smd rect
 		(at 1.325 0.375)
@@ -133,7 +133,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "9e8e7075-687e-4563-bfe5-b499dbb3435b")
+		(uuid "e74cc37f-9efb-5cec-a2f1-683fe67e32a4")
 	)
 	(zone
 		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
@@ -142,7 +142,7 @@
 			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
 			"In29.Cu" "In30.Cu"
 		)
-		(uuid "56a78c79-e4fe-4b39-bb00-27c8411f7e5d")
+		(uuid "60443b82-a43e-528a-a6a9-eda3d3d986a6")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)

@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at 0 -0.762 0)
 		(layer "F.SilkS")
-		(uuid "879650f2-f12d-41a9-8a36-33beefc4c4c1")
+		(uuid "fb694d55-9d65-5f88-9bdb-a2e9825c8c8f")
 		(effects
 			(font
 				(size 0.51816 0.51816)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "48653253-f810-468e-9ba4-1fba23c02ab6")
+		(uuid "af5944dd-3143-5061-a05c-d8070e67bdd5")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "46817a26-e01d-4bb0-bae7-b81b77b86289")
+		(uuid "eb5bb3df-d543-5e9f-b428-f4fd6f656187")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f76ba602-19fc-4437-86b4-650cb9a4d43a")
+		(uuid "7a930437-87c1-5208-99ec-49a0b1a6cb41")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8e986c8c-a497-403b-98b7-fe93d8bed22d")
+		(uuid "59bf4dca-a462-5476-803f-b7557c53564a")
 	)
 	(fp_line
 		(start -0.5 0.3)
@@ -66,7 +66,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0d0ca267-3610-4bad-91b0-5e79cf7984e9")
+		(uuid "39050137-11aa-56d8-adc0-24caa5aa359c")
 	)
 	(fp_line
 		(start 0.5 -0.3)
@@ -76,7 +76,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e8d84bd0-66dc-443f-a522-06ff53a6cfc9")
+		(uuid "108d29b3-85de-568f-868a-55cd74348d79")
 	)
 	(fp_line
 		(start 0.5 0.3)
@@ -86,7 +86,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "50d061fe-f920-43e0-881b-2bd454f8aea4")
+		(uuid "a1302466-191c-59fe-ae3f-d66ed047949e")
 	)
 	(pad "1" smd rect
 		(at -0.35 0)
@@ -95,7 +95,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "597046ec-3e9d-405a-b224-2faadb6b7291")
+		(uuid "e0003748-0617-5dd7-ad80-9a90dfeffa5f")
 	)
 	(pad "2" smd rect
 		(at 0.35 0)
@@ -104,7 +104,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "02f8dfee-a247-444c-aa60-3fd1a1b42690")
+		(uuid "7b0f3201-5a6e-5573-a267-2d6e66f48e69")
 	)
 	(embedded_fonts no)
 )

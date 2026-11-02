@@ -96,7 +96,9 @@ if not upto:
            '| board | file | embedded names | identical | pads identical | pads differ | added | unchecked |','|---|---|---|---|---|---|---|---|']
     for bkey,pcb,brd in BOARDS:
         el={e.get('name'):(e.get('library'),e.get('package')) for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element')}
-        emb=embedded(os.path.join(ws,pcb)); n_id=n_pad=n_dif=n_add=n_unc=0
+        up=os.path.join(tmp,'brd',bkey+'.kicad_pcb'); os.makedirs(os.path.dirname(up),exist_ok=True); shutil.copy(os.path.join(ws,pcb),up)
+        rc,o=run(['kicad-cli','pcb','upgrade','--force',up]); assert rc==0,o   # older boards use another layout
+        emb=embedded(up); n_id=n_pad=n_dif=n_add=n_unc=0
         for full,insts in sorted(emb.items()):
             n=full.split(':')[-1].replace('_528','')
             groups=collections.defaultdict(list)
@@ -122,7 +124,10 @@ if not upto:
         prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
-for name,t in fps.items(): open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)
+for name,t in fps.items():
+    k=iter(range(10**6))
+    t=re.sub(r'\(uuid "[^"]+"\)',lambda m:'(uuid "%s")'%uuid.uuid5(uuid.NAMESPACE_URL,'%s/%s/%d'%(LIB,name,next(k))),t)
+    open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)
 open(SYM,'w').write(head+''.join(syms[n] for n in sorted(syms))+')\n')
 rc,o=run(['kicad-cli','fp','upgrade','--force',PRETTY]); assert rc==0,o
 rc,o=run(['kicad-cli','sym','upgrade','--force',SYM]); assert rc==0,o
