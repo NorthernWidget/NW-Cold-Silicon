@@ -340,9 +340,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | C-EUC06032.2UF | symbol | passives | bschulz | kept once |
 | C-EUC080510UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
 | C-EUC080522UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
-| R-EU_R060310K | symbol | passives | bschulz | both: `R-EU_R060310K_bschulz` |
-| R-EU_R060327 | symbol | passives | bschulz | both: `R-EU_R060327_bschulz` |
-| R-EU_R0603330 | symbol | passives | bschulz | both: `R-EU_R0603330_bschulz` |
+| R-EU_R060310K | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R060327 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0603330 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
 | LINX_BAT-HLD-012-SMT | footprint | bschulz | awickert | kept the first by decision: Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad. |
 | LTC4412S6 | symbol | bschulz | awickert | kept the first by decision: Andy, 2026-11-02, no doubles: bschulz's (reference U, SOT23-6L, pin SENSE; Okapi U7 uses it). awickert's older drawing (reference IC, TSOT23-6, pin SEN) is used by no board. |
 | 0204V | footprint | passives | fork | kept once |
@@ -836,10 +836,10 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | CM200 | symbol | bschulz | fork | kept once |
 | CONN_02 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02-JST-2-PTH-NO_SILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
-| CONN_02-JST-2MM-SMT | symbol | bschulz | fork | older copy skipped |
+| CONN_02-JST-2MM-SMT | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_021X02_NO_SILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
-| CONN_023.5MM | symbol | bschulz | fork | older copy skipped |
-| CONN_023.5MM-NO_SILK | symbol | bschulz | fork | older copy skipped |
+| CONN_023.5MM | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_023.5MM-NO_SILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_023.5MM_LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_024UCON-15767 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_025MM | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
@@ -848,7 +848,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | CONN_02LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02LOCK_LONGPADS | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02POGO_PIN_HOLES_ONLY | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
-| CONN_02POLAR | symbol | bschulz | fork | older copy skipped |
+| CONN_02POLAR | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02POLAR_LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02PTH2 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02PTH3 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
@@ -957,7 +957,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | PHOTODIODEVEMD1060 | symbol | bschulz | fork | kept once |
 | POGO_HOLE | symbol | bschulz | fork | kept once |
 | POGO_PAD | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
-| POWER_JACK | symbol | bschulz | fork | older copy skipped |
+| POWER_JACK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | POWER_JACKPTH_BREAD | symbol | bschulz | fork | kept once |
 | POWER_JACKPTH_LOCK | symbol | bschulz | fork | kept once |
 | POWER_JACKPTH_SMD_COMBO | symbol | bschulz | fork | kept once |
@@ -1195,9 +1195,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MCP4726SOT-23A3 | symbol | bschulz | fork | kept once |
 | MIC842H | symbol | bschulz | fork | older copy skipped |
 | MIC842L | symbol | bschulz | fork | older copy skipped |
-| R-EU_R060310K | symbol | passives | fork | older copy skipped |
-| R-EU_R060327 | symbol | passives | fork | older copy skipped |
-| R-EU_R0603330 | symbol | passives | fork | older copy skipped |
+| R-EU_R060310K | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R060327 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0603330 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
 | RESONATORSMD_3.2X1.316MHZ | symbol | bschulz | fork | kept once |
 | RESONATORSMD_3.2X1.38MHZ | symbol | bschulz | fork | kept once |
 | SN65HVD30 | symbol | bschulz | fork | kept once |
@@ -1612,7 +1612,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MOSFET_PCH-NDP6020P | symbol | fork | old | kept once |
 | MOSFET_PCH-NDS8434 | symbol | fork | old | kept once |
 | MOSFET_PCH-SI2309DS | symbol | fork | old | kept once |
-| POWER_JACK | symbol | bschulz | old | older copy skipped |
+| POWER_JACK | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
 | POWER_JACKPTH_BREAD | symbol | bschulz | old | kept once |
 | POWER_JACKPTH_LOCK | symbol | bschulz | old | kept once |
 | POWER_JACKPTH_SMD_COMBO | symbol | bschulz | old | kept once |

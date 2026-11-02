@@ -27,7 +27,7 @@ Added from the boards (graphics the importer put on the Rescue layer, from Eagle
 - `USB_C_CUSB31-CFM2AX-01-X`: USB-C receptacle; Okapi.brd and Margay.brd name Adafruit's microbuilder library, which does not hold it in the 2015 release that is Adafruit's current master.
 - `USB_MICRO_VERT_MOLEX`: from Bobby's working copy of bschulz, never committed to Cold-Silicon.
 
-Library: **847 footprints** in `nw-cold-silicon.pretty`, **1395 symbols** in `nw-cold-silicon.kicad_sym`.
+Library: **847 footprints** in `nw-cold-silicon.pretty`, **1392 symbols** in `nw-cold-silicon.kicad_sym`.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 
 Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.

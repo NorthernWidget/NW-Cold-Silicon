@@ -76,9 +76,11 @@ def norm(t): return re.sub(r'\n\s*\(uuid "[^"]+"\)','',t)
 BOM_PROPS=('Description','Datasheet','MF','MPN','DIGIKEY','DIGIKEY_PN','MOUSER','PARTNO')
 def nodesc(t):
     """The symbol with its BOM-only properties removed and the rest of its properties sorted:
-    what is left is the drawing, the pins, the footprint and the other fields, whatever their order."""
+    what is left is the drawing, the pins, the footprint and the other fields, whatever their order
+    and wherever a hidden field was stacked."""
     t=re.sub(r'\t\t\(property "(?:%s)" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n'%'|'.join(BOM_PROPS),'',t,flags=re.S)
     props=re.findall(r'\t\t\(property "[^"]*" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n',t,flags=re.S)
+    props=[re.sub(r'\(at [^)]*\)','(at)',q) if '(hide yes)' in q else q for q in props]   # a hidden field's position is where the GUI stacked it
     rest=re.sub(r'\t\t\(property "[^"]*" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n','',t,flags=re.S)
     return rest+''.join(sorted(props))
 def refoot(block,fpmap):
@@ -164,7 +166,7 @@ if not upto:
                 else:
                     n_dif+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}pads differ: KiCad board copy not taken over |')
         prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
-    prov+=['','Added from the boards:','']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
+    prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items):'%getattr(as_library,'dropped_rescue',0),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
 for name,t in fps.items():
