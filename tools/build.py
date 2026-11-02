@@ -16,7 +16,10 @@ says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
 every number in them is the build's.
 --upto stops after the named source, for one commit per source.
 """
-import os,re,sys,shutil,subprocess,tempfile,uuid,datetime
+import os,re,sys,shutil,subprocess,tempfile,uuid,datetime,collections
+import xml.etree.ElementTree as ET
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from from_board import embedded,as_library,sig,from_eagle
 HERE=os.path.dirname(os.path.abspath(__file__)); REPO=os.path.dirname(HERE)
 args=sys.argv[1:]
 ws=os.path.dirname(REPO); upto=None
@@ -31,6 +34,11 @@ SOURCES=[  # key, path under the workspace, kind
  ('old','Cold-Silicon/bschulz_Old.lbr','EXTRAS'),
 ]
 if upto: SOURCES=SOURCES[:[s[0] for s in SOURCES].index(upto)+1]
+BOARDS=[  # key, KiCad board, Eagle board (for each element's library of origin); only after every source
+ ('okapi','Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb','Project-Okapi/Hardware/Okapi.brd'),
+ ('margay','Project-Margay/Hardware/KiCAD/Margay.kicad_pcb','Project-Margay/Hardware/Margay.brd'),
+]
+EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
 def run(cmd):
     p=subprocess.run(cmd,capture_output=True,text=True); return p.returncode,(p.stdout+p.stderr).strip()
@@ -83,6 +91,35 @@ for key,rel,kind in SOURCES:
             coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | both: `{new}` |')
         else: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | older copy skipped |')
     prov.append(f'| {key} | {kind} | `{rel}` | {git(src,"log","-1","--format=%h %cs","--",os.path.basename(src))} | {npk} | {nsy} | {"; ".join(warn) or "–"} |')
+if not upto:
+    prov+=['','## Boards','','Footprints embedded in the KiCad boards, each matched to the library through its element\'s Eagle library of origin. A name no source library holds is added from the Eagle board\'s own package definition through `kicad-cli pcb import`, the converter that built the rest. Columns: identical to the library copy in pads and graphics; same pads but the KiCad board\'s copy (a June 2026 import) draws the graphics or sizes a non-plated hole differently; pads differ (the board copy is NOT taken over; COLLISIONS.md lists it); unchecked means the board has no front-side instance to compare.','',
+           '| board | file | embedded names | identical | pads identical | pads differ | added | unchecked |','|---|---|---|---|---|---|---|---|']
+    for bkey,pcb,brd in BOARDS:
+        el={e.get('name'):(e.get('library'),e.get('package')) for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element')}
+        emb=embedded(os.path.join(ws,pcb)); n_id=n_pad=n_dif=n_add=n_unc=0
+        for full,insts in sorted(emb.items()):
+            n=full.split(':')[-1].replace('_528','')
+            groups=collections.defaultdict(list)
+            for b in insts:
+                ref=re.search(r'\(property "Reference" "([^"]*)"',b).group(1); groups[el.get(ref,(None,None))[0]].append(b)
+            for lib,ins in groups.items():
+                key=EAGLE_KEY.get(lib); merged=fpmap.get(key,{}).get(n) if key else None
+                if merged is None and n in fps: merged=n
+                if merged is None:
+                    fps[n]=from_eagle(os.path.join(ws,brd),[(lib,n)],os.path.join(tmp,'brd',bkey))[n]; fpsrc[n]=f'board:{bkey}'; fpmap.setdefault(bkey,{})[n]=n; merged=n; n_add+=1; added=True
+                else: added=False
+                try: bs=sig(as_library(ins,n))
+                except AssertionError:
+                    n_unc+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} | board {bkey} ({lib}) | {"added from the Eagle board; " if added else ""}unchecked: no front-side instance |'); continue
+                ls=sig(fps[merged])
+                if ls==bs:
+                    n_id+=1
+                    if added: coll.append(f'| {n} | footprint | – | board {bkey} ({lib}) | added from the Eagle board; KiCad board copy identical |')
+                elif ls[0]==bs[0]:
+                    n_pad+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}same pads, KiCad board copy draws graphics differently |')
+                else:
+                    n_dif+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}pads differ: KiCad board copy not taken over |')
+        prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
 for name,t in fps.items(): open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)

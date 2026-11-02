@@ -37,8 +37,9 @@ sources hold one name, and the suffix a losing copy carries, are stated at the
 top of `COLLISIONS.md`.
 
 Packages that a built board carries but no Eagle library ever received are
-added from the board files, with the board named as the source in
-`PROVENANCE.md`.
+added from the Eagle board file's own package definition, through
+`kicad-cli pcb import`, the same converter; `PROVENANCE.md` names the board
+and says how the KiCad board's copy compares.
 
 ## Rebuild
 
