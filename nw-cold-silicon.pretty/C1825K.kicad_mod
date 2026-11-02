@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.6 -3.55 0)
 		(layer "F.SilkS")
-		(uuid "f0bac8b4-cdd5-4ea7-ad23-055a7896eea7")
+		(uuid "55a8897b-4551-4e6c-b826-df61e7ab6f04")
 		(effects
 			(font
 				(size 0.93472 0.93472)
@@ -19,7 +19,7 @@
 	(property "Value" "C1825K"
 		(at -1.6 4.625 0)
 		(layer "F.Fab")
-		(uuid "73be57ee-aa6e-47d3-ab6b-b9c3b6492c15")
+		(uuid "8cf191a5-06c7-4093-854d-99c1d82244fb")
 		(effects
 			(font
 				(size 0.93472 0.93472)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "4f5e39d1-3765-472d-9572-189e533c1d04")
+		(uuid "ed7d428e-b30f-4d43-bf24-226fc60368a8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b615eaa8-a37b-4701-866a-36468c4a868a")
+		(uuid "f609365b-b2c4-415c-88d1-65c390ef7829")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "15dd6e9f-098a-41a7-826a-28206c5f71ae")
+		(uuid "7c6a8475-1672-4ccc-a79f-5c5cd26eea7b")
 	)
 	(fp_line
 		(start 1.525 3.125)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "0419efbf-0e7b-4311-9f9b-350f717d9b65")
+		(uuid "be106db5-1cad-472b-9833-ce1326030a04")
 	)
 	(fp_poly
 		(pts
@@ -81,7 +81,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "d533d0f3-2e9b-4123-a004-7ce3c972afc3")
+		(uuid "4f70dc4f-f375-4bed-bc11-fd479d18406e")
 	)
 	(fp_poly
 		(pts
@@ -93,7 +93,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "8b14e712-0528-4378-b357-2e36ffd6df7c")
+		(uuid "35c25449-874b-450b-af51-a99201bbb3cb")
 	)
 	(pad "1" smd rect
 		(at -1.5 0)
@@ -102,7 +102,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "9474ac55-017e-46ef-afe5-20ec2a95519c")
+		(uuid "46f6a26d-b28c-4090-8acb-b9b08ada971b")
 	)
 	(pad "2" smd rect
 		(at 1.5 0)
@@ -111,7 +111,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "16dcd4f6-bb68-4dee-8c74-b5ab6bea50c3")
+		(uuid "defd3547-274c-4dfc-b7e1-8413bac1d7d7")
 	)
 	(embedded_fonts no)
 )

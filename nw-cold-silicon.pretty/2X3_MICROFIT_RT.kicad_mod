@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -6.985 0 90)
 		(layer "F.SilkS")
-		(uuid "1084c0d5-4519-4b86-b87c-a5deed50480b")
+		(uuid "75f20361-56ec-48d4-9436-43773fa8bd53")
 		(effects
 			(font
 				(size 0.51816 0.51816)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "4e6b94b8-8901-4afb-b5ee-1cd00da5845d")
+		(uuid "aaa6b6f9-ec7a-419e-b62b-fc20a1ccc3f8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c43f2244-dbd8-41da-955f-11afa8c3ddcb")
+		(uuid "e1ce1c70-51f6-4127-b011-8af92ad7bfa8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b596bb17-d181-4163-92b0-ed6b9182bae0")
+		(uuid "a647753a-f195-46b3-a07c-e1236c52385e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1d3ad5ab-0868-43ff-bf62-8ed934af150d")
+		(uuid "cbe8eac3-1077-471d-9e1d-d58894e81b7d")
 	)
 	(fp_line
 		(start -6.325 3.6)
@@ -66,7 +66,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "001e2ec5-d01e-4a07-baaa-7e145ae7da02")
+		(uuid "c9aad81e-db92-4dc8-bc8f-a3d61852f971")
 	)
 	(fp_line
 		(start -5.325 4.6)
@@ -76,7 +76,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "d63cc76c-4a30-41e8-8554-84e44777f5fd")
+		(uuid "917ee913-482d-4350-a66b-93a72d2c5896")
 	)
 	(fp_line
 		(start 5.325 4.6)
@@ -86,7 +86,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "afcc1cc2-109d-4a37-8453-f8a669e4983d")
+		(uuid "6a7e04a6-2404-4ac8-9c4e-f6bcb4212d4a")
 	)
 	(fp_line
 		(start 5.825 -5.31)
@@ -96,7 +96,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "9d62f3a0-bae2-485b-88de-d5a0559ba7af")
+		(uuid "a8c81fdb-4ba3-4424-b525-9b22d7fe8448")
 	)
 	(fp_line
 		(start 6.325 3.6)
@@ -106,7 +106,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b04eeffb-809f-41aa-bd3d-365f78870844")
+		(uuid "f4a5550a-0810-4d82-be40-6c9c4d35d33f")
 	)
 	(fp_arc
 		(start -6.325 -4.81)
@@ -117,7 +117,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4e3a807b-d256-468f-98ea-16d5e806ab93")
+		(uuid "6f7556c4-69db-4bbd-a77a-e98b4ff442b7")
 	)
 	(fp_arc
 		(start 5.825 -5.31)
@@ -128,14 +128,14 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "2350547b-ba12-46f9-8d3b-ee97db41bc39")
+		(uuid "80fc9614-d8b8-4db5-b683-c19472956bdb")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 0)
 		(size 3 3)
 		(drill 3)
 		(layers "*.Cu" "*.Mask")
-		(uuid "2b3fc330-5373-490b-b705-c5a53b440769")
+		(uuid "fd957b7a-9e85-4a11-a780-c54ac3e72981")
 	)
 	(pad "1" thru_hole circle
 		(at 3 -4.32)
@@ -145,7 +145,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "e0e31bb3-b1fa-4baf-8fcc-67927680ad1f")
+		(uuid "8c850d4e-72e3-4be3-9670-4432fc7a343c")
 	)
 	(pad "2" thru_hole circle
 		(at 0 -4.32)
@@ -155,7 +155,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "6b2fec8d-b1ef-4639-a13a-2d2e141a591a")
+		(uuid "238ad03f-baed-4a59-9c33-4fa4b9b8f2d3")
 	)
 	(pad "3" thru_hole circle
 		(at -3 -4.32)
@@ -165,7 +165,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "8ecd7b6d-c4b8-4a1e-a4b7-f1496a3d38de")
+		(uuid "2c96d2f8-7382-417a-9705-19c1fa89364b")
 	)
 	(pad "4" thru_hole circle
 		(at 3 -7.32)
@@ -175,7 +175,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "27cd0bac-c4f2-44d4-b46d-96b6cfe63392")
+		(uuid "4ff01555-5a41-4272-b192-201e537e7702")
 	)
 	(pad "5" thru_hole circle
 		(at 0 -7.32)
@@ -185,7 +185,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "acbef077-12e3-4edb-8a60-83ad67ca91a7")
+		(uuid "0c64355e-44e4-48c7-8007-36e2acd1b316")
 	)
 	(pad "6" thru_hole circle
 		(at -3 -7.32)
@@ -195,7 +195,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "efa8c79a-e54b-4086-8cae-b5f9267f439c")
+		(uuid "0d723ce3-f5b3-46db-8ab5-79935f2f44bc")
 	)
 	(embedded_fonts no)
 )

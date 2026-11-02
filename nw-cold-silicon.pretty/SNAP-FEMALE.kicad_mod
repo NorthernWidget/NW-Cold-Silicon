@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.27 -4.318 0)
 		(layer "F.SilkS")
-		(uuid "deae0ec3-7297-4f8b-8045-a110f65f610e")
+		(uuid "37f7103a-7cb7-403d-b9b9-2506b18c5eb9")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -19,7 +19,7 @@
 	(property "Value" "SNAP-FEMALE"
 		(at -1.27 4.953 0)
 		(layer "F.Fab")
-		(uuid "7bd74796-b700-4b59-a9b6-c1354b720494")
+		(uuid "53ecd994-7d51-4d3a-830a-d9f55bd2af06")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "9d0510da-6cdd-4f65-aa45-37660609da15")
+		(uuid "0986686b-1a60-4b56-b95d-713eaf02c2a7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2e0bde5e-f12b-4a79-bce4-dd2755f9068b")
+		(uuid "b080ac4b-0396-44f1-9448-a68bcd030cb5")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -74,7 +74,7 @@
 		)
 		(fill yes)
 		(layer "F.Cu")
-		(uuid "cb8baf87-af6e-4f03-8261-b440bfe4589c")
+		(uuid "11329182-de83-4e9c-b363-02795cf2fc46")
 	)
 	(fp_poly
 		(pts
@@ -99,7 +99,7 @@
 		)
 		(fill yes)
 		(layer "F.Mask")
-		(uuid "fb0087e7-06c4-4e3c-8fcc-b2bc40ac5cde")
+		(uuid "e88e0c95-241d-48a8-b7a7-2ae26b6d89a5")
 	)
 	(fp_poly
 		(pts
@@ -124,7 +124,7 @@
 		)
 		(fill yes)
 		(layer "F.Paste")
-		(uuid "215e70ea-801e-4ebd-993f-52a0f633a1a0")
+		(uuid "ae7281f7-9ebe-42ec-95c0-01e93e70bdd9")
 	)
 	(pad "1" thru_hole circle
 		(at 0 0)
@@ -134,11 +134,11 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "bea9a8cb-8898-4c9a-9572-71c8eee7cab6")
+		(uuid "64c99fc5-ca44-4339-9db6-1739194b424e")
 	)
 	(zone
 		(layer "F.Cu")
-		(uuid "cb1d285f-ff22-4e5f-abd5-782fad16f826")
+		(uuid "668ffd1e-d059-4a48-a5e7-7c21bd712281")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)

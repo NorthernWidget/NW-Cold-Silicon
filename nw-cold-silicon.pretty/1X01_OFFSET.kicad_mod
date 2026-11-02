@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.27 -3.048 0)
 		(layer "F.SilkS")
-		(uuid "94d3d1ec-97e3-4f66-91e2-d6d8cd3f23ea")
+		(uuid "cf12be80-6ab1-4c6c-817c-90562a52c8cf")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -19,7 +19,7 @@
 	(property "Value" "1X01_OFFSET"
 		(at -1.27 2.032 0)
 		(layer "F.Fab")
-		(uuid "a5ac4e53-dad3-4d27-a6aa-0bb67ab1df1e")
+		(uuid "322260c0-fd7b-4d82-aa64-d597b0ce0941")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "585b02d7-e83c-4c31-b485-71ed62429ed5")
+		(uuid "e27d5b00-ceb2-4959-acda-9866d5e490d8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8e34333f-8af9-4f87-b342-fc03ace78ad7")
+		(uuid "865015fa-f87e-40e6-a17d-ea1312508407")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3baf040d-0daa-421c-979f-e45b963c30f6")
+		(uuid "fc16b151-f087-44db-ab5c-b179ed20cdd4")
 	)
 	(fp_line
 		(start -1.27 0.635)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "813353ba-ca78-4a3c-949d-d001c4eb3a77")
+		(uuid "e1f04be1-d0cd-4f5c-bd2a-db3e246ea297")
 	)
 	(fp_line
 		(start -0.635 1.27)
@@ -79,7 +79,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "04fe7c4e-65aa-4a69-82b3-597632c2c4a6")
+		(uuid "0c7e3329-eadc-40f9-8bfb-19c3eae5a81a")
 	)
 	(fp_line
 		(start 0.635 1.27)
@@ -89,7 +89,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "07666634-9fb0-485f-ab82-937cb504b399")
+		(uuid "02289809-6b8b-4e85-a5a8-ad93a08964a0")
 	)
 	(fp_line
 		(start 1.27 0.635)
@@ -99,7 +99,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8f67773d-cef9-4f83-8390-d9f073163a08")
+		(uuid "579a5579-86fb-4e38-a43c-4306da63b540")
 	)
 	(fp_poly
 		(pts
@@ -111,7 +111,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "3cadf104-6075-4623-bc02-f173fcb63c33")
+		(uuid "0f956f9e-a9c0-4a08-847c-4d2812e4e44b")
 	)
 	(pad "1" thru_hole oval
 		(at 0 0 90)
@@ -123,7 +123,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "af633455-79bd-439b-8548-2a33fe22a9d3")
+		(uuid "2c0e20a4-fa7f-433b-b176-81ed8798a052")
 	)
 	(embedded_fonts no)
 )

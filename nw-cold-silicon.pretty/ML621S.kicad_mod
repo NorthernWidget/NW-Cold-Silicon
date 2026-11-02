@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at 0 -10.414 0)
 		(layer "F.SilkS")
-		(uuid "692b03d2-b7cc-46b3-b25a-d50d6aabb755")
+		(uuid "397b5c5e-2129-4aca-80a2-e5af78889740")
 		(effects
 			(font
 				(size 0.69088 0.69088)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "cf2e80f4-a6cb-4027-8315-fba83f75c902")
+		(uuid "b3b3e2bf-af7d-4f71-8c91-937912c6f2a4")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ffe7aa47-f80f-4e62-89ea-a91eadd54ddc")
+		(uuid "2355b951-7034-4a69-bbff-0570ea0a2d3f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "59d4c6c1-777f-4783-b135-086406e97b8f")
+		(uuid "bd8748ab-26e7-4afb-b986-7d04f074815c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "14a1de1a-62a2-4160-9264-7c3c374e06e0")
+		(uuid "f65bf3f2-b2b9-454a-bd21-16c7dcba324e")
 	)
 	(fp_circle
 		(center 0 -6)
@@ -68,12 +68,12 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "2990fb94-b566-4fc1-9f2a-520551ab74fd")
+		(uuid "0772142c-695d-41b5-9fc1-9edb27e38e5d")
 	)
 	(fp_text user "-"
 		(at -1.651 -1.27 270)
 		(layer "F.SilkS")
-		(uuid "1392c63b-ffc1-449a-a53b-c72ef9b0bea9")
+		(uuid "80fe1e6f-60b4-44a6-af07-8a8b61ba1526")
 		(effects
 			(font
 				(size 0.69088 0.69088)
@@ -84,7 +84,7 @@
 	(fp_text user "+"
 		(at 1.651 -1.27 270)
 		(layer "F.SilkS")
-		(uuid "a3d174e5-3592-44a7-ae40-98eb95a0eef2")
+		(uuid "af360ed4-fa6f-4263-adc3-b1090ffecb3a")
 		(effects
 			(font
 				(size 0.69088 0.69088)
@@ -99,7 +99,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "0eea999c-db83-4f6a-b12f-acec2fd62b05")
+		(uuid "6631adff-619a-43bf-8a94-88687998f2b9")
 	)
 	(pad "-" smd rect
 		(at -0.75 -1 90)
@@ -108,7 +108,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "9fbfa5ed-d290-4feb-b68d-890275e80522")
+		(uuid "678819f1-ef6d-4ff0-89fb-95f83f57a169")
 	)
 	(embedded_fonts no)
 )

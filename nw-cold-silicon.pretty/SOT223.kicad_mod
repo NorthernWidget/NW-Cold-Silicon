@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -3.4925 0 90)
 		(layer "F.SilkS")
-		(uuid "479d9d14-be9e-43d6-b4be-f5968c87f49f")
+		(uuid "4c18ae3b-4d04-4b05-96f1-7af486d6161e")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -19,7 +19,7 @@
 	(property "Value" "SOT223"
 		(at 3.4925 0.127 90)
 		(layer "F.Fab")
-		(uuid "b1c1a3f0-1873-4817-8735-970c470de9a4")
+		(uuid "07b2a48a-1ec0-4e79-9dde-10c7b3f23df4")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "036a912b-b41f-4782-b3aa-68fb73f266ba")
+		(uuid "fde1f767-957c-4f22-873f-ae3f52c2cbae")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "876d8b29-442f-4cfd-a293-fc478c923d0e")
+		(uuid "df4a85c7-1006-42f1-aa69-dd9fc46f6570")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e79b9cae-ee9b-4673-af1c-77c27b85af13")
+		(uuid "df747e99-2f26-4d55-9be6-43a094d7d13a")
 	)
 	(fp_line
 		(start -3.2766 1.651)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "daac1bba-ca76-44df-8aca-4f80a0e9fabc")
+		(uuid "fb158dc4-2296-4e0a-b3dc-6c8038dadca6")
 	)
 	(fp_line
 		(start 3.2766 -1.651)
@@ -79,7 +79,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e63558fe-6ab5-4969-b1e4-4c5b64e1a3f4")
+		(uuid "29121585-e723-4047-a1a8-71727fa15a8e")
 	)
 	(fp_line
 		(start 3.2766 1.651)
@@ -89,7 +89,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f5e36fe2-81b2-4dbb-b721-070286ac19a0")
+		(uuid "f78436f7-2447-4fd7-a7b9-bca3f9bb8e73")
 	)
 	(fp_poly
 		(pts
@@ -101,7 +101,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "5881f756-bc03-40c5-a389-0b08596cb67e")
+		(uuid "8a611e27-dc8d-46f0-9350-0adb73238b25")
 	)
 	(fp_poly
 		(pts
@@ -113,7 +113,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "da0f2c1f-5999-492d-ab03-d0e2b8626a32")
+		(uuid "905700b9-8508-413a-b728-56519806a4ee")
 	)
 	(fp_poly
 		(pts
@@ -125,7 +125,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "53494a68-2efb-4b22-8edb-4be1ae70c66a")
+		(uuid "621a30e7-0cea-49ae-8035-81871d642527")
 	)
 	(fp_poly
 		(pts
@@ -137,7 +137,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "d6316739-0e33-4bdd-af47-af3b290c2c3f")
+		(uuid "d5832d86-042d-49a3-9932-f12da5a2018b")
 	)
 	(fp_poly
 		(pts
@@ -149,7 +149,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "0e12dbf9-7484-4040-822e-f1fddec6bd22")
+		(uuid "95f8bc17-c1ea-47a7-b251-839abc4af98e")
 	)
 	(fp_poly
 		(pts
@@ -161,7 +161,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "753b3659-ade7-4eb2-957e-e12dc876fd22")
+		(uuid "bf3d14c6-d419-4810-9c6e-2c5b1e963509")
 	)
 	(fp_poly
 		(pts
@@ -173,7 +173,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "103cb118-7ba8-4810-8a21-f287654c980d")
+		(uuid "0d175d5e-f0fd-44c1-bad3-196f4fdd2fd6")
 	)
 	(fp_poly
 		(pts
@@ -185,7 +185,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "1ade1d03-f1d7-4967-82c9-3c83b3aa5528")
+		(uuid "496c7a1d-f28c-4b7b-9983-49f867ecc576")
 	)
 	(pad "1" smd rect
 		(at -2.3114 3.0988)
@@ -194,7 +194,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "dac2bc8d-0288-48ed-8647-efbd3a94c3e2")
+		(uuid "86de4755-e199-4d47-9a1a-94631e46c754")
 	)
 	(pad "2" smd rect
 		(at 0 3.0988)
@@ -203,7 +203,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "241761b5-884c-4dfb-81e7-9993f6a5bc04")
+		(uuid "4c77870a-0fdc-4488-a291-56040159e7b4")
 	)
 	(pad "3" smd rect
 		(at 2.3114 3.0988)
@@ -212,7 +212,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "3dcfa80e-7f24-425b-9a9e-3cb147dc87f5")
+		(uuid "68aa06fa-7d9c-491d-9c53-59b7ec0ca44c")
 	)
 	(pad "4" smd rect
 		(at 0 -3.099)
@@ -221,7 +221,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "28f7440c-619b-4db2-a6a4-2533a2b65d8e")
+		(uuid "1a5529b8-857b-4e8a-a3fd-78b17a745113")
 	)
 	(embedded_fonts no)
 )

@@ -1,0 +1,111 @@
+(footprint "PJ-037B"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Barrel Jack 2.5 mm ID, 6.5 mm OD Connects to plug with 2.5mm ID, 5.5mm OD Digi-Key CP-037B-ND")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "4f09f027-8484-42cf-a19f-f94081258635")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "b1ff764b-ef3b-4be8-b701-38a63cc88400")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8f75f7ed-b578-42e0-a8e8-73ffca1c7f37")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb3dac90-a072-4410-985c-8c66909df224")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0 -4.5)
+		(end 13 -4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "745c1096-9d2a-4954-ad66-897638c400d2")
+	)
+	(fp_line
+		(start 13 -4.5)
+		(end 13 -3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "daa06097-a7ab-498c-8575-7155757a1361")
+	)
+	(fp_line
+		(start 13 3)
+		(end 13 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1bf8a7e3-00f9-4648-b22f-8741b2996b56")
+	)
+	(fp_line
+		(start 13 4.5)
+		(end 0 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "67fffc76-77de-4a47-bcd0-5b5a1eb62b5d")
+	)
+	(pad "GND" thru_hole rect
+		(at 6 0)
+		(size 4.216 4.216)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "2f4767cb-3304-4a94-a782-3fa67bcfa8ee")
+	)
+	(pad "PWR" thru_hole rect
+		(at 12 0)
+		(size 4.716 4.716)
+		(drill 3.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "a609e697-8e70-43ea-b3cd-fcab440cb6e1")
+	)
+	(embedded_fonts no)
+)

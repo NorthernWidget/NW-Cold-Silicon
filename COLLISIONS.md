@@ -343,3 +343,5 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | R-EU_R060310K | symbol | passives | bschulz | both: `R-EU_R060310K_bschulz` |
 | R-EU_R060327 | symbol | passives | bschulz | both: `R-EU_R060327_bschulz` |
 | R-EU_R0603330 | symbol | passives | bschulz | both: `R-EU_R0603330_bschulz` |
+| LINX_BAT-HLD-012-SMT | footprint | bschulz | awickert | both: `LINX_BAT-HLD-012-SMT_awickert` |
+| LTC4412S6 | symbol | bschulz | awickert | both: `LTC4412S6_awickert` |
