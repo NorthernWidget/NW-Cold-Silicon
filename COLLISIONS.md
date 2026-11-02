@@ -40,7 +40,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | C025_050-035X075 | footprint | passives | bschulz | kept once |
 | C025_050-045X075 | footprint | passives | bschulz | kept once |
 | C025_050-055X075 | footprint | passives | bschulz | kept once |
-| C0402 | footprint | passives | bschulz | both: `C0402_bschulz` |
+| C0402 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | C0402K | footprint | passives | bschulz | kept once |
 | C050-024X044 | footprint | passives | bschulz | kept once |
 | C050-025X075 | footprint | passives | bschulz | kept once |
@@ -52,19 +52,19 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | C050-075X075 | footprint | passives | bschulz | kept once |
 | C0504 | footprint | passives | bschulz | kept once |
 | C050H075X075 | footprint | passives | bschulz | kept once |
-| C0603 | footprint | passives | bschulz | both: `C0603_bschulz` |
+| C0603 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | C0603K | footprint | passives | bschulz | kept once |
 | C075-032X103 | footprint | passives | bschulz | kept once |
 | C075-042X103 | footprint | passives | bschulz | kept once |
 | C075-052X106 | footprint | passives | bschulz | kept once |
 | C075-063X106 | footprint | passives | bschulz | kept once |
-| C0805 | footprint | passives | bschulz | both: `C0805_bschulz` |
+| C0805 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | C0805K | footprint | passives | bschulz | kept once |
 | C102-043X133 | footprint | passives | bschulz | kept once |
 | C102-054X133 | footprint | passives | bschulz | kept once |
 | C102-064X133 | footprint | passives | bschulz | kept once |
 | C102_152-062X184 | footprint | passives | bschulz | kept once |
-| C1206 | footprint | passives | bschulz | both: `C1206_bschulz` |
+| C1206 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | C1206K | footprint | passives | bschulz | kept once |
 | C1210 | footprint | passives | bschulz | kept once |
 | C1210K | footprint | passives | bschulz | kept once |
@@ -128,20 +128,20 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | PRL1632 | footprint | passives | bschulz | kept once |
 | R01005 | footprint | passives | bschulz | kept once |
 | R0201 | footprint | passives | bschulz | kept once |
-| R0402 | footprint | passives | bschulz | both: `R0402_bschulz` |
-| R0603 | footprint | passives | bschulz | both: `R0603_bschulz` |
-| R0805 | footprint | passives | bschulz | both: `R0805_bschulz` |
+| R0402 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
+| R0603 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
+| R0805 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | R0805W | footprint | passives | bschulz | kept once |
-| R1206 | footprint | passives | bschulz | both: `R1206_bschulz` |
+| R1206 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | R1206W | footprint | passives | bschulz | kept once |
 | R1210 | footprint | passives | bschulz | kept once |
 | R1210W | footprint | passives | bschulz | kept once |
 | R1218 | footprint | passives | bschulz | kept once |
-| R2010 | footprint | passives | bschulz | both: `R2010_bschulz` |
+| R2010 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | R2010W | footprint | passives | bschulz | kept once |
 | R2012 | footprint | passives | bschulz | kept once |
 | R2012W | footprint | passives | bschulz | kept once |
-| R2512 | footprint | passives | bschulz | both: `R2512_bschulz` |
+| R2512 | footprint | passives | bschulz | kept the first by decision: Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it. |
 | R2512W | footprint | passives | bschulz | kept once |
 | R3216 | footprint | passives | bschulz | kept once |
 | R3216W | footprint | passives | bschulz | kept once |
@@ -221,14 +221,14 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | C-EU375-203X418 | symbol | passives | bschulz | kept once |
 | C-EUC0201 | symbol | passives | bschulz | kept once |
 | C-EUC025_050-024X070 | symbol | passives | bschulz | kept once |
-| C-EUC0402 | symbol | passives | bschulz | both: `C-EUC0402_bschulz` |
+| C-EUC0402 | symbol | passives | bschulz | kept once |
 | C-EUC0402K | symbol | passives | bschulz | kept once |
 | C-EUC0504 | symbol | passives | bschulz | kept once |
-| C-EUC0603 | symbol | passives | bschulz | both: `C-EUC0603_bschulz` |
+| C-EUC0603 | symbol | passives | bschulz | kept once |
 | C-EUC0603K | symbol | passives | bschulz | kept once |
-| C-EUC0805 | symbol | passives | bschulz | both: `C-EUC0805_bschulz` |
+| C-EUC0805 | symbol | passives | bschulz | kept once |
 | C-EUC0805K | symbol | passives | bschulz | kept once |
-| C-EUC1206 | symbol | passives | bschulz | both: `C-EUC1206_bschulz` |
+| C-EUC1206 | symbol | passives | bschulz | kept once |
 | C-EUC1206K | symbol | passives | bschulz | kept once |
 | C-EUC1210 | symbol | passives | bschulz | kept once |
 | C-EUC1210K | symbol | passives | bschulz | kept once |
@@ -295,18 +295,18 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | R-EU_R0201 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R0402 | symbol | passives | bschulz | both: `R-EU_R0402_bschulz` |
 | R-EU_R0603 | symbol | passives | bschulz | both: `R-EU_R0603_bschulz` |
-| R-EU_R0805 | symbol | passives | bschulz | both: `R-EU_R0805_bschulz` |
+| R-EU_R0805 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R0805W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1206 | symbol | passives | bschulz | both: `R-EU_R1206_bschulz` |
+| R-EU_R1206 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R1206W | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R1210 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R1210W | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R1218 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2010 | symbol | passives | bschulz | both: `R-EU_R2010_bschulz` |
+| R-EU_R2010 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R2010W | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R2012 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R2012W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2512 | symbol | passives | bschulz | both: `R-EU_R2512_bschulz` |
+| R-EU_R2512 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R2512W | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R3216 | symbol | passives | bschulz | kept once, description differs |
 | R-EU_R3216W | symbol | passives | bschulz | kept once, description differs |
@@ -899,7 +899,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | FEATHERWING | symbol | bschulz | fork | kept once |
 | FEATHERWINGLAYOUT | symbol | bschulz | fork | kept once |
 | FEATHERWING_NODIM | symbol | bschulz | fork | kept once |
-| FERRITE_BEAD0603 | symbol | bschulz | fork | older copy skipped |
+| FERRITE_BEAD0603 | symbol | bschulz | fork | kept once |
 | FRAME_A_L | symbol | bschulz | fork | kept once |
 | FT231X-Q | symbol | bschulz | fork | kept once |
 | FT232RLQFN | symbol | bschulz | fork | kept once |
@@ -1104,7 +1104,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TCA9534A | symbol | bschulz | fork | kept once |
 | TCA955RTW | symbol | bschulz | fork | kept once |
 | TESTPOINTRCU | symbol | bschulz | fork | kept once, description differs |
-| THERMISTOR | symbol | bschulz | fork | older copy skipped |
+| THERMISTOR | symbol | bschulz | fork | kept once |
 | TLV61220DBV | symbol | bschulz | fork | kept once |
 | TPL5010DDC | symbol | bschulz | fork | kept once |
 | TPL5111DDC | symbol | bschulz | fork | kept once |
@@ -1750,6 +1750,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | LINX_BAT-HLD-012-SMT | footprint | bschulz as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board okapi (awickert) | unchecked: no front-side instance |
 | PARTICLE_M.2EKEY_NOPROG | footprint | board:okapi as `PARTICLE_M.2EKEY_NOPROG` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
+| R0603 | footprint | passives as `R0603` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | SOT23-3@1 | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |

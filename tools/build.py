@@ -48,6 +48,16 @@ NOTES={  # what is known about a package no source library holds; printed under 
  'PARTICLE_M.2EKEY_NOPROG':"from Bobby's working copy of bschulz, never committed to Cold-Silicon.",
 }
 PREFER_FIRST={  # a same-name collision between PRIMARY sources settled by decision: the later copy is not kept, its symbols point at the first
+ 'C0402':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'C0603':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'C0805':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'C1206':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R0402':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R0603':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R0805':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R1206':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R2010':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'R2512':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
  'LINX_BAT-HLD-012-SMT':"Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad.",
 }
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}

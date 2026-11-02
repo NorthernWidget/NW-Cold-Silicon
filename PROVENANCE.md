@@ -17,7 +17,7 @@ Footprints embedded in the KiCad boards, each matched to the library through its
 
 | board | file | embedded names | identical | pads identical | pads differ | added | unchecked |
 |---|---|---|---|---|---|---|---|
-| okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 69 | 64 | 2 | 2 | 4 | 2 |
+| okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 69 | 63 | 2 | 3 | 4 | 2 |
 | margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 37 | 34 | 0 | 1 | 1 | 4 |
 
 Added from the boards:
@@ -28,7 +28,7 @@ Added from the boards:
 - `USB_C_CUSB31-CFM2AX-01-X`: USB-C receptacle; Okapi.brd and Margay.brd name Adafruit's microbuilder library, which does not hold it in the 2015 release that is Adafruit's current master.
 - `USB_MICRO_VERT_MOLEX`: from Bobby's working copy of bschulz, never committed to Cold-Silicon.
 
-Library: **858 footprints** in `nw-cold-silicon.pretty`, **1411 symbols** in `nw-cold-silicon.kicad_sym`.
+Library: **848 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 
 Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.
