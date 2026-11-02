@@ -43,6 +43,19 @@ def as_library(instances,name):
     # fp upgrade then renames "Rescue"; a board file may carry neither, and the library converter drops them with a warning
     b,n=re.subn(r'^\t\t\((?:fp_line|fp_poly|fp_circle|fp_arc|fp_rect|fp_text)\n(?:(?!^\t\t\)).*\n)*?\t\t\t\(layer "(?:UNDEFINED|Rescue)"\)\n(?:(?!^\t\t\)).*\n)*?\t\t\)\n','',b,flags=re.M)
     as_library.dropped_rescue=getattr(as_library,'dropped_rescue',0)+n
+    # the board importer gives a non-plated hole a pad 0.254 mm wider than its drill; the library converter and Eagle give it none
+    out=[]; cur=None
+    for line in b.split('\n'):
+        if re.match(r'\s*\(pad "[^"]*" np_thru_hole',line): cur=[]
+        if cur is not None:
+            cur.append(line)
+            if re.match(r'\s*\)\s*$',line) and len(line.strip())==1:
+                blk='\n'.join(cur); d=re.search(r'\(drill ([\d.]+)\)',blk)
+                if d: blk,k2=re.subn(r'\(size [\d.]+ [\d.]+\)','(size %s %s)'%(d.group(1),d.group(1)),blk,count=1); as_library.npth_resized=getattr(as_library,'npth_resized',0)+k2
+                out.append(blk); cur=None
+            continue
+        out.append(line)
+    b='\n'.join(out)
     return '\n'.join(l[1:] if l.startswith('\t') else l for l in b.split('\n'))
 def sig(text):
     from sexp import parse,kids,kid

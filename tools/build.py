@@ -166,7 +166,7 @@ if not upto:
                 else:
                     n_dif+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}pads differ: KiCad board copy not taken over |')
         prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
-    prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items):'%getattr(as_library,'dropped_rescue',0),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
+    prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items; a non-plated hole\'s pad, which that importer makes 0.254 mm wider than the drill, is set to the drill as the library converter and Eagle have it: %d pads):'%(getattr(as_library,'dropped_rescue',0),getattr(as_library,'npth_resized',0)),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
