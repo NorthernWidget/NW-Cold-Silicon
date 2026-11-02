@@ -248,103 +248,103 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | C-EUC4532 | symbol | passives | bschulz | kept once |
 | C-EUC4564 | symbol | passives | bschulz | kept once |
 | C-EUHPC0201 | symbol | passives | bschulz | kept once |
-| R-EU_01005 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0204/2V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0204/5 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0204/7 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/10 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/12 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/15 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/2V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/5V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0207/7 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0309/10 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0309/12 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0309/V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0411/12 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0411/15 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0411/3V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0414/15 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0414/5V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0613/15 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0613/5V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0617/17 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0617/22 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0617/5V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0817/22 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0817/7V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0922/22 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_0922V | symbol | passives | bschulz | kept once, description differs |
-| R-EU_1812X7R | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M0805 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M1206 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M1406 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M2012 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M2309 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M3216 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M3516 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_M5923 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0102AX | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0102R | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0102W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0204R | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0204W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0207R | symbol | passives | bschulz | kept once, description differs |
-| R-EU_MELF0207W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_PRL1632 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R0201 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R0402 | symbol | passives | bschulz | both: `R-EU_R0402_bschulz` |
-| R-EU_R0603 | symbol | passives | bschulz | both: `R-EU_R0603_bschulz` |
-| R-EU_R0805 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R0805W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1206 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1206W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1210 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1210W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R1218 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2010 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2010W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2012 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2012W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2512 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R2512W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R3216 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R3216W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R3225 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R3225W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R4527 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R5025 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R5025W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R6332 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_R6332W | symbol | passives | bschulz | kept once, description differs |
-| R-EU_RDH/15 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_V234/12 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_V235/17 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_V526-0 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VMTA55 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VMTB60 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VTA52 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VTA53 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VTA54 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VTA55 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_VTA56 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC0001 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC0002 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC01/2 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC2515 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC4527 | symbol | passives | bschulz | kept once, description differs |
-| R-EU_WSC6927 | symbol | passives | bschulz | kept once, description differs |
-| C-EUC06030.1UF | symbol | passives | bschulz | both: `C-EUC06030.1UF_bschulz` |
-| C-EUC060312PF | symbol | passives | bschulz | both: `C-EUC060312PF_bschulz` |
-| C-EUC06031UF | symbol | passives | bschulz | both: `C-EUC06031UF_bschulz` |
+| R-EU_01005 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/2V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/5 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/7 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/10 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/12 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/15 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/2V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/5V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/7 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/10 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/12 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/12 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/15 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/3V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/15 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/5V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/15 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/5V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/17 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/22 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/5V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/22 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/7V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922/22 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922V | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_1812X7R | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M0805 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1206 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1406 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2012 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2309 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3216 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3516 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M5923 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102AX | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102R | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204R | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207R | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_PRL1632 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0201 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0402 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0603 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1218 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R4527 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332W | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_RDH/15 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V234/12 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V235/17 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V526-0 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTA55 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTB60 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA52 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA53 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA54 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA55 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA56 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0001 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0002 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC01/2 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC2515 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC4527 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC6927 | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| C-EUC06030.1UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| C-EUC060312PF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| C-EUC06031UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
 | C-EUC06032.2UF | symbol | passives | bschulz | kept once |
-| C-EUC080510UF | symbol | passives | bschulz | both: `C-EUC080510UF_bschulz` |
-| C-EUC080522UF | symbol | passives | bschulz | both: `C-EUC080522UF_bschulz` |
+| C-EUC080510UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
+| C-EUC080522UF | symbol | passives | bschulz | kept once, BOM fields differ (the first source's stand) |
 | R-EU_R060310K | symbol | passives | bschulz | both: `R-EU_R060310K_bschulz` |
 | R-EU_R060327 | symbol | passives | bschulz | both: `R-EU_R060327_bschulz` |
 | R-EU_R0603330 | symbol | passives | bschulz | both: `R-EU_R0603330_bschulz` |
 | LINX_BAT-HLD-012-SMT | footprint | bschulz | awickert | kept the first by decision: Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad. |
-| LTC4412S6 | symbol | bschulz | awickert | both: `LTC4412S6_awickert` |
+| LTC4412S6 | symbol | bschulz | awickert | kept the first by decision: Andy, 2026-11-02, no doubles: bschulz's (reference U, SOT23-6L, pin SENSE; Okapi U7 uses it). awickert's older drawing (reference IC, TSOT23-6, pin SEN) is used by no board. |
 | 0204V | footprint | passives | fork | kept once |
 | 0204_5 | footprint | passives | fork | kept once |
 | 0204_7 | footprint | passives | fork | kept once |
@@ -834,28 +834,28 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | CLVBA-FKA | symbol | bschulz | fork | older copy skipped |
 | CLX6F-FKC | symbol | bschulz | fork | older copy skipped |
 | CM200 | symbol | bschulz | fork | kept once |
-| CONN_02 | symbol | bschulz | fork | kept once, description differs |
-| CONN_02-JST-2-PTH-NO_SILK | symbol | bschulz | fork | kept once, description differs |
+| CONN_02 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02-JST-2-PTH-NO_SILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02-JST-2MM-SMT | symbol | bschulz | fork | older copy skipped |
-| CONN_021X02_NO_SILK | symbol | bschulz | fork | kept once, description differs |
+| CONN_021X02_NO_SILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_023.5MM | symbol | bschulz | fork | older copy skipped |
 | CONN_023.5MM-NO_SILK | symbol | bschulz | fork | older copy skipped |
-| CONN_023.5MM_LOCK | symbol | bschulz | fork | kept once, description differs |
-| CONN_024UCON-15767 | symbol | bschulz | fork | kept once, description differs |
-| CONN_025MM | symbol | bschulz | fork | kept once, description differs |
-| CONN_02JST-PTH-2 | symbol | bschulz | fork | kept once, description differs |
-| CONN_02JST-PTH-2-KIT | symbol | bschulz | fork | kept once, description differs |
-| CONN_02LOCK | symbol | bschulz | fork | kept once, description differs |
-| CONN_02LOCK_LONGPADS | symbol | bschulz | fork | kept once, description differs |
-| CONN_02POGO_PIN_HOLES_ONLY | symbol | bschulz | fork | kept once, description differs |
+| CONN_023.5MM_LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_024UCON-15767 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_025MM | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02JST-PTH-2 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02JST-PTH-2-KIT | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02LOCK_LONGPADS | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02POGO_PIN_HOLES_ONLY | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_02POLAR | symbol | bschulz | fork | older copy skipped |
-| CONN_02POLAR_LOCK | symbol | bschulz | fork | kept once, description differs |
-| CONN_02PTH2 | symbol | bschulz | fork | kept once, description differs |
-| CONN_02PTH3 | symbol | bschulz | fork | kept once, description differs |
-| CONN_02PTH4 | symbol | bschulz | fork | kept once, description differs |
-| CONN_02PTH_RA_FEMALE | symbol | bschulz | fork | kept once, description differs |
-| CONN_02SMALL_POKEHOME | symbol | bschulz | fork | kept once, description differs |
-| CONN_02SPRING-2.54-RA | symbol | bschulz | fork | kept once, description differs |
+| CONN_02POLAR_LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02PTH2 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02PTH3 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02PTH4 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02PTH_RA_FEMALE | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02SMALL_POKEHOME | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_02SPRING-2.54-RA | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_102.54_SCREW | symbol | bschulz | fork | older copy skipped |
 | CONN_102MM | symbol | bschulz | fork | older copy skipped |
 | CONN_102MMSMD | symbol | bschulz | fork | older copy skipped |
@@ -865,24 +865,24 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | CONN_10NO_SILK_PTH_FEMALE | symbol | bschulz | fork | older copy skipped |
 | CONN_10SMD_COMBO-FEMALE | symbol | bschulz | fork | older copy skipped |
 | CONN_10SMD_MALE | symbol | bschulz | fork | older copy skipped |
-| CONN_10X2 | symbol | bschulz | fork | kept once, description differs |
-| CONN_10X22X10_LOCK | symbol | bschulz | fork | kept once, description differs |
-| CONN_10X2NOSILK | symbol | bschulz | fork | kept once, description differs |
-| CONN_10X2SPECIAL | symbol | bschulz | fork | kept once, description differs |
+| CONN_10X2 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_10X22X10_LOCK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_10X2NOSILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_10X2SPECIAL | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_10{dblquote} | symbol | bschulz | fork | older copy skipped |
-| CONN_32.54_SCREW | symbol | bschulz | fork | older copy skipped |
-| CONN_33.5_SCREW | symbol | bschulz | fork | kept once, description differs |
-| CONN_3X21.27MM | symbol | bschulz | fork | kept once, description differs |
-| CONN_42.54 | symbol | bschulz | fork | kept once, description differs |
-| CONN_42.54_NOSILK | symbol | bschulz | fork | kept once, description differs |
-| CONN_42.54_SCREW | symbol | bschulz | fork | kept once, description differs |
-| CONN_5 | symbol | bschulz | fork | kept once, description differs |
+| CONN_32.54_SCREW | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_33.5_SCREW | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_3X21.27MM | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_42.54 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_42.54_NOSILK | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_42.54_SCREW | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_5 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_62.54 | symbol | bschulz | fork | older copy skipped |
 | CONN_6SCREW_2.54 | symbol | bschulz | fork | older copy skipped |
-| CONN_7 | symbol | bschulz | fork | kept once, description differs |
-| CONN_7/90 | symbol | bschulz | fork | kept once, description differs |
-| CONN_82.54 | symbol | bschulz | fork | kept once, description differs |
-| CONN_82.54_SCREW | symbol | bschulz | fork | kept once, description differs |
+| CONN_7 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_7/90 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_82.54 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| CONN_82.54_SCREW | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_MILLI-GRID_14 | symbol | bschulz | fork | kept once |
 | CONN_MILLI-GRID_14NO_PEG | symbol | bschulz | fork | kept once |
 | CONN_MILLI-GRID_14POGO | symbol | bschulz | fork | kept once |
@@ -913,7 +913,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | LED0603 | symbol | bschulz | fork | kept once |
 | LEDXP-E2 | symbol | bschulz | fork | kept once |
 | LM3405 | symbol | bschulz | fork | kept once |
-| LM4040 | symbol | bschulz | fork | kept once, description differs |
+| LM4040 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | LM4132 | symbol | bschulz | fork | older copy skipped |
 | LSF0102DCU | symbol | bschulz | fork | kept once |
 | LSF0102DQE | symbol | bschulz | fork | kept once |
@@ -947,16 +947,16 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MOSFET-NCH-FDS6630A | symbol | bschulz | fork | older copy skipped |
 | MOSFET-NCH-FQP30N06L | symbol | bschulz | fork | older copy skipped |
 | MOSFET-NCH-PSMN7R0 | symbol | bschulz | fork | older copy skipped |
-| MOUNTING_HOLE2_NP | symbol | bschulz | fork | older copy skipped |
-| MOUNTING_HOLE2_PL | symbol | bschulz | fork | older copy skipped |
-| MOUNTING_HOLE4_NP | symbol | bschulz | fork | older copy skipped |
-| MOUNTING_HOLE4_PL | symbol | bschulz | fork | older copy skipped |
+| MOUNTING_HOLE2_NP | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| MOUNTING_HOLE2_PL | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| MOUNTING_HOLE4_NP | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| MOUNTING_HOLE4_PL | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | NC7SZ157SC-70 | symbol | bschulz | fork | kept once |
 | PHOTODIODEMTD5010W | symbol | bschulz | fork | kept once |
 | PHOTODIODESD003-151-001 | symbol | bschulz | fork | kept once |
 | PHOTODIODEVEMD1060 | symbol | bschulz | fork | kept once |
 | POGO_HOLE | symbol | bschulz | fork | kept once |
-| POGO_PAD | symbol | bschulz | fork | older copy skipped |
+| POGO_PAD | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | POWER_JACK | symbol | bschulz | fork | older copy skipped |
 | POWER_JACKPTH_BREAD | symbol | bschulz | fork | kept once |
 | POWER_JACKPTH_LOCK | symbol | bschulz | fork | kept once |
@@ -964,97 +964,97 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | POWER_JACKSLT | symbol | bschulz | fork | kept once |
 | POWER_JACKSMD | symbol | bschulz | fork | kept once |
 | POWER_JACKTOE | symbol | bschulz | fork | kept once |
-| PPTC1.5A | symbol | bschulz | fork | kept once, description differs |
-| PPTC_HALF-AMP | symbol | bschulz | fork | kept once, description differs |
-| PPTC_PTH | symbol | bschulz | fork | kept once, description differs |
-| PPTC_THREE-QUARTER-AMP | symbol | bschulz | fork | kept once, description differs |
+| PPTC1.5A | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| PPTC_HALF-AMP | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| PPTC_PTH | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| PPTC_THREE-QUARTER-AMP | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | PRTR5V0U2X | symbol | bschulz | fork | kept once |
-| R-EU_01005 | symbol | passives | fork | kept once, description differs |
-| R-EU_0204/2V | symbol | passives | fork | kept once, description differs |
-| R-EU_0204/5 | symbol | passives | fork | kept once, description differs |
-| R-EU_0204/7 | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/10 | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/12 | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/15 | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/2V | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/5V | symbol | passives | fork | kept once, description differs |
-| R-EU_0207/7 | symbol | passives | fork | kept once, description differs |
-| R-EU_0309/10 | symbol | passives | fork | kept once, description differs |
-| R-EU_0309/12 | symbol | passives | fork | kept once, description differs |
-| R-EU_0309/V | symbol | passives | fork | kept once, description differs |
-| R-EU_0411/12 | symbol | passives | fork | kept once, description differs |
-| R-EU_0411/15 | symbol | passives | fork | kept once, description differs |
-| R-EU_0411/3V | symbol | passives | fork | kept once, description differs |
-| R-EU_0414/15 | symbol | passives | fork | kept once, description differs |
-| R-EU_0414/5V | symbol | passives | fork | kept once, description differs |
-| R-EU_0613/15 | symbol | passives | fork | kept once, description differs |
-| R-EU_0613/5V | symbol | passives | fork | kept once, description differs |
-| R-EU_0617/17 | symbol | passives | fork | kept once, description differs |
-| R-EU_0617/22 | symbol | passives | fork | kept once, description differs |
-| R-EU_0617/5V | symbol | passives | fork | kept once, description differs |
-| R-EU_0817/22 | symbol | passives | fork | kept once, description differs |
-| R-EU_0817/7V | symbol | passives | fork | kept once, description differs |
-| R-EU_0922/22 | symbol | passives | fork | kept once, description differs |
-| R-EU_0922V | symbol | passives | fork | kept once, description differs |
-| R-EU_1812X7R | symbol | passives | fork | kept once, description differs |
-| R-EU_M0805 | symbol | passives | fork | kept once, description differs |
-| R-EU_M1206 | symbol | passives | fork | kept once, description differs |
-| R-EU_M1406 | symbol | passives | fork | kept once, description differs |
-| R-EU_M2012 | symbol | passives | fork | kept once, description differs |
-| R-EU_M2309 | symbol | passives | fork | kept once, description differs |
-| R-EU_M3216 | symbol | passives | fork | kept once, description differs |
-| R-EU_M3516 | symbol | passives | fork | kept once, description differs |
-| R-EU_M5923 | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0102AX | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0102R | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0102W | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0204R | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0204W | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0207R | symbol | passives | fork | kept once, description differs |
-| R-EU_MELF0207W | symbol | passives | fork | kept once, description differs |
-| R-EU_PRL1632 | symbol | passives | fork | kept once, description differs |
-| R-EU_R0201 | symbol | passives | fork | kept once, description differs |
-| R-EU_R0402 | symbol | passives | fork | older copy skipped |
-| R-EU_R0603 | symbol | passives | fork | older copy skipped |
-| R-EU_R0805 | symbol | passives | fork | kept once, description differs |
-| R-EU_R0805W | symbol | passives | fork | kept once, description differs |
-| R-EU_R1206 | symbol | passives | fork | kept once, description differs |
-| R-EU_R1206W | symbol | passives | fork | kept once, description differs |
-| R-EU_R1210 | symbol | passives | fork | kept once, description differs |
-| R-EU_R1210W | symbol | passives | fork | kept once, description differs |
-| R-EU_R1218 | symbol | passives | fork | kept once, description differs |
-| R-EU_R2010 | symbol | passives | fork | kept once, description differs |
-| R-EU_R2010W | symbol | passives | fork | kept once, description differs |
-| R-EU_R2012 | symbol | passives | fork | kept once, description differs |
-| R-EU_R2012W | symbol | passives | fork | kept once, description differs |
-| R-EU_R2512 | symbol | passives | fork | kept once, description differs |
-| R-EU_R2512W | symbol | passives | fork | kept once, description differs |
-| R-EU_R3216 | symbol | passives | fork | kept once, description differs |
-| R-EU_R3216W | symbol | passives | fork | kept once, description differs |
-| R-EU_R3225 | symbol | passives | fork | kept once, description differs |
-| R-EU_R3225W | symbol | passives | fork | kept once, description differs |
-| R-EU_R4527 | symbol | passives | fork | kept once, description differs |
-| R-EU_R5025 | symbol | passives | fork | kept once, description differs |
-| R-EU_R5025W | symbol | passives | fork | kept once, description differs |
-| R-EU_R6332 | symbol | passives | fork | kept once, description differs |
-| R-EU_R6332W | symbol | passives | fork | kept once, description differs |
-| R-EU_RDH/15 | symbol | passives | fork | kept once, description differs |
-| R-EU_V234/12 | symbol | passives | fork | kept once, description differs |
-| R-EU_V235/17 | symbol | passives | fork | kept once, description differs |
-| R-EU_V526-0 | symbol | passives | fork | kept once, description differs |
-| R-EU_VMTA55 | symbol | passives | fork | kept once, description differs |
-| R-EU_VMTB60 | symbol | passives | fork | kept once, description differs |
-| R-EU_VTA52 | symbol | passives | fork | kept once, description differs |
-| R-EU_VTA53 | symbol | passives | fork | kept once, description differs |
-| R-EU_VTA54 | symbol | passives | fork | kept once, description differs |
-| R-EU_VTA55 | symbol | passives | fork | kept once, description differs |
-| R-EU_VTA56 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC0001 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC0002 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC01/2 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC2515 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC4527 | symbol | passives | fork | kept once, description differs |
-| R-EU_WSC6927 | symbol | passives | fork | kept once, description differs |
+| R-EU_01005 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/2V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/5 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/7 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/10 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/12 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/15 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/2V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/5V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/7 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/10 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/12 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/12 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/15 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/3V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/15 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/5V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/15 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/5V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/17 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/22 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/5V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/22 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/7V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922/22 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922V | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_1812X7R | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M0805 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1206 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1406 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2012 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2309 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3216 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3516 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M5923 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102AX | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102R | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204R | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207R | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_PRL1632 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0201 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0402 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0603 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1218 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R4527 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332W | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_RDH/15 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V234/12 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V235/17 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V526-0 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTA55 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTB60 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA52 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA53 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA54 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA55 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA56 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0001 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0002 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC01/2 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC2515 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC4527 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC6927 | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
 | RESONATORSMD_3.2X1.3 | symbol | bschulz | fork | kept once |
 | RFM69HCW-433 | symbol | bschulz | fork | kept once |
 | RFM69HCW-915 | symbol | bschulz | fork | kept once |
@@ -1067,9 +1067,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SMA | symbol | bschulz | fork | kept once |
 | SMA_EDGE | symbol | bschulz | fork | kept once |
 | SMA_EDGE_UFL | symbol | bschulz | fork | kept once |
-| SMD1,0 | symbol | bschulz | fork | older copy skipped |
-| SMD1,27 | symbol | bschulz | fork | older copy skipped |
-| SMD2 | symbol | bschulz | fork | older copy skipped |
+| SMD1,0 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| SMD1,27 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| SMD2 | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | SN65HVD3 | symbol | bschulz | fork | kept once |
 | SN65HVD33D | symbol | bschulz | fork | kept once |
 | SN65HVD33RHL | symbol | bschulz | fork | kept once |
@@ -1087,8 +1087,8 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SN74HC165D | symbol | bschulz | fork | kept once |
 | SN74HC165N | symbol | bschulz | fork | kept once |
 | SN74HC165PW | symbol | bschulz | fork | kept once |
-| SN74HC590AD | symbol | bschulz | fork | kept once, description differs |
-| SN74HC590AN | symbol | bschulz | fork | kept once, description differs |
+| SN74HC590AD | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
+| SN74HC590AN | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | SN74HC74D | symbol | bschulz | fork | kept once |
 | SN74HC74N | symbol | bschulz | fork | kept once |
 | SN74HC86D | symbol | bschulz | fork | kept once |
@@ -1103,7 +1103,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SX1509 | symbol | bschulz | fork | kept once |
 | TCA9534A | symbol | bschulz | fork | kept once |
 | TCA955RTW | symbol | bschulz | fork | kept once |
-| TESTPOINTRCU | symbol | bschulz | fork | kept once, description differs |
+| TESTPOINTRCU | symbol | bschulz | fork | kept once, BOM fields differ (the first source's stand) |
 | THERMISTOR | symbol | bschulz | fork | kept once |
 | TLV61220DBV | symbol | bschulz | fork | kept once |
 | TPL5010DDC | symbol | bschulz | fork | kept once |
@@ -1140,12 +1140,12 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | ATTINY441/841841 | symbol | bschulz | fork | kept once |
 | ATTINY441/841SOIC441 | symbol | bschulz | fork | kept once |
 | ATTINY441/841SOIC841 | symbol | bschulz | fork | kept once |
-| C-EUC06030.1UF | symbol | passives | fork | older copy skipped |
-| C-EUC060312PF | symbol | passives | fork | older copy skipped |
-| C-EUC06031UF | symbol | passives | fork | older copy skipped |
+| C-EUC06030.1UF | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| C-EUC060312PF | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| C-EUC06031UF | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
 | C-EUC06032.2UF | symbol | passives | fork | kept once |
-| C-EUC080510UF | symbol | passives | fork | older copy skipped |
-| C-EUC080522UF | symbol | passives | fork | older copy skipped |
+| C-EUC080510UF | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
+| C-EUC080522UF | symbol | passives | fork | kept once, BOM fields differ (the first source's stand) |
 | CONN_10X2MALE | symbol | bschulz | fork | kept once |
 | CONN_MILLI-GRID_14FEMALE | symbol | bschulz | fork | kept once |
 | CONN_MILLI-GRID_14MALE | symbol | bschulz | fork | kept once |
@@ -1583,11 +1583,11 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | FDN358P | symbol | bschulz | old | kept once |
 | FT231X-Q | symbol | bschulz | old | older copy skipped |
 | FXMAR2102 | symbol | fork | old | kept once |
-| HEADER_5X2_1.27 | symbol | bschulz | old | older copy skipped |
+| HEADER_5X2_1.27 | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
 | INA219 | symbol | fork | old | kept once |
-| INDUCTORLQS_4X4 | symbol | fork | old | kept once, description differs |
-| INDUCTORLQS_5X5 | symbol | fork | old | kept once, description differs |
-| INDUCTORMAIA_4.1X4.1 | symbol | fork | old | kept once, description differs |
+| INDUCTORLQS_4X4 | symbol | fork | old | kept once, BOM fields differ (the first source's stand) |
+| INDUCTORLQS_5X5 | symbol | fork | old | kept once, BOM fields differ (the first source's stand) |
+| INDUCTORMAIA_4.1X4.1 | symbol | fork | old | kept once, BOM fields differ (the first source's stand) |
 | JST_2MM_MALE | symbol | bschulz | old | kept once |
 | LEDXP-E2 | symbol | bschulz | old | older copy skipped |
 | LED_0402 | symbol | fork | old | older copy skipped |
@@ -1619,97 +1619,97 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | POWER_JACKSLT | symbol | bschulz | old | kept once |
 | POWER_JACKSMD | symbol | bschulz | old | kept once |
 | POWER_JACKTOE | symbol | bschulz | old | kept once |
-| PPTC_HALF-AMP | symbol | bschulz | old | kept once, description differs |
-| PPTC_PTH | symbol | bschulz | old | kept once, description differs |
-| PPTC_THREE-QUARTER-AMP | symbol | bschulz | old | kept once, description differs |
+| PPTC_HALF-AMP | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
+| PPTC_PTH | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
+| PPTC_THREE-QUARTER-AMP | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
 | PRTR5V0U2X | symbol | bschulz | old | kept once |
-| R-EU_01005 | symbol | passives | old | kept once, description differs |
-| R-EU_0204/2V | symbol | passives | old | kept once, description differs |
-| R-EU_0204/5 | symbol | passives | old | kept once, description differs |
-| R-EU_0204/7 | symbol | passives | old | kept once, description differs |
-| R-EU_0207/10 | symbol | passives | old | kept once, description differs |
-| R-EU_0207/12 | symbol | passives | old | kept once, description differs |
-| R-EU_0207/15 | symbol | passives | old | kept once, description differs |
-| R-EU_0207/2V | symbol | passives | old | kept once, description differs |
-| R-EU_0207/5V | symbol | passives | old | kept once, description differs |
-| R-EU_0207/7 | symbol | passives | old | kept once, description differs |
-| R-EU_0309/10 | symbol | passives | old | kept once, description differs |
-| R-EU_0309/12 | symbol | passives | old | kept once, description differs |
-| R-EU_0309/V | symbol | passives | old | kept once, description differs |
-| R-EU_0411/12 | symbol | passives | old | kept once, description differs |
-| R-EU_0411/15 | symbol | passives | old | kept once, description differs |
-| R-EU_0411/3V | symbol | passives | old | kept once, description differs |
-| R-EU_0414/15 | symbol | passives | old | kept once, description differs |
-| R-EU_0414/5V | symbol | passives | old | kept once, description differs |
-| R-EU_0613/15 | symbol | passives | old | kept once, description differs |
-| R-EU_0613/5V | symbol | passives | old | kept once, description differs |
-| R-EU_0617/17 | symbol | passives | old | kept once, description differs |
-| R-EU_0617/22 | symbol | passives | old | kept once, description differs |
-| R-EU_0617/5V | symbol | passives | old | kept once, description differs |
-| R-EU_0817/22 | symbol | passives | old | kept once, description differs |
-| R-EU_0817/7V | symbol | passives | old | kept once, description differs |
-| R-EU_0922/22 | symbol | passives | old | kept once, description differs |
-| R-EU_0922V | symbol | passives | old | kept once, description differs |
-| R-EU_1812X7R | symbol | passives | old | kept once, description differs |
-| R-EU_M0805 | symbol | passives | old | kept once, description differs |
-| R-EU_M1206 | symbol | passives | old | kept once, description differs |
-| R-EU_M1406 | symbol | passives | old | kept once, description differs |
-| R-EU_M2012 | symbol | passives | old | kept once, description differs |
-| R-EU_M2309 | symbol | passives | old | kept once, description differs |
-| R-EU_M3216 | symbol | passives | old | kept once, description differs |
-| R-EU_M3516 | symbol | passives | old | kept once, description differs |
-| R-EU_M5923 | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0102AX | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0102R | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0102W | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0204R | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0204W | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0207R | symbol | passives | old | kept once, description differs |
-| R-EU_MELF0207W | symbol | passives | old | kept once, description differs |
-| R-EU_PRL1632 | symbol | passives | old | kept once, description differs |
-| R-EU_R0201 | symbol | passives | old | kept once, description differs |
-| R-EU_R0402 | symbol | passives | old | older copy skipped |
-| R-EU_R0603 | symbol | passives | old | older copy skipped |
-| R-EU_R0805 | symbol | passives | old | kept once, description differs |
-| R-EU_R0805W | symbol | passives | old | kept once, description differs |
-| R-EU_R1206 | symbol | passives | old | kept once, description differs |
-| R-EU_R1206W | symbol | passives | old | kept once, description differs |
-| R-EU_R1210 | symbol | passives | old | kept once, description differs |
-| R-EU_R1210W | symbol | passives | old | kept once, description differs |
-| R-EU_R1218 | symbol | passives | old | kept once, description differs |
-| R-EU_R2010 | symbol | passives | old | kept once, description differs |
-| R-EU_R2010W | symbol | passives | old | kept once, description differs |
-| R-EU_R2012 | symbol | passives | old | kept once, description differs |
-| R-EU_R2012W | symbol | passives | old | kept once, description differs |
-| R-EU_R2512 | symbol | passives | old | kept once, description differs |
-| R-EU_R2512W | symbol | passives | old | kept once, description differs |
-| R-EU_R3216 | symbol | passives | old | kept once, description differs |
-| R-EU_R3216W | symbol | passives | old | kept once, description differs |
-| R-EU_R3225 | symbol | passives | old | kept once, description differs |
-| R-EU_R3225W | symbol | passives | old | kept once, description differs |
-| R-EU_R4527 | symbol | passives | old | kept once, description differs |
-| R-EU_R5025 | symbol | passives | old | kept once, description differs |
-| R-EU_R5025W | symbol | passives | old | kept once, description differs |
-| R-EU_R6332 | symbol | passives | old | kept once, description differs |
-| R-EU_R6332W | symbol | passives | old | kept once, description differs |
-| R-EU_RDH/15 | symbol | passives | old | kept once, description differs |
-| R-EU_V234/12 | symbol | passives | old | kept once, description differs |
-| R-EU_V235/17 | symbol | passives | old | kept once, description differs |
-| R-EU_V526-0 | symbol | passives | old | kept once, description differs |
-| R-EU_VMTA55 | symbol | passives | old | kept once, description differs |
-| R-EU_VMTB60 | symbol | passives | old | kept once, description differs |
-| R-EU_VTA52 | symbol | passives | old | kept once, description differs |
-| R-EU_VTA53 | symbol | passives | old | kept once, description differs |
-| R-EU_VTA54 | symbol | passives | old | kept once, description differs |
-| R-EU_VTA55 | symbol | passives | old | kept once, description differs |
-| R-EU_VTA56 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC0001 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC0002 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC01/2 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC2515 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC4527 | symbol | passives | old | kept once, description differs |
-| R-EU_WSC6927 | symbol | passives | old | kept once, description differs |
-| SAM-M8Q | symbol | bschulz | old | older copy skipped |
+| R-EU_01005 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/2V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/5 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0204/7 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/10 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/12 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/15 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/2V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/5V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0207/7 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/10 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/12 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0309/V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/12 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/15 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0411/3V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/15 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0414/5V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/15 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0613/5V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/17 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/22 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0617/5V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/22 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0817/7V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922/22 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_0922V | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_1812X7R | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M0805 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1206 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M1406 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2012 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M2309 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3216 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M3516 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_M5923 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102AX | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102R | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0102W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204R | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0204W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207R | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_MELF0207W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_PRL1632 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0201 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0402 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0603 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R0805W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1206W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1210W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R1218 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2010W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2012W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R2512W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3216W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R3225W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R4527 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R5025W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_R6332W | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_RDH/15 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V234/12 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V235/17 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_V526-0 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTA55 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VMTB60 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA52 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA53 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA54 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA55 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_VTA56 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0001 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC0002 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC01/2 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC2515 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC4527 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| R-EU_WSC6927 | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| SAM-M8Q | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
 | SMA | symbol | bschulz | old | kept once |
 | SMA_EDGE | symbol | bschulz | old | kept once |
 | SMA_EDGE_UFL | symbol | bschulz | old | kept once |
@@ -1718,15 +1718,15 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TPS306 | symbol | bschulz | old | kept once |
 | TPS6217 | symbol | bschulz | old | kept once |
 | TPS6217-Q1 | symbol | bschulz | old | kept once |
-| TPS6306 | symbol | bschulz | old | kept once, description differs |
+| TPS6306 | symbol | bschulz | old | kept once, BOM fields differ (the first source's stand) |
 | TPS715XX | symbol | bschulz | old | kept once |
 | UBLOX_MAX-8 | symbol | bschulz | old | kept once |
-| C-EUC06030.1UF | symbol | passives | old | older copy skipped |
-| C-EUC060312PF | symbol | passives | old | older copy skipped |
-| C-EUC06031UF | symbol | passives | old | older copy skipped |
+| C-EUC06030.1UF | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| C-EUC060312PF | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| C-EUC06031UF | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
 | C-EUC06032.2UF | symbol | passives | old | kept once |
-| C-EUC080510UF | symbol | passives | old | older copy skipped |
-| C-EUC080522UF | symbol | passives | old | older copy skipped |
+| C-EUC080510UF | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
+| C-EUC080522UF | symbol | passives | old | kept once, BOM fields differ (the first source's stand) |
 | MAX6070AAUT12 | symbol | bschulz | old | older copy skipped |
 | MAX6070AAUT18 | symbol | bschulz | old | older copy skipped |
 | MAX6070AAUT21 | symbol | bschulz | old | older copy skipped |
@@ -1752,7 +1752,6 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | PARTICLE_M.2EKEY_NOPROG | footprint | board:okapi as `PARTICLE_M.2EKEY_NOPROG` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | R0603 | footprint | passives as `R0603` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
-| SOT23-3@1 | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board margay (awickert) | unchecked: no front-side instance |

@@ -12,8 +12,10 @@ PREFER_FIRST is a collision Andy has settled: the first copy stands, the later
 one is not kept, and the later source's symbols point at the first. Every symbol's Footprint field is
 rewritten from the Eagle library name to nw-cold-silicon and to the merged
 footprint name, since the merged library has one nickname. Two symbols that
-differ only in their Description property count as identical and the earlier
-one is kept (a description is neither geometry nor connectivity); COLLISIONS.md
+differ only in BOM properties (BOM_PROPS: description, datasheet, manufacturer
+and part numbers) count as identical and the earlier one is kept, so the
+dedicated passives library's purchasing data stands. ALIASES collapses a second
+copy under another name onto the first; COLLISIONS.md
 says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
 every number in them is the build's.
 --upto stops after the named source, for one commit per source.
@@ -58,7 +60,11 @@ PREFER_FIRST={  # a same-name collision between PRIMARY sources settled by decis
  'R1206':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
  'R2010':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
  'R2512':"Andy, 2026-11-02: bschulz_passives' for every passive. The passives library is Bobby's later revision (2017-11-16) of the pads in bschulz; every passive on Okapi and Margay but R48 was placed from it.",
+ 'LTC4412S6':"Andy, 2026-11-02, no doubles: bschulz's (reference U, SOT23-6L, pin SENSE; Okapi U7 uses it). awickert's older drawing (reference IC, TSOT23-6, pin SEN) is used by no board.",
  'LINX_BAT-HLD-012-SMT':"Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad.",
+}
+ALIASES={  # a second copy under another name, collapsed onto the first; symbols and boards that named it get the target
+ 'SOT23-3@1':('SOT23-3',"Eagle's second copy of SOT23-3 in bschulz: identical pads, text size and a 0.0635 against 0.1016 mm mask margin the only differences (Andy, 2026-11-02, no doubles)."),
 }
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
@@ -67,7 +73,10 @@ def run(cmd):
 def git(path,*a):
     return subprocess.run(['git','-C',os.path.dirname(path)]+list(a),capture_output=True,text=True).stdout.strip()
 def norm(t): return re.sub(r'\n\s*\(uuid "[^"]+"\)','',t)
-def nodesc(t): return re.sub(r'\t\t\(property "Description" "(?:[^"\\]|\\.)*"','',t)
+BOM_PROPS=('Description','Datasheet','MF','MPN','DIGIKEY','DIGIKEY_PN','MOUSER','PARTNO')
+def nodesc(t):
+    """The symbol with its BOM-only properties removed: what is left is the drawing, the pins and the footprint."""
+    return re.sub(r'\t\t\(property "(?:%s)" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n'%'|'.join(BOM_PROPS),'',t,flags=re.S)
 def refoot(block,fpmap):
     def rep(m):
         name=m.group(1).split(':')[-1]; return '(property "Footprint" "%s:%s"'%(LIB,fpmap.get(name,name))
@@ -96,6 +105,8 @@ for key,rel,kind in SOURCES:
     for f in sorted(os.listdir(d+'.pretty')):
         if not f.endswith('.kicad_mod'): continue
         name=f[:-10]; t=open(os.path.join(d+'.pretty',f)).read(); npk+=1; fpmap.setdefault(key,{})[name]=name
+        if name in ALIASES:
+            fpmap[key][name]=ALIASES[name][0]; coll.append(f'| {name} | footprint | – | {key} | collapsed onto `{ALIASES[name][0]}`: {ALIASES[name][1]} |'); continue
         if name not in fps: fps[name]=t; fpsrc[name]=key; continue
         if norm(fps[name])==norm(t): coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | kept once |'); continue
         if kind=='PRIMARY' and name in PREFER_FIRST:
@@ -109,7 +120,9 @@ for key,rel,kind in SOURCES:
         nsy+=1; b=refoot(b,fpmap.get(key,{}))
         if name not in syms: syms[name]=b; symsrc[name]=key; continue
         if syms[name]==b: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept once |'); continue
-        if nodesc(syms[name])==nodesc(b): coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept once, description differs |'); continue
+        if nodesc(syms[name])==nodesc(b): coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept once, BOM fields differ (the first source\'s stand) |'); continue
+        if kind=='PRIMARY' and name in PREFER_FIRST:
+            coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | kept the first by decision: {PREFER_FIRST[name]} |'); continue
         if kind=='PRIMARY':
             new=f'{name}_{key}'; syms[new]=rename_sym(b,name,new); symsrc[new]=key
             coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | both: `{new}` |')
@@ -130,6 +143,7 @@ if not upto:
                 ref=re.search(r'\(property "Reference" "([^"]*)"',b).group(1); groups[el.get(ref,(None,None))[0]].append(b)
             for lib,ins in groups.items():
                 key=EAGLE_KEY.get(lib); merged=fpmap.get(key,{}).get(n) if key else None
+                if merged is None and n in ALIASES: merged=ALIASES[n][0]
                 if merged is None and n in fps: merged=n
                 if merged is None:
                     fps[n]=from_eagle(os.path.join(ws,brd),[(lib,n)],os.path.join(tmp,'brd',bkey))[n]; fpsrc[n]=f'board:{bkey}'; fpmap.setdefault(bkey,{})[n]=n; merged=n; n_add+=1; added=True
