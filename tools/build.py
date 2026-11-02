@@ -75,8 +75,12 @@ def git(path,*a):
 def norm(t): return re.sub(r'\n\s*\(uuid "[^"]+"\)','',t)
 BOM_PROPS=('Description','Datasheet','MF','MPN','DIGIKEY','DIGIKEY_PN','MOUSER','PARTNO')
 def nodesc(t):
-    """The symbol with its BOM-only properties removed: what is left is the drawing, the pins and the footprint."""
-    return re.sub(r'\t\t\(property "(?:%s)" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n'%'|'.join(BOM_PROPS),'',t,flags=re.S)
+    """The symbol with its BOM-only properties removed and the rest of its properties sorted:
+    what is left is the drawing, the pins, the footprint and the other fields, whatever their order."""
+    t=re.sub(r'\t\t\(property "(?:%s)" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n'%'|'.join(BOM_PROPS),'',t,flags=re.S)
+    props=re.findall(r'\t\t\(property "[^"]*" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n',t,flags=re.S)
+    rest=re.sub(r'\t\t\(property "[^"]*" "(?:[^"\\]|\\.)*"\n.*?\n\t\t\)\n','',t,flags=re.S)
+    return rest+''.join(sorted(props))
 def refoot(block,fpmap):
     def rep(m):
         name=m.group(1).split(':')[-1]; return '(property "Footprint" "%s:%s"'%(LIB,fpmap.get(name,name))
