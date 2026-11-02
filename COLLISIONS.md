@@ -343,7 +343,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | R-EU_R060310K | symbol | passives | bschulz | both: `R-EU_R060310K_bschulz` |
 | R-EU_R060327 | symbol | passives | bschulz | both: `R-EU_R060327_bschulz` |
 | R-EU_R0603330 | symbol | passives | bschulz | both: `R-EU_R0603330_bschulz` |
-| LINX_BAT-HLD-012-SMT | footprint | bschulz | awickert | both: `LINX_BAT-HLD-012-SMT_awickert` |
+| LINX_BAT-HLD-012-SMT | footprint | bschulz | awickert | kept the first by decision: Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad. |
 | LTC4412S6 | symbol | bschulz | awickert | both: `LTC4412S6_awickert` |
 | 0204V | footprint | passives | fork | kept once |
 | 0204_5 | footprint | passives | fork | kept once |

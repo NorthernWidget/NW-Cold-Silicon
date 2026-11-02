@@ -7,7 +7,9 @@ then merges them in the precedence order of SOURCES. A name that appears in two
 sources with identical content (uuid lines ignored) is kept once. A name whose
 content differs is kept from the earlier source under its own name and from a
 later PRIMARY source under NAME_<key>, so nothing is lost; from an EXTRAS source
-(an older fork or copy) only names absent so far are added. Every symbol's Footprint field is
+(an older fork or copy) only names absent so far are added. A name in
+PREFER_FIRST is a collision Andy has settled: the first copy stands, the later
+one is not kept, and the later source's symbols point at the first. Every symbol's Footprint field is
 rewritten from the Eagle library name to nw-cold-silicon and to the merged
 footprint name, since the merged library has one nickname. Two symbols that
 differ only in their Description property count as identical and the earlier
@@ -44,6 +46,9 @@ NOTES={  # what is known about a package no source library holds; printed under 
  'SOT23-3@1':"Eagle's name for a second SOT23-3 variant in bschulz; identical on the Okapi and Margay boards.",
  'USB_MICRO_VERT_MOLEX':"from Bobby's working copy of bschulz, never committed to Cold-Silicon.",
  'PARTICLE_M.2EKEY_NOPROG':"from Bobby's working copy of bschulz, never committed to Cold-Silicon.",
+}
+PREFER_FIRST={  # a same-name collision between PRIMARY sources settled by decision: the later copy is not kept, its symbols point at the first
+ 'LINX_BAT-HLD-012-SMT':"Andy, 2026-11-02: bschulz's. Pads identical; bschulz's puts no solder paste on the 10.16 mm center pad and both boards were built with it; awickert's opens the stencil over the whole pad.",
 }
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
@@ -83,6 +88,8 @@ for key,rel,kind in SOURCES:
         name=f[:-10]; t=open(os.path.join(d+'.pretty',f)).read(); npk+=1; fpmap.setdefault(key,{})[name]=name
         if name not in fps: fps[name]=t; fpsrc[name]=key; continue
         if norm(fps[name])==norm(t): coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | kept once |'); continue
+        if kind=='PRIMARY' and name in PREFER_FIRST:
+            coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | kept the first by decision: {PREFER_FIRST[name]} |'); continue
         if kind=='PRIMARY':
             new=f'{name}_{key}'; fps[new]=t.replace(f'(footprint "{name}"',f'(footprint "{new}"',1); fpsrc[new]=key; fpmap[key][name]=new
             coll.append(f'| {name} | footprint | {fpsrc[name]} | {key} | both: `{new}` |')
