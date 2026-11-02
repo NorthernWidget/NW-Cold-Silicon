@@ -38,6 +38,13 @@ BOARDS=[  # key, KiCad board, Eagle board (for each element's library of origin)
  ('okapi','Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb','Project-Okapi/Hardware/Okapi.brd'),
  ('margay','Project-Margay/Hardware/KiCAD/Margay.kicad_pcb','Project-Margay/Hardware/Margay.brd'),
 ]
+NOTES={  # what is known about a package no source library holds; printed under the Boards table
+ 'SD_WURTH_WR-CRD':"full-size SD holder, Würth Elektronik 693063010911 (the package's own datasheet link), drawn by Bobby Schulz; in no committed Eagle library. Adafruit's SDCARD has the same pitch and pad count with 4.0 by 1.2 mm signal pads against 1.0 by 1.5 here, a relative and not the source (Andy, 2026-11-02: Bobby's is the one).",
+ 'USB_C_CUSB31-CFM2AX-01-X':"USB-C receptacle; Okapi.brd and Margay.brd name Adafruit's microbuilder library, which does not hold it in the 2015 release that is Adafruit's current master.",
+ 'SOT23-3@1':"Eagle's name for a second SOT23-3 variant in bschulz; identical on the Okapi and Margay boards.",
+ 'USB_MICRO_VERT_MOLEX':"from Bobby's working copy of bschulz, never committed to Cold-Silicon.",
+ 'PARTICLE_M.2EKEY_NOPROG':"from Bobby's working copy of bschulz, never committed to Cold-Silicon.",
+}
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
 def run(cmd):
@@ -122,6 +129,7 @@ if not upto:
                 else:
                     n_dif+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}pads differ: KiCad board copy not taken over |')
         prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
+    prov+=['','Added from the boards:','']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
 for name,t in fps.items():
