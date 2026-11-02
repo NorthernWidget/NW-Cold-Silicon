@@ -1747,15 +1747,16 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TPS62177 | symbol | bschulz | old | kept once |
 | TPS63060 | symbol | bschulz | old | kept once |
 | TPS63061 | symbol | bschulz | old | kept once |
-| LINX_BAT-HLD-012-SMT | footprint | bschulz as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| 4_40_CLOSE | footprint | board margay | bschulz | taken from the board's Eagle file by decision: Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing. |
+| LINX_BAT-HLD-012-SMT | footprint | board okapi | bschulz, awickert, fork | taken from the board's Eagle file by decision: Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's. |
+| LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board okapi (awickert) | unchecked: no front-side instance |
 | PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
-| R0603 | footprint | passives as `R0603` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
 | USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
+| LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board margay (awickert) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
-| USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board margay (microbuilder, 1 placed) | pads differ: KiCad board copy not taken over |

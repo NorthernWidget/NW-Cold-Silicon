@@ -15,7 +15,8 @@ footprint name, since the merged library has one nickname. Two symbols that
 differ only in BOM properties (BOM_PROPS: description, datasheet, manufacturer
 and part numbers) count as identical and the earlier one is kept, so the
 dedicated passives library's purchasing data stands. ALIASES collapses a second
-copy under another name onto the first; COLLISIONS.md
+copy under another name onto the first; BOARD_PREFERRED takes a package from a
+board's Eagle file where that is the newer drawing; COLLISIONS.md
 says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
 every number in them is the build's.
 --upto stops after the named source, for one commit per source.
@@ -65,6 +66,10 @@ PREFER_FIRST={  # a same-name collision between PRIMARY sources settled by decis
 }
 ALIASES={  # a second copy under another name, collapsed onto the first; symbols and boards that named it get the target
  'SOT23-3@1':('SOT23-3',"Eagle's second copy of SOT23-3 in bschulz: identical pads, text size and a 0.0635 against 0.1016 mm mask margin the only differences (Andy, 2026-11-02, no doubles)."),
+}
+BOARD_PREFERRED={  # a package whose newest drawing is the copy in a board's Eagle file, not the committed .lbr: taken from that board
+ '4_40_CLOSE':('margay',"Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing."),
+ 'LINX_BAT-HLD-012-SMT':('okapi',"Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's."),
 }
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
@@ -135,6 +140,11 @@ for key,rel,kind in SOURCES:
         else: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | older copy skipped |')
     prov.append(f'| {key} | {kind} | `{rel}` | {git(src,"log","-1","--format=%h %cs","--",os.path.basename(src))} | {npk} | {nsy} | {"; ".join(warn) or "–"} |')
 if not upto:
+    for name,(bkey,why) in BOARD_PREFERRED.items():
+        _,pcb,brd=[b for b in BOARDS if b[0]==bkey][0]
+        lib=[e.get('library') for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element') if e.get('package')==name][0]
+        fps[name]=from_eagle(os.path.join(ws,brd),[(lib,name)],os.path.join(tmp,'brd',bkey))[name]; fpsrc[name]=f'board:{bkey}'
+        coll.append(f'| {name} | footprint | board {bkey} | {", ".join(k for k,v in fpmap.items() if name in v)} | taken from the board\'s Eagle file by decision: {why} |')
     prov+=['','## Boards','','Footprints embedded in the KiCad boards, each matched to the library through its element\'s Eagle library of origin. A name no source library holds is added from the Eagle board\'s own package definition through `kicad-cli pcb import`, the converter that built the rest. Columns: identical to the library copy in pads and graphics; same pads but the KiCad board\'s copy (a June 2026 import) draws the graphics or sizes a non-plated hole differently; pads differ (the board copy is NOT taken over; COLLISIONS.md lists it); unchecked means the board has no front-side instance to compare.','',
            '| board | file | embedded names | identical | pads identical | pads differ | added | unchecked |','|---|---|---|---|---|---|---|---|']
     for bkey,pcb,brd in BOARDS:
