@@ -1749,10 +1749,10 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TPS63061 | symbol | bschulz | old | kept once |
 | LINX_BAT-HLD-012-SMT | footprint | bschulz as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board okapi (awickert) | unchecked: no front-side instance |
-| PARTICLE_M.2EKEY_NOPROG | footprint | board:okapi as `PARTICLE_M.2EKEY_NOPROG` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
+| PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | R0603 | footprint | passives as `R0603` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
-| USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
+| USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
 | USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | NWLOGO_MED | footprint | awickert | board margay (awickert) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
