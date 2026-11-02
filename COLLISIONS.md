@@ -1753,7 +1753,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | R0603 | footprint | passives as `R0603` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
-| USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; same pads, KiCad board copy draws graphics differently |
+| USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | NWLOGO_MED | footprint | awickert | board margay (awickert) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |

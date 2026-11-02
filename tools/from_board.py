@@ -39,8 +39,9 @@ def as_library(instances,name):
     b=re.sub(r'\(property "Value" "[^"]*"','(property "Value" "%s"'%name,b,count=1)
     b=re.sub(r'^\t+\(net \d+ "[^"]*"\)\n','',b,flags=re.M)
     b=re.sub(r'\(uuid "[^"]+"\)',lambda m:'(uuid "%s")'%uuid.uuid4(),b)
-    # the board importer puts graphics from Eagle layers it cannot map on "Rescue", which a board file may not carry
-    b,n=re.subn(r'^\t\t\((?:fp_line|fp_poly|fp_circle|fp_arc|fp_rect|fp_text)\n(?:(?!^\t\t\)).*\n)*?\t\t\t\(layer "Rescue"\)\n(?:(?!^\t\t\)).*\n)*?\t\t\)\n','',b,flags=re.M)
+    # the board importer writes graphics from Eagle layers it cannot map (Milling, 46) on layer "UNDEFINED", which
+    # fp upgrade then renames "Rescue"; a board file may carry neither, and the library converter drops them with a warning
+    b,n=re.subn(r'^\t\t\((?:fp_line|fp_poly|fp_circle|fp_arc|fp_rect|fp_text)\n(?:(?!^\t\t\)).*\n)*?\t\t\t\(layer "(?:UNDEFINED|Rescue)"\)\n(?:(?!^\t\t\)).*\n)*?\t\t\)\n','',b,flags=re.M)
     as_library.dropped_rescue=getattr(as_library,'dropped_rescue',0)+n
     return '\n'.join(l[1:] if l.startswith('\t') else l for l in b.split('\n'))
 def sig(text):
