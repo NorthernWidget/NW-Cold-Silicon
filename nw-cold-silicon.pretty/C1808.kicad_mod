@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -2.233 -1.827 0)
 		(layer "F.SilkS")
-		(uuid "549c58c4-bbb5-496f-84fe-2b8b2e279836")
+		(uuid "96318d9a-16c7-4a9e-b231-81c5a916bd6b")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -19,7 +19,7 @@
 	(property "Value" "C1808"
 		(at -2.233 2.842 0)
 		(layer "F.Fab")
-		(uuid "1d4afaef-97a6-43f8-8137-b86badd7d547")
+		(uuid "12b0cc71-1d44-4034-b34a-ccb3b8751da8")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "7534b30d-95c3-46e0-aa85-aba228b82f81")
+		(uuid "adb6949d-7fa5-41d2-bda9-49348e8dc714")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ad7b5eb9-d8a4-4c5a-a739-ed8aea1b22b1")
+		(uuid "520a5291-8968-417a-bd4f-2b192f778237")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "9562a6ec-112d-499c-8618-e247feeaaee2")
+		(uuid "a392d721-f264-4566-a359-32a12cdc7203")
 	)
 	(fp_line
 		(start -1.4478 0.9502)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "35280789-0a30-4b5c-944e-89ef63735657")
+		(uuid "812670a5-0208-436d-95fc-9c989484f22c")
 	)
 	(fp_poly
 		(pts
@@ -81,7 +81,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "fbfd0971-6c9a-4ca3-ac6d-c535a16049bf")
+		(uuid "2961331f-a1d4-4d50-a0d0-767127bfc9ed")
 	)
 	(fp_poly
 		(pts
@@ -93,7 +93,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "57ae786c-2279-48de-9e44-90081ca9df62")
+		(uuid "a81468b9-876c-49a6-bdc8-d0ca9eec1a0c")
 	)
 	(pad "1" smd rect
 		(at -1.95 0)
@@ -102,7 +102,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "614574ee-2cc4-44c8-a2d4-7ac3258a6b39")
+		(uuid "009886be-f1eb-4a9d-b96f-601677410d80")
 	)
 	(pad "2" smd rect
 		(at 1.95 0)
@@ -111,7 +111,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "c74d57e3-75db-4e58-adaa-20ab24ae7f8b")
+		(uuid "280e030a-2a39-4ee4-874b-27e5b99ff5d0")
 	)
 	(embedded_fonts no)
 )

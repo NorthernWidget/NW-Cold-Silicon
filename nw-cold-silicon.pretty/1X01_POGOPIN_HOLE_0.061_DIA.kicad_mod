@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.27 -1.143 0)
 		(layer "F.SilkS")
-		(uuid "264cc59c-d4b6-4b17-b6ca-29c85ac8570e")
+		(uuid "ecd646cf-37f2-46b6-a089-52f69a847792")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -19,7 +19,7 @@
 	(property "Value" "1X01_POGOPIN_HOLE_0.061_DIA"
 		(at -1.27 1.778 0)
 		(layer "F.Fab")
-		(uuid "39e6ddd9-2f6d-4b42-954f-b4fd54df5505")
+		(uuid "899be688-248b-4660-abe0-4be497a259c6")
 		(effects
 			(font
 				(size 0.48768 0.48768)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b5862533-669a-4aa6-8aba-08698344318c")
+		(uuid "7a8836ba-7dfa-4fda-b59d-3259e2ac03e7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d64b44f8-6bc2-47c0-85bc-ebc908f3da82")
+		(uuid "866619b3-5e8d-456e-a121-b917946389ae")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -60,14 +60,14 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "1758ba90-bf95-457b-bc94-37cdda62d6bb")
+		(uuid "d0bf904f-78b2-4994-b6f6-a73c95cfbc0d")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 0)
 		(size 1.5494 1.5494)
 		(drill 1.5494)
 		(layers "*.Cu" "*.Mask")
-		(uuid "45a98846-a943-42f9-93c8-71f670316c47")
+		(uuid "8ac2de1c-3221-48f7-bda7-fac6140145f0")
 	)
 	(pad "1" thru_hole circle
 		(at 0 0 90)
@@ -78,7 +78,7 @@
 		(solder_mask_margin 0.1016)
 		(zone_connect 2)
 		(thermal_bridge_angle 0)
-		(uuid "60cd4b2d-40d4-4cda-bc06-6ea59af182f9")
+		(uuid "335db187-cdef-4781-aff5-f5a59958bec1")
 	)
 	(embedded_fonts no)
 )

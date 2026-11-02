@@ -1,0 +1,78 @@
+(footprint "AWICKERT_LINX_BAT-HLD-012-SMT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "ee0fcc78-9571-4434-a273-e3d9f887fd91")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "194e67d0-06e4-4391-92f4-a1c2aa215fd4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63a762f0-2165-4909-95be-fd177fc53cba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "77bae3e6-c356-4a12-bb57-5e8f29191d92")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "GND" smd roundrect
+		(at 0 0)
+		(size 10.16 10.16)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.5)
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "05bbd90a-f5fe-4d54-a487-44883fdaf3b1")
+	)
+	(pad "POWER0" smd rect
+		(at -7.62 0)
+		(size 2.54 5.08)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "8761f161-a05f-4f37-a084-276f573b6877")
+	)
+	(pad "POWER1" smd rect
+		(at 7.62 0)
+		(size 2.54 5.08)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "d511a0e0-57ac-4522-bc8d-4caa0b6ba427")
+	)
+	(embedded_fonts no)
+)

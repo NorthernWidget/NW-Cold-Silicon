@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -2.1336 -1.1684 0)
 		(layer "F.SilkS")
-		(uuid "6ec4751e-d2da-49e7-9b27-b0a47e6cb4e4")
+		(uuid "8baae52b-1d9a-4a6b-98f8-bc52032b3767")
 		(effects
 			(font
 				(size 1.143 1.143)
@@ -19,7 +19,7 @@
 	(property "Value" "0204V"
 		(at -2.1336 2.3114 0)
 		(layer "F.Fab")
-		(uuid "0257bef4-156a-4419-a1cb-63750bed5e2c")
+		(uuid "8971f826-5161-4ab5-a0c9-a3ac92cec706")
 		(effects
 			(font
 				(size 1.143 1.143)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "753c52d1-35ff-4d04-8d80-e0ebc490f1a3")
+		(uuid "95ce0d5b-2f12-44fa-9b1e-dc97af0c7b85")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d961e2ce-b103-4312-bf5c-6476a79a6597")
+		(uuid "9747f169-b099-4adf-9ffc-ad0b5ff62cd5")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "45dd4d25-18b3-4011-8ee3-7260fd976940")
+		(uuid "20f4670c-db5a-4d5a-9fdd-702c9fc21234")
 	)
 	(fp_line
 		(start -1.27 0)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "607159d6-790c-4a89-912c-1cbb77fc0f2c")
+		(uuid "605b5dac-c605-42da-8a41-bf4d8afc9955")
 	)
 	(fp_circle
 		(center -1.27 0)
@@ -80,7 +80,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "4aae0437-fde0-4e8b-9a99-750e1ed239f5")
+		(uuid "ad4773a2-502a-4ef4-aa46-60f26613c9b7")
 	)
 	(fp_circle
 		(center -1.27 0)
@@ -91,7 +91,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "0d71b214-50c1-430d-8470-f965d4d005c8")
+		(uuid "eca9257a-51e8-4a63-af48-86487fd4a756")
 	)
 	(pad "1" thru_hole roundrect
 		(at -1.27 0)
@@ -104,7 +104,7 @@
 		(chamfer top_left top_right bottom_left bottom_right)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "8192c1b4-7d76-40c7-bf5d-19af15f9ba8b")
+		(uuid "7ac98dee-d194-4cf6-a68b-8596e110541e")
 	)
 	(pad "2" thru_hole roundrect
 		(at 1.27 0)
@@ -117,7 +117,7 @@
 		(chamfer top_left top_right bottom_left bottom_right)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "6f1e5aae-7e18-4e74-8f1a-0b4844209888")
+		(uuid "3e4a9eda-647a-48e0-8d9c-68836b13bd73")
 	)
 	(embedded_fonts no)
 )

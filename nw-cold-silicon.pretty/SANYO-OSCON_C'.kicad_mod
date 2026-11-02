@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -1.905 -1.27 0)
 		(layer "F.SilkS")
-		(uuid "97d635dd-bfd5-41b6-869e-1ad6c6b6c0e6")
+		(uuid "e393724f-00ef-4361-ba8b-d69887ed0620")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -19,7 +19,7 @@
 	(property "Value" "SANYO-OSCON_C'"
 		(at -1.905 2.54 0)
 		(layer "F.Fab")
-		(uuid "85a7455a-46b4-4906-9a44-72ef276db5c5")
+		(uuid "3326212d-a933-4d0e-9e82-4c73359fc877")
 		(effects
 			(font
 				(size 1.1684 1.1684)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3ac9445b-ff2a-4317-9b80-2aa0e68200b1")
+		(uuid "3ddf765a-8df6-4084-bd03-ca97e560d37d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "7aca7c50-b773-498f-ba1a-618fc182c913")
+		(uuid "c1434ad8-9829-45b1-b99d-2a522dac4503")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3512bc78-9be5-4dfb-93c0-1b5cf1eb4616")
+		(uuid "105b790b-f425-4981-8573-8bc4989d726f")
 	)
 	(fp_circle
 		(center 0 0)
@@ -70,7 +70,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "e81564dc-3d23-4174-a457-4e524c201824")
+		(uuid "4cd0b7e5-dbd5-49d5-a416-adc02019c80c")
 	)
 	(pad "+" thru_hole circle
 		(at 1.25 0)
@@ -80,7 +80,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "6c648773-01a0-4079-a83b-811409f94d9f")
+		(uuid "56f750a8-60f4-48a3-9435-227a495c9f0b")
 	)
 	(pad "-" thru_hole circle
 		(at -1.25 0)
@@ -90,7 +90,7 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.1016)
 		(thermal_bridge_angle 0)
-		(uuid "a5171dbf-1556-4071-b76b-765abc1dc1c3")
+		(uuid "b54a5d02-047b-4ddb-acac-5eab04924024")
 	)
 	(embedded_fonts no)
 )

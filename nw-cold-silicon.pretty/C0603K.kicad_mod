@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at -0.8 -0.65 0)
 		(layer "F.SilkS")
-		(uuid "88e0b16b-fb5d-47ab-bd46-e4bccfc4b834")
+		(uuid "e9fae2cf-bef1-4a12-ad14-7eabe1cb0078")
 		(effects
 			(font
 				(size 0.93472 0.93472)
@@ -19,7 +19,7 @@
 	(property "Value" "C0603K"
 		(at -0.8 1.65 0)
 		(layer "F.Fab")
-		(uuid "71993d9b-f9ce-4fdd-92d3-1423a7ffe7a2")
+		(uuid "b44a4894-d5e0-4d32-89c8-97bcb083b1f3")
 		(effects
 			(font
 				(size 0.93472 0.93472)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "4e196e17-c2bb-4468-bbd9-d4ee177a3f88")
+		(uuid "c791612f-c565-4c03-8466-b48c9818f8e9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "663b43db-399f-45e2-a186-bf81dd68d7ab")
+		(uuid "cc7c2d30-47bd-4b04-b4ed-a116014ea2ef")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -59,7 +59,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "491c119a-de17-446f-8ca3-5b0fe85fd128")
+		(uuid "042025fe-258f-4430-a444-8d0c22b8744e")
 	)
 	(fp_line
 		(start 0.725 0.35)
@@ -69,7 +69,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "e9e84831-b99f-494c-a8bd-99575fac6d1d")
+		(uuid "23955ab4-869b-4a91-8fd6-910516da4751")
 	)
 	(fp_poly
 		(pts
@@ -81,7 +81,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "cf52955a-3351-493b-9932-5bcf0cea01f9")
+		(uuid "813d4148-ceb9-477d-a6d5-628c5a2fec12")
 	)
 	(fp_poly
 		(pts
@@ -93,7 +93,7 @@
 		)
 		(fill yes)
 		(layer "F.Fab")
-		(uuid "c134e45d-0296-4c48-afa3-706000d1cbb2")
+		(uuid "1fa5f068-d59d-4548-8aaa-3bebdefb2592")
 	)
 	(pad "1" smd rect
 		(at -0.875 0)
@@ -102,7 +102,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "7ef22eb1-3dfc-44c9-981e-c513bad62974")
+		(uuid "62832624-85e2-418e-a18a-6a0367e9d88f")
 	)
 	(pad "2" smd rect
 		(at 0.875 0)
@@ -111,7 +111,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "3c05979e-d86f-4581-a539-e6df674dfc7f")
+		(uuid "3eb1875a-3e2a-4572-9067-57dfb3e942f9")
 	)
 	(embedded_fonts no)
 )

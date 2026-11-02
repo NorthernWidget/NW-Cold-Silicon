@@ -7,7 +7,7 @@
 	(property "Reference" "REF**"
 		(at 0 1.778 0)
 		(layer "F.SilkS")
-		(uuid "0cfb91bf-5c8d-48a8-968d-ac4e9045bd44")
+		(uuid "d29df166-a1cb-40aa-ad6a-5fbe738a5ee4")
 		(effects
 			(font
 				(size 0.51816 0.51816)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "7ed6fe73-bcc2-4c8e-a04c-f1c8d58d0d4e")
+		(uuid "c4bf589b-b5e1-4e2f-b700-fc73472c1f44")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8f0a9d82-104f-4e51-990c-79d0978704f3")
+		(uuid "8c95b10b-9429-4d83-8d2f-6e8427529704")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dc5456da-6040-4d16-96aa-9f42e1f12a8f")
+		(uuid "f5469b78-6a57-45b8-86a6-f7ae72bb99eb")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -58,7 +58,7 @@
 		)
 		(fill yes)
 		(layer "F.Cu")
-		(uuid "f34298ca-78d8-4e02-84f7-f99e924c6337")
+		(uuid "a33dc4aa-d48b-488c-9724-ac15ac1e83ca")
 	)
 	(fp_poly
 		(pts
@@ -70,7 +70,7 @@
 		)
 		(fill yes)
 		(layer "F.Mask")
-		(uuid "4ab444ce-c662-41a1-8c86-34a0db3bbdc2")
+		(uuid "c4ddf010-7597-4f48-803b-566a3a1dbd33")
 	)
 	(fp_line
 		(start -1.225 -1.225)
@@ -80,7 +80,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "da3e5768-ec6e-4171-8f6b-ba632370cb66")
+		(uuid "63c0b2a8-9d5d-4e5a-9628-2f401cc9ae16")
 	)
 	(fp_line
 		(start -1.225 1.225)
@@ -90,7 +90,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e5a9e914-cc06-4cf8-86df-b119fe2306b1")
+		(uuid "ea2f8f2e-3740-42ef-869e-57498d3b1904")
 	)
 	(fp_line
 		(start 1.225 -1.225)
@@ -100,7 +100,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "643a80c0-8a20-4e41-bdd8-ded5ec5526dd")
+		(uuid "eeb5be9b-5ff4-4bd8-b34f-8cb600a41555")
 	)
 	(fp_line
 		(start 1.225 1.225)
@@ -110,7 +110,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4eb629d9-36a3-4f2d-ab22-ba6fac4c8382")
+		(uuid "43ae570c-6faa-4225-97d6-8362dfeafe95")
 	)
 	(fp_circle
 		(center -1.524 -1.524)
@@ -121,7 +121,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "3dadfc65-4cac-48c5-a4c9-8a43027ca78b")
+		(uuid "1859ac15-ef2b-4bac-8f75-fe7102a831bb")
 	)
 	(fp_poly
 		(pts
@@ -133,7 +133,7 @@
 		)
 		(fill yes)
 		(layer "F.Paste")
-		(uuid "1a2dd9d8-41d8-4083-ba7f-4531b0a925cd")
+		(uuid "91055a25-c00d-48de-807d-bcc400ef332f")
 	)
 	(pad "1" smd rect
 		(at -1.15 -0.8)
@@ -142,7 +142,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "eff41b7c-423b-4485-a3b3-4ab745b213a0")
+		(uuid "4c5997d1-1424-4ee1-8225-bebda624b510")
 	)
 	(pad "2" smd rect
 		(at -1.15 0)
@@ -151,7 +151,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "c142e014-5e92-46ca-bd9b-b38393b0d376")
+		(uuid "46330b59-e0a8-4ca8-8792-53cdde1bd806")
 	)
 	(pad "3" smd rect
 		(at -1.15 0.8)
@@ -160,7 +160,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "84e31ea8-0039-4b2d-a37f-487be3cfef10")
+		(uuid "39f17f15-92d8-4929-9e19-e97704a26729")
 	)
 	(pad "4" smd rect
 		(at 1.15 0.8 180)
@@ -169,7 +169,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "af3e9311-cd2e-4f93-9e32-54b3b8f1fb4d")
+		(uuid "81bb98fc-a874-49f5-b015-aa224c2c456c")
 	)
 	(pad "5" smd rect
 		(at 1.15 0 180)
@@ -178,7 +178,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "dca5431e-ca69-40a7-b509-24b77aec4994")
+		(uuid "1f530964-33de-445c-9c73-df2f82c3c8f1")
 	)
 	(pad "6" smd rect
 		(at 1.15 -0.8 180)
@@ -187,7 +187,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "2df45e4d-eceb-4093-be06-f07988e2dda6")
+		(uuid "c5c4a47b-97eb-4fc2-9828-ff9b49bffcc0")
 	)
 	(pad "EP" smd rect
 		(at 0 0)
@@ -196,7 +196,7 @@
 		(solder_mask_margin 0.1016)
 		(solder_paste_margin 0)
 		(thermal_bridge_angle 0)
-		(uuid "ce3aae9d-adb9-4882-933a-bf2f0c96be82")
+		(uuid "c22b6ff3-c7cd-436c-af18-d23f3c1f1cea")
 	)
 	(embedded_fonts no)
 )
