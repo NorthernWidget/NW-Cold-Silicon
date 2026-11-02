@@ -1,0 +1,122 @@
+(footprint "C2917"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Tantalum capacitor, 7343 Metric size")
+	(property "Reference" "REF**"
+		(at 0 -2.667 0)
+		(layer "F.SilkS")
+		(uuid "9e1b4485-4bf3-4928-af1e-a778c3281f6c")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "eddd2646-3ee4-4d27-9d8f-229ef1feb8b0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03f353e0-bcc3-4355-8053-929a102a669c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3eafb94e-adc6-4931-a20b-e289518bfb29")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.65 -2.15)
+		(end -3.65 2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2b17ed19-28fd-49c3-a72c-9440f58546fe")
+	)
+	(fp_line
+		(start -3.65 2.15)
+		(end 3.65 2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b93d2be2-181a-49a0-a2cb-e2169db58eba")
+	)
+	(fp_line
+		(start 3.65 -2.15)
+		(end -3.65 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bd152b80-8d3a-4ca1-9cbd-6976ce615d07")
+	)
+	(fp_line
+		(start 3.65 2.15)
+		(end 3.65 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9e27665c-273f-478c-931d-8fc173a773b8")
+	)
+	(fp_poly
+		(pts
+			(xy -2.286 2.159) (xy -1.27 2.159) (xy -1.27 -2.159) (xy -2.286 -2.159)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "5c2ffdce-c27e-47f7-b5b1-3dc096db20a1")
+	)
+	(pad "+" smd rect
+		(at -3 0 180)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "87625f57-6947-4792-95ff-ee28320a746a")
+	)
+	(pad "-" smd rect
+		(at 3 0 180)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "29a597c7-6cff-4d17-a6e6-544590dabb07")
+	)
+	(embedded_fonts no)
+)

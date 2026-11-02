@@ -1,0 +1,72 @@
+(footprint "4_40_GND"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "4x40 Non-Plated Mounting Hole\nHole diameter based on max body diameter + 15%\nKeepout ring is for diameter of socket cap screw (minimum clearance required)\nTPlace ring is for diameter of pan head screw (recomended clearance)")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "ff63d1f5-caa1-41e3-a90a-6f4547d02b43")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9624eec4-ee91-4e0a-97c7-36e8c950c43c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a584da66-b354-4da8-a21c-cf9021c53410")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f43d6785-dc97-4e58-87f6-a218396972be")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 2.65 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "84a4000e-da2a-4fc7-afab-1edb8a352c5d")
+	)
+	(pad "GND" thru_hole circle
+		(at 0 0)
+		(size 4.191 4.191)
+		(drill 3.175)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "0f227a37-1cd7-4484-aa31-0b9dcc308c25")
+	)
+	(embedded_fonts no)
+)

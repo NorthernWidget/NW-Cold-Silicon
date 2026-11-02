@@ -1,0 +1,133 @@
+(footprint "MINI_MELF-0204R"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "CECC Size RC3715 Reflow Soldering\n\nsource Beyschlag")
+	(property "Reference" "REF**"
+		(at -1.27 -0.9525 0)
+		(layer "F.SilkS")
+		(uuid "0060a760-e83f-41c1-8e50-a4143176baaf")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "MINI_MELF-0204R"
+		(at -1.27 2.2225 0)
+		(layer "F.Fab")
+		(uuid "fb2e9e2e-9e46-4aa3-84a4-28827890be7e")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "25ef906c-0bc5-41f6-8bed-b600e200dbd7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bdeeafe6-8c15-458c-9b5c-fe3abc5a1b0a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.938 0.6)
+		(end 0.938 0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "799cbb7b-357c-4a96-b9b3-f56f2a0ecf63")
+	)
+	(fp_line
+		(start 0.938 -0.6)
+		(end -0.938 -0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c667351-7709-4059-a2a7-c2d6ab903194")
+	)
+	(fp_line
+		(start -1.7 -0.6)
+		(end -1.7 0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7eec32de-a21b-4a1c-8ad2-d6283e8cee42")
+	)
+	(fp_line
+		(start -1.7 0.6)
+		(end 1.7 0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "27667c0f-3c89-465d-9bde-130b7d3a2e10")
+	)
+	(fp_line
+		(start 1.7 -0.6)
+		(end -1.7 -0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5ecc6c3f-13f6-42d4-9b09-4ad0d06cc453")
+	)
+	(fp_line
+		(start 1.7 0.6)
+		(end 1.7 -0.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e2f4afe7-e7af-4f86-bf51-7d7a5be64828")
+	)
+	(pad "1" smd rect
+		(at -1.5 0)
+		(size 0.8 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "6142f880-6a65-4c5f-ac86-fda30c6ff718")
+	)
+	(pad "2" smd rect
+		(at 1.5 0)
+		(size 0.8 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "3d605277-e125-40ad-a77f-dc42b7909210")
+	)
+	(embedded_fonts no)
+)

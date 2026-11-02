@@ -1,0 +1,114 @@
+(footprint "TO-18"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "IR LED\n\ninfrared emitting diode, Infineon TO-18, lead spacing 2.54 mm, cathode marking\n\nInifineon")
+	(property "Reference" "REF**"
+		(at 0 -3.429 0)
+		(layer "F.SilkS")
+		(uuid "f9e0716f-32f7-4b63-ba83-1161d3aaa794")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" "TO-18"
+		(at 0 3.302 0)
+		(layer "F.Fab")
+		(uuid "dd815313-d01a-42c2-b59d-b2668369b11e")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07fa478a-934a-401c-a853-1b3d114e8e7f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3be5af8f-aee3-400b-93d5-d0c90e543132")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.794 -2.159)
+		(end -2.159 -2.794)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f1ef00ef-79cd-414e-9454-71c7df6b22c9")
+	)
+	(fp_line
+		(start -2.159 -1.524)
+		(end -2.794 -2.159)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68779c4b-453e-4212-b1a3-7401fb58de12")
+	)
+	(fp_line
+		(start -1.524 -2.159)
+		(end -2.159 -2.794)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6603ae8c-95ea-4fb4-8944-fb9bee018ff4")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.667 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "51525172-c6c4-49d1-ab2e-ba15742599e6")
+	)
+	(pad "ANODE" thru_hole circle
+		(at 1.27 0 90)
+		(size 1.3208 1.3208)
+		(drill 0.8128)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "81a0268b-146d-483a-9db6-5c29fa67fbef")
+	)
+	(pad "CATHODE" thru_hole circle
+		(at -1.27 0 90)
+		(size 1.3208 1.3208)
+		(drill 0.8128)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "bca2986f-7686-42bd-ac1f-891df462a99e")
+	)
+	(embedded_fonts no)
+)

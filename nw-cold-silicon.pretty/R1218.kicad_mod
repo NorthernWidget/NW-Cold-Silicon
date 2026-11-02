@@ -1,0 +1,117 @@
+(footprint "R1218"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "CRCW1218 Thick Film, Rectangular Chip Resistors\n\nSource: http://www.vishay.com .. dcrcw.pdf")
+	(property "Reference" "REF**"
+		(at -2.54 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "218f7179-2597-4938-ab51-ec98a67eacb5")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "R1218"
+		(at -2.54 3.81 0)
+		(layer "F.Fab")
+		(uuid "c174090b-9af5-4833-a1c2-670f775c2d7c")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1c35ade9-e765-4d09-afed-4e2f48914cab")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8dd21cff-cce0-4580-b2d7-cd4a9bdfd08c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.913 2.219)
+		(end 0.939 2.219)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0440398a-4964-4957-8b4f-1bc0aebe84fc")
+	)
+	(fp_line
+		(start 0.913 -2.219)
+		(end -0.939 -2.219)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51a38965-d0fb-4572-a683-ddae788d9d78")
+	)
+	(fp_poly
+		(pts
+			(xy -1.651 2.3) (xy -0.9009 2.3) (xy -0.9009 -2.3) (xy -1.651 -2.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "bab3462a-4082-474f-bb4d-626aaeb99c1c")
+	)
+	(fp_poly
+		(pts
+			(xy 0.9144 2.3) (xy 1.6645 2.3) (xy 1.6645 -2.3) (xy 0.9144 -2.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "9961b7df-771e-4c49-afe9-5b3c4b878e80")
+	)
+	(pad "1" smd rect
+		(at -1.475 0)
+		(size 1.05 4.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "e22cecff-a6aa-4f03-bb21-929e905a4d86")
+	)
+	(pad "2" smd rect
+		(at 1.475 0)
+		(size 1.05 4.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "2d518f55-fd38-4a9b-a081-4a0ad4fa485c")
+	)
+	(embedded_fonts no)
+)

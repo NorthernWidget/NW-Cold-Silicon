@@ -1,0 +1,122 @@
+(footprint "C1411_TANT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "1411 (3528 Metric) Tantalum Capacitor\nSize Code: B\nEIA Code: 1210\nDatasheet")
+	(property "Reference" "REF**"
+		(at 0 -1.905 0)
+		(layer "F.SilkS")
+		(uuid "42e26dcc-0fe4-43e6-a6b6-dd6e50bbbbea")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9dbb3523-92d1-4d37-88e8-f853ea3d4a4e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4fe09b45-cd03-4854-ab71-6735d5506048")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "23c459d7-b701-4781-87dc-f0891f733467")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.75 -1.4)
+		(end -1.75 1.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "25c3b32e-c1db-4fe0-8eda-135b9207ba7a")
+	)
+	(fp_line
+		(start -1.75 1.4)
+		(end 1.75 1.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8dd1d1a1-c6ca-44e0-b61c-7e2f59ff97ce")
+	)
+	(fp_line
+		(start 1.75 -1.4)
+		(end -1.75 -1.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2a3629cb-e5cb-41a9-b503-88f69296e0ac")
+	)
+	(fp_line
+		(start 1.75 1.4)
+		(end 1.75 -1.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e7438e9-6af6-4d97-8e6a-88539b984893")
+	)
+	(fp_poly
+		(pts
+			(xy -0.3175 1.4605) (xy -1.8135 1.4605) (xy -1.8135 -1.4605) (xy -0.3175 -1.4605)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "02604dfc-d902-4edc-b2ad-90ed832c8a7a")
+	)
+	(pad "ANODE" smd rect
+		(at -1.725 0)
+		(size 1.65 2.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "c617ba2a-8538-4c48-ba92-aecf9d7e6fc8")
+	)
+	(pad "CATHODE" smd rect
+		(at 1.725 0)
+		(size 1.65 2.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "65acee4f-f683-459e-8857-07aee3e4b05c")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,217 @@
+(footprint "150CLZ-0810"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Aluminum electrolytic capacitors SMD (Chip)\n\nLong life base plate, very low impedance 150 CLZ\n\nhttp://www.bccomponents.com/")
+	(property "Reference" "REF**"
+		(at -5.43 2.74 90)
+		(layer "F.SilkS")
+		(uuid "e7b3e784-9175-4830-a21c-9b5ddeecfdcd")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "150CLZ-0810"
+		(at 0.635 3.175 90)
+		(layer "F.Fab")
+		(uuid "189f0e10-403f-4665-afd0-dc4a9e23b1e0")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae7e96d4-49c5-4700-b7ac-ba44cf717385")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f74b9faf-9a29-4733-adf5-e71e3a128817")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.85 -4.2)
+		(end 3.4 -4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd1ab412-5419-4a04-861d-0b82cd040098")
+	)
+	(fp_line
+		(start -4.85 -1.45)
+		(end -4.85 -4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6b901cfd-1bda-49ca-a667-fc32f906b3b3")
+	)
+	(fp_line
+		(start -4.85 4.2)
+		(end -4.85 1.45)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "baaf3ab8-5d1e-4cb8-a1fb-98df68a52f71")
+	)
+	(fp_line
+		(start 3.4 4.2)
+		(end -4.85 4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ba99b79f-fef4-4ef8-8240-cfaff0b23283")
+	)
+	(fp_line
+		(start 4.85 -2.75)
+		(end 3.4 -4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91ab5bc3-62c9-4281-985c-1d383fad89df")
+	)
+	(fp_line
+		(start 4.85 -2.75)
+		(end 4.85 -1.45)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d0e1f35e-8dad-4cf0-8649-dc408ff75396")
+	)
+	(fp_line
+		(start 4.85 1.45)
+		(end 4.85 2.75)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0ed6f2c4-8f17-4146-b3d0-c062f106419f")
+	)
+	(fp_line
+		(start 4.85 2.75)
+		(end 3.4 4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7e52cb74-b5d9-4b4b-8612-acee2f82ea4e")
+	)
+	(fp_arc
+		(start -3.65 -1.4)
+		(mid 0 -3.909284)
+		(end 3.65 -1.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "950f8e60-d4dc-4db9-82da-ffedf4683048")
+	)
+	(fp_arc
+		(start 3.65 1.4)
+		(mid 0 3.909284)
+		(end -3.65 1.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1cb017a1-5686-4f93-b7c6-a593ef3ef1a6")
+	)
+	(fp_line
+		(start -4.85 1.45)
+		(end -4.85 -1.45)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "30cc2a20-5716-46f7-96a9-64788ae0d638")
+	)
+	(fp_line
+		(start 4.85 -1.45)
+		(end 4.85 1.45)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d5c1430e-d6b1-4112-9163-0a19898217f5")
+	)
+	(fp_arc
+		(start -3.65 1.4)
+		(mid -3.909284 0)
+		(end -3.65 -1.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "73ee8902-5bbe-4edd-b8a3-abed1b9d2063")
+	)
+	(fp_arc
+		(start 3.65 -1.4)
+		(mid 3.909284 0)
+		(end 3.65 1.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6e342eaa-b1b5-489f-ac60-355c44502dd3")
+	)
+	(pad "+" smd rect
+		(at 3.25 0)
+		(size 3.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "d0609a9d-636b-4cd1-9b44-d8903ce12ccd")
+	)
+	(pad "-" smd rect
+		(at -3.25 0)
+		(size 3.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "9bd9e965-e2ef-43a1-b312-6333b4432cdb")
+	)
+	(embedded_fonts no)
+)

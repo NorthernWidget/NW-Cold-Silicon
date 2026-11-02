@@ -1,0 +1,209 @@
+(footprint "V235_17"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "RESISTOR\n\ntype V235, grid 17.78 mm")
+	(property "Reference" "REF**"
+		(at -6.858 -3.302 0)
+		(layer "F.SilkS")
+		(uuid "3efcd8c6-d5d1-4619-821b-f4744dc5e2d8")
+		(effects
+			(font
+				(size 1.143 1.143)
+				(thickness 0.127)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "V235_17"
+		(at -5.842 0.635 0)
+		(layer "F.Fab")
+		(uuid "f487c531-e3f7-4314-9f66-71c0eeeb38af")
+		(effects
+			(font
+				(size 1.143 1.143)
+				(thickness 0.127)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8af26b51-6694-47de-bfd0-77642eb45780")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f9f1905c-929d-4cb4-a7a7-5f0738707600")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7.112 -2.54)
+		(end -7.112 2.54)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "10224206-e75e-4edc-ac41-15558bc22772")
+	)
+	(fp_line
+		(start -6.731 -2.921)
+		(end 6.731 -2.921)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0eafd5ce-3031-4c64-9736-99f3c019113d")
+	)
+	(fp_line
+		(start 6.731 2.921)
+		(end -6.731 2.921)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "35fa43ae-7118-4e53-8653-90807c7f6f8e")
+	)
+	(fp_line
+		(start 7.112 -2.54)
+		(end 7.112 2.54)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bf3ee98d-99ad-46f5-8492-d786b2a9d999")
+	)
+	(fp_arc
+		(start -7.112 -2.54)
+		(mid -7.000408 -2.809408)
+		(end -6.731 -2.921)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b1a12890-601a-4572-833c-3406bbdb8aa6")
+	)
+	(fp_arc
+		(start -6.731 2.921)
+		(mid -7.000408 2.809408)
+		(end -7.112 2.54)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5f250e81-8e73-44e9-b99f-1e640e6c6048")
+	)
+	(fp_arc
+		(start 6.731 -2.921)
+		(mid 7.000408 -2.809408)
+		(end 7.112 -2.54)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29bad8e9-038f-46b0-8742-95e669448809")
+	)
+	(fp_arc
+		(start 7.112 2.54)
+		(mid 7.000408 2.809408)
+		(end 6.731 2.921)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "17bbe06d-da9a-436f-ac64-4930715d46dd")
+	)
+	(fp_poly
+		(pts
+			(xy -7.747 0.508) (xy -7.112 0.508) (xy -7.112 -0.508) (xy -7.747 -0.508)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "ef9a3e70-f829-4daf-81f3-ad3eec8c8778")
+	)
+	(fp_poly
+		(pts
+			(xy 7.112 0.508) (xy 7.747 0.508) (xy 7.747 -0.508) (xy 7.112 -0.508)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "0e88caf1-3d8b-4ea8-aab7-d979cb585476")
+	)
+	(fp_line
+		(start -7.874 0)
+		(end -8.89 0)
+		(stroke
+			(width 1.016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f9c79718-b82f-4833-8826-f5c906c09253")
+	)
+	(fp_line
+		(start 8.89 0)
+		(end 7.874 0)
+		(stroke
+			(width 1.016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2a88d4fd-5e40-47e3-b5ae-e835bfd27574")
+	)
+	(pad "1" thru_hole roundrect
+		(at -8.89 0)
+		(size 1.7907 1.7907)
+		(drill 1.1938)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(chamfer_ratio 0.2928932188)
+		(chamfer top_left top_right bottom_left bottom_right)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "e1e7c4e4-9afc-4dc6-9471-268526d4c592")
+	)
+	(pad "2" thru_hole roundrect
+		(at 8.89 0)
+		(size 1.7907 1.7907)
+		(drill 1.1938)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(chamfer_ratio 0.2928932188)
+		(chamfer top_left top_right bottom_left bottom_right)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "296ebadc-994b-43c2-83c5-e292af4937e8")
+	)
+	(embedded_fonts no)
+)

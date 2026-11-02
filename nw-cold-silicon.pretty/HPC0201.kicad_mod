@@ -1,0 +1,85 @@
+(footprint "HPC0201"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Source: http://www.vishay.com/docs/10129/hpc0201a.pdf")
+	(property "Reference" "REF**"
+		(at -0.75 -0.74 0)
+		(layer "F.SilkS")
+		(uuid "355014eb-9b79-4fc0-9e8d-0e4916dba86e")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "HPC0201"
+		(at -0.785 1.865 0)
+		(layer "F.Fab")
+		(uuid "7baa926d-4129-4e2a-9cb2-72c04d956ed7")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0dab2b61-dc65-41a3-a55c-ff4ae39cccf3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f2f9f67b-6d2d-411e-8acf-b0704678b5df")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_poly
+		(pts
+			(xy -0.305 0.15) (xy 0.305 0.15) (xy 0.305 -0.15) (xy -0.305 -0.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "ee01636b-96aa-439d-ba29-6007ee5a38e0")
+	)
+	(pad "1" smd rect
+		(at -0.18 0)
+		(size 0.2 0.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "b60495da-2bcb-49b5-9b0a-57b504fe1b27")
+	)
+	(pad "2" smd rect
+		(at 0.18 0)
+		(size 0.2 0.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "76969000-1006-4e99-9f66-5e5086d221cc")
+	)
+	(embedded_fonts no)
+)

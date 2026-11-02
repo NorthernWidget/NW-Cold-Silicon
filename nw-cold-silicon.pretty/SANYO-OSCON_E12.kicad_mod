@@ -1,0 +1,100 @@
+(footprint "SANYO-OSCON_E12"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SANYO OSCON Capacitor\n\nSource: e_os_all.pdf")
+	(property "Reference" "REF**"
+		(at -1.905 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "6507dbe8-3053-416d-a4e7-06c2d3d5d246")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SANYO-OSCON_E12"
+		(at -1.905 2.54 0)
+		(layer "F.Fab")
+		(uuid "313d09a1-9538-4f06-bb88-a80a30eecbfb")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "468569fe-9b97-41c3-96b1-6f6483cf626d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9af60e12-2168-40cb-8e27-6b21dd3ff6ff")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 3.9 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "e87d33e8-56e2-40dd-9061-8f000f294fb7")
+	)
+	(fp_poly
+		(pts
+			(xy -2.5484 3.027022) (xy -3.01204 2.479965) (xy -3.263732 2.112643) (xy -3.476587 1.721533) (xy -3.648379 1.310726)
+			(xy -3.778066 0.882022) (xy -3.9016 0.007138) (xy -3.9016 -0.004623) (xy -3.861799 -0.441155) (xy -3.776805 -0.871853)
+			(xy -3.647597 -1.291412) (xy -3.475567 -1.695307) (xy -3.261287 -2.081496) (xy -2.5484 -2.99545)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "2227ac35-a27a-43fd-8a6f-1570c75b59c2")
+	)
+	(pad "+" thru_hole circle
+		(at 1.75 0)
+		(size 1.27 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "b7ebb671-0786-4306-bb87-30ff9b9c9a55")
+	)
+	(pad "-" thru_hole circle
+		(at -1.75 0)
+		(size 1.27 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "aeddba71-8c60-40d3-a6c5-f46289ed5f8c")
+	)
+	(embedded_fonts no)
+)

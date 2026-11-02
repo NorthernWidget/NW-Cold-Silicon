@@ -1,0 +1,337 @@
+(footprint "139CLL-2R"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Aluminum electrolytic capacitors reflow soldering\n\nSMD (Chip) Long Life 139 CLL\n\nhttp://www.bccomponents.com/")
+	(property "Reference" "REF**"
+		(at -2.54 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "204b2266-0b29-4195-8f5e-6cda1f681f82")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "139CLL-2R"
+		(at -3.81 2.54 0)
+		(layer "F.Fab")
+		(uuid "948c6f31-905e-408f-ab27-3349500a0896")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "757a509d-86d6-46f6-a4d2-3715d9d31788")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce165f5c-740a-4d94-97fc-b865ae7c6fe5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.4 -3.05)
+		(end 6.4 -3.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "be1211d9-9cb5-440e-ba0e-ec72d5aec4f3")
+	)
+	(fp_line
+		(start -6.4 -1.6)
+		(end -6.4 -3.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c9f45726-7b8e-4798-b3c5-0d6034eb2ba4")
+	)
+	(fp_line
+		(start -6.4 3.05)
+		(end -6.4 1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9b207614-63db-49ae-a379-62c2b2c3248a")
+	)
+	(fp_line
+		(start 4.5 -2)
+		(end 4.25 -2.95)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6dafeb8f-94ec-4ec9-873d-34b16bf55395")
+	)
+	(fp_line
+		(start 4.5 2)
+		(end 4.25 2.95)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "52722d48-3845-4f8b-ae50-2f9005862f2a")
+	)
+	(fp_line
+		(start 6.35 -2)
+		(end 4.5 -2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2fb97140-3b08-450b-b72a-cb7771fc9e39")
+	)
+	(fp_line
+		(start 6.35 2)
+		(end 4.5 2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0780571b-6b4a-4930-8b4c-9178c8b703f8")
+	)
+	(fp_line
+		(start 6.4 -3.05)
+		(end 6.4 -1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "11dab6e4-c36c-46a7-afa1-8a69d6693edb")
+	)
+	(fp_line
+		(start 6.4 1.6)
+		(end 6.4 3.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a17645cd-4568-4d2a-b7c3-6ee5fa167bc6")
+	)
+	(fp_line
+		(start 6.4 3.05)
+		(end -6.4 3.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9943f3a1-135c-4c8d-a4a9-237ed93aa4fb")
+	)
+	(fp_line
+		(start -8.1 -3.9)
+		(end -8.1 3.9)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3463026e-784a-49d0-adf4-6cefd5aed4ca")
+	)
+	(fp_line
+		(start -8.1 3.9)
+		(end 8.1 3.9)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "af7e31ba-c17d-485e-a19d-adfe72c4459b")
+	)
+	(fp_line
+		(start 8.1 -3.9)
+		(end -8.1 -3.9)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f1e7dc6c-1388-46d2-9104-cda06417a5b5")
+	)
+	(fp_line
+		(start 8.1 3.9)
+		(end 8.1 -3.9)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c1c86323-a2b8-4386-8eb5-34d91acfde03")
+	)
+	(fp_line
+		(start -7.15 -0.6)
+		(end -6.9 -0.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "68b5c74b-1878-4777-b940-e4bcaccf8c22")
+	)
+	(fp_line
+		(start -7.15 0.6)
+		(end -7.15 -0.6)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4de61688-db78-4f0a-8692-4034805477bb")
+	)
+	(fp_line
+		(start -6.9 -0.85)
+		(end -6.9 0.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5ec9e095-2bad-455a-abc1-e632b3971549")
+	)
+	(fp_line
+		(start -6.9 0.85)
+		(end -7.15 0.6)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d247a14f-5b2c-4352-9a16-5da829ce00c1")
+	)
+	(fp_line
+		(start -6.4 1.6)
+		(end -6.4 -1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "94b407f4-17eb-41a2-8b23-976228848780")
+	)
+	(fp_line
+		(start 6.4 -1.6)
+		(end 6.4 1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7c1720d9-e9e9-4e39-a9bd-11bc494136e9")
+	)
+	(fp_line
+		(start 6.9 -0.85)
+		(end 7.15 -0.6)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "63516922-1e60-4d83-bf66-c6a8decf8ac6")
+	)
+	(fp_line
+		(start 6.9 0.85)
+		(end 6.9 -0.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "65e6e431-77f7-4261-97f7-57c81a3606e5")
+	)
+	(fp_line
+		(start 7.15 -0.6)
+		(end 7.15 0.6)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6bb5230c-fb65-4cd9-8c43-5da7133b2d4d")
+	)
+	(fp_line
+		(start 7.15 0.6)
+		(end 6.9 0.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c6eb1890-86df-4752-941c-bbb3f62cbeac")
+	)
+	(fp_poly
+		(pts
+			(xy -6.85 1) (xy -4.5 1) (xy -4.5 -1) (xy -6.85 -1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "a28e517d-88ec-4365-b4f9-b380d14ef357")
+	)
+	(fp_poly
+		(pts
+			(xy 4.5 1) (xy 6.85 1) (xy 6.85 -1) (xy 4.5 -1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "3a182f80-e6c0-4d9a-83fa-df96d160b3e3")
+	)
+	(pad "+" smd rect
+		(at 6.2 0)
+		(size 3.5 2.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "640a9e4a-6860-4c21-8a6a-218f7120804d")
+	)
+	(pad "-" smd rect
+		(at -6.2 0)
+		(size 3.5 2.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "94acef65-3a3f-4962-afee-fee978a8eb93")
+	)
+	(embedded_fonts no)
+)

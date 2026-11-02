@@ -1,0 +1,153 @@
+(footprint "WSC0001"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wirewound Resistors, Precision Power\n\nSource: VISHAY wscwsn.pdf")
+	(property "Reference" "REF**"
+		(at -2.544 -2.229 0)
+		(layer "F.SilkS")
+		(uuid "96c9cfc8-94fc-4b07-b057-e91f911fb95d")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "WSC0001"
+		(at -2.544 3.501 0)
+		(layer "F.Fab")
+		(uuid "f79b322f-021b-498a-9f26-8aa288581881")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3dc2212-9a95-470f-a396-db02a032f75e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "afef17e5-c7d2-440b-b001-a5112ea1b8e7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.075 -1.8)
+		(end -3.075 -1.606)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5d866cd-51f2-4481-a837-b9253346e235")
+	)
+	(fp_line
+		(start -3.075 1.606)
+		(end -3.075 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ad8c12c0-6d42-42d2-9e50-dc84701c3469")
+	)
+	(fp_line
+		(start -3.075 1.8)
+		(end 3.075 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8034351c-4c95-4416-a42f-fb95b6495c49")
+	)
+	(fp_line
+		(start 3.075 -1.8)
+		(end -3.075 -1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1ec7be71-5489-46d8-bc5e-b2e4da4b4d0c")
+	)
+	(fp_line
+		(start 3.075 -1.606)
+		(end 3.075 -1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3bd2e08e-3aae-4f02-9139-986bfa7f0ed2")
+	)
+	(fp_line
+		(start 3.075 1.8)
+		(end 3.075 1.606)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fdce6057-e27a-46f6-a2c4-32c617a26c98")
+	)
+	(fp_line
+		(start -3.075 -1.8)
+		(end -3.075 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a46c2902-865b-432c-806a-6ebd94df8391")
+	)
+	(fp_line
+		(start 3.075 1.8)
+		(end 3.075 -1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "39c3ca99-24c0-4607-9c8f-50525a0ea23b")
+	)
+	(pad "1" smd rect
+		(at -2.675 0)
+		(size 2.29 2.92)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "955589f3-b148-40c6-ba89-a6775886e2f2")
+	)
+	(pad "2" smd rect
+		(at 2.675 0)
+		(size 2.29 2.92)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "e0d69f1f-3f55-4610-89e9-0671915f2011")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,111 @@
+(footprint "WE-MAIA(4.1X4.1)"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wurth MAIA series inductor, with 4.1mmx4.1mm package, sheilded    Avaliable in inductances 330nH, 560nH, 680nH, 1.2uH, 1.5uH, 1.8uH, 2.2uH, 3.3uH, 4.7uH, 5.6uH  https://www.digikey.com/products/en/inductors-coils-chokes/fixed-inductors/71?FV=ffecb9d7%2Cfffc0511%2Cfffc06ed%2Cfffc02dc%2Cb87c46%2C1f140000%2Cffe00047&mnonly=0&ColumnSort=0&page=1&stock=1&pbfree=0&rohs=0&cad=0&datasheet=0&nstock=0&photo=0&nonrohs=0&newproducts=0&k=inductor&quantity=&ptm=0&fid=0&pageSize=25&pkeyword=inductor")
+	(property "Reference" "REF**"
+		(at 0 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "6201bd66-af8a-4963-aab5-32a688363b2f")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" "WE-MAIA(4.1X4.1)"
+		(at 0 3.175 0)
+		(layer "F.Fab")
+		(uuid "dae8fb54-8d4c-4ccc-938b-bfd1ffab725d")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d75d93e-507e-453e-8a85-c1c8a4819b37")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d56f82b9-7df5-43e9-932f-15adfb59379d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.05 -2.05)
+		(end -2.05 2.05)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "70830fd1-7d36-4a02-ac7d-cf7cf7319ccf")
+	)
+	(fp_line
+		(start -2.05 2.05)
+		(end 2.05 2.05)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "43534967-e1a7-4b10-8d55-50b7ea5e829e")
+	)
+	(fp_line
+		(start 2.05 -2.05)
+		(end -2.05 -2.05)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "151172da-c0cb-4807-b199-fb362bc429ec")
+	)
+	(fp_line
+		(start 2.05 2.05)
+		(end 2.05 -2.05)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "63464bdc-88a7-4533-8d67-32a446fca48f")
+	)
+	(pad "P$1" smd rect
+		(at -1.185 0 90)
+		(size 3.7 0.98)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "922641e3-ad92-421b-84aa-279ef07fcf3b")
+	)
+	(pad "P$2" smd rect
+		(at 1.185 0 90)
+		(size 3.7 0.98)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "372c214a-06fe-40de-8531-e6bd267d3b50")
+	)
+	(embedded_fonts no)
+)

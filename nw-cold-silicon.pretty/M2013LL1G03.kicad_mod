@@ -1,0 +1,122 @@
+(footprint "M2013LL1G03"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SPDT Panel Mount Toggle\nNKK, PC Pin, On-Off-On, Locking Lever, 0.4A, 28V\nM2013LL1G03")
+	(property "Reference" "REF**"
+		(at 0 -4.572 0)
+		(layer "F.SilkS")
+		(uuid "c6cfb70c-ee94-4f1a-bcd7-61e33532d170")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0ac12b45-89d2-4e36-aa69-0f27c3a597c4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34eeac50-4013-47d8-83a8-201244481ef7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03760d2f-d00c-46b6-b8ba-ad89069dfe89")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.5 -3.95)
+		(end -6.5 3.95)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e05b99e-f21b-4e80-b344-fb517177d2b7")
+	)
+	(fp_line
+		(start -6.5 3.95)
+		(end 6.5 3.95)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dbecaa94-af37-444c-81d4-ca7e09eb2817")
+	)
+	(fp_line
+		(start 6.5 -3.95)
+		(end -6.5 -3.95)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "792d2bf9-0bb4-4ceb-9abd-fef519c78844")
+	)
+	(fp_line
+		(start 6.5 3.95)
+		(end 6.5 -3.95)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21c01c68-6432-4d49-bda2-c57c0df951b2")
+	)
+	(pad "1" thru_hole circle
+		(at 4.7 0)
+		(size 2.7 2.7)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "53caa0b8-3a5b-43b6-bfc3-70bb7a15852a")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 2.7 2.7)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "6d095e51-97b8-4a49-8b2a-46afdedb2a83")
+	)
+	(pad "3" thru_hole circle
+		(at -4.7 0)
+		(size 2.7 2.7)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "82bf1b6c-04ac-4fc0-ac11-a2e7d03f1392")
+	)
+	(embedded_fonts no)
+)

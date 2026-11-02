@@ -1,0 +1,154 @@
+(footprint "BATT_1042P"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "18650 Battery Holder\nKeystone Electronics 1042P SMD Battery Holder\nDatasheet")
+	(property "Reference" "REF**"
+		(at 39.37 -3.81 270)
+		(layer "F.SilkS")
+		(uuid "7d5301ae-cb25-4bd6-967a-89af5d8cd514")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+			(justify right bottom)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "a21b5b80-1dad-488f-879d-6747f4837966")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "472ba327-e268-48e0-a9c5-640c21f12c8e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ad8794f9-6104-4361-8896-383175843a16")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -38.525 -10.325)
+		(end -38.525 10.325)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "80bbc4e3-d285-4c26-b0a3-87b44d07fab2")
+	)
+	(fp_line
+		(start -38.525 10.325)
+		(end 38.525 10.325)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4f3f0630-3a3f-42a2-8fc4-87c5f7546d1a")
+	)
+	(fp_line
+		(start 38.525 -10.325)
+		(end -38.525 -10.325)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54ded2de-9724-4790-836d-a6b79d76fdfb")
+	)
+	(fp_line
+		(start 38.525 10.325)
+		(end 38.525 -10.325)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3e8d6b17-7248-44d2-9351-aba7b941fd0c")
+	)
+	(fp_text user "-"
+		(at -41.275 6.35 270)
+		(layer "F.SilkS")
+		(uuid "2697eb1c-3093-4ca3-bbbb-14e343c5e122")
+		(effects
+			(font
+				(size 4.318 4.318)
+				(thickness 0.762)
+			)
+		)
+	)
+	(fp_text user "+"
+		(at 41.275 6.35 90)
+		(layer "F.SilkS")
+		(uuid "f5862d8f-efec-4b30-a338-bb8ae85fff8c")
+		(effects
+			(font
+				(size 4.318 4.318)
+				(thickness 0.762)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -27.6 8)
+		(size 3.45 3.45)
+		(drill 3.45)
+		(layers "*.Cu" "*.Mask")
+		(uuid "0997caf9-937a-4b3d-9478-431419fb2532")
+	)
+	(pad "" np_thru_hole circle
+		(at 27.6 -8)
+		(size 3.45 3.45)
+		(drill 3.45)
+		(layers "*.Cu" "*.Mask")
+		(uuid "3a6dde98-72d9-49a4-a705-4e2daccd890d")
+	)
+	(pad "" np_thru_hole circle
+		(at 35.82 8)
+		(size 2.39 2.39)
+		(drill 2.39)
+		(layers "*.Cu" "*.Mask")
+		(uuid "b473aba1-aa0a-402c-bcad-4cadc223169b")
+	)
+	(pad "BATT+" smd rect
+		(at 39.67 0 90)
+		(size 6.47 7.46)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "2baa1028-a0c0-4d2f-964e-2affb7b1b3a2")
+	)
+	(pad "BATT-" smd rect
+		(at -39.67 0 90)
+		(size 6.47 7.46)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "4d697b7a-8ed1-49f4-baf0-89437a0f3d0c")
+	)
+	(embedded_fonts no)
+)

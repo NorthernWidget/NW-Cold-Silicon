@@ -1,0 +1,171 @@
+(footprint "1X3_MICROFIT_RT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Molex MicroFit Board Connector\n1x3, Right Angle\nDrawing")
+	(property "Reference" "REF**"
+		(at -6.985 0 90)
+		(layer "F.SilkS")
+		(uuid "17e4c5e8-aa5d-479b-a413-b2ce3a5ff88d")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "79e80dd4-639b-4cb0-bcd4-6f25e0029bbb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ab150dfb-b52b-4ab4-97aa-7ac7c59e8a1a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5cbb48b6-12f6-4d49-914e-129d8df2a857")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.325 -4.8)
+		(end -6.325 3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "73313574-8c97-4832-ac47-1b6a7ff4d25b")
+	)
+	(fp_line
+		(start -6.325 3.6)
+		(end -5.325 4.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "239e3f23-de46-4c8d-ab16-bc8d43c45877")
+	)
+	(fp_line
+		(start -5.325 4.6)
+		(end 5.325 4.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d35c33bb-6bdd-4eb9-8f1e-de40baf67b66")
+	)
+	(fp_line
+		(start 5.325 4.6)
+		(end 6.325 3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "383a8a3c-c5d1-45f0-b3d6-f6f22b63e88f")
+	)
+	(fp_line
+		(start 5.825 -5.3)
+		(end -5.825 -5.3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2863a0b8-3699-4828-b836-8f6e7cffaee5")
+	)
+	(fp_line
+		(start 6.325 3.6)
+		(end 6.325 -4.8)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a641ca37-fca1-4d8c-8495-a5f95a27836a")
+	)
+	(fp_arc
+		(start -6.325 -4.8)
+		(mid -6.178553 -5.153553)
+		(end -5.825 -5.3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e286cb55-a284-4d1f-a539-42f216abe457")
+	)
+	(fp_arc
+		(start 5.825 -5.3)
+		(mid 6.178553 -5.153553)
+		(end 6.325 -4.8)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2004e12b-92c6-4076-85e8-e26511e32cdc")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 3)
+		(layers "*.Cu" "*.Mask")
+		(uuid "775b4eae-2b14-4dae-86bc-60311d7eabf6")
+	)
+	(pad "1" thru_hole circle
+		(at 3 -4.32)
+		(size 1.53 1.53)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "cd297297-5be9-4359-ac20-258ccc68ba49")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -4.32)
+		(size 1.53 1.53)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "825df9cc-a646-4d29-8ae8-165923804dee")
+	)
+	(pad "3" thru_hole circle
+		(at -3 -4.32)
+		(size 1.53 1.53)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "64991a83-bb55-42ca-a445-7e57a527e6a4")
+	)
+	(embedded_fonts no)
+)

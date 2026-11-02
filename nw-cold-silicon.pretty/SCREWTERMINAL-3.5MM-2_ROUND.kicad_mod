@@ -1,0 +1,216 @@
+(footprint "SCREWTERMINAL-3.5MM-2_ROUND"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Screw Terminal  3.5mm Pitch - 2 Pin PTH\n\nSpecifications:\n\n• Pin count: 2\n• Pin pitch: 3.5mm/138mil\n\nDatasheet referenced for footprint\n\nExample device(s):\n\n• CONN_02")
+	(property "Reference" "REF**"
+		(at -1.27 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "27ae7fa6-34b3-4a0d-ab5d-ac5066bb161c")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SCREWTERMINAL-3.5MM-2_ROUND"
+		(at -1.27 -1.27 0)
+		(layer "F.Fab")
+		(uuid "fda37557-21ba-4ada-8a3d-572c19e13491")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "93517b29-a0ef-4a0e-a49d-0c50f84e2187")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db303b99-5e05-42d4-b6ad-79b3b1e2f809")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.75 -3.4)
+		(end 5.25 -3.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a4c9e8e8-639d-4ac9-a999-19f135af7693")
+	)
+	(fp_line
+		(start -1.75 2.8)
+		(end -1.75 -3.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "360c0265-16c7-4ba6-b850-12dbdf96aae2")
+	)
+	(fp_line
+		(start -1.75 3.6)
+		(end -1.75 2.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3eb9cc75-147e-4bcb-b576-cfdb37d11411")
+	)
+	(fp_line
+		(start 5.25 -3.4)
+		(end 5.25 2.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "793e6856-b3c6-426d-9d8c-19b301e9dc5b")
+	)
+	(fp_line
+		(start 5.25 2.8)
+		(end -1.75 2.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fbf08c0c-1181-481f-88dd-4c9ee94a13ac")
+	)
+	(fp_line
+		(start 5.25 2.8)
+		(end 5.25 3.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1ceda53e-8f0c-4cd7-95cb-a59dd04a8d3a")
+	)
+	(fp_line
+		(start 5.25 3.6)
+		(end -1.75 3.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "efea1581-6d2c-44c1-ac41-6662c1fdd596")
+	)
+	(fp_line
+		(start -2.25 1.35)
+		(end -2.25 2.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db7f427d-94f6-49b3-9d0a-aab5e9d75242")
+	)
+	(fp_line
+		(start -2.25 2.35)
+		(end -1.75 2.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e8701a56-5001-4c79-bc37-374cb1437f18")
+	)
+	(fp_line
+		(start -1.75 1.35)
+		(end -2.25 1.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e3b84981-ffb7-434c-bce2-d58aa5b36b09")
+	)
+	(fp_line
+		(start 5.25 -3.15)
+		(end 5.75 -3.15)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c2be015b-9fd0-49f4-a9c6-333c660bd62b")
+	)
+	(fp_line
+		(start 5.75 -3.15)
+		(end 5.75 -2.15)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a7687469-c24c-49f7-aea8-3041822b0f97")
+	)
+	(fp_line
+		(start 5.75 -2.15)
+		(end 5.25 -2.15)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "613e860d-c659-4b39-8058-653d5a96b45b")
+	)
+	(fp_circle
+		(center 2 -3)
+		(end 2.2828 -3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3755e4d6-61da-4c29-b44e-3493ded663da")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2.032 2.032)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "eebd4b24-d7ce-458d-a921-d7f4c6f05f40")
+	)
+	(pad "2" thru_hole circle
+		(at 3.5 0)
+		(size 2.032 2.032)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "455dc44e-84d1-4521-bce4-257d63aab701")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,110 @@
+(footprint "WIREPAD_HOLE_2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "2a486fef-6fa7-408d-9261-a87f7deab11b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "e30e7c22-7b15-4a33-a5fb-810ba54e1d16")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "20cd8b6b-b974-4646-aa33-34be8efccc73")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0e8de250-85e6-4bfc-a581-60d6b39ef28f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.905 -2.54)
+		(end -1.905 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d48f8a4-8403-4f98-9cb6-9a5982b05ae2")
+	)
+	(fp_line
+		(start -1.905 2.54)
+		(end 1.905 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8aff4e4d-dbc3-45f3-9941-58f4ebd825d9")
+	)
+	(fp_line
+		(start 1.905 -2.54)
+		(end -1.905 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5079d742-4890-4fad-abad-8697107fe52f")
+	)
+	(fp_line
+		(start 1.905 2.54)
+		(end 1.905 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fe3c85c4-d1f0-4f36-91d3-21d53b291550")
+	)
+	(pad "P$1" thru_hole circle
+		(at 0 -1.27)
+		(size 2.1 2.1)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "b13dde51-46d4-4c4f-9fa6-fb79e728db56")
+	)
+	(pad "P$2" thru_hole rect
+		(at 0 1.27)
+		(size 2.1 2.1)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "bbf31409-f80a-47ac-9c47-668dbe44b6fa")
+	)
+	(embedded_fonts no)
+)

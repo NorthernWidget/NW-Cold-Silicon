@@ -1,0 +1,189 @@
+(footprint "HL"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Super capacitor, Designed for MPN = DSK-3R3H224U-HL\nDesign Doc: https://media.digikey.com/pdf/Data%20Sheets/Elna%20America%20Inc/DS,DSK.pdf")
+	(property "Reference" "REF**"
+		(at -4.064 0 270)
+		(layer "F.SilkS")
+		(uuid "524ee1d9-2b44-4954-9452-b05526c16335")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" "HL"
+		(at 3.937 0 270)
+		(layer "F.Fab")
+		(uuid "1f3f0953-6ee7-4364-88c8-27d7492e280f")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "65a386f2-e79b-4cb8-8102-d3670abe1fc8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ff16bc26-2542-4cce-bcfe-8cc8d04ed2e6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -5.85)
+		(end -2 -2.794)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2888e55d-2725-4ad9-8383-83e2a98a5393")
+	)
+	(fp_line
+		(start -2 -5.85)
+		(end 2 -5.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2c090e75-d6ed-43c8-8d31-9329968f6386")
+	)
+	(fp_line
+		(start -1.5 3.175)
+		(end -1.5 5.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f4987cb1-1eb7-4003-a24c-b4adcf10bc40")
+	)
+	(fp_line
+		(start -1.5 5.85)
+		(end 1.5 5.85)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f6f79e1b-446b-44ef-86ec-2e8c9f29d84d")
+	)
+	(fp_line
+		(start 1.5 5.85)
+		(end 1.5 3.048)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d66b36db-38f8-4737-bae6-ee8cf91f37fd")
+	)
+	(fp_line
+		(start 2 -5.85)
+		(end 2 -2.794)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9f1d2cd2-f274-4dcc-b306-13eae295158b")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.4 0)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ef764ff6-aa2e-4252-a729-b3fc395aa7e2")
+	)
+	(pad "+" smd rect
+		(at 0 -5.15)
+		(size 5 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "5ae40b12-db6c-483b-b439-73bd7afe6c2f")
+	)
+	(pad "-" smd rect
+		(at 0 5)
+		(size 4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "ac909650-54d1-4f91-b8d9-4624a86bad91")
+	)
+	(zone
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
+		(uuid "7efc32dc-763c-40be-aea2-47ee7c74dee7")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 3.340846 0) (xy 3.320569 -0.367521) (xy 3.259985 -0.73058) (xy 3.15983 -1.084771) (xy 3.021318 -1.425794)
+				(xy 2.846132 -1.749511) (xy 2.636397 -2.05199) (xy 2.39466 -2.329561) (xy 2.123855 -2.578855) (xy 1.82727 -2.796844)
+				(xy 1.508503 -2.980884) (xy 1.171426 -3.12874) (xy 0.820129 -3.238617) (xy 0.458877 -3.309182) (xy 0.092055 -3.339578)
+				(xy -0.275885 -3.329435) (xy -0.640476 -3.278878) (xy -0.997292 -3.18852) (xy -1.342003 -3.059458)
+				(xy -1.670423 -2.893258) (xy -1.978567 -2.691937) (xy -2.262693 -2.45794) (xy -2.519354 -2.194107)
+				(xy -2.745433 -1.903641) (xy -2.938186 -1.590067) (xy -3.095274 -1.257192) (xy -3.214789 -0.909056)
+				(xy -3.295281 -0.549885) (xy -3.335773 -0.18404) (xy -3.335773 0.18404) (xy -3.295281 0.549885)
+				(xy -3.214789 0.909056) (xy -3.095274 1.257192) (xy -2.938186 1.590067) (xy -2.745433 1.903641)
+				(xy -2.519354 2.194107) (xy -2.262693 2.45794) (xy -1.978567 2.691937) (xy -1.670423 2.893258) (xy -1.342003 3.059458)
+				(xy -0.997292 3.18852) (xy -0.640476 3.278878) (xy -0.275885 3.329435) (xy 0.092055 3.339578) (xy 0.458877 3.309182)
+				(xy 0.820129 3.238617) (xy 1.171426 3.12874) (xy 1.508503 2.980884) (xy 1.82727 2.796844) (xy 2.123855 2.578855)
+				(xy 2.39466 2.329561) (xy 2.636397 2.05199) (xy 2.846132 1.749511) (xy 3.021318 1.425794) (xy 3.15983 1.084771)
+				(xy 3.259985 0.73058) (xy 3.320569 0.367521)
+			)
+		)
+	)
+	(embedded_fonts no)
+)

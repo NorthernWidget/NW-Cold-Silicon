@@ -1,0 +1,65 @@
+(footprint "SNAP-MALE"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Sew-On Fabric Snap - Male Equivalent to size #1/0 snap.\n\nSpecifications:\n\n• Pin count: 1\n• Area:8mm\n\nExample device(s):\n\n• CONN_01")
+	(property "Reference" "REF**"
+		(at -1.524 -4.064 0)
+		(layer "F.SilkS")
+		(uuid "4e2b5c85-b318-469a-ae5e-eff1aed919f7")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SNAP-MALE"
+		(at -1.651 4.826 0)
+		(layer "F.Fab")
+		(uuid "bdf25f34-8621-4cf5-a40e-78a2003fef9e")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f0c6e76b-90fc-460a-a2eb-6ac2f536cd41")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "316c1a2d-282e-4d14-8cc1-5908c8ec61cf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "2" smd roundrect
+		(at 0 0)
+		(size 7.62 7.62)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.5)
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "ba3de46d-6815-4691-b819-3fd1e4b28f7f")
+	)
+	(embedded_fonts no)
+)

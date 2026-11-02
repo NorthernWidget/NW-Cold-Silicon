@@ -1,0 +1,84 @@
+(footprint "1X01_POGOPIN_HOLE_0.58_DIA"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Pogo Pin Hole - 0.58\"\n\nSpecifications:\n\n• Pin count:1\n• Pin pitch:0.58\"\n\nExample device(s):\n\n• CONN_01")
+	(property "Reference" "REF**"
+		(at -1.27 -1.143 0)
+		(layer "F.SilkS")
+		(uuid "76b720ed-58d4-4d44-8c75-aaa320c56118")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "1X01_POGOPIN_HOLE_0.58_DIA"
+		(at -1.27 1.778 0)
+		(layer "F.Fab")
+		(uuid "3cb52f06-203f-46c8-a4ef-e960c870cd56")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a593986-65d8-4e59-8dd5-05f6bee60c52")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "54daa28b-4640-412c-9240-1c56b6a37090")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 0.635 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "0495a440-d156-4964-a8f8-2d7d03f4e63c")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 1.4732 1.4732)
+		(drill 1.4732)
+		(layers "*.Cu" "*.Mask")
+		(uuid "64fd8ebb-7038-4b4a-a8d1-c2a59c27cc00")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0 90)
+		(size 0.8128 0.8128)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(zone_connect 2)
+		(thermal_bridge_angle 0)
+		(uuid "477150e2-6c1a-41fd-b00e-5ebe8e92cb41")
+	)
+	(embedded_fonts no)
+)

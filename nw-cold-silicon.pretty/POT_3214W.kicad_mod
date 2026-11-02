@@ -1,0 +1,130 @@
+(footprint "POT_3214W"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Footprint for 3214W Bourns potentiometers\nhttps://www.bourns.com/docs/Product-Datasheets/3214.pdf")
+	(property "Reference" "REF**"
+		(at 0 -3.048 0)
+		(layer "F.SilkS")
+		(uuid "be905cea-2850-4cdb-ac0c-0587e00a3949")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cbd973d0-1576-44d5-882d-dc40159eac76")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9ea078b6-373d-4a92-b8ec-b8e08b80ab8b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e7c36ade-c91b-414b-8df5-1ae204b2a2e3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.75 -2.4)
+		(end -1.75 2.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1c3923b-8d8b-4493-bd96-618013e2a568")
+	)
+	(fp_line
+		(start -1.75 2.4)
+		(end 1.75 2.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4872add-46d6-4db5-9d12-00d204f921ac")
+	)
+	(fp_line
+		(start 1.75 -2.4)
+		(end -1.75 -2.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "292676f8-6e3a-4a34-8434-c4c3dae8d210")
+	)
+	(fp_line
+		(start 1.75 2.4)
+		(end 1.75 -2.4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "830bf533-e9b1-44df-abd1-2818b326e1ac")
+	)
+	(fp_circle
+		(center -0.635 -1.27)
+		(end -0.111366 -1.27)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "92856b04-468f-444b-a099-0e32a2f29727")
+	)
+	(pad "1" smd rect
+		(at 1.45 1.25 90)
+		(size 1.3 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "c901e170-7017-4135-89ba-944489400bd4")
+	)
+	(pad "2" smd rect
+		(at -1.45 0)
+		(size 1.6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "02073e24-3a63-47a3-9aeb-a7737f694471")
+	)
+	(pad "3" smd rect
+		(at 1.45 -1.25 90)
+		(size 1.3 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "f6201287-7e3d-4356-bad2-9e95ddfa7d32")
+	)
+	(embedded_fonts no)
+)

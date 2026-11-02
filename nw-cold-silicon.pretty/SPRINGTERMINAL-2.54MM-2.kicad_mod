@@ -1,0 +1,221 @@
+(footprint "SPRINGTERMINAL-2.54MM-2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Spring Terminal- PCB Mount 2 Pin PTH tDocu marks the spring arms\n\nSpecifications:\n\n• Pin count: 4\n• Pin pitch: 0.1\"\n\nDatasheet referenced for footprint\n\nExample device(s):\n\n• CONN_02")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "57f7a714-744d-4a2c-bf88-46adff725c67")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3ca7ac6d-68f5-487a-b8ec-b208cf95e740")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2649bf4e-2eee-4712-846e-10c7cead3116")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "073913a1-443a-4364-9555-0f846bbfda95")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0 0)
+		(end 0 -5.08)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Cu")
+		(uuid "173bc76f-2766-4597-a0a8-420eb77a57a5")
+	)
+	(fp_line
+		(start 2.54 0)
+		(end 2.54 -5.08)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Cu")
+		(uuid "698116c9-29dd-4a11-8809-3a26c69ac083")
+	)
+	(fp_line
+		(start 0 0)
+		(end 0 -5.08)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "B.Cu")
+		(uuid "a73b6bd5-864b-437a-946d-d1183e99717a")
+	)
+	(fp_line
+		(start 2.54 0)
+		(end 2.54 -5.08)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "B.Cu")
+		(uuid "5db759ad-7fbf-40cd-929d-2c52d9155571")
+	)
+	(fp_line
+		(start -4.2 -7.88)
+		(end -4.2 2.8)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91b9526e-fc74-4efd-a55c-43a2d8660354")
+	)
+	(fp_line
+		(start -4.2 2.8)
+		(end 3.44 2.8)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bd644f25-aa47-4877-9936-43f9508dc2ff")
+	)
+	(fp_line
+		(start 3.44 -7.88)
+		(end -4.2 -7.88)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "71d9898e-e5b0-414f-8a59-66d107b5a097")
+	)
+	(fp_line
+		(start 3.44 -7.88)
+		(end 3.44 -6)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "caf881d4-2750-4167-95f5-df75f30d4bd7")
+	)
+	(fp_line
+		(start 3.44 -4)
+		(end 3.44 -1)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9208a85d-2ea7-432b-a2e6-d09ec11f23f3")
+	)
+	(fp_line
+		(start 3.44 0.9)
+		(end 3.44 2.8)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2329fc56-dfdf-4ae9-96be-6a153c36ad0b")
+	)
+	(fp_line
+		(start -4.2 2.8)
+		(end -4.2 4.72)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "34706422-c666-45f2-8158-1a7d2d1c3c3a")
+	)
+	(fp_line
+		(start -4.2 4.72)
+		(end 3.44 4.72)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1014e662-c9b7-467a-8611-8d212832f246")
+	)
+	(fp_line
+		(start 3.44 4.72)
+		(end 3.44 2.8)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "030abd7f-499d-4a7a-ae80-c440b4be4799")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.9 1.9)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "c7f75f87-b9de-4727-9394-5033fd3cd5be")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0)
+		(size 1.9 1.9)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "9aa2358f-2175-477e-bd3e-5c2c439edd12")
+	)
+	(pad "P$2" thru_hole circle
+		(at 0 -5.08)
+		(size 1.9 1.9)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "26867fb5-41ed-4a5f-8704-4b18cfab73c3")
+	)
+	(pad "P$3" thru_hole circle
+		(at 2.54 -5.08)
+		(size 1.9 1.9)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "8bdde83d-accf-422c-b509-4b134dec72d4")
+	)
+	(embedded_fonts no)
+)

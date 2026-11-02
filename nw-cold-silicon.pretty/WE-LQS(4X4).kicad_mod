@@ -1,0 +1,121 @@
+(footprint "WE-LQS(4X4)"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wurth LQS series inductor, with 4mmx4mm package Avaliable in inductances 470nH, 1uH, 1.5uH, 2.2uH, 3.3uH, 4.7uH, 10uH, 15uH, 22uH, 33uH, 47uH, 68uH, 100uH, 150uH, 220uH, 330uH, 470uH, 1mH  https://www.digikey.com/products/en/inductors-coils-chokes/fixed-inductors/71?FV=ffecaecb%2Cfffc0511%2Cfffc06ed%2Cfffc02dc%2C1f140000%2Cffe00047%2Cb83c0b&mnonly=0&ColumnSort=0&page=1&stock=1&pbfree=0&rohs=0&cad=0&datasheet=0&nstock=0&photo=0&nonrohs=0&newproducts=0&k=inductor&quantity=0&ptm=0&fid=0&pageSize=25&pkeyword=inductor")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "c9b5a6f2-db9c-440a-9f55-31e6824ed9e1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "WE-LQS(4X4)"
+		(at -2.54 -3.302 0)
+		(layer "F.Fab")
+		(uuid "2d91c188-b48e-4500-8387-128515130bf5")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7c979674-db5a-4fe3-bd45-49201c73daf5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e4dd196-27ef-465f-a2d4-643fc83119b4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.54 -2.54)
+		(end -2.54 -1.905)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6ab956cd-ccd0-4af8-af8b-2b52d34f8286")
+	)
+	(fp_line
+		(start -2.54 -1.905)
+		(end -2.54 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "83a05bb4-fef6-41e8-8311-80e32639f43e")
+	)
+	(fp_line
+		(start -2.54 2.54)
+		(end 2.54 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c377ed37-a91e-41b8-b558-da78db8ab1f5")
+	)
+	(fp_line
+		(start 2.54 -2.54)
+		(end -2.54 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "11400852-ac0c-44b4-8fe7-524ebcd3ad54")
+	)
+	(fp_line
+		(start 2.54 2.54)
+		(end 2.54 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "af613ebb-2cc0-4847-a16f-a7a8482cc8af")
+	)
+	(pad "P$1" smd rect
+		(at -1.15 0 90)
+		(size 3.6 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "91bc627c-648d-4f22-b8d9-7999a4382b46")
+	)
+	(pad "P$2" smd rect
+		(at 1.15 0 90)
+		(size 3.6 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "aaa14fcd-97f2-4cca-ad86-cf6c0df7c7a3")
+	)
+	(embedded_fonts no)
+)

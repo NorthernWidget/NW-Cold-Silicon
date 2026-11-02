@@ -1,0 +1,109 @@
+(footprint "WE-TPC(3.8X3.8)"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 2.794 0)
+		(layer "F.SilkS")
+		(uuid "8d1b5361-b25f-4e33-a42f-912d080dfaf9")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "80f11ebe-103b-4a29-a2fa-d2015ea270f5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6ceee1b7-319d-43c1-816a-0997c33989c1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "77371aed-985c-4b93-8ed8-19c5a34ee0d3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.9 -1.9)
+		(end -1.9 1.9)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c0af2849-60a6-4122-8b7d-db08ca7184ed")
+	)
+	(fp_line
+		(start -1.9 1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c128fed6-472c-4d45-9e17-60c601dd2752")
+	)
+	(fp_line
+		(start 1.9 -1.9)
+		(end -1.9 -1.9)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4f1d7c6f-bad0-472b-a12e-d0d9c55fa53a")
+	)
+	(fp_line
+		(start 1.9 1.9)
+		(end 1.9 -1.9)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0be39475-a9c0-4043-b226-68af3f9c77d9")
+	)
+	(pad "1" smd rect
+		(at -1.35 0 90)
+		(size 4.3 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "ff481158-636f-4f47-8e74-18e6f1a291b8")
+	)
+	(pad "2" smd rect
+		(at 1.35 0 90)
+		(size 4.3 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "9beacdc7-ed2b-45ca-8200-6f796736b200")
+	)
+	(embedded_fonts no)
+)

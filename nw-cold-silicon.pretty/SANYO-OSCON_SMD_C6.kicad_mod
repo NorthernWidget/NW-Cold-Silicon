@@ -1,0 +1,158 @@
+(footprint "SANYO-OSCON_SMD_C6"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SANYO OSCON Capacitor SMD type with conductive polymer electrolyte\n\nSource: e_os_all.pdf")
+	(property "Reference" "REF**"
+		(at -3.175 -3.81 0)
+		(layer "F.SilkS")
+		(uuid "96e997e4-595a-4012-871c-6d1ad5174d7e")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SANYO-OSCON_SMD_C6"
+		(at -3.175 5.08 0)
+		(layer "F.Fab")
+		(uuid "7308bd2b-2a58-4088-a538-77e836742726")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edb94448-89ad-4619-a6fb-47ae513af31a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "10a70d6d-1cfc-40e3-b466-887704b72fc3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.2 -3.2)
+		(end 2.4 -3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "18d9c2bc-7380-4f84-8fd1-471b28cc51fd")
+	)
+	(fp_line
+		(start 2.4 -3.2)
+		(end 3.2 -2.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "186c7f09-f587-4441-94c6-51b301257b00")
+	)
+	(fp_line
+		(start 2.4 3.2)
+		(end -3.2 3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "37aa7ded-af07-407a-a91d-6c1b75413ea5")
+	)
+	(fp_line
+		(start 3.2 2.4)
+		(end 2.4 3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a12a8bbb-d5d8-4630-9c1c-1a5e2b46a8df")
+	)
+	(fp_line
+		(start -3.2 3.2)
+		(end -3.2 -3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "92e1f246-199f-4fd0-a289-eea83b9e00fd")
+	)
+	(fp_line
+		(start 3.2 -2.4)
+		(end 3.2 2.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "373395df-3e43-47ea-aaee-3a45fec5fbdb")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.95 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "5794d37e-69a3-4d3e-8cb9-537368edbb01")
+	)
+	(fp_poly
+		(pts
+			(xy -2.0984 2.220155) (xy -2.483044 1.675156) (xy -2.652327 1.365729) (xy -2.785318 1.039055) (xy -2.880289 0.699377)
+			(xy -2.936011 0.3511) (xy -2.951753 -0.001144) (xy -2.928195 -0.351504) (xy -2.868108 -0.697124)
+			(xy -2.772131 -1.034545) (xy -2.64032 -1.362534) (xy -2.0984 -2.267383)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "cd506699-54da-48f0-831f-139071771205")
+	)
+	(pad "+" smd rect
+		(at 2.8 0)
+		(size 3.5 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "4a591aa9-a185-4314-9ca7-77bf12b84f78")
+	)
+	(pad "-" smd rect
+		(at -2.8 0)
+		(size 3.5 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "634b6dff-912b-447e-bec7-7c7b1030569f")
+	)
+	(embedded_fonts no)
+)

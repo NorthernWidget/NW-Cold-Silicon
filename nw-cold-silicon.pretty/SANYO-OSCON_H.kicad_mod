@@ -1,0 +1,96 @@
+(footprint "SANYO-OSCON_H"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SANYO OSCON Capacitor\n\nSource: e_os_all.pdf")
+	(property "Reference" "REF**"
+		(at -1.905 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "0618a074-f32a-4c7c-9b53-59dd19e821c7")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SANYO-OSCON_H"
+		(at -1.905 2.54 0)
+		(layer "F.Fab")
+		(uuid "ae94faeb-351f-4365-a469-7fb89660bbe8")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2bc4405e-6e18-48cb-af63-ff95e9480b4b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a9fc65b6-9947-4b28-9abd-2840ebb3b659")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7 0)
+		(end -5.7 0)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84965566-6563-480e-9a6c-53a641862795")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 7.9001 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "aaf3eefa-0295-4008-a180-e6f66a4abb0e")
+	)
+	(pad "+" thru_hole circle
+		(at 3.75 0)
+		(size 1.27 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "b9503691-1327-4368-88ef-5f9a5253712d")
+	)
+	(pad "-" thru_hole circle
+		(at -3.75 0)
+		(size 1.27 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "9c1270c3-267b-436c-b2f9-bd9b4fdfbba0")
+	)
+	(embedded_fonts no)
+)

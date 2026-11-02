@@ -1,0 +1,217 @@
+(footprint "153CLV-0807"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Aluminum electrolytic capacitors\n\nSMD (Chip) Long Life Vertical 153 CLV\n\nhttp://www.bccomponents.com/")
+	(property "Reference" "REF**"
+		(at -4.29 -4.53 0)
+		(layer "F.SilkS")
+		(uuid "a4a582c2-7ebf-415d-98f5-90cfd8ce0132")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "153CLV-0807"
+		(at -4.325 5.785 0)
+		(layer "F.Fab")
+		(uuid "d791718d-6a88-4f4a-a3c4-0fafe1cdda56")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "66529469-f484-4570-89a6-5cf0f6fa0bef")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d617a1d-f03c-40db-870d-ced22940be80")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.2 -4.2)
+		(end 3.3 -4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b80eee8f-b6f2-4733-9bad-a0508414924a")
+	)
+	(fp_line
+		(start -4.2 -1.1)
+		(end -4.2 -4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c86cc530-6703-470b-a273-35ba24797745")
+	)
+	(fp_line
+		(start -4.2 4.2)
+		(end -4.2 1.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d69ab69-c482-4908-8be5-8b2f5e881446")
+	)
+	(fp_line
+		(start 3.3 -4.2)
+		(end 4.2 -3.3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49b659d8-2076-493e-a5ed-651a3bd1827f")
+	)
+	(fp_line
+		(start 3.3 4.2)
+		(end -4.2 4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "00f7a099-75ba-414f-b341-a0bf668e9143")
+	)
+	(fp_line
+		(start 4.2 -3.3)
+		(end 4.2 -1.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7a41487e-5ce5-4579-b280-ed40e6137ced")
+	)
+	(fp_line
+		(start 4.2 1.1)
+		(end 4.2 3.3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d3a23c7e-2227-4f41-b2e9-c51c924ae977")
+	)
+	(fp_line
+		(start 4.2 3.3)
+		(end 3.3 4.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a3acf91-9514-4292-bebc-295587b4fb09")
+	)
+	(fp_arc
+		(start -3.75 -1.05)
+		(mid 0 -3.876042)
+		(end 3.75 -1.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8c7f4a6f-98a7-4dd2-9a98-392cabe938fa")
+	)
+	(fp_arc
+		(start 3.75 1.05)
+		(mid 0 3.876042)
+		(end -3.75 1.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "70583a42-e0ac-41a2-a50e-c61a3b3543f4")
+	)
+	(fp_line
+		(start -4.2 1.1)
+		(end -4.2 -1.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e3d7a421-84f2-4c2f-b2ed-f325cd18ad10")
+	)
+	(fp_line
+		(start 4.2 -1.1)
+		(end 4.2 1.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bd991b90-881f-422c-8fa4-d8f5fc6a05a5")
+	)
+	(fp_arc
+		(start -3.75 1.05)
+		(mid -3.894226 0)
+		(end -3.75 -1.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e30afe2f-e145-40ab-9be3-33c9fb4647e2")
+	)
+	(fp_arc
+		(start 3.75 -1.05)
+		(mid 3.894226 0)
+		(end 3.75 1.05)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7f380652-04f7-4080-aecf-d8b406858d55")
+	)
+	(pad "+" smd rect
+		(at 3.05 0)
+		(size 4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "cdb0dc8d-4828-41d9-b03c-dbe655575a1a")
+	)
+	(pad "-" smd rect
+		(at -3.05 0)
+		(size 4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "22673e91-39fb-4237-b916-a6cc8a7fb81a")
+	)
+	(embedded_fonts no)
+)

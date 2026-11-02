@@ -1,0 +1,149 @@
+(footprint "D_7343-31W"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Chip Capacitor Type KEMET D / EIA 7343-21\n\nKEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder")
+	(property "Reference" "REF**"
+		(at -3.65 -2.3 0)
+		(layer "F.SilkS")
+		(uuid "b1ee94d3-ba98-42cb-8495-a106b0acf50b")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "D_7343-31W"
+		(at -3.65 3.575 0)
+		(layer "F.Fab")
+		(uuid "7df9e99d-a1e1-4671-81e5-018c8bfa8f5a")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a07ad38-6472-4aeb-81b6-cd49fa4ca303")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d837255b-d7d0-46bd-a5d2-c091a915d56f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.45 -2.1)
+		(end 3.45 -2.1)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ab1abfb3-eaba-4036-85f1-b27f808cd712")
+	)
+	(fp_line
+		(start -3.45 2.1)
+		(end -3.45 -2.1)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b8e27334-b8b5-4932-9c05-612c8d95c200")
+	)
+	(fp_line
+		(start 3.45 -2.1)
+		(end 3.45 2.1)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8248d53b-6649-41fd-b424-4fa7146d705e")
+	)
+	(fp_line
+		(start 3.45 2.1)
+		(end -3.45 2.1)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "18bc3430-91ca-44bd-98f4-6288a530b46f")
+	)
+	(fp_poly
+		(pts
+			(xy -3.65 1.2) (xy -3.5 1.2) (xy -3.5 -1.2) (xy -3.65 -1.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "998bb445-3e95-42ec-b356-906e357d9e34")
+	)
+	(fp_poly
+		(pts
+			(xy 2.675 2.125) (xy 3.15 2.125) (xy 3.15 -2.125) (xy 2.675 -2.125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "b352a306-734e-4033-8376-c17a07eaf4f1")
+	)
+	(fp_poly
+		(pts
+			(xy 3.5 1.2) (xy 3.65 1.2) (xy 3.65 -1.2) (xy 3.5 -1.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "4ef92e31-901b-4d31-8715-fe462041610f")
+	)
+	(pad "+" smd rect
+		(at 3.375 0)
+		(size 2.95 2.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "e988a18e-0624-4262-9e01-fda8b5a94cf0")
+	)
+	(pad "-" smd rect
+		(at -3.375 0)
+		(size 2.95 2.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "90ebf4b1-b5e7-4861-8d64-8169348125a5")
+	)
+	(embedded_fonts no)
+)

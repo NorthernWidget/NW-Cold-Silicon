@@ -1,0 +1,232 @@
+(footprint "JST-2-PTH-KIT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "JST 2 Pin Right Angle Plated Through  Hole - KIT tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.\nThis package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad.\nThis means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.\n\nSpecifications:\n\n• Pin count: 2\n• Pin pitch:2mm\n\nDatasheet referenced for footprint\n\nExample device(s):\n\n• CONN_02")
+	(property "Reference" "REF**"
+		(at -1.27 -5.27 0)
+		(layer "F.SilkS")
+		(uuid "28279225-cd2c-49c0-a4e1-1800a4b314f4")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "JST-2-PTH-KIT"
+		(at -1.27 -4 0)
+		(layer "F.Fab")
+		(uuid "29dda39a-fb69-48e7-994a-8450c5dfd725")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27c89004-745d-4d28-9f1e-6b1d658e65b6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b448fad2-70db-4a92-8da8-4194ab7f70dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_poly
+		(pts
+			(xy -0.865584 -0.324507) (xy -0.746119 -0.244683) (xy -0.647462 -0.006504) (xy -0.675493 0.134416)
+			(xy -0.755317 0.253881) (xy -0.993479 0.352531) (xy -1.134426 0.324571) (xy -1.248428 0.248428) (xy -1.324571 0.134426)
+			(xy -1.348786 0.012356) (xy -1.286505 0) (xy -1.348783 -0.012369) (xy -1.32454 -0.134419) (xy -1.248398 -0.248396)
+			(xy -1.134422 -0.324539) (xy -0.999991 -0.351242)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "8859d5aa-9be9-4ef3-9fc1-788c362c79b3")
+	)
+	(fp_poly
+		(pts
+			(xy 1.134416 -0.324507) (xy 1.253881 -0.244683) (xy 1.352538 -0.006504) (xy 1.324507 0.134416) (xy 1.244683 0.253881)
+			(xy 1.012631 0.35) (xy 0.993762 0.35) (xy 0.865573 0.324571) (xy 0.751571 0.248428) (xy 0.675427 0.134426)
+			(xy 0.651214 0.012355) (xy 0.713497 0) (xy 0.651217 -0.012371) (xy 0.675461 -0.13442) (xy 0.751603 -0.248396)
+			(xy 0.865579 -0.324538) (xy 1.000008 -0.351242)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "31400836-a108-434d-878d-8056f35a67a4")
+	)
+	(fp_poly
+		(pts
+			(xy -0.812499 -0.699763) (xy -0.637776 -0.62739) (xy -0.487738 -0.512262) (xy -0.37261 -0.362224)
+			(xy -0.300237 -0.187501) (xy -0.2761 -0.004162) (xy -0.2761 0.004085) (xy -0.299739 0.187119) (xy -0.371613 0.361744)
+			(xy -0.48627 0.511791) (xy -0.639268 0.629623) (xy -0.993152 0.724994) (xy -1.185255 0.700109) (xy -1.360439 0.627956)
+			(xy -1.51097 0.512909) (xy -1.626584 0.362814) (xy -1.699399 0.187905) (xy -1.723343 0.008396) (xy -1.660407 0.000001)
+			(xy -1.723358 -0.008278) (xy -1.699785 -0.187502) (xy -1.627423 -0.362241) (xy -1.512292 -0.512291)
+			(xy -1.358854 -0.630022) (xy -1.004231 -0.725005)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "B.Mask")
+		(uuid "6fb94aa8-2bb4-4d6c-9aa6-021064a9fd54")
+	)
+	(fp_poly
+		(pts
+			(xy 1.187501 -0.699763) (xy 1.362224 -0.62739) (xy 1.512262 -0.512262) (xy 1.62739 -0.362224) (xy 1.699763 -0.187501)
+			(xy 1.724438 -0.000079) (xy 1.700262 0.187118) (xy 1.628387 0.361744) (xy 1.51373 0.51179) (xy 1.360733 0.629623)
+			(xy 1.010907 0.7239) (xy 0.998403 0.7239) (xy 0.814744 0.700109) (xy 0.63956 0.627956) (xy 0.489029 0.512909)
+			(xy 0.373415 0.362814) (xy 0.3006 0.187904) (xy 0.276657 0.008395) (xy 0.339596 0) (xy 0.276642 -0.008279)
+			(xy 0.300215 -0.187504) (xy 0.372578 -0.362241) (xy 0.487708 -0.512291) (xy 0.641147 -0.630021) (xy 0.995769 -0.725005)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "B.Mask")
+		(uuid "eccfbf12-1a7d-4ca7-97bf-e4a64d8039b1")
+	)
+	(fp_line
+		(start -3 -6)
+		(end 3 -6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "258c4b5b-1317-489d-b63b-d393776fa408")
+	)
+	(fp_line
+		(start -3 1.8)
+		(end -3 -6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "640cca3f-21ba-4f66-9757-908c672cd48c")
+	)
+	(fp_line
+		(start -2 0)
+		(end -2 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e50980cd-d798-4136-84df-32dbc079f7ad")
+	)
+	(fp_line
+		(start -2 1.8)
+		(end -3 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9a33e43f-ffc4-4d42-93ca-75a47fd76238")
+	)
+	(fp_line
+		(start 2 1.8)
+		(end 2 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5a714cac-d50a-44d0-b5de-fe48c2dc692b")
+	)
+	(fp_line
+		(start 3 -6)
+		(end 3 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4bb8043e-fba7-4502-a425-00e67ef3b0f2")
+	)
+	(fp_line
+		(start 3 1.8)
+		(end 2 1.8)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1fcfe509-db44-404f-8ff9-23f2d3def823")
+	)
+	(fp_text user "-"
+		(at -1.4 -0.7 0)
+		(layer "F.Fab")
+		(uuid "95b732cd-e82d-4c38-ad18-5416894c18c1")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "+"
+		(at 0.6 -0.7 0)
+		(layer "F.Fab")
+		(uuid "b65148bd-17a8-4bdc-8b25-e60dd66c611a")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1 0)
+		(size 1.4478 1.4478)
+		(drill 0.7)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "de1115b9-2131-4858-8cee-f2607beee73f")
+	)
+	(pad "2" thru_hole circle
+		(at 1 0)
+		(size 1.4478 1.4478)
+		(drill 0.7)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "19dcbc8c-e2f0-485d-8b0f-83afdef6329d")
+	)
+	(embedded_fonts no)
+)

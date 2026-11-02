@@ -1,0 +1,145 @@
+(footprint "1X02_2.54_SCREWTERM"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "2 Pin Screw Terminal - 2.54mm\n\nSpecifications:\n\n• Pin count:2\n• Pin pitch:0.1\"\n\nExample device(s):\n\n• CONN_02")
+	(property "Reference" "REF**"
+		(at -2.54 -3.429 0)
+		(layer "F.SilkS")
+		(uuid "894cbb95-7d56-4293-a7ec-e6aa5d5978d9")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "1X02_2.54_SCREWTERM"
+		(at -2.54 4.064 0)
+		(layer "F.Fab")
+		(uuid "feff7c9e-0677-47d8-8ae0-a8cd0f95aedc")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b440e49f-9641-4fda-90f6-36664e82d8a4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6af9c069-d643-44c1-acf9-be95b5d49570")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.77 -3.3)
+		(end 2.73 -3.3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a0ac1266-9a24-4869-91d8-bbd3c740ca8b")
+	)
+	(fp_line
+		(start -2.77 -2.5)
+		(end -2.77 -3.3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "58f21539-c3e6-47ec-ac80-19873d21bf99")
+	)
+	(fp_line
+		(start -2.77 -2.5)
+		(end 2.73 -2.5)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9d4e8b8e-3c4f-4fd8-b758-95ca72d90d2f")
+	)
+	(fp_line
+		(start -2.77 3.2)
+		(end -2.77 -2.5)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "67b2520a-fb01-453f-98c3-8d7b75f18602")
+	)
+	(fp_line
+		(start 2.73 -3.3)
+		(end 2.73 -2.5)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e247716-30ef-40ae-9c66-1900c5eb7824")
+	)
+	(fp_line
+		(start 2.73 -2.5)
+		(end 2.73 3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4690dd5a-db70-4902-a5a9-ed8a0749ad7e")
+	)
+	(fp_line
+		(start 2.73 3.2)
+		(end -2.77 3.2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7287b3ec-2c76-4b43-b061-93db184791db")
+	)
+	(pad "P1" thru_hole circle
+		(at 1.27 0)
+		(size 1.524 1.524)
+		(drill 1.016)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "45ce2173-01fd-4b6b-9cfd-a12c28613488")
+	)
+	(pad "P2" thru_hole rect
+		(at -1.27 0)
+		(size 1.524 1.524)
+		(drill 1.016)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "50959950-ff07-4567-a931-6d3ebdbe07b3")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,141 @@
+(footprint "1X02_POKEHOME"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "2 pin poke-home connector  part number 2062-2P from STA")
+	(property "Reference" "REF**"
+		(at 0.635 3.175 0)
+		(layer "F.SilkS")
+		(uuid "14c84805-cad8-4320-a00f-c08a515db566")
+		(effects
+			(font
+				(size 0.373888 0.373888)
+				(thickness 0.032512)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "1X02_POKEHOME"
+		(at 0.635 1.905 0)
+		(layer "F.Fab")
+		(uuid "40a8aee3-b250-4c57-83b3-c3608b63d8ff")
+		(effects
+			(font
+				(size 0.373888 0.373888)
+				(thickness 0.032512)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85170e5b-2c0c-4edb-bc0e-6eb3b5840ca3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e928efe5-372f-41e2-8e03-0f6535dca4b4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7 -4)
+		(end 4.7 -4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "10182f06-bd38-44c0-8381-9f4a93c939c3")
+	)
+	(fp_line
+		(start -7 -2)
+		(end -7 -4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5e2ab9e0-00a0-48b1-b846-c64170c0945f")
+	)
+	(fp_line
+		(start -7 4)
+		(end -7 -2)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a7427d27-96a4-426e-8e2b-78d7daff7d3b")
+	)
+	(fp_line
+		(start 4.7 -4)
+		(end 4.7 4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "98c47405-4ec0-4569-bb30-7bbb975fa732")
+	)
+	(fp_line
+		(start 4.7 4)
+		(end -7 4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a13b14cc-dfcc-4a44-afc1-8a4bcf9e1a6d")
+	)
+	(pad "P1" smd rect
+		(at 5.25 -2)
+		(size 3.5 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "43e4960f-013a-4665-b6a2-d7e7a74ab46a")
+	)
+	(pad "P2" smd rect
+		(at 5.25 2)
+		(size 3.5 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "b7c6c78c-31bb-45b8-ad05-74e7ff166f46")
+	)
+	(pad "P3" smd rect
+		(at -4 -2)
+		(size 6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "8b9dd98b-558c-4480-826c-338ce3a81af9")
+	)
+	(pad "P4" smd rect
+		(at -4 2)
+		(size 6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1016)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "7ad60cc4-91a1-4b60-b1f3-d31e0d7213ad")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,169 @@
+(footprint "JST-2-PTH"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "JST 2 Pin Right Angle Plated Through  Hole tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.\n\nSpecifications:\n\n• Pin count: 2\n• Pin pitch:2mm\n\nDatasheet referenced for footprint\n\nExample device(s):\n\n• CONN_02")
+	(property "Reference" "REF**"
+		(at -1.27 -5.27 0)
+		(layer "F.SilkS")
+		(uuid "f8b4d196-6dd4-4459-a56d-b73668f31b1a")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "JST-2-PTH"
+		(at -1.27 -2.73 0)
+		(layer "F.Fab")
+		(uuid "bdcd4ecf-f3dc-4e0a-a15a-a8117b22d3be")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c53d40b0-7c13-4404-adf8-94d8357b049a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a284ae66-40f7-4bf2-b198-30bc809d3120")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.95 -6)
+		(end 2.95 -6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "00b1bb19-0d18-4e7c-b3b7-b56757e169b1")
+	)
+	(fp_line
+		(start -2.95 1.6)
+		(end -2.95 -6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ae0e5a78-fe92-4610-af95-012973c2f2f5")
+	)
+	(fp_line
+		(start -2.95 1.6)
+		(end -2.3 1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "48405f05-4495-40a3-8df6-7d9e786b01cf")
+	)
+	(fp_line
+		(start -2.3 1.6)
+		(end -2.3 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "03843e0c-8dfd-40c1-aa15-4620933b256a")
+	)
+	(fp_line
+		(start 2.3 1.6)
+		(end 2.3 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e1859db1-0d4e-47dc-9924-64faded5637a")
+	)
+	(fp_line
+		(start 2.95 -6)
+		(end 2.95 1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "30eda5ba-b56e-47e3-9186-4c8f5bb5282e")
+	)
+	(fp_line
+		(start 2.95 1.6)
+		(end 2.3 1.6)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b892d00d-018d-4ac4-8c64-b55c1ce5d151")
+	)
+	(fp_text user "-"
+		(at -1.4 -0.7 0)
+		(layer "F.Fab")
+		(uuid "85e36367-8074-4bc0-808e-99ad580f9393")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "+"
+		(at 0.6 -0.7 0)
+		(layer "F.Fab")
+		(uuid "69580647-26ed-43c6-8693-6e9dea8db332")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1 0)
+		(size 1.6 1.6)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "242f2fd4-886a-473d-b778-40e011da6cb7")
+	)
+	(pad "2" thru_hole circle
+		(at 1 0)
+		(size 1.6 1.6)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "6b5db705-0a57-4c7b-8539-1e28566d387b")
+	)
+	(embedded_fonts no)
+)

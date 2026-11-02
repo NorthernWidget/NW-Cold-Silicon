@@ -1,0 +1,65 @@
+(footprint "1X01_2MM"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Plated Through Hole - 2mm\n\nSpecifications:\n\n• Pin count:1\n\nExample device(s):\n\n• CONN_01")
+	(property "Reference" "REF**"
+		(at -1.651 -1.778 0)
+		(layer "F.SilkS")
+		(uuid "5a463e9e-2553-421a-a5ed-5400e94b9176")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "1X01_2MM"
+		(at -1.651 2.413 0)
+		(layer "F.Fab")
+		(uuid "17d3f7f8-da87-4975-abea-71f39779795d")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9603792a-d401-405f-9859-04bc941f675f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63c1fdc8-58dc-4f3a-b942-46e7ee111ccf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at 0 0 90)
+		(size 3.302 3.302)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "b70686b3-023a-4e8b-8f58-eee82d6da5f5")
+	)
+	(embedded_fonts no)
+)

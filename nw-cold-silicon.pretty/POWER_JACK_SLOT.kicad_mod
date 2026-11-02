@@ -1,0 +1,205 @@
+(footprint "POWER_JACK_SLOT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "DC Barrel Power Jack/Connector PTH Slot Pads Extended soldering pads.  5.5mm jack, 2.1mm center pole diameter\n\nSpecifications:\n\n• Pin count: 3\n\nDatasheet referenced for footprint\n\nExample device(s):\n\n• POWER_JACK")
+	(property "Reference" "REF**"
+		(at 3.5052 -2.159 0)
+		(layer "F.SilkS")
+		(uuid "e0fed33b-c676-4e94-96cf-bbfff4748a04")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "POWER_JACK_SLOT"
+		(at 3.175 -1.143 0)
+		(layer "F.Fab")
+		(uuid "274e210c-ad4a-455f-811c-d5d23d70b98d")
+		(effects
+			(font
+				(size 0.48768 0.48768)
+				(thickness 0.12192)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e77b6240-e084-4511-9bb0-3371cf656b60")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e83ac31-95c0-45a1-be93-876fd8f90b3e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0.83 -12.7)
+		(end 0.83 -8.4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e5345396-9b08-48c9-a3e3-0ba05be8a169")
+	)
+	(fp_line
+		(start 0.83 -6.51)
+		(end 0.83 -3.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "905a5f31-e83b-4a76-8630-9f983fac20dc")
+	)
+	(fp_line
+		(start 0.83 -3.1)
+		(end 9.33 -3.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "732c45fe-9c4c-43dd-b65d-16b71486bfa7")
+	)
+	(fp_line
+		(start 9.33 -13.7)
+		(end 4.83 -13.7)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6bd3cbe9-d88b-4c41-a6cb-d55d46e8dd8c")
+	)
+	(fp_line
+		(start 9.33 -3.1)
+		(end 9.28 -3.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9add3d5c-53fe-488c-8613-074a2fa7de13")
+	)
+	(fp_line
+		(start 9.33 -3.1)
+		(end 9.33 -13.7)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "14cafbee-a78c-431e-983b-0008a4a39fd0")
+	)
+	(fp_line
+		(start 0.83 -13.7)
+		(end 0.83 -12.7)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1b0b0836-72d4-46bd-ac3d-3aecad60f7dc")
+	)
+	(fp_line
+		(start 0.83 -8.4)
+		(end 0.83 -6.55)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5ad1cf8b-8e60-4ccd-9f5d-97c53e0dd9d0")
+	)
+	(fp_line
+		(start 0.83 -3.1)
+		(end 0.83 -0.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6e03fb6a-0ea4-4e57-819a-7d8fa09f62d3")
+	)
+	(fp_line
+		(start 4.83 -13.7)
+		(end 0.83 -13.7)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2c5a3642-896b-4424-ab6a-f9b9d7a0ead2")
+	)
+	(fp_line
+		(start 9.33 -0.1)
+		(end 0.83 -0.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5d29938b-2f43-4f00-84b7-2059245b0894")
+	)
+	(fp_line
+		(start 9.33 -0.1)
+		(end 9.33 -3.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fe0e1d3c-8d48-4da5-a9a9-e7d35c16e40d")
+	)
+	(pad "GND@1" thru_hole oval
+		(at 2.58 -7.5)
+		(size 4 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "327f2775-5c77-485a-9fc5-e27304cf218d")
+	)
+	(pad "GND@2" thru_hole oval
+		(at 7.58 -10.8 90)
+		(size 4 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "50d4e38f-2269-45d2-baf7-f5fd35f416dc")
+	)
+	(pad "PWR" thru_hole oval
+		(at 2.58 -13.8)
+		(size 4 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+		(uuid "fb027e64-c7bb-4039-89b3-dc332f809e68")
+	)
+	(embedded_fonts no)
+)
