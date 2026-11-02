@@ -18,7 +18,7 @@ Footprints embedded in the KiCad boards, each matched to the library through its
 | board | file | embedded names | identical | pads identical | pads differ | added | unchecked |
 |---|---|---|---|---|---|---|---|
 | okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 68 | 63 | 1 | 3 | 3 | 2 |
-| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 37 | 34 | 0 | 1 | 1 | 4 |
+| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 36 | 33 | 0 | 1 | 1 | 4 |
 
 Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: 42 items):
 
@@ -27,6 +27,7 @@ Added from the boards (graphics the importer put on the Rescue layer, from Eagle
 - `USB_C_CUSB31-CFM2AX-01-X`: USB-C receptacle; Okapi.brd and Margay.brd name Adafruit's microbuilder library, which does not hold it in the 2015 release that is Adafruit's current master.
 - `USB_MICRO_VERT_MOLEX`: from Bobby's working copy of bschulz, never committed to Cold-Silicon.
 
+No footprint carries a per-pad solder-mask or paste margin (7608 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
 Library: **847 footprints** in `nw-cold-silicon.pretty`, **1392 symbols** in `nw-cold-silicon.kicad_sym`.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 

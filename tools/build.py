@@ -169,7 +169,10 @@ if not upto:
     prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items):'%getattr(as_library,'dropped_rescue',0),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
+MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
+nmargin=0
 for name,t in fps.items():
+    t,nm=MARGIN.subn('',t); nmargin+=nm   # no per-pad mask or paste margin: the board's design rules set them
     k=iter(range(10**6))
     t=re.sub(r'\(uuid "[^"]+"\)',lambda m:'(uuid "%s")'%uuid.uuid5(uuid.NAMESPACE_URL,'%s/%s/%d'%(LIB,name,next(k))),t)
     open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)
@@ -181,7 +184,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')
