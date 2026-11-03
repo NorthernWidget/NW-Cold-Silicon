@@ -255,8 +255,34 @@ def graphic_fp(t,name):
     t=re.sub(r'^\t\(property "Value" "[^"]*"','\t(property "Value" "%s"'%name,t,count=1,flags=re.M)
     if '(attr ' not in t: t=re.sub(r'^(\t\(duplicate_pad_numbers_are_jumpers [^)]*\)\n)',r'\1\t(attr exclude_from_pos_files exclude_from_bom)\n',t,count=1,flags=re.M)
     return t.replace('(layer "F.Cu")\n\t(descr','(layer "F.Cu")\n\t(descr "%s")\n\t(descr'%GRAPHIC[name],1) if False else re.sub(r'^\t\(layer "F\.Cu"\)\n',lambda m:m.group(0)+'\t(descr "%s")\n'%GRAPHIC[name],t,count=1,flags=re.M)
+def fmt6(v):
+    s=('%.6f'%v).rstrip('0').rstrip('.'); return '0' if s in ('-0','') else s
+def artwork_from_fp(fp,scale=2.0):
+    """The footprint's front-silkscreen drawing as symbol graphics, scaled and with y up (a symbol's y axis
+    points up, a footprint's down). Lines become polylines, filled polygons filled polylines."""
+    out=[]
+    for m in re.finditer(r'^\t\((fp_line|fp_poly|fp_circle|fp_arc)\n((?:\t\t.*\n)+?)\t\)\n',fp,re.M):
+        kind,body=m.group(1),m.group(2)
+        if '(layer "F.SilkS")' not in body: continue
+        pts=[(float(a)*scale,-float(b)*scale) for a,b in re.findall(r'\((?:start|mid|end|xy|center) (-?[\d.]+) (-?[\d.]+)\)',body)]
+        w=re.search(r'\(width ([\d.]+)\)',body); w=float(w.group(1))*scale if w else 0
+        if kind=='fp_line':
+            out.append('\t\t\t(polyline\n\t\t\t\t(pts\n\t\t\t\t\t(xy %s %s) (xy %s %s)\n\t\t\t\t)\n\t\t\t\t(stroke\n\t\t\t\t\t(width %s)\n\t\t\t\t\t(type default)\n\t\t\t\t)\n\t\t\t\t(fill\n\t\t\t\t\t(type none)\n\t\t\t\t)\n\t\t\t)\n'%(fmt6(pts[0][0]),fmt6(pts[0][1]),fmt6(pts[1][0]),fmt6(pts[1][1]),fmt6(w)))
+        elif kind=='fp_poly':
+            out.append('\t\t\t(polyline\n\t\t\t\t(pts\n\t\t\t\t\t%s\n\t\t\t\t)\n\t\t\t\t(stroke\n\t\t\t\t\t(width 0)\n\t\t\t\t\t(type default)\n\t\t\t\t)\n\t\t\t\t(fill\n\t\t\t\t\t(type outline)\n\t\t\t\t)\n\t\t\t)\n'%' '.join('(xy %s %s)'%(fmt6(x),fmt6(y)) for x,y in pts+pts[:1]))
+        elif kind=='fp_circle':
+            r=((pts[1][0]-pts[0][0])**2+(pts[1][1]-pts[0][1])**2)**0.5
+            out.append('\t\t\t(circle\n\t\t\t\t(center %s %s)\n\t\t\t\t(radius %s)\n\t\t\t\t(stroke\n\t\t\t\t\t(width %s)\n\t\t\t\t\t(type default)\n\t\t\t\t)\n\t\t\t\t(fill\n\t\t\t\t\t(type none)\n\t\t\t\t)\n\t\t\t)\n'%(fmt6(pts[0][0]),fmt6(pts[0][1]),fmt6(r),fmt6(w)))
+        elif kind=='fp_arc':
+            out.append('\t\t\t(arc\n\t\t\t\t(start %s %s)\n\t\t\t\t(mid %s %s)\n\t\t\t\t(end %s %s)\n\t\t\t\t(stroke\n\t\t\t\t\t(width %s)\n\t\t\t\t\t(type default)\n\t\t\t\t)\n\t\t\t\t(fill\n\t\t\t\t\t(type none)\n\t\t\t\t)\n\t\t\t)\n'%(fmt6(pts[0][0]),fmt6(pts[0][1]),fmt6(pts[1][0]),fmt6(pts[1][1]),fmt6(pts[2][0]),fmt6(pts[2][1]),fmt6(w)))
+    return ''.join(out)
 def graphic_sym(b,name):
     b=re.sub(r'\(exclude_from_sim \w+\)','(exclude_from_sim yes)',b,count=1); b=re.sub(r'\(in_bom \w+\)','(in_bom no)',b,count=1); b=re.sub(r'\(in_pos_files \w+\)','(in_pos_files no)',b,count=1)
+    # the symbol draws the logo itself (the footprint's silkscreen at twice its size) in place of a stand-in text
+    art=artwork_from_fp(fps[name]) if name in fps else ''
+    if art:
+        b=re.sub(r'^\t\t\(symbol "%s_\d+_\d+"\n(?:.*\n)*?\t\t\)\n'%re.escape(name),'',b,flags=re.M)   # every unit body goes
+        b=re.sub(r'^\t\t\(embedded_fonts',lambda m:'\t\t(symbol "%s_0_1"\n%s\t\t)\n'%(name,art)+m.group(0),b,count=1,flags=re.M)
     b=re.sub(r'\(property "Reference" "[^"]*"','(property "Reference" "LOGO"',b,count=1)
     b=re.sub(r'\(property "Value" "[^"]*"','(property "Value" "%s"'%name,b,count=1)
     b=re.sub(r'\(property "Description" "[^"]*"','(property "Description" "%s"'%GRAPHIC[name],b,count=1)
