@@ -7,6 +7,13 @@ drawn with.
 - `nw-cold-silicon.pretty/`: the footprints.
 - `nw-cold-silicon.kicad_sym`: the symbols, one per Eagle device (a deviceset
   with a package), each pointing at its footprint here.
+- `nw-cold-silicon.kicad_wks`: the drawing sheet (border, zones and title
+  block) for every schematic page and board. The title block is Bobby's Eagle
+  FRAME_A_L, which the Eagle designs placed as a symbol on each sheet: Project
+  and Designer come from the project's text variables `PROJECT` and
+  `DESIGNER`, REV and Date from each sheet's title block, TITLE is the sheet's
+  name in the hierarchy, and the CC BY-SA 4.0 line is printed on every page.
+  Point both page-layout settings of a project (schematic and board) at it.
 - `PROVENANCE.md`: which Eagle libraries, at which commit, with which
   converter, and the counts. Written by the build, not by hand.
 - `COLLISIONS.md`: every name that two sources both held, and what was done.
@@ -23,7 +30,9 @@ to the global tables, under the nickname `nw-cold-silicon`:
 ```
 
 The nickname must be `nw-cold-silicon`: every symbol's Footprint field names
-it.
+it. In the project file, set `page_layout_descr_file` under both `schematic`
+and `pcbnew` to `${NW_LIBS}/nw-cold-silicon/nw-cold-silicon.kicad_wks` and
+give `text_variables` a `PROJECT` and a `DESIGNER`.
 
 ## Where it comes from
 
