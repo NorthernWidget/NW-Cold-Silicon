@@ -16,12 +16,14 @@ differ only in BOM properties (BOM_PROPS: description, datasheet, manufacturer
 and part numbers) count as identical and the earlier one is kept, so the
 dedicated passives library's purchasing data stands. ALIASES collapses a second
 copy under another name onto the first; BOARD_PREFERRED takes a package from a
-board's Eagle file where that is the newer drawing; COLLISIONS.md
+board's Eagle file where that is the newer drawing; SCHEMATIC_LIFT and
+POWER_LIFT take symbols from a board's imported project library, the latter
+as KiCad power symbols; COLLISIONS.md
 says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
 every number in them is the build's.
 --upto stops after the named source, for one commit per source.
 """
-import os,re,sys,shutil,subprocess,tempfile,uuid,datetime,collections
+import os,re,sys,shutil,subprocess,tempfile,uuid,datetime,collections,glob
 import xml.etree.ElementTree as ET
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from from_board import embedded,as_library,sig,from_eagle
@@ -71,6 +73,41 @@ BOARD_PREFERRED={  # a package whose newest drawing is the copy in a board's Eag
  '4_40_CLOSE':('margay',"Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing."),
  'LINX_BAT-HLD-012-SMT':('okapi',"Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's."),
 }
+SCHEMATIC_LIFT={  # symbols that exist only in a board's imported project library (Bobby's working copy, or a library not in the workspace)
+ 'Project-Okapi/Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{
+   'BAT54C':"dual Schottky, bschulz working copy, not in Cold-Silicon 5823fee",
+   'USB_C':"USB-C receptacle symbol, Adafruit's microbuilder library, not in the workspace",
+   'B_SERIES_M.2EKEY_NOPROG':"Particle B-series M.2 connector, bschulz working copy",
+   'USB_MICROVERT':"vertical micro-USB, bschulz working copy",
+   'BMA456':"Bosch accelerometer, bschulz working copy",
+   'MLX90393':"Melexis magnetometer, bschulz working copy",
+ },
+}
+POWER_LIFT={  # the import's supply symbols become KiCad power symbols: (power), reference #PWR, the rail's name as value and pin name
+ 'Project-Okapi/Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{'GND':'GND','3V3_AUX':'3V3_AUX','3V3_CORE':'3V3_CORE'},
+}
+def lift_symbol(libfile,name,new=None,power=False):
+    t=open(libfile).read()
+    m=re.search(r'^\t\(symbol "'+re.escape(name)+r'"\n.*?^\t\)\n',t,re.S|re.M)
+    if m: b=m.group(0)
+    else:   # a definition the importer embedded in a sheet and never wrote to the library file
+        nick=os.path.basename(libfile)[:-len('.kicad_sym')]; b=None
+        for f in sorted(glob.glob(os.path.join(os.path.dirname(libfile),'*.kicad_sch'))):
+            m=re.search(r'^\t\t\(symbol "'+re.escape(nick+':'+name)+r'"\n.*?^\t\t\)\n',open(f).read(),re.S|re.M)
+            if m: b='\n'.join(l[1:] for l in m.group(0).split('\n')).replace('(symbol "%s:%s"'%(nick,name),'(symbol "%s"'%name,1); break
+        assert b,(libfile,name)
+    new=new or name
+    b=re.sub(r'^\t\(symbol "'+re.escape(name)+'"','\t(symbol "%s"'%new,b,count=1)
+    b=re.sub(r'\(symbol "'+re.escape(name)+r'_(\d+_\d+)"',lambda q:'(symbol "%s_%s"'%(new,q.group(1)),b)
+    b=re.sub(r'\(property "Footprint" "[^"]*:([^"]*)"',lambda q:'(property "Footprint" "%s:%s"'%(LIB,q.group(1)),b)
+    b=re.sub(r'^(\t+)\(text "\$\{DISP\}"\n(?:.*\n)*?\1\)\n','',b,flags=re.M)   # the GUI import's unresolvable text, at whatever depth it sits
+    if power:
+        if not re.search(r'^\t\t\(power',b,re.M): b=b.replace('\t(symbol "%s"\n'%new,'\t(symbol "%s"\n\t\t(power)\n'%new,1)
+        b=re.sub(r'\(exclude_from_sim \w+\)','(exclude_from_sim yes)',b,count=1); b=re.sub(r'\(in_bom \w+\)','(in_bom no)',b,count=1); b=re.sub(r'\(on_board \w+\)','(on_board no)',b,count=1)
+        b=re.sub(r'\(property "Reference" "[^"]*"','(property "Reference" "#PWR"',b,count=1)
+        b=re.sub(r'\(property "Value" "[^"]*"','(property "Value" "%s"'%new,b,count=1)
+        b=re.sub(r'\(name "[^"]*"',lambda q:'(name "%s"'%new,b)
+    return b
 EAGLE_KEY={'bschulz_passives':'passives','bschulz':'bschulz','awickert':'awickert','csandell':'csandell'}
 LIB='nw-cold-silicon'; PRETTY=os.path.join(REPO,LIB+'.pretty'); SYM=os.path.join(REPO,LIB+'.kicad_sym')
 def run(cmd):
@@ -140,6 +177,16 @@ for key,rel,kind in SOURCES:
         else: coll.append(f'| {name} | symbol | {symsrc[name]} | {key} | older copy skipped |')
     prov.append(f'| {key} | {kind} | `{rel}` | {git(src,"log","-1","--format=%h %cs","--",os.path.basename(src))} | {npk} | {nsy} | {"; ".join(warn) or "–"} |')
 if not upto:
+    for libfile,names in SCHEMATIC_LIFT.items():
+        for name,why in names.items():
+            assert name not in syms,(name,'already in the library')
+            syms[name]=lift_symbol(os.path.join(ws,libfile),name); symsrc[name]='schematic:'+libfile.split('/')[0]
+            coll.append(f'| {name} | symbol | – | {libfile.split("/")[0]} | lifted from the imported project library: {why} |')
+    for libfile,names in POWER_LIFT.items():
+        for name,new in names.items():
+            assert new not in syms,(new,'already in the library')
+            syms[new]=lift_symbol(os.path.join(ws,libfile),name,new,power=True); symsrc[new]='power:'+libfile.split('/')[0]
+            coll.append(f'| {new} | symbol | – | {libfile.split("/")[0]} | power symbol for the rail, from the import\'s supply symbol |')
     for name,(bkey,why) in BOARD_PREFERRED.items():
         _,pcb,brd=[b for b in BOARDS if b[0]==bkey][0]
         lib=[e.get('library') for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element') if e.get('package')==name][0]

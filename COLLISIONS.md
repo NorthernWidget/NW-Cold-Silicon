@@ -1747,14 +1747,23 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TPS62177 | symbol | bschulz | old | kept once |
 | TPS63060 | symbol | bschulz | old | kept once |
 | TPS63061 | symbol | bschulz | old | kept once |
+| BAT54C | symbol | – | Project-Okapi | lifted from the imported project library: dual Schottky, bschulz working copy, not in Cold-Silicon 5823fee |
+| USB_C | symbol | – | Project-Okapi | lifted from the imported project library: USB-C receptacle symbol, Adafruit's microbuilder library, not in the workspace |
+| B_SERIES_M.2EKEY_NOPROG | symbol | – | Project-Okapi | lifted from the imported project library: Particle B-series M.2 connector, bschulz working copy |
+| USB_MICROVERT | symbol | – | Project-Okapi | lifted from the imported project library: vertical micro-USB, bschulz working copy |
+| BMA456 | symbol | – | Project-Okapi | lifted from the imported project library: Bosch accelerometer, bschulz working copy |
+| MLX90393 | symbol | – | Project-Okapi | lifted from the imported project library: Melexis magnetometer, bschulz working copy |
+| GND | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
+| 3V3_AUX | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
+| 3V3_CORE | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
 | 4_40_CLOSE | footprint | board margay | bschulz | taken from the board's Eagle file by decision: Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing. |
 | LINX_BAT-HLD-012-SMT | footprint | board okapi | bschulz, awickert, fork | taken from the board's Eagle file by decision: Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's. |
-| NWLOGO_MED | footprint | awickert | board okapi (awickert) | unchecked: no front-side instance |
+| NWLOGO_MED | footprint | awickert | board okapi (None) | unchecked: no front-side instance |
 | PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
 | USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
-| NWLOGO_MED | footprint | awickert | board margay (awickert) | unchecked: no front-side instance |
+| NWLOGO_MED | footprint | awickert | board margay (None) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |

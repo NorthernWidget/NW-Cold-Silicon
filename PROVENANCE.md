@@ -31,7 +31,7 @@ Added from the boards (graphics the importer put on the Rescue layer, from Eagle
 
 Artwork (logos, 25 footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.
 No footprint carries a per-pad solder-mask or paste margin (7608 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
-Library: **847 footprints** in `nw-cold-silicon.pretty`, **1392 symbols** in `nw-cold-silicon.kicad_sym`.
+Library: **847 footprints** in `nw-cold-silicon.pretty`, **1401 symbols** in `nw-cold-silicon.kicad_sym`.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 
 Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.
