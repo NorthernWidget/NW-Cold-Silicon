@@ -84,6 +84,9 @@ SCHEMATIC_LIFT={  # symbols that exist only in a board's imported project librar
    'BMA456':"Bosch accelerometer, bschulz working copy",
    'MLX90393':"Melexis magnetometer, bschulz working copy",
  },
+ 'Project-Margay@fc9e682:Hardware/KiCAD/Margay-eagle-import.kicad_sym':{
+   'SDMMCWR-CRD':"SD/MMC socket, the Wurth WR-CRD device of bschulz's SDMMC deviceset, bschulz working copy (the committed library has SCDA, 18650 and 06132 only); the KiCad 7 import embedded it in Margay_1 and never wrote it to its library file",
+ },
 }
 POWER_LIFT={  # the import's supply symbols become KiCad power symbols: (power), reference #PWR, the rail's name as value and pin name
  'Project-Okapi@11776ab:Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{'GND':'GND','3V3_AUX':'3V3_AUX','3V3_CORE':'3V3_CORE'},

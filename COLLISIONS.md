@@ -1753,6 +1753,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | USB_MICROVERT | symbol | – | Project-Okapi | lifted from the imported project library: vertical micro-USB, bschulz working copy |
 | BMA456 | symbol | – | Project-Okapi | lifted from the imported project library: Bosch accelerometer, bschulz working copy |
 | MLX90393 | symbol | – | Project-Okapi | lifted from the imported project library: Melexis magnetometer, bschulz working copy |
+| SDMMCWR-CRD | symbol | – | Project-Margay | lifted from the imported project library: SD/MMC socket, the Wurth WR-CRD device of bschulz's SDMMC deviceset, bschulz working copy (the committed library has SCDA, 18650 and 06132 only); the KiCad 7 import embedded it in Margay_1 and never wrote it to its library file |
 | GND | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
 | 3V3_AUX | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
 | 3V3_CORE | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
