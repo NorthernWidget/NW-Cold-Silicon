@@ -74,7 +74,9 @@ BOARD_PREFERRED={  # a package whose newest drawing is the copy in a board's Eag
  'LINX_BAT-HLD-012-SMT':('okapi',"Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's."),
 }
 SCHEMATIC_LIFT={  # symbols that exist only in a board's imported project library (Bobby's working copy, or a library not in the workspace)
- 'Project-Okapi/Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{
+ # A source is Repo@commit:path, read from that repository's git object, because an import library is retired once nothing names it
+ # (Okapi's went with f5ae35d) and the lift must still build. The commit is the last at which the file and the sheets hold every lifted definition.
+ 'Project-Okapi@11776ab:Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{
    'BAT54C':"dual Schottky, bschulz working copy, not in Cold-Silicon 5823fee",
    'USB_C':"USB-C receptacle symbol, Adafruit's microbuilder library, not in the workspace",
    'B_SERIES_M.2EKEY_NOPROG':"Particle B-series M.2 connector, bschulz working copy",
@@ -84,18 +86,27 @@ SCHEMATIC_LIFT={  # symbols that exist only in a board's imported project librar
  },
 }
 POWER_LIFT={  # the import's supply symbols become KiCad power symbols: (power), reference #PWR, the rail's name as value and pin name
- 'Project-Okapi/Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{'GND':'GND','3V3_AUX':'3V3_AUX','3V3_CORE':'3V3_CORE'},
+ 'Project-Okapi@11776ab:Hardware/KiCAD-10import/Okapi-eagle-import.kicad_sym':{'GND':'GND','3V3_AUX':'3V3_AUX','3V3_CORE':'3V3_CORE'},
 }
-def lift_symbol(libfile,name,new=None,power=False):
-    t=open(libfile).read()
+def git_show(source):
+    """'Repo@commit:path' -> the file at that commit of the workspace repository Repo."""
+    repo,rest=source.split('@',1); rev,path=rest.split(':',1)
+    return subprocess.run(['git','-C',os.path.join(ws,repo),'show',f'{rev}:{path}'],capture_output=True,text=True,check=True).stdout
+def git_sheets(source):
+    """The .kicad_sch files beside a 'Repo@commit:path' library at that commit, as (name, text)."""
+    repo,rest=source.split('@',1); rev,path=rest.split(':',1); d=os.path.dirname(path)
+    names=subprocess.run(['git','-C',os.path.join(ws,repo),'ls-tree','--name-only',rev,d+'/'],capture_output=True,text=True,check=True).stdout.split()
+    return [(f,git_show(f'{repo}@{rev}:{f}')) for f in sorted(names) if f.endswith('.kicad_sch')]
+def lift_symbol(source,name,new=None,power=False):
+    t=git_show(source)
     m=re.search(r'^\t\(symbol "'+re.escape(name)+r'"\n.*?^\t\)\n',t,re.S|re.M)
     if m: b=m.group(0)
     else:   # a definition the importer embedded in a sheet and never wrote to the library file
-        nick=os.path.basename(libfile)[:-len('.kicad_sym')]; b=None
-        for f in sorted(glob.glob(os.path.join(os.path.dirname(libfile),'*.kicad_sch'))):
-            m=re.search(r'^\t\t\(symbol "'+re.escape(nick+':'+name)+r'"\n.*?^\t\t\)\n',open(f).read(),re.S|re.M)
+        nick=os.path.basename(source.split(':',1)[1])[:-len('.kicad_sym')]; b=None
+        for f,text in git_sheets(source):
+            m=re.search(r'^\t\t\(symbol "'+re.escape(nick+':'+name)+r'"\n.*?^\t\t\)\n',text,re.S|re.M)
             if m: b='\n'.join(l[1:] for l in m.group(0).split('\n')).replace('(symbol "%s:%s"'%(nick,name),'(symbol "%s"'%name,1); break
-        assert b,(libfile,name)
+        assert b,(source,name)
     new=new or name
     b=re.sub(r'^\t\(symbol "'+re.escape(name)+'"','\t(symbol "%s"'%new,b,count=1)
     b=re.sub(r'\(symbol "'+re.escape(name)+r'_(\d+_\d+)"',lambda q:'(symbol "%s_%s"'%(new,q.group(1)),b)
@@ -180,13 +191,13 @@ if not upto:
     for libfile,names in SCHEMATIC_LIFT.items():
         for name,why in names.items():
             assert name not in syms,(name,'already in the library')
-            syms[name]=lift_symbol(os.path.join(ws,libfile),name); symsrc[name]='schematic:'+libfile.split('/')[0]
-            coll.append(f'| {name} | symbol | – | {libfile.split("/")[0]} | lifted from the imported project library: {why} |')
+            syms[name]=lift_symbol(libfile,name); symsrc[name]='schematic:'+libfile.split('@')[0]
+            coll.append(f'| {name} | symbol | – | {libfile.split("@")[0]} | lifted from the imported project library: {why} |')
     for libfile,names in POWER_LIFT.items():
         for name,new in names.items():
             assert new not in syms,(new,'already in the library')
-            syms[new]=lift_symbol(os.path.join(ws,libfile),name,new,power=True); symsrc[new]='power:'+libfile.split('/')[0]
-            coll.append(f'| {new} | symbol | – | {libfile.split("/")[0]} | power symbol for the rail, from the import\'s supply symbol |')
+            syms[new]=lift_symbol(libfile,name,new,power=True); symsrc[new]='power:'+libfile.split('@')[0]
+            coll.append(f'| {new} | symbol | – | {libfile.split("@")[0]} | power symbol for the rail, from the import\'s supply symbol |')
     for name,(bkey,why) in BOARD_PREFERRED.items():
         _,pcb,brd=[b for b in BOARDS if b[0]==bkey][0]
         lib=[e.get('library') for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element') if e.get('package')==name][0]
