@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Open-Source Hardware (OSHW) Logo - Small - Silkscreen\n\nSilkscreen logo for open-source hardware designs.\n\nDevices using:\n\n• OSHW_LOGO")
-	(property "Reference" ""
+	(descr "Open Source Hardware logo, small")
+	(property "Reference" "LOGO"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(uuid "7d7f8e76-ce53-5f23-bcaa-af271d6274dc")
@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "OSHW-LOGO-S"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "4c5d6a40-a2ad-5581-bb67-f4bfe813627f")
@@ -35,7 +35,7 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Open Source Hardware logo, small"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -46,6 +46,7 @@
 			)
 		)
 	)
+	(attr exclude_from_pos_files exclude_from_bom)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_poly
 		(pts

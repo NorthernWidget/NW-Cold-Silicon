@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "ALOG logo")
-	(property "Reference" ""
+	(descr "ALog logo, v0")
+	(property "Reference" "LOGO"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(uuid "0add4ca6-e6b8-502a-8e08-b6df8ca4e46a")
@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "ALOG_LOGO_V0"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "4ccf6045-fe67-53d7-b688-7714efd27dc2")
@@ -35,7 +35,7 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "ALog logo, v0"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -46,6 +46,7 @@
 			)
 		)
 	)
+	(attr exclude_from_pos_files exclude_from_bom)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -4.9615 -4.2788)

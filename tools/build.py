@@ -179,6 +179,32 @@ if not upto:
     prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items; a non-plated hole\'s pad, which that importer makes 0.254 mm wider than the drill, is set to the drill as the library converter and Eagle have it: %d pads):'%(getattr(as_library,'dropped_rescue',0),getattr(as_library,'npth_resized',0)),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
+GRAPHIC={  # parts that are artwork, not components: no BOM line, no pick-and-place row, no simulation
+ 'NWLOGO':'Northern Widget logo, silkscreen','NWLOGO_MED':'Northern Widget logo, medium, silkscreen','NW_LOGO_1IN':'Northern Widget logo, one inch',
+ 'ALOG_LOGO_V0':'ALog logo, v0','ALOG_LOGO_V0_SMALL':'ALog logo, v0, 5.5 mm','ALOG_LOGO_V0_5.5MM':'ALog logo, v0, 5.5 mm','ALOG_LOGO_V1_SMALL':'ALog logo, v1, 5.5 mm','ALOG_LOGO_V1_5.5MM':'ALog logo, v1, 5.5 mm',
+ 'OSHW-LOGO-L':'Open Source Hardware logo, large','OSHW-LOGO-M':'Open Source Hardware logo, medium','OSHW-LOGO-S':'Open Source Hardware logo, small','OSHW-LOGO-MINI':'Open Source Hardware logo, mini',
+ 'OSHW-LOGO-L_COPPER':'Open Source Hardware logo, large, copper','OSHW-LOGO-M_COPPER':'Open Source Hardware logo, medium, copper','OSHW-LOGO-S_COPPER':'Open Source Hardware logo, small, copper',
+ 'OSHW-LOGOL':'Open Source Hardware logo, large','OSHW-LOGOM':'Open Source Hardware logo, medium','OSHW-LOGOS':'Open Source Hardware logo, small','OSHW-LOGOMINI':'Open Source Hardware logo, mini',
+ 'OSHW-LOGOL-COPPER':'Open Source Hardware logo, large, copper','OSHW-LOGOM-COPPER':'Open Source Hardware logo, medium, copper','OSHW-LOGOS-COPPER':'Open Source Hardware logo, small, copper',
+}
+def graphic_fp(t,name):
+    t=re.sub(r'^\t\(descr "[^"]*"\)\n','',t,flags=re.M)
+    t=re.sub(r'^\t\(property "Description" ""','\t(property "Description" "%s"'%GRAPHIC[name],t,count=1,flags=re.M)
+    t=re.sub(r'^\t\(property "Reference" "[^"]*"','\t(property "Reference" "LOGO"',t,count=1,flags=re.M)
+    t=re.sub(r'^\t\(property "Value" "[^"]*"','\t(property "Value" "%s"'%name,t,count=1,flags=re.M)
+    if '(attr ' not in t: t=re.sub(r'^(\t\(duplicate_pad_numbers_are_jumpers [^)]*\)\n)',r'\1\t(attr exclude_from_pos_files exclude_from_bom)\n',t,count=1,flags=re.M)
+    return t.replace('(layer "F.Cu")\n\t(descr','(layer "F.Cu")\n\t(descr "%s")\n\t(descr'%GRAPHIC[name],1) if False else re.sub(r'^\t\(layer "F\.Cu"\)\n',lambda m:m.group(0)+'\t(descr "%s")\n'%GRAPHIC[name],t,count=1,flags=re.M)
+def graphic_sym(b,name):
+    b=re.sub(r'\(exclude_from_sim \w+\)','(exclude_from_sim yes)',b,count=1); b=re.sub(r'\(in_bom \w+\)','(in_bom no)',b,count=1); b=re.sub(r'\(in_pos_files \w+\)','(in_pos_files no)',b,count=1)
+    b=re.sub(r'\(property "Reference" "[^"]*"','(property "Reference" "LOGO"',b,count=1)
+    b=re.sub(r'\(property "Value" "[^"]*"','(property "Value" "%s"'%name,b,count=1)
+    b=re.sub(r'\(property "Description" "[^"]*"','(property "Description" "%s"'%GRAPHIC[name],b,count=1)
+    return b
+ngr=0
+for name in list(fps):
+    if name in GRAPHIC: fps[name]=graphic_fp(fps[name],name); ngr+=1
+for name in list(syms):
+    if name in GRAPHIC: syms[name]=graphic_sym(syms[name],name); ngr+=1
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
 nmargin=0
 for name,t in fps.items():
@@ -194,7 +220,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')

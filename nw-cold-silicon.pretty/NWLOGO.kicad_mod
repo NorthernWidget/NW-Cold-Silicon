@@ -3,7 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" ""
+	(descr "Northern Widget logo, silkscreen")
+	(property "Reference" "LOGO"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(uuid "911d0716-9f3b-573e-91d7-4f3d18ecb8fb")
@@ -13,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "NWLOGO"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "2947ecfa-f549-5c82-8891-660cffb33f25")
@@ -34,7 +35,7 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Northern Widget logo, silkscreen"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -45,6 +46,7 @@
 			)
 		)
 	)
+	(attr exclude_from_pos_files exclude_from_bom)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -7.059725 -4.858578)

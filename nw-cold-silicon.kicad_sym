@@ -5055,12 +5055,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "ALOG_LOGO_V0"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5071,7 +5071,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "ALOG_LOGO_V0"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5104,7 +5104,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "ALog logo, v0"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5139,12 +5139,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "ALOG_LOGO_V0_5.5MM"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5155,7 +5155,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "ALOG_LOGO_V0_5.5MM"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5188,7 +5188,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "ALog logo, v0, 5.5 mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5223,12 +5223,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "ALOG_LOGO_V1_5.5MM"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5239,7 +5239,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "ALOG_LOGO_V1_5.5MM"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5272,7 +5272,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "ALog logo, v1, 5.5 mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222281,12 +222281,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "NWLOGO"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222297,7 +222297,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "NWLOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222330,7 +222330,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Northern Widget logo, silkscreen"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222365,12 +222365,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "NWLOGO_MED"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222381,7 +222381,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "NWLOGO_MED"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222414,7 +222414,7 @@
 				)
 			)
 		)
-		(property "Description" "Medium-sized Northern Widget logo"
+		(property "Description" "Northern Widget logo, medium, silkscreen"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222533,12 +222533,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "NW_LOGO_1IN"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" ""
+		(property "Reference" "LOGO"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222549,7 +222549,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "NW_LOGO_1IN"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222581,7 +222581,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Northern Widget logo, one inch"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222605,10 +222605,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOL"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -222621,7 +222621,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOL"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -222654,7 +222654,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, large"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -261426,10 +261426,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOL-COPPER"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -261442,7 +261442,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOL-COPPER"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -261475,7 +261475,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, large, copper"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -300247,10 +300247,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOM"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -300263,7 +300263,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOM"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -300296,7 +300296,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, medium"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -339068,10 +339068,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOM-COPPER"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -339084,7 +339084,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOM-COPPER"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -339117,7 +339117,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, medium, copper"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -377889,10 +377889,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOMINI"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -377905,7 +377905,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOMINI"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -377938,7 +377938,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, mini"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -416710,10 +416710,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOS"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -416726,7 +416726,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOS"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -416759,7 +416759,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, small"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -455531,10 +455531,10 @@
 		(embedded_fonts no)
 	)
 	(symbol "OSHW-LOGOS-COPPER"
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "LOGO"
 			(at 0 0 0)
@@ -455547,7 +455547,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "OSHW-LOGOS-COPPER"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -455580,7 +455580,7 @@
 				)
 			)
 		)
-		(property "Description" "Open-Source Hardware (OSHW) Logo\n\nThis logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW http://freedomdefined.org/OSHW"
+		(property "Description" "Open Source Hardware logo, small, copper"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Open-Source Hardware (OSHW) Logo - Small - Top Copper\n\nExposed copper logo for open-source hardware designs.\n\nDevices using:\n\n• OSHW_LOGO")
-	(property "Reference" ""
+	(descr "Open Source Hardware logo, small, copper")
+	(property "Reference" "LOGO"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(uuid "2bbd9ba3-1cfe-56e3-90f8-27fec695f491")
@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "OSHW-LOGO-S_COPPER"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "faf636de-4988-590b-beae-ed4caedb5b2b")
@@ -35,7 +35,7 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Open Source Hardware logo, small, copper"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -46,6 +46,7 @@
 			)
 		)
 	)
+	(attr exclude_from_pos_files exclude_from_bom)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_poly
 		(pts
