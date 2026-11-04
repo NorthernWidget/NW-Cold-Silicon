@@ -1769,3 +1769,12 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | TPL5111DDC | symbol | pin DRVN | – | electrical type output: TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON) |
+| TLV61220DBV | symbol | pin VOUT | – | electrical type power_out: TI SLVSBD8: boost converter output (Okapi 5V_LP) |
+| TPS6103RSA | symbol | pin VOUT | – | electrical type power_out: TI SLUS534: boost converter output, three pins (Okapi 5V_AUX) |
+| TPS210 | symbol | pin OUT | – | electrical type power_out: TI SLVS388 (TPS2105): power multiplexer output (Okapi V_CORE) |
+| MIC2544MSOP | symbol | pin OUT | – | electrical type power_out: Microchip MIC2544/2545: current-limited switch output, two pins (Okapi VBUS_PRIME, VBUS_SEC) |
+| TPS22917DBV | symbol | pin VOUT | – | electrical type power_out: TI SLVSCX1: load switch output (Okapi V_HP, FEATHER_BAT) |
+| TPS797 | symbol | pin VOUT | – | electrical type power_out: TI SLVS350 (TPS797xx): LDO output (Okapi 3V3_CORE); the import typed every pin of this symbol bidirectional |
+| TPS797 | symbol | pin VIN | – | electrical type power_in: TI SLVS350: LDO input |
+| TPS797 | symbol | pin GND | – | electrical type power_in: TI SLVS350: ground |
+| MIC9409C6 | symbol | pin VOUT | – | electrical type power_out: Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO) |

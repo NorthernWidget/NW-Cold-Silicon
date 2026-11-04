@@ -294,12 +294,27 @@ for name in list(syms):
     if name in GRAPHIC: syms[name]=graphic_sym(syms[name],name); ngr+=1
 PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the datasheet that says so (the import types every non-power pin input)
  ('TPL5111DDC','DRVN'):('output',"TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON)"),
+ # the regulators' and switches' outputs, typed power input by the import (Okapi CHECKS-TODO ERC item 6): each is the part's output pin by its datasheet
+ ('TLV61220DBV','VOUT'):('power_out',"TI SLVSBD8: boost converter output (Okapi 5V_LP)"),
+ ('TPS6103RSA','VOUT'):('power_out',"TI SLUS534: boost converter output, three pins (Okapi 5V_AUX)"),
+ ('TPS210','OUT'):('power_out',"TI SLVS388 (TPS2105): power multiplexer output (Okapi V_CORE)"),
+ ('MIC2544MSOP','OUT'):('power_out',"Microchip MIC2544/2545: current-limited switch output, two pins (Okapi VBUS_PRIME, VBUS_SEC)"),
+ ('TPS22917DBV','VOUT'):('power_out',"TI SLVSCX1: load switch output (Okapi V_HP, FEATHER_BAT)"),
+ ('TPS797','VOUT'):('power_out',"TI SLVS350 (TPS797xx): LDO output (Okapi 3V3_CORE); the import typed every pin of this symbol bidirectional"),
+ ('TPS797','VIN'):('power_in',"TI SLVS350: LDO input"),
+ ('TPS797','GND'):('power_in',"TI SLVS350: ground"),
+ ('MIC9409C6','VOUT'):('power_out',"Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO)"),
 }
 npin=0
 for (name,pin),(etype,why) in PIN_TYPES.items():
-    b=syms[name]; i=b.index('(name "%s"'%pin); j=b.rfind('(pin ',0,i)   # the pin block that holds this name: the last "(pin " before it
-    m=re.match(r'\(pin (\w+) (\w+)',b[j:]); assert m,(name,pin)
-    syms[name]=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; npin+=1
+    b=syms[name]; k=0; pos=0
+    while True:
+        i=b.find('(name "%s"'%pin,pos)
+        if i<0: break
+        j=b.rfind('(pin ',0,i)   # the pin block that holds this name: the last "(pin " before it
+        m=re.match(r'\(pin (\w+) (\w+)',b[j:]); assert m,(name,pin)
+        b=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; k+=1; pos=i+1
+    assert k,(name,pin); syms[name]=b; npin+=k
     coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
 # Eagle's bRestrict (layer 43) in a package: the converter writes a via-only keepout on every copper layer, where
 # Eagle means no copper of any kind on the bottom layer (its tRestrict, layer 41, comes through right: F.Cu, all

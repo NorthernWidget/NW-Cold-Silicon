@@ -207685,7 +207685,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 15.24 5.08 180)
 				(length 5.08)
 				(name "OUT"
@@ -207721,7 +207721,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 15.24 5.08 180)
 				(length 5.08)
 				(name "OUT"
@@ -210164,7 +210164,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 2.54 180)
 				(length 5.08)
 				(name "VOUT"
@@ -566731,7 +566731,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 5.08 180)
 				(length 5.08)
 				(name "VOUT"
@@ -568033,7 +568033,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 2.54 180)
 				(length 5.08)
 				(name "OUT"
@@ -569020,7 +569020,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 7.62 180)
 				(length 5.08)
 				(name "VOUT"
@@ -571613,7 +571613,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 10.16 180)
 				(length 5.08)
 				(name "VOUT"
@@ -571847,7 +571847,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 10.16 180)
 				(length 5.08)
 				(name "VOUT"
@@ -571865,7 +571865,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 12.7 10.16 180)
 				(length 5.08)
 				(name "VOUT"
@@ -576783,7 +576783,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin power_in line
 				(at -12.7 -2.54 0)
 				(length 5.08)
 				(name "GND"
@@ -576801,7 +576801,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin power_in line
 				(at -12.7 0 0)
 				(length 5.08)
 				(name "VIN"
@@ -576819,7 +576819,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin power_out line
 				(at 15.24 0 180)
 				(length 5.08)
 				(name "VOUT"
