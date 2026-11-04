@@ -1828,5 +1828,5 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MAX6070AAUT | symbol | pin GND | – | electrical type power_in: Maxim MAX6070: ground |
 | MAX6070AAUT | symbol | pin EN | – | electrical type input: Maxim MAX6070: enable input |
 | MAX6070AAUT | symbol | pin FILT | – | electrical type passive: Maxim MAX6070: noise-reduction capacitor pin |
-| MAX6070AAUT | symbol | pin OUTF | – | electrical type power_out: Maxim MAX6070: reference output, force |
+| MAX6070AAUT | symbol | pin OUTF | – | electrical type output: Maxim MAX6070: reference output, force (an output, not a supply: it feeds an ADC input on Margay) |
 | MAX6070AAUT | symbol | pin OUTS | – | electrical type passive: Maxim MAX6070: reference output, sense |

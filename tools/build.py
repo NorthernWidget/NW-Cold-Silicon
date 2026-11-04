@@ -346,7 +346,7 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('MAX6070AAUT','GND'):('power_in',"Maxim MAX6070: ground"),
  ('MAX6070AAUT','EN'):('input',"Maxim MAX6070: enable input"),
  ('MAX6070AAUT','FILT'):('passive',"Maxim MAX6070: noise-reduction capacitor pin"),
- ('MAX6070AAUT','OUTF'):('power_out',"Maxim MAX6070: reference output, force"),
+ ('MAX6070AAUT','OUTF'):('output',"Maxim MAX6070: reference output, force (an output, not a supply: it feeds an ADC input on Margay)"),
  ('MAX6070AAUT','OUTS'):('passive',"Maxim MAX6070: reference output, sense"),
 }
 # a discrete part's pins are passive, KiCad's own typing for every diode, LED, transistor and fuse in its library; the
