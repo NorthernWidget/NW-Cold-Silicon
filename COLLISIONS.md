@@ -1768,6 +1768,13 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
+| LED0603 | symbol | every pin | – | electrical type passive: an LED (Okapi D10 to D18) |
+| CLVBA-FKA | symbol | every pin | – | electrical type passive: the RGB LED (Okapi D4, D5) |
+| LM4040 | symbol | every pin | – | electrical type passive: a shunt voltage reference, two terminals (Okapi D6) |
+| MOSFET-NCH-2N7002PW | symbol | every pin | – | electrical type passive: an N-channel MOSFET (Okapi Q4, Q7, Q8) |
+| MOSFET-NCH-DMG3404L | symbol | every pin | – | electrical type passive: an N-channel MOSFET (Okapi Q1, Q2, Q6) |
+| MOSFET_PCH-FDN360P | symbol | every pin | – | electrical type passive: a P-channel MOSFET (Okapi Q3, Q5) |
+| PPTC1.5A | symbol | every pin | – | electrical type passive: a resettable fuse (Okapi F1, F2) |
 | TPL5111DDC | symbol | pin DRVN | – | electrical type output: TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON) |
 | TLV61220DBV | symbol | pin VOUT | – | electrical type power_out: TI SLVSBD8: boost converter output (Okapi 5V_LP) |
 | TPS6103RSA | symbol | pin VOUT | – | electrical type power_out: TI SLUS534: boost converter output, three pins (Okapi 5V_AUX) |
@@ -1778,3 +1785,5 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | TPS797 | symbol | pin VIN | – | electrical type power_in: TI SLVS350: LDO input |
 | TPS797 | symbol | pin GND | – | electrical type power_in: TI SLVS350: ground |
 | MIC9409C6 | symbol | pin VOUT | – | electrical type power_out: Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO) |
+| ADS111 | symbol | pin ADDR | – | electrical type input: TI SBAS444 (ADS1115): ADDR is the I2C address select input; the import typed it bidirectional |
+| PAC1934QFN | symbol | pin VDD_IO | – | electrical type power_in: Microchip PAC1934 DS20005850: VDD_IO is the I/O supply; the import typed it open collector |

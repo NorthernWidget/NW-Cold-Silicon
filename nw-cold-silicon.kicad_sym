@@ -4323,7 +4323,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin input line
 				(at -12.7 2.54 0)
 				(length 5.08)
 				(name "ADDR"
@@ -48027,7 +48027,7 @@
 					(justify left bottom)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 7.62 2.54 180)
 				(length 5.08)
 				(name "RED_CATH"
@@ -48045,7 +48045,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -5.08 0 0)
 				(length 5.08)
 				(name "ANODE"
@@ -48063,7 +48063,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 7.62 -2.54 180)
 				(length 5.08)
 				(name "BLUE_CATH"
@@ -48081,7 +48081,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 7.62 0 180)
 				(length 5.08)
 				(name "GREEN_CATH"
@@ -165418,7 +165418,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 -2.54 90)
 				(length 2.54)
 				(name "ANODE"
@@ -165436,7 +165436,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
 				(name "CATHODE"
@@ -185823,7 +185823,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 7.62 270)
 				(length 5.08)
 				(name "C"
@@ -185841,7 +185841,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 -5.08 90)
 				(length 5.08)
 				(name "A"
@@ -214933,7 +214933,7 @@
 					(type none)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 2.54)
 				(name "G"
@@ -214951,7 +214951,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
 				(name "S"
@@ -214969,7 +214969,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
 				(name "D"
@@ -216603,7 +216603,7 @@
 					(type none)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 2.54)
 				(name "G"
@@ -216621,7 +216621,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
 				(name "S"
@@ -216639,7 +216639,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
 				(name "D"
@@ -224253,7 +224253,7 @@
 					(type none)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 2.54)
 				(name "G"
@@ -224271,7 +224271,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
 				(name "S"
@@ -224289,7 +224289,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
 				(name "D"
@@ -502506,7 +502506,7 @@
 					)
 				)
 			)
-			(pin open_collector line
+			(pin power_in line
 				(at -15.24 10.16 0)
 				(length 5.08)
 				(name "VDD_IO"
@@ -511949,7 +511949,7 @@
 					(type none)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -5.08 0 0)
 				(length 2.54)
 				(name "1"
@@ -511967,7 +511967,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at 7.62 0 180)
 				(length 2.54)
 				(name "2"

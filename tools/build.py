@@ -304,7 +304,24 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('TPS797','VIN'):('power_in',"TI SLVS350: LDO input"),
  ('TPS797','GND'):('power_in',"TI SLVS350: ground"),
  ('MIC9409C6','VOUT'):('power_out',"Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO)"),
+ ('ADS111','ADDR'):('input',"TI SBAS444 (ADS1115): ADDR is the I2C address select input; the import typed it bidirectional"),
+ ('PAC1934QFN','VDD_IO'):('power_in',"Microchip PAC1934 DS20005850: VDD_IO is the I/O supply; the import typed it open collector"),
 }
+# a discrete part's pins are passive, KiCad's own typing for every diode, LED, transistor and fuse in its library; the
+# import typed them bidirectional or power input, which made every LED a power sink and every MOSFET a driver
+PASSIVE={
+ 'LED0603':"an LED (Okapi D10 to D18)",
+ 'CLVBA-FKA':"the RGB LED (Okapi D4, D5)",
+ 'LM4040':"a shunt voltage reference, two terminals (Okapi D6)",
+ 'MOSFET-NCH-2N7002PW':"an N-channel MOSFET (Okapi Q4, Q7, Q8)",
+ 'MOSFET-NCH-DMG3404L':"an N-channel MOSFET (Okapi Q1, Q2, Q6)",
+ 'MOSFET_PCH-FDN360P':"a P-channel MOSFET (Okapi Q3, Q5)",
+ 'PPTC1.5A':"a resettable fuse (Okapi F1, F2)",
+}
+npassive=0
+for name,why in PASSIVE.items():
+    b,n=re.subn(r'\(pin (?!passive)\w+ (\w+)\n',r'(pin passive \1\n',syms[name]); assert n,(name)
+    syms[name]=b; npassive+=n; coll.append(f'| {name} | symbol | every pin | – | electrical type passive: {why} |')
 npin=0
 for (name,pin),(etype,why) in PIN_TYPES.items():
     b=syms[name]; k=0; pos=0
