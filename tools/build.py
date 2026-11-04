@@ -318,6 +318,16 @@ PASSIVE={
  'MOSFET_PCH-FDN360P':"a P-channel MOSFET (Okapi Q3, Q5)",
  'PPTC1.5A':"a resettable fuse (Okapi F1, F2)",
 }
+# PWR_FLAG, KiCad's own symbol for telling ERC where a rail enters the schematic (a connector, a battery, a passive part),
+# lifted verbatim from the KiCad symbol library (power.kicad_sym, CC-BY-SA 4.0 with the KiCad libraries' exception),
+# so the boards need no second symbol library
+KICAD_POWER='/usr/share/kicad/symbols/power.kicad_sym'
+if os.path.exists(KICAD_POWER):
+    kp=open(KICAD_POWER).read(); i=kp.index('\n\t(symbol "PWR_FLAG"'); j=kp.index('\n\t(symbol "',i+10)
+    syms['PWR_FLAG']=kp[i+1:j+1]; symsrc['PWR_FLAG']='kicad power.kicad_sym'
+    coll.append('| PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |')
+else:
+    raise SystemExit('KiCad symbol library not found at %s: PWR_FLAG cannot be lifted'%KICAD_POWER)
 npassive=0
 for name,why in PASSIVE.items():
     b,n=re.subn(r'\(pin (?!passive)\w+ (\w+)\n',r'(pin passive \1\n',syms[name]); assert n,(name)

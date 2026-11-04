@@ -1768,6 +1768,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
+| PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
 | LED0603 | symbol | every pin | – | electrical type passive: an LED (Okapi D10 to D18) |
 | CLVBA-FKA | symbol | every pin | – | electrical type passive: the RGB LED (Okapi D4, D5) |
 | LM4040 | symbol | every pin | – | electrical type passive: a shunt voltage reference, two terminals (Okapi D6) |
