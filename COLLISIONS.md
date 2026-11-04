@@ -1824,3 +1824,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MLX90393 | symbol | pin MS/CS | – | electrical type input: Melexis MLX90393 datasheet: mode select / chip select input |
 | LTC4412S6 | symbol | pin CTL | – | electrical type input: ADI LTC4412 datasheet: control input |
 | TPS22916YFP | symbol | pin VOUT | – | electrical type power_out: TI SLVSCT1 (TPS22916): load switch output (Margay U8) |
+| MAX6070AAUT | symbol | pin VIN | – | electrical type power_in: Maxim MAX6070 datasheet: supply input (Margay U13); the import typed every pin bidirectional |
+| MAX6070AAUT | symbol | pin GND | – | electrical type power_in: Maxim MAX6070: ground |
+| MAX6070AAUT | symbol | pin EN | – | electrical type input: Maxim MAX6070: enable input |
+| MAX6070AAUT | symbol | pin FILT | – | electrical type passive: Maxim MAX6070: noise-reduction capacitor pin |
+| MAX6070AAUT | symbol | pin OUTF | – | electrical type power_out: Maxim MAX6070: reference output, force |
+| MAX6070AAUT | symbol | pin OUTS | – | electrical type passive: Maxim MAX6070: reference output, sense |

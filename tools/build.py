@@ -342,6 +342,12 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('MLX90393','MS/CS'):('input',"Melexis MLX90393 datasheet: mode select / chip select input"),
  ('LTC4412S6','CTL'):('input',"ADI LTC4412 datasheet: control input"),
  ('TPS22916YFP','VOUT'):('power_out',"TI SLVSCT1 (TPS22916): load switch output (Margay U8)"),
+ ('MAX6070AAUT','VIN'):('power_in',"Maxim MAX6070 datasheet: supply input (Margay U13); the import typed every pin bidirectional"),
+ ('MAX6070AAUT','GND'):('power_in',"Maxim MAX6070: ground"),
+ ('MAX6070AAUT','EN'):('input',"Maxim MAX6070: enable input"),
+ ('MAX6070AAUT','FILT'):('passive',"Maxim MAX6070: noise-reduction capacitor pin"),
+ ('MAX6070AAUT','OUTF'):('power_out',"Maxim MAX6070: reference output, force"),
+ ('MAX6070AAUT','OUTS'):('passive',"Maxim MAX6070: reference output, sense"),
 }
 # a discrete part's pins are passive, KiCad's own typing for every diode, LED, transistor and fuse in its library; the
 # import typed them bidirectional or power input, which made every LED a power sink and every MOSFET a driver
