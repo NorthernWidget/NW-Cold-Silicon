@@ -341,6 +341,7 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('BME280','SDO'):('input',"Bosch BST-BME280-DS002: I2C address select input in I2C mode (SPI data out otherwise; Okapi uses I2C)"),
  ('MLX90393','MS/CS'):('input',"Melexis MLX90393 datasheet: mode select / chip select input"),
  ('LTC4412S6','CTL'):('input',"ADI LTC4412 datasheet: control input"),
+ ('TPS22916YFP','VOUT'):('power_out',"TI SLVSCT1 (TPS22916): load switch output (Margay U8)"),
 }
 # a discrete part's pins are passive, KiCad's own typing for every diode, LED, transistor and fuse in its library; the
 # import typed them bidirectional or power input, which made every LED a power sink and every MOSFET a driver
@@ -355,6 +356,7 @@ PASSIVE={
  'BUTTON2.6X1.6':"a tactile switch (Okapi S5)",
  'BUTTON4.2X3.2':"a tactile switch (Okapi S3, S4, S6, S7)",
  'JST_2MM_MALE':"a connector (Okapi J8)",
+ 'AVRISP-6':"a programming header, a connector (Okapi and Margay ISP1): its RST pin had been typed output and met the MCU's reset output",
 }
 # PWR_FLAG, KiCad's own symbol for telling ERC where a rail enters the schematic (a connector, a battery, a passive part),
 # lifted verbatim from the KiCad symbol library (power.kicad_sym, CC-BY-SA 4.0 with the KiCad libraries' exception),

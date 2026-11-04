@@ -1779,6 +1779,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | BUTTON2.6X1.6 | symbol | every pin | – | electrical type passive: a tactile switch (Okapi S5) |
 | BUTTON4.2X3.2 | symbol | every pin | – | electrical type passive: a tactile switch (Okapi S3, S4, S6, S7) |
 | JST_2MM_MALE | symbol | every pin | – | electrical type passive: a connector (Okapi J8) |
+| AVRISP-6 | symbol | every pin | – | electrical type passive: a programming header, a connector (Okapi and Margay ISP1): its RST pin had been typed output and met the MCU's reset output |
 | TPL5111DDC | symbol | pin DRVN | – | electrical type output: TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON) |
 | TLV61220DBV | symbol | pin VOUT | – | electrical type power_out: TI SLVSBD8: boost converter output (Okapi 5V_LP) |
 | TPS6103RSA | symbol | pin VOUT | – | electrical type power_out: TI SLUS534: boost converter output, three pins (Okapi 5V_AUX) |
@@ -1822,3 +1823,4 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | BME280 | symbol | pin SDO | – | electrical type input: Bosch BST-BME280-DS002: I2C address select input in I2C mode (SPI data out otherwise; Okapi uses I2C) |
 | MLX90393 | symbol | pin MS/CS | – | electrical type input: Melexis MLX90393 datasheet: mode select / chip select input |
 | LTC4412S6 | symbol | pin CTL | – | electrical type input: ADI LTC4412 datasheet: control input |
+| TPS22916YFP | symbol | pin VOUT | – | electrical type power_out: TI SLVSCT1 (TPS22916): load switch output (Margay U8) |
