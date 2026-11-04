@@ -1768,3 +1768,4 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
+| TPL5111DDC | symbol | pin DRVN | – | electrical type output: TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON) |

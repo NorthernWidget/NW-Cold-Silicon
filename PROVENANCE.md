@@ -1,6 +1,6 @@
 # Provenance
 
-Built 2026-11-03 by tools/build.py with kicad-cli 10.0.7. Sources, in precedence order:
+Built 2026-11-04 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
 
 | key | kind | file | repository commit | packages | symbols | converter warnings |
 |---|---|---|---|---|---|---|

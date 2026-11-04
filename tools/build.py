@@ -292,6 +292,15 @@ for name in list(fps):
     if name in GRAPHIC: fps[name]=graphic_fp(fps[name],name); ngr+=1
 for name in list(syms):
     if name in GRAPHIC: syms[name]=graphic_sym(syms[name],name); ngr+=1
+PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the datasheet that says so (the import types every non-power pin input)
+ ('TPL5111DDC','DRVN'):('output',"TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON)"),
+}
+npin=0
+for (name,pin),(etype,why) in PIN_TYPES.items():
+    b=syms[name]; i=b.index('(name "%s"'%pin); j=b.rfind('(pin ',0,i)   # the pin block that holds this name: the last "(pin " before it
+    m=re.match(r'\(pin (\w+) (\w+)',b[j:]); assert m,(name,pin)
+    syms[name]=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; npin+=1
+    coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
 nmargin=0
 for name,t in fps.items():
