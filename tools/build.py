@@ -402,6 +402,20 @@ def brestrict(m):
     return '\t(zone\n\t\t(layers "B.Cu")\n'+body+'\t)\n'
 for name in list(fps):
     fps[name]=ALLCU.sub(brestrict,fps[name])
+# Eagle's restring: every through-hole pad is fabricated at least drill + 2 x max(25 % of the drill, 5 mil), capped at
+# 20 mil of ring (the DRU of every Northern Widget board: rvPadTop 0.25, rlMinPadTop 5mil, rlMaxPadTop 20mil), whatever
+# the package drew; KiCad fabricates the drawn pad. A pad drawn under that size is grown to it (Andy, 2026-11-04:
+# match the way the Eagle boards printed), both axes by the same amount so an oval stays an oval.
+PADRE=re.compile(r'(\(pad "[^"]*" thru_hole \w+\n(?:.*\n)*?\t\t\(size )([\d.]+) ([\d.]+)(\)\n\t\t\(drill )([\d.]+)')
+nrestring=0
+def restring(m):
+    global nrestring
+    sx,sy,dr=float(m.group(2)),float(m.group(3)),float(m.group(5))
+    want=dr+2*min(max(0.25*dr,0.127),0.508)
+    if min(sx,sy)+1e-6>=want: return m.group(0)
+    g=want-min(sx,sy); nrestring+=1
+    return '%s%s %s%s%s'%(m.group(1),fmt6(sx+g),fmt6(sy+g),m.group(4),m.group(5))
+for name in list(fps): fps[name]=PADRE.sub(restring,fps[name])
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
 nmargin=0
 for name,t in fps.items():
@@ -418,7 +432,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')

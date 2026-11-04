@@ -473,7 +473,7 @@
 	)
 	(pad "THERMAL@5" thru_hole circle
 		(at -0.6 0)
-		(size 0.6 0.6)
+		(size 0.654 0.654)
 		(drill 0.4)
 		(layers "*.Cu")
 		(remove_unused_layers no)
@@ -483,7 +483,7 @@
 	)
 	(pad "THERMAL@6" thru_hole circle
 		(at 0.6 0)
-		(size 0.6 0.6)
+		(size 0.654 0.654)
 		(drill 0.4)
 		(layers "*.Cu")
 		(remove_unused_layers no)
