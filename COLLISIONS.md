@@ -1761,6 +1761,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | LINX_BAT-HLD-012-SMT | footprint | board okapi | bschulz, awickert, fork | taken from the board's Eagle file by decision: Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's. |
 | NWLOGO_MED | footprint | awickert | board okapi (None) | unchecked: no front-side instance |
 | PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
+| RSA_S-PVQFN-N16 | footprint | bschulz as `RSA_S-PVQFN-N16` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
 | USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
@@ -1769,6 +1770,8 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
+| USB_MICROVERT | symbol | pins BODY | – | 6 stacked pins spread 2.54 mm apart: the micro-USB's six shell pads, separate and unconnected as Eagle had them |
+| USB_MICRO_VERT_MOLEX | footprint | attr | – | allow_soldermask_bridges: the micro-USB's six shell slots share one mask opening on the fabricated board |
 | LED0603 | symbol | every pin | – | electrical type passive: an LED (Okapi D10 to D18) |
 | CLVBA-FKA | symbol | every pin | – | electrical type passive: the RGB LED (Okapi D4, D5) |
 | LM4040 | symbol | every pin | – | electrical type passive: a shunt voltage reference, two terminals (Okapi D6) |

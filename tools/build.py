@@ -374,6 +374,25 @@ if os.path.exists(KICAD_POWER):
     coll.append('| PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |')
 else:
     raise SystemExit('KiCad symbol library not found at %s: PWR_FLAG cannot be lifted'%KICAD_POWER)
+# pins a symbol stacks on one point: KiCad joins them by geometry, where Eagle kept each pad its own. The k-th pin
+# of the name is moved k steps along the direction given (symbol coordinates, 2.54 mm a step), so each can carry
+# its own flag and its own net; the Okapi micro-USB's six shell slots were one joined net in KiCad and six
+# unconnected pads in Eagle (Andy, 2026-11-04: match the way the Eagle boards printed).
+PIN_SPREAD={('USB_MICROVERT','BODY'):((0,-1),"the micro-USB's six shell pads, separate and unconnected as Eagle had them")}
+nspread=0
+for (name,pin),((dx,dy),why) in PIN_SPREAD.items():
+    b=syms[name]; hits=[m.start() for m in re.finditer(re.escape('(name "%s"'%pin),b)]
+    for k,i in reversed(list(enumerate(hits))):   # last pin first, so an edit never shifts the text of a pin still to be done
+        j=b.rfind('(pin ',0,i); m=re.search(r'\(at (-?[\d.]+) (-?[\d.]+) (\d+)\)',b[j:i])
+        x,y=float(m.group(1))+dx*2.54*k,float(m.group(2))+dy*2.54*k
+        b=b[:j]+b[j:i].replace(m.group(0),'(at %s %s %s)'%(fmt6(x),fmt6(y),m.group(3)),1)+b[i:]
+    assert len(hits)>1,(name,pin); syms[name]=b; nspread+=len(hits); coll.append(f'| {name} | symbol | pins {pin} | – | {len(hits)} stacked pins spread 2.54 mm apart: {why} |')
+# a footprint whose pads share one solder-mask opening as fabricated: KiCad's allow_soldermask_bridges attribute
+FP_ATTRS={'USB_MICRO_VERT_MOLEX':('allow_soldermask_bridges',"the micro-USB's six shell slots share one mask opening on the fabricated board")}
+for name,(attr,why) in FP_ATTRS.items():
+    b,n=re.subn(r'^\t\(attr ([^)]*)\)',lambda m:'\t(attr %s %s)'%(m.group(1),attr) if attr not in m.group(1) else m.group(0),fps[name],count=1,flags=re.M)
+    if n==0: b,n=re.subn(r'^\t\(layer "F\.Cu"\)\n',lambda m:m.group(0)+'\t(attr %s)\n'%attr,fps[name],count=1,flags=re.M)   # a through-hole footprint carries no attr line
+    assert n==1,name; fps[name]=b; coll.append(f'| {name} | footprint | attr | – | {attr}: {why} |')
 npassive=0
 for name,why in PASSIVE.items():
     b,n=re.subn(r'\(pin (?!passive)\w+ (\w+)\n',r'(pin passive \1\n',syms[name]); assert n,(name)
