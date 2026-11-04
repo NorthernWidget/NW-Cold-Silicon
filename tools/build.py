@@ -238,6 +238,9 @@ if not upto:
                     n_dif+=1; coll.append(f'| {n} | footprint | {fpsrc[merged]} as `{merged}` | board {bkey} ({lib}, {len(ins)} placed) | {"added from the Eagle board; " if added else ""}pads differ: KiCad board copy not taken over |')
         prov.append(f'| {bkey} | `{pcb}` | {len(emb)} | {n_id} | {n_pad} | {n_dif} | {n_add} | {n_unc} |')
     prov+=['','Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: %d items; a non-plated hole\'s pad, which that importer makes 0.254 mm wider than the drill, is set to the drill as the library converter and Eagle have it: %d pads):'%(getattr(as_library,'dropped_rescue',0),getattr(as_library,'npth_resized',0)),'']+[f'- `{n}`: {NOTES.get(n,"no note")}' for n in sorted(k for k,v in fpsrc.items() if v.startswith('board:'))]
+# the footprints are written beside the library and swapped in only when the build has passed its checks, so an
+# aborted build leaves the committed library in place (a NameError once emptied it)
+PRETTY_OUT=PRETTY; PRETTY=os.path.join(REPO,LIB+'.building.pretty')   # kicad-cli reads the library type off the extension
 if os.path.isdir(PRETTY): shutil.rmtree(PRETTY)
 os.makedirs(PRETTY)
 GRAPHIC={  # parts that are artwork, not components: no BOM line, no pick-and-place row, no simulation
@@ -398,6 +401,7 @@ for name,t in fps.items():
     k=iter(range(10**6))
     t=re.sub(r'\(uuid "[^"]+"\)',lambda m:'(uuid "%s")'%uuid.uuid5(uuid.NAMESPACE_URL,'%s/%s/%d'%(LIB,name,next(k))),t)
     open(os.path.join(PRETTY,name+'.kicad_mod'),'w').write(t)
+SYM_OUT=SYM; SYM=os.path.join(REPO,LIB+'.building.kicad_sym')
 open(SYM,'w').write(head+''.join(syms[n] for n in sorted(syms))+')\n')
 rc,o=run(['kicad-cli','fp','upgrade','--force',PRETTY]); assert rc==0,o
 rc,o=run(['kicad-cli','sym','upgrade','--force',SYM]); assert rc==0,o
@@ -412,5 +416,7 @@ prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, exclu
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')
 open(os.path.join(REPO,'COLLISIONS.md'),'w').write('\n'.join(coll)+'\n')
 assert chg==0 and same, ('second pass changed the output',chg,same)
+if os.path.isdir(PRETTY_OUT): shutil.rmtree(PRETTY_OUT)
+os.rename(PRETTY,PRETTY_OUT); os.replace(SYM,SYM_OUT); PRETTY,SYM=PRETTY_OUT,SYM_OUT
 print(f'{len(fps)} footprints, {len(syms)} symbols; second pass: {chg} fp changed, sym {"identical" if same else "CHANGED"}; collisions {len(coll)-6}')
 shutil.rmtree(tmp)
