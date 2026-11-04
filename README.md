@@ -50,6 +50,35 @@ added from the Eagle board file's own package definition, through
 `kicad-cli pcb import`, the same converter; `PROVENANCE.md` names the board
 and says how the KiCad board's copy compares.
 
+## What the build corrects
+
+KiCad's Eagle reader is the converter, and the output is what it writes, with
+these corrections, each a table in `tools/build.py` keyed by symbol or
+footprint name and listed in `COLLISIONS.md` with the datasheet or the
+fabricated board that justifies it:
+
+- `PIN_TYPES`: a pin's electrical type by its datasheet (the reader types
+  every Eagle pwr pin as a power input and every other pin as an input or
+  bidirectional, so no rail had a driver and every LED was a supply).
+- `PASSIVE`: every pin of a diode, LED, transistor, fuse, switch or connector,
+  KiCad's own typing for discretes.
+- `PIN_DROP` and `PIN_SPREAD`: pins stacked on one point, which KiCad joins
+  by geometry where Eagle kept each pad its own (the micro-USB shell).
+- `PAD_RENUMBER`: a shell drawn as pairs of plated holes joined by a copper
+  bar, Eagle's one shape; the pair shares a pad number and the bar becomes
+  the pad's own primitive.
+- `FP_ATTRS`: a footprint attribute the part needs (one shared mask opening).
+- Eagle's restring: every through-hole pad at least drill + 2 × max(25 % of
+  the drill, 5 mil), the ring Eagle fabricates whatever the package drew.
+- Eagle's bRestrict: a no-copper keepout on the bottom layer, where the
+  reader had written a via-only keepout on every copper layer.
+- `PWR_FLAG`, lifted from KiCad's own symbol library, so a board needs no
+  second library for it.
+
+Add a line to the table, rebuild, and refresh the sheets that hold the
+symbol (`refresh_symbols.py` in NW-Tests/kicad) or re-body the boards
+(`rebody.py`). Nothing is edited in a sheet's embedded copy by hand.
+
 ## Rebuild
 
 ```sh
