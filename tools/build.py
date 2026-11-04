@@ -301,6 +301,19 @@ for (name,pin),(etype,why) in PIN_TYPES.items():
     m=re.match(r'\(pin (\w+) (\w+)',b[j:]); assert m,(name,pin)
     syms[name]=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; npin+=1
     coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
+# Eagle's bRestrict (layer 43) in a package: the converter writes a via-only keepout on every copper layer, where
+# Eagle means no copper of any kind on the bottom layer (its tRestrict, layer 41, comes through right: F.Cu, all
+# not_allowed). Every zone of that form is rewritten to the bottom layer with the same keepout as the top form.
+ALLCU=re.compile(r'^\t\(zone\n\t\t\(layers "F\.Cu" "B\.Cu" "In1\.Cu"[^)]*\)\n((?:.*\n)*?)^\t\)\n',re.M)
+nrestrict=0
+def brestrict(m):
+    global nrestrict
+    body=m.group(1)
+    body=re.sub(r'\(keepout\n(?:.*\n)*?\t\t\)','(keepout\n\t\t\t(tracks not_allowed)\n\t\t\t(vias not_allowed)\n\t\t\t(pads not_allowed)\n\t\t\t(copperpour not_allowed)\n\t\t\t(footprints allowed)\n\t\t)',body,count=1)
+    nrestrict+=1
+    return '\t(zone\n\t\t(layers "B.Cu")\n'+body+'\t)\n'
+for name in list(fps):
+    fps[name]=ALLCU.sub(brestrict,fps[name])
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
 nmargin=0
 for name,t in fps.items():
@@ -316,7 +329,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')
