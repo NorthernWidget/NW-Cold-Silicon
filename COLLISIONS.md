@@ -1770,7 +1770,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
-| USB_MICROVERT | symbol | pins BODY | – | 6 stacked pins spread 2.54 mm apart: the micro-USB's six shell pads, separate and unconnected as Eagle had them |
+| USB_MICROVERT | symbol | pins P$2, P$4, P$6 | – | dropped: the shell's second hole of each pair shares its pad number with the first |
+| USB_MICROVERT | symbol | pins BODY | – | 3 stacked pins spread 2.54 mm apart: the micro-USB's three shell slots, separate and unconnected as Eagle had them |
+| USB_MICRO_VERT_MOLEX | footprint | pads P$2 as P$1, P$4 as P$3, P$6 as P$5 | – | 3 copper bars folded into their pads: the micro-USB shell: three slots of two holes each (Okapi USB2) |
 | USB_MICRO_VERT_MOLEX | footprint | attr | – | allow_soldermask_bridges: the micro-USB's six shell slots share one mask opening on the fabricated board |
 | LED0603 | symbol | every pin | – | electrical type passive: an LED (Okapi D10 to D18) |
 | CLVBA-FKA | symbol | every pin | – | electrical type passive: the RGB LED (Okapi D4, D5) |

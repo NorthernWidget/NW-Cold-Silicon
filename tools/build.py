@@ -378,7 +378,14 @@ else:
 # of the name is moved k steps along the direction given (symbol coordinates, 2.54 mm a step), so each can carry
 # its own flag and its own net; the Okapi micro-USB's six shell slots were one joined net in KiCad and six
 # unconnected pads in Eagle (Andy, 2026-11-04: match the way the Eagle boards printed).
-PIN_SPREAD={('USB_MICROVERT','BODY'):((0,-1),"the micro-USB's six shell pads, separate and unconnected as Eagle had them")}
+# pins to drop before the spread: a pad that shares its number with another (PAD_RENUMBER below) has no pin of its own
+PIN_DROP={'USB_MICROVERT':(('P$2','P$4','P$6'),"the shell's second hole of each pair shares its pad number with the first")}
+for name,(numbers,why) in PIN_DROP.items():
+    b=syms[name]; k=0
+    for num in numbers:
+        b,n=re.subn(r'\t\t\t\(pin \w+ \w+\n(?:(?!\t\t\t\(pin ).*\n)*?\t\t\t\t\(number "%s"\n(?:.*\n)*?\t\t\t\)\n'%re.escape(num),'',b,count=1); assert n==1,(name,num); k+=n
+    syms[name]=b; coll.append(f'| {name} | symbol | pins {", ".join(numbers)} | – | dropped: {why} |')
+PIN_SPREAD={('USB_MICROVERT','BODY'):((0,-1),"the micro-USB's three shell slots, separate and unconnected as Eagle had them")}
 nspread=0
 for (name,pin),((dx,dy),why) in PIN_SPREAD.items():
     b=syms[name]; hits=[m.start() for m in re.finditer(re.escape('(name "%s"'%pin),b)]
@@ -387,6 +394,34 @@ for (name,pin),((dx,dy),why) in PIN_SPREAD.items():
         x,y=float(m.group(1))+dx*2.54*k,float(m.group(2))+dy*2.54*k
         b=b[:j]+b[j:i].replace(m.group(0),'(at %s %s %s)'%(fmt6(x),fmt6(y),m.group(3)),1)+b[i:]
     assert len(hits)>1,(name,pin); syms[name]=b; nspread+=len(hits); coll.append(f'| {name} | symbol | pins {pin} | – | {len(hits)} stacked pins spread 2.54 mm apart: {why} |')
+# a shell drawn as pairs of plated holes joined by a copper bar (Eagle's one shape): the second hole of a pair takes the
+# first's pad number, which KiCad treats as one pad, and the bar becomes a primitive of the first pad (a custom-shaped
+# pad on an anchor circle), so no loose copper is left for DRC to read as a short or a mask bridge
+PAD_RENUMBER={'USB_MICRO_VERT_MOLEX':({'P$2':'P$1','P$4':'P$3','P$6':'P$5'},"the micro-USB shell: three slots of two holes each (Okapi USB2)")}
+npadjoin=0
+for name,(renum,why) in PAD_RENUMBER.items():
+    b=fps[name]
+    pads={m.group(1):(float(m.group(2)),float(m.group(3))) for m in re.finditer(r'\(pad "([^"]*)" thru_hole \w+\n\t\t\(at (-?[\d.]+) (-?[\d.]+)',b)}
+    for old_,new_ in renum.items():
+        b,n=re.subn(r'\(pad "%s" thru_hole'%re.escape(old_),'(pad "%s" thru_hole'%new_,b,count=1); assert n==1,(name,old_)
+    # every copper bar whose ends are two pad centers of one number becomes that pad's primitive; the lines go
+    bars={}
+    def take(m):
+        (x1,y1),(x2,y2),w=(float(m.group(1)),float(m.group(2))),(float(m.group(3)),float(m.group(4))),m.group(5)
+        ends=[k for k,(px,py) in pads.items() if (abs(px-x1)<1e-6 and abs(py-y1)<1e-6) or (abs(px-x2)<1e-6 and abs(py-y2)<1e-6)]
+        if len(ends)!=2: return m.group(0)
+        a,c=sorted(ends,key=lambda k:renum.get(k,k)); first=renum.get(a,a)
+        if renum.get(c,c)!=first: return m.group(0)
+        ax,ay=pads[a]; bx,by=pads[c]
+        bars[a]=(bx-ax,by-ay,w); return ''
+    b=re.sub(r'^\t\(fp_line\n\t\t\(start (-?[\d.]+) (-?[\d.]+)\)\n\t\t\(end (-?[\d.]+) (-?[\d.]+)\)\n\t\t\(stroke\n\t\t\t\(width ([\d.]+)\)\n(?:.*\n)*?\t\t\(layer "[FB]\.Cu"\)\n(?:.*\n)*?\t\)\n',take,b,flags=re.M)
+    for a,(dx,dy,w) in bars.items():
+        num=renum.get(a,a)
+        def custom(m):
+            return m.group(1)+'custom'+m.group(2)+'\t\t(options\n\t\t\t(clearance outline)\n\t\t\t(anchor circle)\n\t\t)\n\t\t(primitives\n\t\t\t(gr_line\n\t\t\t\t(start 0 0)\n\t\t\t\t(end %s %s)\n\t\t\t\t(width %s)\n\t\t\t)\n\t\t)\n'%(fmt6(dx),fmt6(dy),w)
+        b,n=re.subn(r'(\(pad "%s" thru_hole )circle(\n\t\t\(at %s %s\)\n(?:.*\n)*?\t\t\(layers [^\n]*\n)'%(re.escape(num),re.escape(fmt6(pads[a][0])),re.escape(fmt6(pads[a][1]))),custom,b,count=1); assert n==1,(name,a)
+        npadjoin+=1
+    fps[name]=b; coll.append(f'| {name} | footprint | pads {", ".join(f"{o} as {n}" for o,n in renum.items())} | – | {len(bars)} copper bars folded into their pads: {why} |')
 # a footprint whose pads share one solder-mask opening as fabricated: KiCad's allow_soldermask_bridges attribute
 FP_ATTRS={'USB_MICRO_VERT_MOLEX':('allow_soldermask_bridges',"the micro-USB's six shell slots share one mask opening on the fabricated board")}
 for name,(attr,why) in FP_ATTRS.items():
