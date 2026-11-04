@@ -1776,6 +1776,9 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MOSFET-NCH-DMG3404L | symbol | every pin | – | electrical type passive: an N-channel MOSFET (Okapi Q1, Q2, Q6) |
 | MOSFET_PCH-FDN360P | symbol | every pin | – | electrical type passive: a P-channel MOSFET (Okapi Q3, Q5) |
 | PPTC1.5A | symbol | every pin | – | electrical type passive: a resettable fuse (Okapi F1, F2) |
+| BUTTON2.6X1.6 | symbol | every pin | – | electrical type passive: a tactile switch (Okapi S5) |
+| BUTTON4.2X3.2 | symbol | every pin | – | electrical type passive: a tactile switch (Okapi S3, S4, S6, S7) |
+| JST_2MM_MALE | symbol | every pin | – | electrical type passive: a connector (Okapi J8) |
 | TPL5111DDC | symbol | pin DRVN | – | electrical type output: TI SNAS659B: DRVn is the timer's output, asserted every interval to drive a load switch's enable (Okapi U10 ON) |
 | TLV61220DBV | symbol | pin VOUT | – | electrical type power_out: TI SLVSBD8: boost converter output (Okapi 5V_LP) |
 | TPS6103RSA | symbol | pin VOUT | – | electrical type power_out: TI SLUS534: boost converter output, three pins (Okapi 5V_AUX) |
@@ -1788,3 +1791,34 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MIC9409C6 | symbol | pin VOUT | – | electrical type power_out: Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO) |
 | ADS111 | symbol | pin ADDR | – | electrical type input: TI SBAS444 (ADS1115): ADDR is the I2C address select input; the import typed it bidirectional |
 | PAC1934QFN | symbol | pin VDD_IO | – | electrical type power_in: Microchip PAC1934 DS20005850: VDD_IO is the I/O supply; the import typed it open collector |
+| LT3652DD | symbol | pin VIN | – | electrical type power_in: ADI LT3652 datasheet: input supply |
+| LT3652DD | symbol | pin VIN_REG | – | electrical type input: ADI LT3652: input voltage regulation reference |
+| LT3652DD | symbol | pin ~{SHDN} | – | electrical type input: ADI LT3652: shutdown input |
+| LT3652DD | symbol | pin ~{CHRG} | – | electrical type open_collector: ADI LT3652: open-collector status output |
+| LT3652DD | symbol | pin ~{FAULT} | – | electrical type open_collector: ADI LT3652: open-collector status output |
+| LT3652DD | symbol | pin TIMER | – | electrical type passive: ADI LT3652: timer capacitor pin |
+| LT3652DD | symbol | pin VFB | – | electrical type input: ADI LT3652: feedback input |
+| LT3652DD | symbol | pin NTC | – | electrical type input: ADI LT3652: thermistor input |
+| LT3652DD | symbol | pin BAT | – | electrical type power_out: ADI LT3652: charger output to the battery (Okapi V_LI) |
+| LT3652DD | symbol | pin SENSE | – | electrical type input: ADI LT3652: current sense input |
+| LT3652DD | symbol | pin BOOST | – | electrical type passive: ADI LT3652: bootstrap capacitor pin |
+| LT3652DD | symbol | pin GND_PAD | – | electrical type power_in: ADI LT3652: ground |
+| FT231X-Q | symbol | pin VCC | – | electrical type power_in: FTDI DS_FT231X: supply |
+| FT231X-Q | symbol | pin VCCIO | – | electrical type power_in: FTDI DS_FT231X: I/O supply |
+| FT231X-Q | symbol | pin GND | – | electrical type power_in: FTDI DS_FT231X: ground, three pins |
+| FT231X-Q | symbol | pin 3V3OUT | – | electrical type power_out: FTDI DS_FT231X: regulator output |
+| FT231X-Q | symbol | pin RXD | – | electrical type input: FTDI DS_FT231X: UART receive |
+| FT231X-Q | symbol | pin TXD | – | electrical type output: FTDI DS_FT231X: UART transmit |
+| FT231X-Q | symbol | pin RTS# | – | electrical type output: FTDI DS_FT231X: handshake output |
+| FT231X-Q | symbol | pin DTR# | – | electrical type output: FTDI DS_FT231X: handshake output |
+| FT231X-Q | symbol | pin CTS# | – | electrical type input: FTDI DS_FT231X: handshake input |
+| FT231X-Q | symbol | pin DSR# | – | electrical type input: FTDI DS_FT231X: handshake input |
+| FT231X-Q | symbol | pin DCD# | – | electrical type input: FTDI DS_FT231X: handshake input |
+| FT231X-Q | symbol | pin RI# | – | electrical type input: FTDI DS_FT231X: handshake input |
+| FT231X-Q | symbol | pin RESET# | – | electrical type input: FTDI DS_FT231X: reset input |
+| BME280 | symbol | pin VDDIO | – | electrical type power_in: Bosch BST-BME280-DS002: interface supply |
+| BME280 | symbol | pin CSB | – | electrical type input: Bosch BST-BME280-DS002: chip select / interface select input |
+| BME280 | symbol | pin SCK | – | electrical type input: Bosch BST-BME280-DS002: serial clock input |
+| BME280 | symbol | pin SDO | – | electrical type input: Bosch BST-BME280-DS002: I2C address select input in I2C mode (SPI data out otherwise; Okapi uses I2C) |
+| MLX90393 | symbol | pin MS/CS | – | electrical type input: Melexis MLX90393 datasheet: mode select / chip select input |
+| LTC4412S6 | symbol | pin CTL | – | electrical type input: ADI LTC4412 datasheet: control input |
