@@ -1759,20 +1759,27 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | 3V3_CORE | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
 | 4_40_CLOSE | footprint | board margay | bschulz | taken from the board's Eagle file by decision: Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing. |
 | LINX_BAT-HLD-012-SMT | footprint | board okapi | bschulz, awickert, fork | taken from the board's Eagle file by decision: Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's. |
+| LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | NWLOGO_MED | footprint | awickert | board okapi (None) | unchecked: no front-side instance |
 | PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | RSA_S-PVQFN-N16 | footprint | bschulz as `RSA_S-PVQFN-N16` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
-| USB_MICRO_VERT_MOLEX | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
+| USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
+| LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board margay (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | NWLOGO_MED | footprint | awickert | board margay (None) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
 | USB_MICROVERT | symbol | pins P$2, P$4, P$6 | – | dropped: the shell's second hole of each pair shares its pad number with the first |
+| BATTERY_COIN12MM | symbol | pins POWER1 | – | dropped: the coin holder's second + spring shares its pad number with the first (PAD_SAME_NUMBER) |
+| BATTERY_COIN10MM | symbol | pins BATT+2 | – | dropped: the same, for the 10 mm clip |
 | USB_MICROVERT | symbol | pins BODY | – | 3 stacked pins spread 2.54 mm apart: the micro-USB's three shell slots, separate and unconnected as Eagle had them |
 | USB_MICRO_VERT_MOLEX | footprint | pads P$2 as P$1, P$4 as P$3, P$6 as P$5 | – | 3 copper bars folded into their pads: the micro-USB shell: three slots of two holes each (Okapi USB2) |
+| LINX_BAT-HLD-012-SMT | footprint | pads POWER1 as POWER0; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: the coin holder's two + springs are one piece of metal (Margay and Okapi BT1; Eagle contactref route="any") |
+| BATT_10MM_CLIP | footprint | pads BATT+2 as BATT+1; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: the same, for the 10 mm clip (Eagle route="any") |
+| AWICKERT_LINX_BAT-HLD-012-SMT | footprint | pads POWER1 as POWER0; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: Andy's copy of the 12 mm holder, the same two springs |
 | USB_MICRO_VERT_MOLEX | footprint | attr | – | allow_soldermask_bridges: the micro-USB's six shell slots share one mask opening on the fabricated board |
 | LED0603 | symbol | every pin | – | electrical type passive: an LED (Okapi D10 to D18) |
 | CLVBA-FKA | symbol | every pin | – | electrical type passive: the RGB LED (Okapi D4, D5) |

@@ -1,6 +1,6 @@
 # Provenance
 
-Built 2026-11-04 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
+Built 2026-11-05 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
 
 | key | kind | file | repository commit | packages | symbols | converter warnings |
 |---|---|---|---|---|---|---|
@@ -17,8 +17,8 @@ Footprints embedded in the KiCad boards, each matched to the library through its
 
 | board | file | embedded names | identical | pads identical | pads differ | added | unchecked |
 |---|---|---|---|---|---|---|---|
-| okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 68 | 66 | 0 | 1 | 3 | 2 |
-| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 36 | 34 | 0 | 0 | 1 | 4 |
+| okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 68 | 64 | 0 | 3 | 3 | 2 |
+| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 36 | 33 | 0 | 1 | 1 | 4 |
 
 Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: 42 items; a non-plated hole's pad, which that importer makes 0.254 mm wider than the drill, is set to the drill as the library converter and Eagle have it: 17 pads):
 

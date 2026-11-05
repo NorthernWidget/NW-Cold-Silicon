@@ -379,7 +379,9 @@ else:
 # its own flag and its own net; the Okapi micro-USB's six shell slots were one joined net in KiCad and six
 # unconnected pads in Eagle (Andy, 2026-11-04: match the way the Eagle boards printed).
 # pins to drop before the spread: a pad that shares its number with another (PAD_RENUMBER below) has no pin of its own
-PIN_DROP={'USB_MICROVERT':(('P$2','P$4','P$6'),"the shell's second hole of each pair shares its pad number with the first")}
+PIN_DROP={'USB_MICROVERT':(('P$2','P$4','P$6'),"the shell's second hole of each pair shares its pad number with the first"),
+          'BATTERY_COIN12MM':(('POWER1',),"the coin holder's second + spring shares its pad number with the first (PAD_SAME_NUMBER)"),
+          'BATTERY_COIN10MM':(('BATT+2',),"the same, for the 10 mm clip")}
 for name,(numbers,why) in PIN_DROP.items():
     b=syms[name]; k=0
     for num in numbers:
@@ -422,6 +424,18 @@ for name,(renum,why) in PAD_RENUMBER.items():
         b,n=re.subn(r'(\(pad "%s" thru_hole )circle(\n\t\t\(at %s %s\)\n(?:.*\n)*?\t\t\(layers [^\n]*\n)'%(re.escape(num),re.escape(fmt6(pads[a][0])),re.escape(fmt6(pads[a][1]))),custom,b,count=1); assert n==1,(name,a)
         npadjoin+=1
     fps[name]=b; coll.append(f'| {name} | footprint | pads {", ".join(f"{o} as {n}" for o,n in renum.items())} | – | {len(bars)} copper bars folded into their pads: {why} |')
+# pads that are one terminal of the part: Eagle's device maps one pin to both and routes to either (route="any"),
+# so no copper joins them on the board; KiCad joins pads only by number, so the second takes the first's
+PAD_SAME_NUMBER={'LINX_BAT-HLD-012-SMT':({'POWER1':'POWER0'},"the coin holder's two + springs are one piece of metal (Margay and Okapi BT1; Eagle contactref route=\"any\")"),
+                 'BATT_10MM_CLIP':({'BATT+2':'BATT+1'},"the same, for the 10 mm clip (Eagle route=\"any\")"),
+                 'AWICKERT_LINX_BAT-HLD-012-SMT':({'POWER1':'POWER0'},"Andy's copy of the 12 mm holder, the same two springs")}
+for name,(renum,why) in PAD_SAME_NUMBER.items():
+    b=fps[name]
+    for old_,new_ in renum.items():
+        b,n=re.subn(r'\(pad "%s" smd'%re.escape(old_),'(pad "%s" smd'%new_,b,count=1); assert n==1,(name,old_)
+    # KiCad joins same-numbered pads for the ratsnest only when the footprint says they are jumpers (KiCad 9+)
+    b,n=re.subn(r'^\t\(duplicate_pad_numbers_are_jumpers no\)$','\t(duplicate_pad_numbers_are_jumpers yes)',b,count=1,flags=re.M); assert n==1,(name,'jumper flag')
+    fps[name]=b; coll.append(f'| {name} | footprint | pads {", ".join(f"{o} as {n}" for o,n in renum.items())}; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: {why} |')
 # a footprint whose pads share one solder-mask opening as fabricated: KiCad's allow_soldermask_bridges attribute
 FP_ATTRS={'USB_MICRO_VERT_MOLEX':('allow_soldermask_bridges',"the micro-USB's six shell slots share one mask opening on the fabricated board")}
 for name,(attr,why) in FP_ATTRS.items():

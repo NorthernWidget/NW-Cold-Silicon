@@ -23026,24 +23026,6 @@
 				)
 			)
 			(pin power_in line
-				(at 0 5.08 270)
-				(length 2.54)
-				(name "+"
-					(effects
-						(font
-							(size 0 0)
-						)
-					)
-				)
-				(number "BATT+2"
-					(effects
-						(font
-							(size 0 0)
-						)
-					)
-				)
-			)
-			(pin power_in line
 				(at 0 -2.54 90)
 				(length 2.54)
 				(name "-"
@@ -23269,24 +23251,6 @@
 					)
 				)
 				(number "POWER0"
-					(effects
-						(font
-							(size 0 0)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 0 5.08 270)
-				(length 2.54)
-				(name "+"
-					(effects
-						(font
-							(size 0 0)
-						)
-					)
-				)
-				(number "POWER1"
 					(effects
 						(font
 							(size 0 0)

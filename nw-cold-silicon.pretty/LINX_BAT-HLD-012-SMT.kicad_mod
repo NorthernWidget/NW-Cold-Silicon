@@ -52,7 +52,7 @@
 			)
 		)
 	)
-	(duplicate_pad_numbers_are_jumpers no)
+	(duplicate_pad_numbers_are_jumpers yes)
 	(fp_line
 		(start -6.75 -2.54)
 		(end -4.75 -4.54)
@@ -191,7 +191,7 @@
 		(thermal_bridge_angle 0)
 		(uuid "dc654a75-5b2a-50dd-b25a-c1173c286318")
 	)
-	(pad "POWER1" smd rect
+	(pad "POWER0" smd rect
 		(at 7.62 0)
 		(size 2.54 5.08)
 		(layers "F.Cu" "F.Mask" "F.Paste")
