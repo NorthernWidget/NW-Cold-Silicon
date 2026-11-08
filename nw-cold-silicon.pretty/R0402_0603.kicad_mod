@@ -1,0 +1,207 @@
+(footprint "R0402_0603"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Resistor land that takes an 0603 or an 0402: pads 0.75 x 0.80 mm at +/-0.725 mm (gap 0.70, extent 2.20), the geometry of Blues MN_0402_0603 (blues/note-hardware, Notecarrier-XI v1.4, reflowed with both sizes on its production BOM), without its -0.025 mm paste reduction (the board's rules set paste). Inside Panasonic's 0603 land; oversized for an 0402. For user-swappable parts.")
+	(tags "resistor 0402 0603 dual")
+	(property "Reference" "REF**"
+		(at 0 -1.1 0)
+		(layer "F.SilkS")
+		(uuid "5f103b22-f71e-524e-9a8c-4ec606e18af1")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Value" "R0402_0603"
+		(at 0 1.1 0)
+		(layer "F.Fab")
+		(uuid "59b8a369-3daf-59be-81b5-8ab24daeda20")
+		(effects
+			(font
+				(size 0.51816 0.51816)
+				(thickness 0.09144)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9ddc2cf6-9c2f-5f9c-88ea-87cb0d9c26f1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ea145482-fa94-5d9b-92a5-018a68755654")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.2 -0.55)
+		(end 0.2 -0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "454e169d-1774-5880-b81d-470b11e82ff3")
+	)
+	(fp_line
+		(start -0.2 0.55)
+		(end 0.2 0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c7fe9197-feaa-5e38-b5c5-692648bbdb3d")
+	)
+	(fp_line
+		(start -1.35 -0.65)
+		(end 1.35 -0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "852221f5-c118-5353-bd7c-f8782a27fe8c")
+	)
+	(fp_line
+		(start -1.35 0.65)
+		(end -1.35 -0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "992b4422-9e7d-5f85-863e-ff6aab95f4eb")
+	)
+	(fp_line
+		(start 1.35 -0.65)
+		(end 1.35 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1d4ff1d8-01b4-5b36-ad9e-1e332de467e7")
+	)
+	(fp_line
+		(start 1.35 0.65)
+		(end -1.35 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5193d922-cac5-5cff-a2bc-dcff512c2f5a")
+	)
+	(fp_line
+		(start -0.8 -0.4)
+		(end 0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6fe55080-6fcc-5d19-9d40-e6e94f185920")
+	)
+	(fp_line
+		(start -0.8 0.4)
+		(end -0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4832cd87-0b15-5f0a-8caf-ee0e0bf2b004")
+	)
+	(fp_line
+		(start -0.5 -0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "746953a5-42a5-576d-9638-40a895b0f423")
+	)
+	(fp_line
+		(start -0.5 0.25)
+		(end -0.5 -0.25)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "9e0ad3c1-6706-5e88-9bc2-71e96e7862a4")
+	)
+	(fp_line
+		(start 0.5 -0.25)
+		(end 0.5 0.25)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "11f9b30b-81aa-595b-a599-64b22269d464")
+	)
+	(fp_line
+		(start 0.5 0.25)
+		(end -0.5 0.25)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "7d2d6c33-361c-5ac5-81b6-1675414ba42d")
+	)
+	(fp_line
+		(start 0.8 -0.4)
+		(end 0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "aea2b39b-9f67-5092-99a0-49e8ea985622")
+	)
+	(fp_line
+		(start 0.8 0.4)
+		(end -0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e87d9e20-40c5-5e97-bece-edc0586ddf61")
+	)
+	(pad "1" smd rect
+		(at -0.725 0)
+		(size 0.75 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "09685d2b-c0ba-5490-ab51-fb274e019921")
+	)
+	(pad "2" smd rect
+		(at 0.725 0)
+		(size 0.75 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3ec4f300-ecf6-5dde-aa50-4545e6e59c59")
+	)
+	(embedded_fonts no)
+)

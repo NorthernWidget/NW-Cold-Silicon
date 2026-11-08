@@ -1,6 +1,6 @@
 # Provenance
 
-Built 2026-11-05 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
+Built 2026-11-08 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
 
 | key | kind | file | repository commit | packages | symbols | converter warnings |
 |---|---|---|---|---|---|---|
@@ -33,7 +33,8 @@ Artwork (logos, 25 footprints and symbols): reference LOGO, excluded from the BO
 Through-hole pads grown to Eagle's restring (135): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.
 Eagle bRestrict zones (6): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.
 No footprint carries a per-pad solder-mask or paste margin (7608 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
-Library: **847 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
+Library: **848 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
+Native footprints, drawn in KiCad and copied from native/ (1): `R0402_0603`; each names its source in its descr.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 
 Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.

@@ -50,6 +50,8 @@ added from the Eagle board file's own package definition, through
 `kicad-cli pcb import`, the same converter; `PROVENANCE.md` names the board
 and says how the KiCad board's copy compares.
 
+A few footprints are drawn in KiCad rather than converted: they live in `native/`, the build copies them in under their own names, and each names its source in its description. The first is `R0402_0603`, a resistor land that takes an 0603 or an 0402 (the geometry of Blues' MN_0402_0603), for user-swappable parts.
+
 ## What the build corrects
 
 KiCad's Eagle reader is the converter, and the output is what it writes, with

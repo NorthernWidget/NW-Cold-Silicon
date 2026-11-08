@@ -21,6 +21,8 @@ POWER_LIFT take symbols from a board's imported project library, the latter
 as KiCad power symbols; COLLISIONS.md
 says so for each. The script writes PROVENANCE.md and COLLISIONS.md itself, so
 every number in them is the build's.
+Footprints drawn in KiCad rather than converted (native/*.kicad_mod) are copied in
+under their own names; a name a converted footprint already holds stops the build.
 --upto stops after the named source, for one commit per source.
 """
 import os,re,sys,shutil,subprocess,tempfile,uuid,datetime,collections,glob
@@ -485,6 +487,12 @@ def restring(m):
     return '%s%s %s%s%s'%(m.group(1),fmt6(sx+g),fmt6(sy+g),m.group(4),m.group(5))
 for name in list(fps): fps[name]=PADRE.sub(restring,fps[name])
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
+# native footprints: drawn in KiCad, not converted from an Eagle library (native/*.kicad_mod)
+nnative=0; native_names=[]
+for f in sorted(glob.glob(os.path.join(REPO,'native','*.kicad_mod'))):
+    name=os.path.basename(f)[:-len('.kicad_mod')]
+    assert name not in fps,('native footprint name collides with a converted one',name)
+    fps[name]=open(f).read(); nnative+=1; native_names.append(name)
 nmargin=0
 for name,t in fps.items():
     t,nm=MARGIN.subn('',t); nmargin+=nm   # no per-pad mask or paste margin: the board's design rules set them
@@ -501,6 +509,7 @@ s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym'
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
 prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+       f'Native footprints, drawn in KiCad and copied from native/ ({nnative}): '+(', '.join('`%s`'%n for n in native_names) or 'none')+'; each names its source in its descr.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
 open(os.path.join(REPO,'PROVENANCE.md'),'w').write('\n'.join(prov)+'\n')
