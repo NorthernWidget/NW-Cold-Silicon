@@ -210,6 +210,9 @@ if not upto:
         coll.append(f'| {name} | footprint | board {bkey} | {", ".join(k for k,v in fpmap.items() if name in v)} | taken from the board\'s Eagle file by decision: {why} |')
     prov+=['','## Boards','','Footprints embedded in the KiCad boards, each matched to the library through its element\'s Eagle library of origin. A name no source library holds is added from the Eagle board\'s own package definition through `kicad-cli pcb import`, the converter that built the rest. Columns: identical to the library copy in pads and graphics; same pads but the KiCad board\'s copy (a June 2026 import) draws the graphics or sizes a non-plated hole differently; pads differ (the board copy is NOT taken over; COLLISIONS.md lists it); unchecked means the board has no front-side instance to compare.','',
            '| board | file | embedded names | identical | pads identical | pads differ | added | unchecked |','|---|---|---|---|---|---|---|---|']
+    # a native footprint (native/, drawn in KiCad) has no Eagle origin, so the board pass never looks for it in an Eagle
+    # board; it is copied in from native/ below (the dual 0402/0603 land on Okapi from 2026-11-08 stopped the build here)
+    NATIVE={os.path.basename(f)[:-len('.kicad_mod')] for f in glob.glob(os.path.join(REPO,'native','*.kicad_mod'))}
     for bkey,pcb,brd in BOARDS:
         el={e.get('name'):(e.get('library'),e.get('package')) for e in ET.parse(os.path.join(ws,brd)).getroot().iter('element')}
         up=os.path.join(tmp,'brd',bkey+'.kicad_pcb'); os.makedirs(os.path.dirname(up),exist_ok=True); shutil.copy(os.path.join(ws,pcb),up)
@@ -217,6 +220,7 @@ if not upto:
         emb=embedded(up); n_id=n_pad=n_dif=n_add=n_unc=0
         for full,insts in sorted(emb.items()):
             n=full.split(':')[-1].replace('_528','')
+            if n in NATIVE: continue
             groups=collections.defaultdict(list)
             for b in insts:
                 ref=re.search(r'\(property "Reference" "([^"]*)"',b).group(1); groups[el.get(ref,(None,None))[0]].append(b)
