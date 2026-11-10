@@ -480,6 +480,17 @@ def brestrict(m):
     return '\t(zone\n\t\t(layers "B.Cu")\n'+body+'\t)\n'
 for name in list(fps):
     fps[name]=ALLCU.sub(brestrict,fps[name])
+# a package whose Eagle restrict sat on the wrong side for the part's datasheet: the zone is moved to the layer and the
+# keepout the datasheet asks for (Okapi DECISIONS item 6, 2026-11-10)
+KEEPOUT_FIX={'SWITCH_2.6X1.6':('F.Cu',{'tracks':'allowed','vias':'not_allowed','pads':'not_allowed','copperpour':'not_allowed','footprints':'allowed'},
+   "Panasonic EVP-BB datasheet, 'Land pattern plan': no land pattern or via holes in the No soldering area under the switch, "
+   "or resist over them (solder balls short; extra pattern tilts the switch); a top-side rule, so Bobby's bottom restrict moves to F.Cu "
+   "and masked tracks stay allowed (Okapi S5)")}
+for name,(layer,ko,why) in KEEPOUT_FIX.items():
+    t=fps[name]; assert t.count('\t(zone\n')==1,(name,'one keepout zone expected')
+    t,n=re.subn(r'(\t\(zone\n\t\t\(layers? )"[^)]*"\)',lambda m:m.group(1)+'"'+layer+'")',t,count=1); assert n==1,name
+    t,n=re.subn(r'\(keepout\n(?:.*\n)*?\t\t\)','(keepout\n'+''.join(f'\t\t\t({k} {v})\n' for k,v in ko.items())+'\t\t)',t,count=1); assert n==1,name
+    fps[name]=t; coll.append(f'| {name} | footprint | keepout | – | {layer}, '+', '.join(f'{k} {v}' for k,v in ko.items())+f': {why} |')
 # Eagle's restring: every through-hole pad is fabricated at least drill + 2 x max(25 % of the drill, 5 mil), capped at
 # 20 mil of ring (the DRU of every Northern Widget board: rvPadTop 0.25, rlMinPadTop 5mil, rlMaxPadTop 20mil), whatever
 # the package drew; KiCad fabricates the drawn pad. A pad drawn under that size is grown to it (Andy, 2026-11-04:

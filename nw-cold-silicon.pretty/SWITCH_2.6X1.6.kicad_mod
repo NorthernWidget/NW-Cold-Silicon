@@ -128,7 +128,7 @@
 		(uuid "e74cc37f-9efb-5cec-a2f1-683fe67e32a4")
 	)
 	(zone
-		(layer "B.Cu")
+		(layer "F.Cu")
 		(uuid "60443b82-a43e-528a-a6a9-eda3d3d986a6")
 		(hatch edge 0.5)
 		(connect_pads
@@ -136,7 +136,7 @@
 		)
 		(min_thickness 0.25)
 		(keepout
-			(tracks not_allowed)
+			(tracks allowed)
 			(vias not_allowed)
 			(pads not_allowed)
 			(copperpour not_allowed)

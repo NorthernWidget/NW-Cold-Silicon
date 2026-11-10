@@ -1845,3 +1845,4 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MAX6070AAUT | symbol | pin FILT | – | electrical type passive: Maxim MAX6070: noise-reduction capacitor pin |
 | MAX6070AAUT | symbol | pin OUTF | – | electrical type output: Maxim MAX6070: reference output, force (an output, not a supply: it feeds an ADC input on Margay) |
 | MAX6070AAUT | symbol | pin OUTS | – | electrical type passive: Maxim MAX6070: reference output, sense |
+| SWITCH_2.6X1.6 | footprint | keepout | – | F.Cu, tracks allowed, vias not_allowed, pads not_allowed, copperpour not_allowed, footprints allowed: Panasonic EVP-BB datasheet, 'Land pattern plan': no land pattern or via holes in the No soldering area under the switch, or resist over them (solder balls short; extra pattern tilts the switch); a top-side rule, so Bobby's bottom restrict moves to F.Cu and masked tracks stay allowed (Okapi S5) |
