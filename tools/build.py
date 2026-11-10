@@ -306,6 +306,10 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('MIC2544MSOP','OUT'):('power_out',"Microchip MIC2544/2545: current-limited switch output, two pins (Okapi VBUS_PRIME, VBUS_SEC)"),
  ('TPS22917DBV','VOUT'):('power_out',"TI SLVSCX1: load switch output (Okapi V_HP, FEATHER_BAT)"),
  ('TPS797','VOUT'):('power_out',"TI SLVS350 (TPS797xx): LDO output (Okapi 3V3_CORE); the import typed every pin of this symbol bidirectional"),
+ # the switch nodes, typed power input by the import, which left them undriven in ERC (Okapi DECISIONS item 5a, 2026-11-10)
+ ('TLV61220DBV','SW'):('input',"TI SLVSB53A pin table: SW is I, 'Boost and rectifying switch input' (Okapi U1)"),
+ ('TPS6103RSA','SW'):('input',"TI SLUS534G pin table: SW is I, 'Boost and rectifying switch input', two pins (Okapi U3)"),
+ ('TPS6282DLC','SW'):('power_out',"TI SLVSDV6C pin table: SW is Power, 'Switch node, connected to the internal MOSFET switches'; power output as KiCad's own TPS62822 symbol (Okapi U2)"),
  ('TPS797','VIN'):('power_in',"TI SLVS350: LDO input"),
  ('TPS797','GND'):('power_in',"TI SLVS350: ground"),
  ('MIC9409C6','VOUT'):('power_out',"Microchip MIC94090/1/2/3: load switch output (Okapi 3V3_CORE_ISO)"),
