@@ -1,0 +1,156 @@
+(footprint "1X03_SCREW_2.54_D1.1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "3-position 2.54 mm rising-clamp screw terminal on 1.1 mm holes, made to fit both On Shore and Phoenix (Andy, 2026-11-11). Fits: On Shore OSTVN03A150; Amphenol Anytek VN03A1500000G (the original of the On Shore design); GCT TBC05-03-1-G-G; Phoenix Contact MPT 0,5/3-2,54. Pins: On Shore/Anytek/GCT 0.90 x 0.40 mm, Phoenix 0.9 x 0.5 mm; 1.1 mm is Phoenix's recommended hole. Pads, silkscreen and pin row as 1X03_SCREW (1.016 mm holes, On Shore only). Wire entry at -y. Body envelope: On Shore 6.5 mm deep (pin row 3.3 mm from the entry face), Phoenix 6.2 mm centered.")
+	(tags "terminal block screw 2.54 rising clamp On Shore OSTVN Anytek VN GCT TBC05 Phoenix MPT")
+	(property "Reference" "REF**"
+		(at -4.04 -4.3 0)
+		(layer "F.SilkS")
+		(uuid "335c0af2-5aa5-5f8e-a51e-4314ed509b9d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "1X03_SCREW_2.54_D1.1"
+		(at 0 4.4 0)
+		(layer "F.Fab")
+		(uuid "4f374124-5218-5a16-a706-d919296a447a")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.on-shore.com/wp-content/uploads/OSTVNXXA150.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aff09782-5898-5bfc-b698-c288aa7050c0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d3f1b20c-3fef-5d9f-8080-2a8f4e64025c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.12)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.04 -3.3)
+		(end -4.04 3.2)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7d376e63-6234-571b-922b-dc6a723def3e")
+	)
+	(fp_line
+		(start -4.04 -3.3)
+		(end 4.04 -3.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a6d562b-edde-5f98-9b78-00dee3aa326a")
+	)
+	(fp_line
+		(start -4.04 -2.54)
+		(end 4.04 -2.54)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2756249e-a1e4-5822-bc38-38420ec6db40")
+	)
+	(fp_line
+		(start -4.04 3.2)
+		(end 4.04 3.2)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5906f1e1-bca9-535e-9a3b-6e9465ae315d")
+	)
+	(fp_line
+		(start 4.04 -3.3)
+		(end 4.04 3.2)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3b5a8721-5915-5a1e-9ef2-a22d38a7656c")
+	)
+	(fp_rect
+		(start -4.29 -3.55)
+		(end 4.29 3.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "2f2aefc0-4e84-5c4c-b71e-6b3364786489")
+	)
+	(fp_rect
+		(start -4.04 -3.3)
+		(end 4.04 3.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "35688355-945a-5d4a-9473-27da34f9356d")
+	)
+	(pad "1" thru_hole circle
+		(at -2.54 0 90)
+		(size 1.524 1.524)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 0)
+		(uuid "6e057049-d101-5fa5-aedf-0e9c80813229")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0 90)
+		(size 1.524 1.524)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 0)
+		(uuid "fe122861-a9cc-5f8b-aa38-6ef29f7be897")
+	)
+	(pad "3" thru_hole circle
+		(at 2.54 0 90)
+		(size 1.524 1.524)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 0)
+		(uuid "dbbd237f-90e4-5385-99bd-22a187aeba26")
+	)
+	(embedded_fonts no)
+)
