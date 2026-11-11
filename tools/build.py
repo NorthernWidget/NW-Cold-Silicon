@@ -406,6 +406,15 @@ for (name,pin),((dx,dy),why) in PIN_SPREAD.items():
         x,y=float(m.group(1))+dx*2.54*k,float(m.group(2))+dy*2.54*k
         b=b[:j]+b[j:i].replace(m.group(0),'(at %s %s %s)'%(fmt6(x),fmt6(y),m.group(3)),1)+b[i:]
     assert len(hits)>1,(name,pin); syms[name]=b; nspread+=len(hits); coll.append(f'| {name} | symbol | pins {pin} | – | {len(hits)} stacked pins spread 2.54 mm apart: {why} |')
+# a pin the Eagle symbol never had: (name, number, electrical type, x, y, angle in symbol coordinates, why). The
+# footprint's pads for it take that number (PAD_SAME_NUMBER), so the pin reaches the pads on the board
+PIN_ADD={'USB_C':(('SHIELD','S1','passive',0,-15.24,90),"the receptacle's metal shell (stakes M1-M4), so it can be tied to GND; Eagle left the shell on no net (Andy, 2026-11-11: ground the USB-C shell; Project-Margay #81)")}
+for name,((pname,pnum,ptype,x,y,a),why) in PIN_ADD.items():
+    b=syms[name]; assert '(number "%s"'%pnum not in b,(name,pnum)
+    pin=('\t\t\t(pin %s line\n\t\t\t\t(at %s %s %s)\n\t\t\t\t(length 2.54)\n\t\t\t\t(name "%s"\n\t\t\t\t\t(effects\n\t\t\t\t\t\t(font\n\t\t\t\t\t\t\t(size 1.524 1.524)\n\t\t\t\t\t\t)\n\t\t\t\t\t)\n\t\t\t\t)\n'
+         '\t\t\t\t(number "%s"\n\t\t\t\t\t(effects\n\t\t\t\t\t\t(font\n\t\t\t\t\t\t\t(size 0 0)\n\t\t\t\t\t\t)\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\t)\n')%(ptype,fmt6(x),fmt6(y),a,pname,pnum)
+    i=b.find('\t\t\t(pin '); assert i>0,(name,'no pin to insert before')
+    syms[name]=b[:i]+pin+b[i:]; coll.append(f'| {name} | symbol | pin {pname} ({pnum}) | – | added: {why} |')
 # a shell drawn as pairs of plated holes joined by a copper bar (Eagle's one shape): the second hole of a pair takes the
 # first's pad number, which KiCad treats as one pad, and the bar becomes a primitive of the first pad (a custom-shaped
 # pad on an anchor circle), so no loose copper is left for DRC to read as a short or a mask bridge
@@ -438,11 +447,12 @@ for name,(renum,why) in PAD_RENUMBER.items():
 # so no copper joins them on the board; KiCad joins pads only by number, so the second takes the first's
 PAD_SAME_NUMBER={'LINX_BAT-HLD-012-SMT':({'POWER1':'POWER0'},"the coin holder's two + springs are one piece of metal (Margay and Okapi BT1; Eagle contactref route=\"any\")"),
                  'BATT_10MM_CLIP':({'BATT+2':'BATT+1'},"the same, for the 10 mm clip (Eagle route=\"any\")"),
-                 'AWICKERT_LINX_BAT-HLD-012-SMT':({'POWER1':'POWER0'},"Andy's copy of the 12 mm holder, the same two springs")}
+                 'AWICKERT_LINX_BAT-HLD-012-SMT':({'POWER1':'POWER0'},"Andy's copy of the 12 mm holder, the same two springs"),
+                 'USB_C_CUSB31-CFM2AX-01-X':({'M1':'S1','M2':'S1','M3':'S1','M4':'S1'},"the four shell stakes are one metal shell, the symbol's SHIELD pin (PIN_ADD; Andy, 2026-11-11: ground the USB-C shell)")}
 for name,(renum,why) in PAD_SAME_NUMBER.items():
     b=fps[name]
     for old_,new_ in renum.items():
-        b,n=re.subn(r'\(pad "%s" smd'%re.escape(old_),'(pad "%s" smd'%new_,b,count=1); assert n==1,(name,old_)
+        b,n=re.subn(r'\(pad "%s" (smd|thru_hole)'%re.escape(old_),lambda m:'(pad "%s" %s'%(new_,m.group(1)),b,count=1); assert n==1,(name,old_)
     # KiCad joins same-numbered pads for the ratsnest only when the footprint says they are jumpers (KiCad 9+)
     b,n=re.subn(r'^\t\(duplicate_pad_numbers_are_jumpers no\)$','\t(duplicate_pad_numbers_are_jumpers yes)',b,count=1,flags=re.M); assert n==1,(name,'jumper flag')
     fps[name]=b; coll.append(f'| {name} | footprint | pads {", ".join(f"{o} as {n}" for o,n in renum.items())}; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: {why} |')

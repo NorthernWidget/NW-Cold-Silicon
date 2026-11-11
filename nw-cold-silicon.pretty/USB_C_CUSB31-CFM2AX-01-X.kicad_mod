@@ -54,7 +54,7 @@
 			)
 		)
 	)
-	(duplicate_pad_numbers_are_jumpers no)
+	(duplicate_pad_numbers_are_jumpers yes)
 	(fp_line
 		(start -4.47 -4)
 		(end -4.47 -5.35)
@@ -324,7 +324,7 @@
 		(thermal_bridge_angle 0)
 		(uuid "a569147b-f6c0-5baa-9ea5-90c506123377")
 	)
-	(pad "M1" thru_hole oval
+	(pad "S1" thru_hole oval
 		(at -4.32 -6.78 90)
 		(size 2 1)
 		(drill oval 1.7 0.6)
@@ -333,16 +333,7 @@
 		(thermal_bridge_angle 0)
 		(uuid "94ef6ab2-49fb-5cdc-87ce-1ea287203878")
 	)
-	(pad "M2" thru_hole oval
-		(at 4.32 -6.78 90)
-		(size 2 1)
-		(drill oval 1.7 0.6)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(thermal_bridge_angle 0)
-		(uuid "6d1d6442-1a9f-5f24-9ead-a0b65d275742")
-	)
-	(pad "M3" thru_hole oval
+	(pad "S1" thru_hole oval
 		(at -4.32 -2.6 90)
 		(size 2 1)
 		(drill oval 1.4 0.6)
@@ -351,7 +342,16 @@
 		(thermal_bridge_angle 0)
 		(uuid "011a4370-e3c1-50a2-b2a9-08302c4fb377")
 	)
-	(pad "M4" thru_hole oval
+	(pad "S1" thru_hole oval
+		(at 4.32 -6.78 90)
+		(size 2 1)
+		(drill oval 1.7 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 0)
+		(uuid "6d1d6442-1a9f-5f24-9ead-a0b65d275742")
+	)
+	(pad "S1" thru_hole oval
 		(at 4.32 -2.6 90)
 		(size 2 1)
 		(drill oval 1.4 0.6)
