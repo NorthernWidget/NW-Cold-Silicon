@@ -397,6 +397,22 @@ for name,(numbers,why) in PIN_DROP.items():
     for num in numbers:
         b,n=re.subn(r'\t\t\t\(pin \w+ \w+\n(?:(?!\t\t\t\(pin ).*\n)*?\t\t\t\t\(number "%s"\n(?:.*\n)*?\t\t\t\)\n'%re.escape(num),'',b,count=1); assert n==1,(name,num); k+=n
     syms[name]=b; coll.append(f'| {name} | symbol | pins {", ".join(numbers)} | – | dropped: {why} |')
+# a pin that Eagle numbered for two pads at once (USB-C "A1B12"): KiCad numbers each pad on its own, so the pin takes
+# the first number and a hidden copy on the same point takes the second, and the symbol carries the footprint whose
+# pads are numbered that way (Andy, 2026-11-11: replace the Eagle USB-C part with KiCad's GCT USB4105)
+PIN_SPLIT={'USB_C':({'A1B12':('A1','B12'),'B1A12':('B1','A12'),'A4B9':('A4','B9'),'B4A9':('B4','A9')},
+   'USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal',"KiCad's GCT USB4105 footprint numbers every contact on its own (Okapi J10, Margay J4)")}
+for name,(split,fp,why) in PIN_SPLIT.items():
+    b=syms[name]
+    for old_,(a,c) in split.items():
+        k=b.index('(number "%s"'%old_); st=b.rfind('\t\t\t(pin ',0,k); en=b.index('\n\t\t\t)\n',k)+len('\n\t\t\t)\n')
+        blk=b[st:en]; assert blk.count('(number ')==1,(name,old_)
+        first=blk.replace('(number "%s"'%old_,'(number "%s"'%a,1)
+        second=blk.replace('(number "%s"'%old_,'(number "%s"'%c,1)
+        second,n=re.subn(r'(\t\t\t\t\(length [\d.]+\)\n)',r'\1\t\t\t\t(hide yes)\n',second,count=1); assert n==1,(name,old_,'length')
+        b=b[:st]+first+second+b[en:]
+    b,n=re.subn(r'\(property "Footprint" "[^"]*"','(property "Footprint" "%s:%s"'%(LIB,fp),b,count=1); assert n==1,(name,'Footprint')
+    syms[name]=b; coll.append(f'| {name} | symbol | pins {", ".join(f"{o} as {a} and {c} (hidden)" for o,(a,c) in split.items())}; footprint {fp} | – | {why} |')
 PIN_SPREAD={('USB_MICROVERT','BODY'):((0,-1),"the micro-USB's three shell slots, separate and unconnected as Eagle had them")}
 nspread=0
 for (name,pin),((dx,dy),why) in PIN_SPREAD.items():
