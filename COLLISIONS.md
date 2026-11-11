@@ -1776,7 +1776,6 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | USB_MICROVERT | symbol | pins P$2, P$4, P$6 | – | dropped: the shell's second hole of each pair shares its pad number with the first |
 | BATTERY_COIN12MM | symbol | pins POWER1 | – | dropped: the coin holder's second + spring shares its pad number with the first (PAD_SAME_NUMBER) |
 | BATTERY_COIN10MM | symbol | pins BATT+2 | – | dropped: the same, for the 10 mm clip |
-| USB_C | symbol | pins A1B12 as A1 and B12 (hidden), B1A12 as B1 and A12 (hidden), A4B9 as A4 and B9 (hidden), B4A9 as B4 and A9 (hidden); footprint USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal | – | KiCad's GCT USB4105 footprint numbers every contact on its own (Okapi J10, Margay J4) |
 | USB_MICROVERT | symbol | pins BODY | – | 3 stacked pins spread 2.54 mm apart: the micro-USB's three shell slots, separate and unconnected as Eagle had them |
 | USB_MICRO_VERT_MOLEX | footprint | pads P$2 as P$1, P$4 as P$3, P$6 as P$5 | – | 3 copper bars folded into their pads: the micro-USB shell: three slots of two holes each (Okapi USB2) |
 | LINX_BAT-HLD-012-SMT | footprint | pads POWER1 as POWER0; duplicate_pad_numbers_are_jumpers yes | – | one terminal, two pads: the coin holder's two + springs are one piece of metal (Margay and Okapi BT1; Eagle contactref route="any") |
