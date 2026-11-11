@@ -1764,13 +1764,14 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
 | RSA_S-PVQFN-N16 | footprint | bschulz as `RSA_S-PVQFN-N16` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
-| USB_C_CUSB31-CFM2AX-01-X | footprint | – | board okapi (microbuilder) | added from the Eagle board; KiCad board copy identical |
+| USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board margay (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | NWLOGO_MED | footprint | awickert | board margay (None) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
+| USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board margay (microbuilder, 1 placed) | pads differ: KiCad board copy not taken over |
 | PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
 | USB_MICROVERT | symbol | pins P$2, P$4, P$6 | – | dropped: the shell's second hole of each pair shares its pad number with the first |
 | BATTERY_COIN12MM | symbol | pins POWER1 | – | dropped: the coin holder's second + spring shares its pad number with the first (PAD_SAME_NUMBER) |
