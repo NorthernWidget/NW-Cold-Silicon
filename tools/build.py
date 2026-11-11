@@ -531,10 +531,14 @@ MILLED_SLOTS={  # footprint: (Eagle files holding the package, every one checked
  'USB_C_CUSB31-CFM2AX-01-X':(('Project-Okapi/Hardware/Okapi.brd','Project-Margay/Hardware/Margay.brd'),
    "GCT USB4105 shell stakes (Okapi J10, Margay J4): Eagle mills 0.6 x 1.7 at the rear pair and 0.6 x 1.2 at the front pair, "
    "as fabricated (Okapi_2024-11-02 profile.gbr); GCT's drawing (USB4105, 4 October 2019, Recommended PCB Layout) asks 0.6 x 1.70 and 0.6 x 1.40, "
-   "pads 1.00 x 2.10 and 1.00 x 1.80: the front slot's length is Andy's decision, Eagle's stands"),
+   "pads 1.00 x 2.10 and 1.00 x 1.80. Andy, 2026-11-11: keep his footprint (pads 1.0 x 2.0), each slot the longer of his and GCT's, "
+   "so the front pair is 1.4 (SLOT_MIN_LENGTH)"),
  'USB_MICRO_VERT_MOLEX':(('Project-Okapi/Hardware/Okapi.brd',),
    "Molex 105133-0001 vertical micro-USB shell (Okapi USB2): three milled slots, 0.5 x 1.2, 0.5 x 1.2 and 0.5 x 1.6, each around a pair of 0.5 mm drills"),
 }
+# a slot made longer than Eagle milled it, from the part's drawing: Eagle (x, y) of the slot center, minimum length
+SLOT_MIN_LENGTH={'USB_C_CUSB31-CFM2AX-01-X':({(-4.32,2.6):1.4,(4.32,2.6):1.4},
+   "GCT USB4105 drawing (4 October 2019): front pair 0.6 x 1.40 where Eagle milled 1.2; the longer slot takes stakes of either length (Andy, 2026-11-11)")}
 import math
 def eagle_slots(path,pkg):
     """The closed layer-46 outlines of an Eagle package as (cx, cy, length, width, axis) in Eagle coordinates (y up)."""
@@ -567,6 +571,12 @@ PADBLK=re.compile(r'^\t\(pad "([^"]*)" thru_hole (\w+)\n\t\t\(at (-?[\d.]+) (-?[
 for name,(files,why) in MILLED_SLOTS.items():
     slots=eagle_slots(files[0],name)
     for f in files[1:]: assert eagle_slots(f,name)==slots,(name,f,'slots differ between Eagle files')
+    if name in SLOT_MIN_LENGTH:
+        mins,mwhy=SLOT_MIN_LENGTH[name]; found=0
+        for k,(cx,cy,L,W,axis) in enumerate(slots):
+            if (cx,cy) in mins and mins[(cx,cy)]>L: slots[k]=(cx,cy,mins[(cx,cy)],W,axis); found+=1
+        assert found==len(mins),(name,'slot centers not found',mins)
+        coll.append(f'| {name} | footprint | slots lengthened | – | '+', '.join(f'({x}, {y}) to {v}' for (x,y),v in mins.items())+f': {mwhy} |')
     t=fps[name]; notes=[]
     for cx,cy,L,W,axis in slots:
         ky=-cy   # a footprint's y axis points down
