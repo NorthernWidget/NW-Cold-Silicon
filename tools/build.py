@@ -612,6 +612,36 @@ for name,(files,why) in MILLED_SLOTS.items():
     fps[name]=t; slot_notes[name]=notes
     coll.append(f'| {name} | footprint | {len(slots)} milled slots | – | oval drills from Eagle layer 46: {"; ".join(notes)}. {why} |')
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
+# a courtyard for a footprint that came from Eagle without one: the rectangle 'margin' beyond the union of the body
+# (F.Fab) and every pad, rounded outward to 0.01 mm (Andy, 2026-11-11: the standard courtyard)
+COURTYARD={'USB_C_CUSB31-CFM2AX-01-X':(0.25,"USB-C receptacle (Okapi J10, Margay J4): Eagle drew no tKeepout")}
+import uuid as _uuid2, math as _m
+for name,(margin,why) in COURTYARD.items():
+    t=fps[name]; assert '"F.CrtYd"' not in t,(name,'already has a courtyard')
+    xs=[];ys=[]
+    for m in re.finditer(r'^\t\((fp_line|fp_poly|fp_arc|fp_rect)\n(.*?)\n\t\)',t,re.S|re.M):
+        if '(layer "F.Fab")' in m.group(2):
+            for x,y in re.findall(r'\((?:start|end|mid|xy) (-?[\d.]+) (-?[\d.]+)\)',m.group(2)): xs.append(float(x)); ys.append(float(y))
+    assert xs,(name,'no F.Fab outline')
+    for m in re.finditer(r'\(pad "[^"]*" \w+ \w+\n\t\t\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)\n\t\t\(size ([\d.]+) ([\d.]+)\)',t):
+        x,y,r,w,h=float(m.group(1)),float(m.group(2)),float(m.group(3) or 0),float(m.group(4)),float(m.group(5))
+        assert r%90==0,(name,'pad rotation not a multiple of 90')
+        if r%180==90: w,h=h,w
+        xs+=[x-w/2,x+w/2]; ys+=[y-h/2,y+h/2]
+    lo=lambda v:_m.floor(round((v-margin)*100,6))/100; hi=lambda v:_m.ceil(round((v+margin)*100,6))/100
+    x0,y0,x1,y1=lo(min(xs)),lo(min(ys)),hi(max(xs)),hi(max(ys))
+    rect=('\t(fp_rect\n\t\t(start %s %s)\n\t\t(end %s %s)\n\t\t(stroke\n\t\t\t(width 0.05)\n\t\t\t(type solid)\n\t\t)\n\t\t(fill no)\n'
+          '\t\t(layer "F.CrtYd")\n\t\t(uuid "%s")\n\t)\n')%(fmt6(x0),fmt6(y0),fmt6(x1),fmt6(y1),_uuid2.uuid5(_uuid2.NAMESPACE_URL,'nw-cold-silicon:%s:courtyard'%name))
+    i=t.index('\t(pad '); fps[name]=t[:i]+rect+t[i:]
+    coll.append(f'| {name} | footprint | courtyard | – | F.CrtYd rectangle ({fmt6(x0)}, {fmt6(y0)}) to ({fmt6(x1)}, {fmt6(y1)}), {margin} mm beyond body and pads: {why} |')
+# a footprint's description where its Eagle package had none, or where its design intent must travel with it
+FP_DESCR={'USB_C_CUSB31-CFM2AX-01-X':"USB 2.0 Type-C receptacle, 16 contacts, top mount, horizontal. Laid out by Andy Wickert (Project-Margay 364c9ef, 2022) "
+   "to fit both the CUI (Same Sky) CUSB31-CFM2AX-01-X and the GCT USB4105-GF-A (Andy, 2026-11-11). Shell slots 0.6 x 1.7 mm (rear) and "
+   "0.6 x 1.4 mm (front), each the longer of Andy's layout and GCT's drawing; courtyard 0.25 mm beyond body and pads."}
+for name,text in FP_DESCR.items():
+    t=fps[name]; t=re.sub(r'^\t\(descr "[^"]*"\)\n','',t,flags=re.M)
+    t,n=re.subn(r'^\t\(layer "F\.Cu"\)\n',lambda m:m.group(0)+'\t(descr "%s")\n'%text.replace('"',"'"),t,count=1,flags=re.M); assert n==1,name
+    fps[name]=t; coll.append(f'| {name} | footprint | descr | – | {text} |')
 # native footprints: drawn in KiCad, not converted from an Eagle library (native/*.kicad_mod)
 nnative=0; native_names=[]
 for f in sorted(glob.glob(os.path.join(REPO,'native','*.kicad_mod'))):
