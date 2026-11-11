@@ -483,6 +483,29 @@ for name,(layer,ko,why) in KEEPOUT_FIX.items():
     t,n=re.subn(r'(\t\(zone\n\t\t\(layers? )"[^)]*"\s*\)',lambda m:m.group(1)+'"'+layer+'")',t,count=1); assert n==1,name
     t,n=re.subn(r'\(keepout\n(?:.*\n)*?\t\t\)','(keepout\n'+''.join(f'\t\t\t({k} {v})\n' for k,v in ko.items())+'\t\t)',t,count=1); assert n==1,name
     fps[name]=t; coll.append(f'| {name} | footprint | keepout | – | {layer}, '+', '.join(f'{k} {v}' for k,v in ko.items())+f': {why} |')
+# A restrict drawn as a closed chain of wires, not a polygon: the converter drops it. Eagle enforced only the wires
+# themselves; the area they enclose is the evident intent and is what this writes, as the converter writes a polygon
+# on the same layer (layer 43, vRestrict: no vias on any copper layer).
+WIRE_RESTRICTS={'SIM_SF72':('Cold-Silicon/bschulz.lbr','43',
+   "Bobby's vRestrict over the SIM card, six 0.127 mm wires on layer 43 enclosing 10.39 x 14.35 mm (library only, on no board)")}
+import uuid as _uuid
+for name,(lbr,layer,why) in WIRE_RESTRICTS.items():
+    p=[q for q in ET.parse(os.path.join(ws,lbr)).getroot().iter('package') if q.get('name')==name]; assert len(p)==1,(lbr,name)
+    ws_=[(float(w.get('x1')),float(w.get('y1')),float(w.get('x2')),float(w.get('y2'))) for w in p[0] if w.tag=='wire' and w.get('layer')==layer]
+    assert ws_ and not any(w.get('curve') for w in p[0] if w.tag=='wire' and w.get('layer')==layer),(name,'straight wires expected')
+    pts=[ws_[0][:2],ws_[0][2:]]; left=ws_[1:]
+    while left:   # chain the wires end to end
+        nxt=[w for w in left if w[:2]==pts[-1] or w[2:]==pts[-1]]; assert len(nxt)==1,(name,'open or branched outline at',pts[-1])
+        w=nxt[0]; left.remove(w); pts.append(w[2:] if w[:2]==pts[-1] else w[:2])
+    assert pts[0]==pts[-1],(name,'outline not closed'); pts=pts[:-1]
+    t=fps[name]; assert '\t(zone\n' not in t,(name,'already has a zone')
+    zone=('\t(zone\n\t\t(layers "F.Cu" "B.Cu")\n\t\t(uuid "%s")\n\t\t(hatch edge 0.5)\n\t\t(connect_pads\n\t\t\t(clearance 0)\n\t\t)\n'
+          '\t\t(min_thickness 0.25)\n\t\t(keepout\n\t\t\t(tracks allowed)\n\t\t\t(vias not_allowed)\n\t\t\t(pads allowed)\n\t\t\t(copperpour allowed)\n'
+          '\t\t\t(footprints allowed)\n\t\t)\n\t\t(placement\n\t\t\t(enabled no)\n\t\t\t(sheetname "")\n\t\t)\n\t\t(fill\n\t\t\t(thermal_gap 0.5)\n'
+          '\t\t\t(thermal_bridge_width 0.5)\n\t\t\t(island_removal_mode 0)\n\t\t)\n\t\t(polygon\n\t\t\t(pts\n\t\t\t\t%s\n\t\t\t)\n\t\t)\n\t)\n')%(
+          _uuid.uuid5(_uuid.NAMESPACE_URL,'nw-cold-silicon:%s:%s'%(name,layer)),' '.join('(xy %s %s)'%(fmt6(x),fmt6(-y)) for x,y in pts))
+    i=t.rindex('\t(embedded_fonts'); fps[name]=t[:i]+zone+t[i:]
+    coll.append(f'| {name} | footprint | keepout | – | F.Cu and B.Cu, vias not allowed: {why} |')
 # Eagle's restring: every through-hole pad is fabricated at least drill + 2 x max(25 % of the drill, 5 mil), capped at
 # 20 mil of ring (the DRU of every Northern Widget board: rvPadTop 0.25, rlMinPadTop 5mil, rlMaxPadTop 20mil), whatever
 # the package drew; KiCad fabricates the drawn pad. A pad drawn under that size is grown to it (Andy, 2026-11-04:
@@ -600,7 +623,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).','Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).','Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose ('+', '.join(WIRE_RESTRICTS)+').',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Native footprints, drawn in KiCad and copied from native/ ({nnative}): '+(', '.join('`%s`'%n for n in native_names) or 'none')+'; each names its source in its descr.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
