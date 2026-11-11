@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "MPD BK-916 retainer for 12 mm coin cells (CR1216, CR1220, CR1225), rated -40 to +270 C: land pattern from MPD drawing BK-916 rev E, 10/24/18 (four 2.5 x 2.5 mm tab pads, 17.8 mm overall; round 10.2 mm negative contact pad, no paste). The tab pairs are placed symmetric about the cell center as the drawing's PCB layout shows; the drawing gives no number for that offset. Body 13.80 x 9.60 mm drawn with the chamfered side at -y; cell 12.5 mm on F.Fab; courtyard 0.25 mm beyond pads and cell (Andy, 2026-11-11).")
+	(descr "MPD BK-916 retainer for 12 mm coin cells (CR1216, CR1220, CR1225), rated -40 to +270 C: land pattern from MPD drawing BK-916 rev E, 10/24/18 (four 2.5 x 2.5 mm tab pads, 17.8 mm overall; round 10.2 mm negative contact pad, no paste). The tab pairs are placed symmetric about the cell center as the drawing's PCB layout shows; the drawing gives no number for that offset. Body 13.80 x 9.60 mm drawn with the chamfered side at -y; cell 12.5 mm on F.Fab; courtyard 0.25 mm beyond pads and the round cell (Andy, 2026-11-11).")
 	(tags "coin cell battery holder retainer 1220 1225 1216 MPD BK-916")
 	(property "Reference" "REF**"
 		(at 0 -7.3 0)
@@ -73,9 +73,24 @@
 		(layer "F.SilkS")
 		(uuid "2bbcb0af-15ff-5142-9674-33cc86076423")
 	)
-	(fp_rect
-		(start -9.15 -6.5)
-		(end 9.15 6.5)
+	(fp_poly
+		(pts
+			(xy 9.15 -3) (xy 9.15 3) (xy 5.7663 3) (xy 5.574 3.3438) (xy 5.3612 3.6753) (xy 5.1287 3.9933) (xy 4.8773 4.2967)
+			(xy 4.6081 4.5843) (xy 4.3219 4.855) (xy 4.0199 5.1079) (xy 3.7031 5.342) (xy 3.3727 5.5565) (xy 3.0299 5.7506)
+			(xy 2.676 5.9236) (xy 2.3122 6.0748) (xy 1.94 6.2038) (xy 1.5606 6.3099) (xy 1.1755 6.3928) (xy 0.7861 6.4523)
+			(xy 0.3938 6.4881) (xy 0 6.5) (xy -0.3938 6.4881) (xy -0.7861 6.4523) (xy -1.1755 6.3928) (xy -1.5606 6.3099)
+			(xy -1.94 6.2038) (xy -2.3122 6.0748) (xy -2.676 5.9236) (xy -3.0299 5.7506) (xy -3.3727 5.5565)
+			(xy -3.7031 5.342) (xy -4.0199 5.1079) (xy -4.3219 4.855) (xy -4.6081 4.5843) (xy -4.8773 4.2967)
+			(xy -5.1287 3.9933) (xy -5.3612 3.6753) (xy -5.574 3.3438) (xy -5.7663 3) (xy -9.15 3) (xy -9.15 -3)
+			(xy -5.7663 -3) (xy -5.574 -3.3438) (xy -5.3612 -3.6753) (xy -5.1287 -3.9933) (xy -4.8773 -4.2967)
+			(xy -4.6081 -4.5843) (xy -4.3219 -4.855) (xy -4.0199 -5.1079) (xy -3.7031 -5.342) (xy -3.3727 -5.5565)
+			(xy -3.0299 -5.7506) (xy -2.676 -5.9236) (xy -2.3122 -6.0748) (xy -1.94 -6.2038) (xy -1.5606 -6.3099)
+			(xy -1.1755 -6.3928) (xy -0.7861 -6.4523) (xy -0.3938 -6.4881) (xy 0 -6.5) (xy 0.3938 -6.4881) (xy 0.7861 -6.4523)
+			(xy 1.1755 -6.3928) (xy 1.5606 -6.3099) (xy 1.94 -6.2038) (xy 2.3122 -6.0748) (xy 2.676 -5.9236)
+			(xy 3.0299 -5.7506) (xy 3.3727 -5.5565) (xy 3.7031 -5.342) (xy 4.0199 -5.1079) (xy 4.3219 -4.855)
+			(xy 4.6081 -4.5843) (xy 4.8773 -4.2967) (xy 5.1287 -3.9933) (xy 5.3612 -3.6753) (xy 5.574 -3.3438)
+			(xy 5.7663 -3)
+		)
 		(stroke
 			(width 0.05)
 			(type solid)
