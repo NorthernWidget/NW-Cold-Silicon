@@ -467,28 +467,20 @@ for (name,pin),(etype,why) in PIN_TYPES.items():
         b=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; k+=1; pos=i+1
     assert k,(name,pin); syms[name]=b; npin+=k
     coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
-# Eagle's bRestrict (layer 43) in a package: the converter writes a via-only keepout on every copper layer, where
-# Eagle means no copper of any kind on the bottom layer (its tRestrict, layer 41, comes through right: F.Cu, all
-# not_allowed). Every zone of that form is rewritten to the bottom layer with the same keepout as the top form.
-ALLCU=re.compile(r'^\t\(zone\n\t\t\(layers "F\.Cu" "B\.Cu" "In1\.Cu"[^)]*\)\n((?:.*\n)*?)^\t\)\n',re.M)
-nrestrict=0
-def brestrict(m):
-    global nrestrict
-    body=m.group(1)
-    body=re.sub(r'\(keepout\n(?:.*\n)*?\t\t\)','(keepout\n\t\t\t(tracks not_allowed)\n\t\t\t(vias not_allowed)\n\t\t\t(pads not_allowed)\n\t\t\t(copperpour not_allowed)\n\t\t\t(footprints allowed)\n\t\t)',body,count=1)
-    nrestrict+=1
-    return '\t(zone\n\t\t(layers "B.Cu")\n'+body+'\t)\n'
-for name in list(fps):
-    fps[name]=ALLCU.sub(brestrict,fps[name])
+# Eagle's vRestrict (layer 43) in a package means no vias, and the converter writes exactly that: a keepout on every
+# copper layer with only vias not allowed. Its bRestrict (layer 42) comes through as a no-copper keepout on B.Cu and its
+# tRestrict (41) on F.Cu. All three are kept as converted. (Until 2026-11-11 this build read layer 43 as bRestrict and
+# rewrote its six zones, in HL, HC49UP, MICROSD_HIROSE_HINDGED and SWITCH_2.6X1.6, as no-copper keepouts on B.Cu;
+# the Eagle conversion audit in NW-Status found it, from both boards' own layer tables.)
 # a package whose Eagle restrict sat on the wrong side for the part's datasheet: the zone is moved to the layer and the
 # keepout the datasheet asks for (Okapi DECISIONS item 6, 2026-11-10)
 KEEPOUT_FIX={'SWITCH_2.6X1.6':('F.Cu',{'tracks':'allowed','vias':'not_allowed','pads':'not_allowed','copperpour':'not_allowed','footprints':'allowed'},
    "Panasonic EVP-BB datasheet, 'Land pattern plan': no land pattern or via holes in the No soldering area under the switch, "
-   "or resist over them (solder balls short; extra pattern tilts the switch); a top-side rule, so Bobby's bottom restrict moves to F.Cu "
+   "or resist over them (solder balls short; extra pattern tilts the switch); a top-side rule, so Bobby's via restrict becomes a F.Cu keepout of pads and vias "
    "and masked tracks stay allowed (Okapi S5)")}
 for name,(layer,ko,why) in KEEPOUT_FIX.items():
     t=fps[name]; assert t.count('\t(zone\n')==1,(name,'one keepout zone expected')
-    t,n=re.subn(r'(\t\(zone\n\t\t\(layers? )"[^)]*"\)',lambda m:m.group(1)+'"'+layer+'")',t,count=1); assert n==1,name
+    t,n=re.subn(r'(\t\(zone\n\t\t\(layers? )"[^)]*"\s*\)',lambda m:m.group(1)+'"'+layer+'")',t,count=1); assert n==1,name
     t,n=re.subn(r'\(keepout\n(?:.*\n)*?\t\t\)','(keepout\n'+''.join(f'\t\t\t({k} {v})\n' for k,v in ko.items())+'\t\t)',t,count=1); assert n==1,name
     fps[name]=t; coll.append(f'| {name} | footprint | keepout | – | {layer}, '+', '.join(f'{k} {v}' for k,v in ko.items())+f': {why} |')
 # Eagle's restring: every through-hole pad is fabricated at least drill + 2 x max(25 % of the drill, 5 mil), capped at
@@ -608,7 +600,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).','Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Native footprints, drawn in KiCad and copied from native/ ({nnative}): '+(', '.join('`%s`'%n for n in native_names) or 'none')+'; each names its source in its descr.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
