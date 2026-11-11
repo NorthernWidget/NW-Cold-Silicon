@@ -505,6 +505,87 @@ def restring(m):
     g=want-min(sx,sy); nrestring+=1
     return '%s%s %s%s%s'%(m.group(1),fmt6(sx+g),fmt6(sy+g),m.group(4),m.group(5))
 for name in list(fps): fps[name]=PADRE.sub(restring,fps[name])
+# Eagle's milled slots: a closed outline on layer 46 (Milling) around a pad's drill is the slot the fabricator routed,
+# and KiCad's Eagle reader ignores layer 46, so the converted pad keeps only its round drill and the part's stakes
+# would not fit. Each outline is read from the Eagle package (a stadium: two straight sides along its long axis and
+# arcs of 360 degrees in all), and the pads whose drill centers lie inside it (one pad number, after PAD_RENUMBER)
+# become one oval pad with the slot as its oval drill, at the slot's center and along its axis. A single oval pad keeps
+# its copper and rotation; a pair is replaced by the oval its copper already was (two circles and a bar of their width).
+# Runs after the restring, which reads round drills only. Andy, 2026-11-11: produce the slots for the USB ports.
+MILLED_SLOTS={  # footprint: (Eagle files holding the package, every one checked to agree; why)
+ 'USB_C_CUSB31-CFM2AX-01-X':(('Project-Okapi/Hardware/Okapi.brd','Project-Margay/Hardware/Margay.brd'),
+   "GCT USB4105 shell stakes (Okapi J10, Margay J4): Eagle mills 0.6 x 1.7 at the rear pair and 0.6 x 1.2 at the front pair, "
+   "as fabricated (Okapi_2024-11-02 profile.gbr); GCT's drawing (USB4105, 4 October 2019, Recommended PCB Layout) asks 0.6 x 1.70 and 0.6 x 1.40, "
+   "pads 1.00 x 2.10 and 1.00 x 1.80: the front slot's length is Andy's decision, Eagle's stands"),
+ 'USB_MICRO_VERT_MOLEX':(('Project-Okapi/Hardware/Okapi.brd',),
+   "Molex 105133-0001 vertical micro-USB shell (Okapi USB2): three milled slots, 0.5 x 1.2, 0.5 x 1.2 and 0.5 x 1.6, each around a pair of 0.5 mm drills"),
+}
+import math
+def eagle_slots(path,pkg):
+    """The closed layer-46 outlines of an Eagle package as (cx, cy, length, width, axis) in Eagle coordinates (y up)."""
+    p=[q for q in ET.parse(os.path.join(ws,path)).getroot().iter('package') if q.get('name')==pkg]; assert len(p)>=1,(path,pkg)
+    wires=[w for w in p[0] if w.tag=='wire' and w.get('layer')=='46']; assert wires,(path,pkg,'no layer-46 wires')
+    def pts(w):
+        x1,y1,x2,y2=(float(w.get(k)) for k in ('x1','y1','x2','y2')); a=float(w.get('curve','0'))
+        if not a: return [(x1,y1),(x2,y2)]
+        c=math.hypot(x2-x1,y2-y1); r=c/(2*math.sin(math.radians(abs(a))/2)); mx,my=(x1+x2)/2,(y1+y2)/2
+        h=math.sqrt(max(r*r-c*c/4,0)); s=1 if a>0 else -1   # the center is to the left of the chord for a counterclockwise arc
+        cx,cy=mx-s*h*(y2-y1)/c,my+s*h*(x2-x1)/c; t0=math.atan2(y1-cy,x1-cx)
+        return [(cx+r*math.cos(t0+math.radians(a)*k/64),cy+r*math.sin(t0+math.radians(a)*k/64)) for k in range(65)]
+    key=lambda q:(round(q[0],4),round(q[1],4))
+    left=list(wires); out=[]
+    while left:   # chain wires end to end into closed loops
+        loop=[left.pop(0)]; ends=[key((float(loop[0].get('x1')),float(loop[0].get('y1')))),key((float(loop[0].get('x2')),float(loop[0].get('y2'))))]
+        while ends[0]!=ends[-1]:
+            nxt=[w for w in left if ends[-1] in (key((float(w.get('x1')),float(w.get('y1')))),key((float(w.get('x2')),float(w.get('y2')))))]
+            assert nxt,(path,pkg,'open layer-46 outline at',ends[-1]); w=nxt[0]; left.remove(w); loop.append(w)
+            a,b=key((float(w.get('x1')),float(w.get('y1')))),key((float(w.get('x2')),float(w.get('y2')))); ends.append(b if a==ends[-1] else a)
+        xs,ys=zip(*[q for w in loop for q in pts(w)]); x0,x1,y0,y1=min(xs),max(xs),min(ys),max(ys)
+        assert abs(sum(abs(float(w.get('curve','0'))) for w in loop)-360)<1e-6,(path,pkg,'not a stadium: arcs')
+        axis='x' if x1-x0>=y1-y0 else 'y'
+        for w in loop:   # the straight sides run along the long axis
+            if not w.get('curve'): assert (w.get('y1')==w.get('y2')) if axis=='x' else (w.get('x1')==w.get('x2')),(path,pkg,'not a stadium: side')
+        out.append((round((x0+x1)/2,4),round((y0+y1)/2,4),round(max(x1-x0,y1-y0),4),round(min(x1-x0,y1-y0),4),axis))
+    return sorted(out)
+nslot=0; slot_notes={}
+PADBLK=re.compile(r'^\t\(pad "([^"]*)" thru_hole (\w+)\n\t\t\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)\n\t\t\(size ([\d.]+) ([\d.]+)\)\n\t\t\(drill ([\d.]+)\)\n(?:.*\n)*?\t\)\n',re.M)
+for name,(files,why) in MILLED_SLOTS.items():
+    slots=eagle_slots(files[0],name)
+    for f in files[1:]: assert eagle_slots(f,name)==slots,(name,f,'slots differ between Eagle files')
+    t=fps[name]; notes=[]
+    for cx,cy,L,W,axis in slots:
+        ky=-cy   # a footprint's y axis points down
+        sx,sy=(L,W) if axis=='x' else (W,L)
+        inside=[m for m in PADBLK.finditer(t) if abs(float(m.group(3))-cx)<=sx/2+1e-6 and abs(float(m.group(4))-ky)<=sy/2+1e-6]
+        assert inside,(name,cx,cy,'no pad drill inside the slot'); assert len({m.group(1) for m in inside})==1,(name,cx,cy,'pads of several numbers in one slot')
+        for m in inside: assert float(m.group(8))<=W+1e-6,(name,m.group(1),'drill wider than the slot')
+        if len(inside)==1 and inside[0].group(2)=='oval':
+            m=inside[0]; rot=float(m.group(5) or 0); px,py=float(m.group(6)),float(m.group(7))
+            assert abs(float(m.group(3))-cx)<1e-6 and abs(float(m.group(4))-ky)<1e-6,(name,m.group(1),'slot not centered on its pad')
+            dx,dy=(sx,sy) if rot%180==0 else (sy,sx)   # the drill is given in the pad's own frame, as its size is
+            assert px>=dx-1e-6 and py>=dy-1e-6,(name,m.group(1),'copper smaller than the slot')
+            blk=m.group(0).replace('\t\t(drill %s)\n'%m.group(8),'\t\t(drill oval %s %s)\n'%(fmt6(dx),fmt6(dy)),1)
+            t=t.replace(m.group(0),blk,1); ring=(min(px,py)-min(dx,dy))/2,(max(px,py)-max(dx,dy))/2
+        else:   # a pair (or more) of round drills: the copper they and their bar cover is one stadium along the slot
+            ext=[]
+            for m in inside:
+                x,y,d=float(m.group(3)),float(m.group(4)),float(m.group(6)); assert m.group(2) in ('circle','custom') and m.group(6)==m.group(7),(name,m.group(1))
+                ext.append((x-d/2,x+d/2,y-d/2,y+d/2))
+                for (a1,b1,a2,b2,w) in re.findall(r'\(gr_line\n\t+\(start (-?[\d.]+) (-?[\d.]+)\)\n\t+\(end (-?[\d.]+) (-?[\d.]+)\)\n\t+\(width ([\d.]+)\)',m.group(0)):
+                    w=float(w); assert abs(w-d)<1e-6,(name,m.group(1),'bar narrower than the pad: the copper is not a stadium')
+                    for qx,qy in ((float(a1),float(b1)),(float(a2),float(b2))): ext.append((x+qx-w/2,x+qx+w/2,y+qy-w/2,y+qy+w/2))
+            X0,X1,Y0,Y1=min(e[0] for e in ext),max(e[1] for e in ext),min(e[2] for e in ext),max(e[3] for e in ext)
+            px,py=X1-X0,Y1-Y0; assert abs((X0+X1)/2-cx)<1e-6 and abs((Y0+Y1)/2-ky)<1e-6,(name,'slot not centered on its copper')
+            assert px>=sx-1e-6 and py>=sy-1e-6,(name,'copper smaller than the slot')
+            first=inside[0]; blk=first.group(0)
+            blk=re.sub(r'^\t\(pad "([^"]*)" thru_hole \w+\n\t\t\(at [^)]*\)\n\t\t\(size [^)]*\)\n\t\t\(drill [^)]*\)\n',lambda q:'\t(pad "%s" thru_hole oval\n\t\t(at %s %s)\n\t\t(size %s %s)\n\t\t(drill oval %s %s)\n'%(q.group(1),fmt6(cx),fmt6(ky),fmt6(px),fmt6(py),fmt6(sx),fmt6(sy)),blk,count=1,flags=re.M)
+            blk=re.sub(r'^\t\t\(options\n(?:.*\n)*?\t\t\)\n','',blk,count=1,flags=re.M); blk=re.sub(r'^\t\t\(primitives\n(?:.*\n)*?\t\t\)\n','',blk,count=1,flags=re.M)
+            t=t.replace(first.group(0),blk,1)
+            for m in inside[1:]: t=t.replace(m.group(0),'',1)
+            ring=(min(px,py)-W)/2,(max(px,py)-L)/2
+        nslot+=1; notes.append('%s %sx%s at (%s, %s) in %sx%s copper, ring %s across and %s at the ends'%(inside[0].group(1),fmt6(W),fmt6(L),fmt6(cx),fmt6(ky),fmt6(min(px,py)),fmt6(max(px,py)),fmt6(ring[0]),fmt6(ring[1])))
+    fps[name]=t; slot_notes[name]=notes
+    coll.append(f'| {name} | footprint | {len(slots)} milled slots | – | oval drills from Eagle layer 46: {"; ".join(notes)}. {why} |')
 MARGIN=re.compile(r'^\t\t\((?:solder_mask_margin|solder_paste_margin) -?[\d.]+\)\n',re.M)
 # native footprints: drawn in KiCad, not converted from an Eagle library (native/*.kicad_mod)
 nnative=0; native_names=[]
@@ -527,7 +608,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).',f'Eagle bRestrict zones ({nrestrict}): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Native footprints, drawn in KiCad and copied from native/ ({nnative}): '+(', '.join('`%s`'%n for n in native_names) or 'none')+'; each names its source in its descr.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']

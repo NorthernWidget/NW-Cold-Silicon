@@ -69,6 +69,10 @@ fabricated board that justifies it:
 - `PAD_RENUMBER`: a shell drawn as pairs of plated holes joined by a copper
   bar, Eagle's one shape; the pair shares a pad number and the bar becomes
   the pad's own primitive.
+- `MILLED_SLOTS`: a slot Eagle milled (a stadium on layer 46, Milling)
+  around a pad's drill, which KiCad's reader ignores, leaving a round drill
+  where the part's stake needs a slot; the pad takes the slot as its oval
+  drill (the USB-C and vertical micro-USB shells).
 - `FP_ATTRS`: a footprint attribute the part needs (one shared mask opening).
 - Eagle's restring: every through-hole pad at least drill + 2 × max(25 % of
   the drill, 5 mil), the ring Eagle fabricates whatever the package drew.
