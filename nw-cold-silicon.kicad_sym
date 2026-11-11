@@ -584745,7 +584745,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "nw-cold-silicon:USB_C_CUSB31-CFM2AX-01-X"
+		(property "Footprint" "nw-cold-silicon:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -585116,7 +585116,7 @@
 						)
 					)
 				)
-				(number "A1B12"
+				(number "A1"
 					(effects
 						(font
 							(size 0 0)
@@ -585134,7 +585134,7 @@
 						)
 					)
 				)
-				(number "A4B9"
+				(number "A4"
 					(effects
 						(font
 							(size 0 0)
@@ -585215,6 +585215,44 @@
 				)
 			)
 			(pin power_in line
+				(at 10.16 10.16 180)
+				(length 2.54)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.524 1.524)
+						)
+					)
+				)
+				(number "A9"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 10.16 -10.16 180)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.524 1.524)
+						)
+					)
+				)
+				(number "A12"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin power_in line
 				(at 10.16 -10.16 180)
 				(length 2.54)
 				(name "GND"
@@ -585224,7 +585262,7 @@
 						)
 					)
 				)
-				(number "B1A12"
+				(number "B1"
 					(effects
 						(font
 							(size 0 0)
@@ -585242,7 +585280,7 @@
 						)
 					)
 				)
-				(number "B4A9"
+				(number "B4"
 					(effects
 						(font
 							(size 0 0)
@@ -585315,6 +585353,44 @@
 					)
 				)
 				(number "B8"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 10.16 10.16 180)
+				(length 2.54)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.524 1.524)
+						)
+					)
+				)
+				(number "B9"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 10.16 -10.16 180)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.524 1.524)
+						)
+					)
+				)
+				(number "B12"
 					(effects
 						(font
 							(size 0 0)
