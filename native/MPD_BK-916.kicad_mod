@@ -1,0 +1,184 @@
+(footprint "MPD_BK-916"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MPD BK-916 retainer for 12 mm coin cells (CR1216, CR1220, CR1225), rated -40 to +270 C: land pattern from MPD drawing BK-916 rev E, 10/24/18 (four 2.5 x 2.5 mm tab pads, 17.8 mm overall; round 10.2 mm negative contact pad, no paste). The tab pairs are placed symmetric about the cell center as the drawing's PCB layout shows; the drawing gives no number for that offset. Body 13.80 x 9.60 mm drawn with the chamfered side at -y; cell 12.5 mm on F.Fab; courtyard 0.25 mm beyond pads and cell (Andy, 2026-11-11).")
+	(tags "coin cell battery holder retainer 1220 1225 1216 MPD BK-916")
+	(property "Reference" "REF**"
+		(at 0 -7.3 0)
+		(layer "F.SilkS")
+		(uuid "d4b4e779-f8ca-5be5-9ba2-050e33f78fd8")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "MPD_BK-916"
+		(at 0 7.3 0)
+		(layer "F.Fab")
+		(uuid "91da9574-7d34-5424-8bf1-9696d5a5ba64")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.memoryprotectiondevices.com/datasheets/BK-916-TR/BK-916-TR-datasheet.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d47dc07b-9619-5e36-acd0-5d12f5b699e7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "becf0418-5a2f-5c2f-977c-591bda058be6")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers yes)
+	(fp_line
+		(start -6.9 -4.72)
+		(end 6.9 -4.72)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "613c94c8-e330-56b2-9590-e0f25fc0dd0f")
+	)
+	(fp_line
+		(start -6.9 5.12)
+		(end 6.9 5.12)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "af36daf1-c9c6-5f1d-9d22-15bfcb71ef41")
+	)
+	(fp_rect
+		(start -9.15 -6.5)
+		(end 9.15 6.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "8ff20bdb-5d22-5f73-bc5a-7dfd62d384b6")
+	)
+	(fp_rect
+		(start -6.9 -4.6)
+		(end 6.9 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3b0019ca-bff4-5223-9bfd-47df634ee165")
+	)
+	(fp_rect
+		(start -6.9 -2.5)
+		(end -7.8 -0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "aa030ac8-9b57-5385-8e25-762f43723239")
+	)
+	(fp_rect
+		(start -6.9 0.5)
+		(end -7.8 2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "365a9caf-11bc-5b80-9ddf-73ac67173f1e")
+	)
+	(fp_rect
+		(start 6.9 -2.5)
+		(end 7.8 -0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "14186d61-f66c-53d4-8d72-71e6fde29f95")
+	)
+	(fp_rect
+		(start 6.9 0.5)
+		(end 7.8 2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3acb72a5-aa4e-53d7-8216-3029a00cbcaf")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 6.25 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "9e199eea-7e76-557b-81ff-749f1cac6e47")
+	)
+	(pad "GND" smd circle
+		(at 0 0)
+		(size 10.2 10.2)
+		(layers "F.Cu" "F.Mask")
+		(uuid "ffe156d3-a876-5a6e-aa63-fe19de8b2f16")
+	)
+	(pad "POWER0" smd rect
+		(at -7.65 -1.5)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dc2c42d7-919d-5cab-b373-7fd799ac06e3")
+	)
+	(pad "POWER0" smd rect
+		(at -7.65 1.5)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6928d598-25ff-5621-9845-5743b8516c5c")
+	)
+	(pad "POWER0" smd rect
+		(at 7.65 -1.5)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5e0334e9-b90e-52f9-9ca2-27ce08960eff")
+	)
+	(pad "POWER0" smd rect
+		(at 7.65 1.5)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f5d3d102-a954-56f6-9604-c32b13c2cdd0")
+	)
+	(embedded_fonts no)
+)
