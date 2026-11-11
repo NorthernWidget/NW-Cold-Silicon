@@ -333,7 +333,7 @@
 	(pad "M3" thru_hole oval
 		(at -4.32 -2.6 90)
 		(size 2 1)
-		(drill oval 1.2 0.6)
+		(drill oval 1.4 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
@@ -342,7 +342,7 @@
 	(pad "M4" thru_hole oval
 		(at 4.32 -2.6 90)
 		(size 2 1)
-		(drill oval 1.2 0.6)
+		(drill oval 1.4 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
