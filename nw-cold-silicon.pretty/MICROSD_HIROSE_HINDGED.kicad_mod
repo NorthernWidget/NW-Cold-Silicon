@@ -299,7 +299,12 @@
 		(uuid "6404a758-c670-542b-bd26-78add5bf3bfa")
 	)
 	(zone
-		(layer "B.Cu")
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
 		(uuid "749372f7-bb78-56e1-8369-2d1d02b5cc0f")
 		(hatch edge 0.5)
 		(connect_pads
@@ -307,10 +312,10 @@
 		)
 		(min_thickness 0.25)
 		(keepout
-			(tracks not_allowed)
+			(tracks allowed)
 			(vias not_allowed)
-			(pads not_allowed)
-			(copperpour not_allowed)
+			(pads allowed)
+			(copperpour allowed)
 			(footprints allowed)
 		)
 		(placement
@@ -329,7 +334,12 @@
 		)
 	)
 	(zone
-		(layer "B.Cu")
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
 		(uuid "c8051738-2b71-552c-9bff-602b09ec1e7f")
 		(hatch edge 0.5)
 		(connect_pads
@@ -337,10 +347,10 @@
 		)
 		(min_thickness 0.25)
 		(keepout
-			(tracks not_allowed)
+			(tracks allowed)
 			(vias not_allowed)
-			(pads not_allowed)
-			(copperpour not_allowed)
+			(pads allowed)
+			(copperpour allowed)
 			(footprints allowed)
 		)
 		(placement
@@ -359,7 +369,12 @@
 		)
 	)
 	(zone
-		(layer "B.Cu")
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
 		(uuid "171a63f7-519b-5185-bdb4-5440f682828b")
 		(hatch edge 0.5)
 		(connect_pads
@@ -367,10 +382,10 @@
 		)
 		(min_thickness 0.25)
 		(keepout
-			(tracks not_allowed)
+			(tracks allowed)
 			(vias not_allowed)
-			(pads not_allowed)
-			(copperpour not_allowed)
+			(pads allowed)
+			(copperpour allowed)
 			(footprints allowed)
 		)
 		(placement

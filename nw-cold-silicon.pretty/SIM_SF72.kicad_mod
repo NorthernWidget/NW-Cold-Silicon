@@ -394,5 +394,35 @@
 		(thermal_bridge_angle 0)
 		(uuid "b1f5f55a-54ae-5701-80d6-37857d8fefc2")
 	)
+	(zone
+		(layers "F.Cu" "B.Cu")
+		(uuid "25304822-6807-58bc-9ee9-00178e52d729")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy -3.81 0) (xy -3.81 -13.9) (xy 3.81 -13.9) (xy 3.81 -14.35) (xy 6.58 -14.35) (xy 6.58 0)
+			)
+		)
+	)
 	(embedded_fonts no)
 )

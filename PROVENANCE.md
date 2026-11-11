@@ -32,7 +32,7 @@ Added from the boards (graphics the importer put on the Rescue layer, from Eagle
 Artwork (logos, 25 footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.
 Through-hole pads grown to Eagle's restring (135): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.
 Milled slots from Eagle layer 46 (7, in `USB_C_CUSB31-CFM2AX-01-X`, `USB_MICRO_VERT_MOLEX`): KiCad's Eagle reader ignores the Milling layer, so each outline around a pad's drill becomes that pad's oval drill (COLLISIONS.md gives each slot and its ring).
-Eagle bRestrict zones (6): the converter had written a via-only keepout on every copper layer; each is a no-copper keepout on B.Cu, as its tRestrict zones are on F.Cu.
+Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose (SIM_SF72).
 No footprint carries a per-pad solder-mask or paste margin (7605 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
 Library: **848 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
 Native footprints, drawn in KiCad and copied from native/ (1): `R0402_0603`; each names its source in its descr.
