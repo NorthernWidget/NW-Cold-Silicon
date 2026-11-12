@@ -1,0 +1,317 @@
+(footprint "VDIV_MARGAY_2026"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Voltage-divider diagram for Margay's analog reference, drawn by Andy Wickert (2021, Eagle VDIV_MARGAY_2021) and redrawn in KiCad lines and text on the bottom silkscreen (2026-11-12, Project-Margay#80): REF to 1V8; Ax through the on-board resistor and the front jumper (JP) to ground. Same geometry as the Eagle drawing; 0.127 mm strokes, 0.8 mm text. Artwork: no pads, excluded from position files (the BoM lists it as DNP, as the symbol says).")
+	(tags "artwork diagram voltage divider analog reference Margay")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "1b6f9498-c7b8-5e8e-a72b-bce3895bec45")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "8ba6a2dc-43c9-58e1-a366-7e94c3740f3e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cfb34c2f-3aa3-5feb-bcf6-852ba1226a2a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c501012b-7432-5dd2-8d4b-4784cb514b44")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.95 3.48)
+		(end 0.95 3.48)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "a312ee40-2232-59a7-b540-800724bd65d5")
+	)
+	(fp_line
+		(start -0.66 -2.92)
+		(end 0 -2.92)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "83334fd1-b7f4-574c-aae5-e4a678a88030")
+	)
+	(fp_line
+		(start -0.66 -1.865)
+		(end 0 -1.865)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "ead6f522-74f3-5a52-90f4-aee6c172e658")
+	)
+	(fp_line
+		(start -0.6 3.73)
+		(end 0.6 3.73)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "51749ac0-593e-5e4d-822e-3c145dc76fdb")
+	)
+	(fp_line
+		(start -0.3 -0.82)
+		(end 0.3 -0.505)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "eaf71211-f2e6-54e9-9b4d-02382c30005d")
+	)
+	(fp_line
+		(start -0.3 -0.19)
+		(end 0.3 0.125)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "157ef25a-c7f7-55ae-a634-575f6684322d")
+	)
+	(fp_line
+		(start -0.3 0.44)
+		(end 0.3 0.755)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "71fc63fe-1337-554c-be98-40f01c44c396")
+	)
+	(fp_line
+		(start -0.3 3.98)
+		(end 0.3 3.98)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "3c57f1c2-b741-5852-9f54-e883f15e6c1a")
+	)
+	(fp_line
+		(start 0 -2.92)
+		(end 0 -3.55)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "b6239837-653e-5112-a315-f13b4f962a9e")
+	)
+	(fp_line
+		(start 0 -1.865)
+		(end 0 -0.975)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "9dafc6b0-e4b0-5701-a3d5-572b1901a3b2")
+	)
+	(fp_line
+		(start 0 -0.975)
+		(end -0.3 -0.82)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "0b7af4e1-4c22-585b-a83c-25d16e43757e")
+	)
+	(fp_line
+		(start 0 0.91)
+		(end 0 1.85)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "437eb0dd-e0e3-5b67-97ec-71f3fa9ae2a9")
+	)
+	(fp_line
+		(start 0 1.85)
+		(end -0.6 2.88)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "560bb435-bb71-5ea1-95ba-5f446bf91e1a")
+	)
+	(fp_line
+		(start 0 3.05)
+		(end 0 3.48)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "8d6428a2-33b3-545a-8383-b2f941260fa5")
+	)
+	(fp_line
+		(start 0.3 -0.505)
+		(end -0.3 -0.19)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "0aa9c538-224b-564c-a204-7556c48cbe98")
+	)
+	(fp_line
+		(start 0.3 0.125)
+		(end -0.3 0.44)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "ea4e848a-59ad-5637-94f7-15f5422e6d4d")
+	)
+	(fp_line
+		(start 0.3 0.755)
+		(end 0 0.91)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "B.SilkS")
+		(uuid "811683bb-b830-5869-98c5-4e3614bb0ca7")
+	)
+	(fp_circle
+		(center -0.66 -2.92)
+		(end -0.54 -2.92)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "105edbc9-aedc-55ee-9b5c-7bc53f043fe1")
+	)
+	(fp_circle
+		(center -0.66 -1.865)
+		(end -0.54 -1.865)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "41ccf570-1705-570b-8cb4-392a40056706")
+	)
+	(fp_poly
+		(pts
+			(xy 0 -4.05) (xy -0.25 -3.55) (xy 0.25 -3.55)
+		)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "c683b617-b7fc-5ac1-9182-50cd2c011cf8")
+	)
+	(fp_text user "REF"
+		(at -2.13 -2.91 0)
+		(layer "B.SilkS")
+		(uuid "5fb83cec-42cb-53f5-ad4b-1951f272819b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.127)
+			)
+			(justify mirror)
+		)
+	)
+	(fp_text user "Ax"
+		(at -1.83 -1.84 0)
+		(layer "B.SilkS")
+		(uuid "9c8e37d3-2f44-5567-99dd-29f29269df3a")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.127)
+			)
+			(justify mirror)
+		)
+	)
+	(fp_text user "1V8"
+		(at 1.36 -3.65 0)
+		(layer "B.SilkS")
+		(uuid "df0c5989-5ef5-561e-81f6-8bff828a6a0f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.127)
+			)
+			(justify mirror)
+		)
+	)
+	(fp_text user "JP"
+		(at 1.58 1.36 0)
+		(layer "B.SilkS")
+		(uuid "20891d90-d33d-51ad-832c-eb24481a2eee")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.127)
+			)
+			(justify mirror)
+		)
+	)
+	(fp_text user "front"
+		(at 1.58 2.5 0)
+		(layer "B.SilkS")
+		(uuid "8e36fa2b-920c-504d-a145-9b7c10fefc11")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.127)
+			)
+			(justify mirror)
+		)
+	)
+	(embedded_fonts no)
+)

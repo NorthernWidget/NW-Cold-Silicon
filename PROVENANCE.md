@@ -1,6 +1,6 @@
 # Provenance
 
-Built 2026-11-11 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
+Built 2026-11-12 by tools/build.py with kicad-cli 10.0.8. Sources, in precedence order:
 
 | key | kind | file | repository commit | packages | symbols | converter warnings |
 |---|---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Footprints embedded in the KiCad boards, each matched to the library through its
 | board | file | embedded names | identical | pads identical | pads differ | added | unchecked |
 |---|---|---|---|---|---|---|---|
 | okapi | `Project-Okapi/Hardware/KiCAD-10import/Okapi.kicad_pcb` | 68 | 61 | 0 | 4 | 3 | 2 |
-| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 36 | 32 | 0 | 2 | 1 | 4 |
+| margay | `Project-Margay/Hardware/KiCAD/Margay.kicad_pcb` | 36 | 29 | 0 | 2 | 1 | 4 |
 
 Added from the boards (graphics the importer put on the Rescue layer, from Eagle layers it does not map, are dropped: 42 items; a non-plated hole's pad, which that importer makes 0.254 mm wider than the drill, is set to the drill as the library converter and Eagle have it: 17 pads):
 
@@ -34,8 +34,8 @@ Through-hole pads grown to Eagle's restring (135): drill + 2 x max(25 % of the d
 Milled slots from Eagle layer 46 (7, in `USB_C_CUSB31-CFM2AX-01-X`, `USB_MICRO_VERT_MOLEX`): KiCad's Eagle reader ignores the Milling layer, so each outline around a pad's drill becomes that pad's oval drill (COLLISIONS.md gives each slot and its ring).
 Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose (SIM_SF72).
 No footprint carries a per-pad solder-mask or paste margin (7605 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
-Library: **858 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
-Native footprints, drawn in KiCad and copied from native/ (11): `1X02_SCREW_2.54_D1.1`, `1X03_SCREW_2.54_D1.1`, `1X04_SCREW_2.54_D1.1`, `1X05_SCREW_2.54_D1.1`, `1X06_SCREW_2.54_D1.1`, `1X07_SCREW_2.54_D1.1`, `1X08_SCREW_2.54_D1.1`, `1X09_SCREW_2.54_D1.1`, `1X10_SCREW_2.54_D1.1`, `MPD_BK-916`, `R0402_0603`; each names its source in its descr.
+Library: **859 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
+Native footprints, drawn in KiCad and copied from native/ (12): `1X02_SCREW_2.54_D1.1`, `1X03_SCREW_2.54_D1.1`, `1X04_SCREW_2.54_D1.1`, `1X05_SCREW_2.54_D1.1`, `1X06_SCREW_2.54_D1.1`, `1X07_SCREW_2.54_D1.1`, `1X08_SCREW_2.54_D1.1`, `1X09_SCREW_2.54_D1.1`, `1X10_SCREW_2.54_D1.1`, `MPD_BK-916`, `R0402_0603`, `VDIV_MARGAY_2026`; each names its source in its descr.
 Second pass of kicad-cli upgrade on the output: 0 footprint files changed, symbol file identical.
 
 Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.
