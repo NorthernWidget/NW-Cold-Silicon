@@ -351,6 +351,17 @@ PIN_TYPES={  # a pin whose electrical type the Eagle import got wrong, with the 
  ('BME280','SDO'):('input',"Bosch BST-BME280-DS002: I2C address select input in I2C mode (SPI data out otherwise; Okapi uses I2C)"),
  ('MLX90393','MS/CS'):('input',"Melexis MLX90393 datasheet: mode select / chip select input"),
  ('LTC4412S6','CTL'):('input',"ADI LTC4412 datasheet: control input"),
+ # open-drain outputs the import typed input, output or bidirectional, and the TWI pins it typed one way (Okapi re-audit 2026-11-13, SYMBOLS.md)
+ ('TPS6282DLC','PG'):('open_collector',"TI SLVSDV6C pin table: PG is O, an open-drain power-good output (Okapi U2)"),
+ ('TPS797','PG'):('open_collector',"TI SLVS350 pin table: PG is O, open drain (Okapi U9)"),
+ ('TPS6103RSA','LBO'):('open_collector',"TI SLUS534 pin table: LBO, low-battery output, open drain (Okapi U3)"),
+ ('LTC4412S6','STAT'):('open_collector',"ADI LTC4412 Pin Functions: STAT (Pin 4) is an open-drain output (Okapi U7)"),
+ ('ADS111','ALERT'):('open_collector',"TI SBAS444 Table 4-1: ALERT/RDY, open-drain output (Okapi U33)"),
+ ('DS3231M','SQW'):('open_collector',"Maxim DS3231M pin description: INT/SQW, an open-drain pin that requires an external pullup (Okapi and Margay RTC1)"),
+ ('ATMEGA1284M','(PCINT16/SCL)PC0'):('bidirectional',"Microchip ATmega1284P: PC0 is the TWI clock, driven and read (Okapi and Margay IC1)"),
+ ('ATMEGA1284M','(PCINT17/SDA)PC1'):('bidirectional',"Microchip ATmega1284P: PC1 is the TWI data line, driven and read (Okapi and Margay IC1)"),
+ ('PCA9634QFN','SCL'):('input',"NXP PCA9634 Table 3: SCL is I (Okapi U45; the import had SCL and SDA's types the other way round)"),
+ ('PCA9634QFN','SDA'):('bidirectional',"NXP PCA9634 Table 3: SDA is I/O (Okapi U45)"),
  ('TPS22916YFP','VOUT'):('power_out',"TI SLVSCT1 (TPS22916): load switch output (Margay U8)"),
  ('MAX6070AAUT','VIN'):('power_in',"Maxim MAX6070 datasheet: supply input (Margay U13); the import typed every pin bidirectional"),
  ('MAX6070AAUT','GND'):('power_in',"Maxim MAX6070: ground"),
@@ -477,6 +488,30 @@ for (name,pin),(etype,why) in PIN_TYPES.items():
         b=b[:j]+'(pin %s %s'%(etype,m.group(2))+b[j+m.end():]; k+=1; pos=i+1
     assert k,(name,pin); syms[name]=b; npin+=k
     coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
+# a pin the Eagle symbol misnamed, keyed by pad number since the wrong name is shared: (new name, type, datasheet)
+PIN_RENAME={
+ ('BMA456','1'):('SDO','bidirectional',"Bosch BMA456 pin table: pin 1 is SDO, the I2C address select (GND gives 0x18); the symbol called it GND"),
+ ('BMA456','10'):('CSB','input',"Bosch BMA456 pin table: pin 10 is CSB, at VDDIO for I2C mode; the symbol called it VCC"),
+ ('MLX90393','4'):('NC','passive',"Melexis MLX90393 Table 3: N/C, 'recommended to connect the N/C pins to Ground'; the symbol called it VSS"),
+ ('MLX90393','9'):('NC','passive',"Melexis MLX90393 Table 3: N/C"),
+ ('MLX90393','10'):('NC','passive',"Melexis MLX90393 Table 3: N/C"),
+ ('MLX90393','14'):('NC','passive',"Melexis MLX90393 Table 3: N/C"),
+ ('MLX90393','16'):('NC','passive',"Melexis MLX90393 Table 3: N/C"),
+}
+for (name,num),(new,etype,why) in PIN_RENAME.items():
+    b=syms[name]
+    pat=re.compile(r'\(pin \w+ (\w+)\n((?:(?!\t\t\t\(pin ).*\n)*?)(\t+\(name )"[^"]*"((?:(?!\t\t\t\(pin ).*\n)*?\t+\(number "%s"\n)'%re.escape(num))
+    b,n=pat.subn(lambda m:'(pin %s %s\n%s%s"%s"%s'%(etype,m.group(1),m.group(2),m.group(3),new,m.group(4)),b); assert n==1,(name,num,n)
+    syms[name]=b; coll.append(f'| {name} | symbol | pin {num} | – | named {new}, type {etype}: {why} |')
+# a BOM field the Eagle device carried wrong or out of date: (value, why)
+SYM_PROPS={
+ ('MOSFET_PCH-FDN360P','MF'):('onsemi',"Fairchild has been part of onsemi since 2016; onsemi lists the FDN360P as active (Okapi Q3, Q5; Margay)"),
+ ('MOSFET-PCH-FDN360P','MF'):('onsemi',"the same part under its other Eagle name"),
+ ('MOSFET_PCH-IRLML2244','MF'):('Infineon',"the IRLML2244 is an International Rectifier part, now Infineon; the Eagle device said Fairchild"),
+}
+for (name,prop),(val,why) in SYM_PROPS.items():
+    b,n=re.subn(r'\(property "%s" "[^"]*"'%re.escape(prop),'(property "%s" "%s"'%(prop,val),syms[name],count=1); assert n==1,(name,prop)
+    syms[name]=b; coll.append(f'| {name} | symbol | {prop} | – | {val}: {why} |')
 # Eagle's vRestrict (layer 43) in a package means no vias, and the converter writes exactly that: a keepout on every
 # copper layer with only vias not allowed. Its bRestrict (layer 42) comes through as a no-copper keepout on B.Cu and its
 # tRestrict (41) on F.Cu. All three are kept as converted. (Until 2026-11-11 this build read layer 43 as bRestrict and
