@@ -1,4 +1,4 @@
-# nw-cold-silicon
+# NW-Cold-Silicon
 
 The Northern Widget KiCad library: one footprint library and one symbol
 library, built from the Eagle libraries that every Northern Widget board was
