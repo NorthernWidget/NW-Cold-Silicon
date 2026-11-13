@@ -490,7 +490,7 @@ for (name,pin),(etype,why) in PIN_TYPES.items():
     coll.append(f'| {name} | symbol | pin {pin} | – | electrical type {etype}: {why} |')
 # a pin the Eagle symbol misnamed, keyed by pad number since the wrong name is shared: (new name, type, datasheet)
 PIN_RENAME={
- ('BMA456','1'):('SDO','bidirectional',"Bosch BMA456 pin table: pin 1 is SDO, the I2C address select (GND gives 0x18); the symbol called it GND"),
+ ('BMA456','1'):('SDO','input',"Bosch BMA456 pin table: pin 1 is SDO, in I2C mode the address select input (GND gives 0x18), typed as the BME280's SDO is; the symbol called it GND"),
  ('BMA456','10'):('CSB','input',"Bosch BMA456 pin table: pin 10 is CSB, at VDDIO for I2C mode; the symbol called it VCC"),
  ('MLX90393','4'):('NC','passive',"Melexis MLX90393 Table 3: N/C, 'recommended to connect the N/C pins to Ground'; the symbol called it VSS"),
  ('MLX90393','9'):('NC','passive',"Melexis MLX90393 Table 3: N/C"),

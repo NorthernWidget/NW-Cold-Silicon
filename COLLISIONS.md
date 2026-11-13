@@ -1868,7 +1868,7 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MAX6070AAUT | symbol | pin FILT | – | electrical type passive: Maxim MAX6070: noise-reduction capacitor pin |
 | MAX6070AAUT | symbol | pin OUTF | – | electrical type output: Maxim MAX6070: reference output, force (an output, not a supply: it feeds an ADC input on Margay) |
 | MAX6070AAUT | symbol | pin OUTS | – | electrical type passive: Maxim MAX6070: reference output, sense |
-| BMA456 | symbol | pin 1 | – | named SDO, type bidirectional: Bosch BMA456 pin table: pin 1 is SDO, the I2C address select (GND gives 0x18); the symbol called it GND |
+| BMA456 | symbol | pin 1 | – | named SDO, type input: Bosch BMA456 pin table: pin 1 is SDO, in I2C mode the address select input (GND gives 0x18), typed as the BME280's SDO is; the symbol called it GND |
 | BMA456 | symbol | pin 10 | – | named CSB, type input: Bosch BMA456 pin table: pin 10 is CSB, at VDDIO for I2C mode; the symbol called it VCC |
 | MLX90393 | symbol | pin 4 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C, 'recommended to connect the N/C pins to Ground'; the symbol called it VSS |
 | MLX90393 | symbol | pin 9 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C |
