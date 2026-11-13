@@ -652,6 +652,22 @@ for name,text in FP_DESCR.items():
     t=fps[name]; t=re.sub(r'^\t\(descr "[^"]*"\)\n','',t,flags=re.M)
     t,n=re.subn(r'^\t\(layer "F\.Cu"\)\n',lambda m:m.group(0)+'\t(descr "%s")\n'%text.replace('"',"'"),t,count=1,flags=re.M); assert n==1,name
     fps[name]=t; coll.append(f'| {name} | footprint | descr | – | {text} |')
+# Eagle's documentation layers printed: the CAM job of every Northern Widget board put tDocu (51) on the top
+# silkscreen and bDocu (52) on the bottom (Okapi_2024-11-02, Margay's 2023 fab), so a package's pin stripes, outlines
+# and diagrams were on the boards. The converter puts them on F.Fab and B.Fab, which do not print, and they are the
+# only Fab items it writes (checked per package on both boards). Each is kept on Fab, for the assembly drawing, and
+# copied to the silkscreen of its side (Andy, 2026-11-13: every mark that printed prints).
+FAB_ITEM=re.compile(r'^\t\((fp_line|fp_arc|fp_circle|fp_rect|fp_poly|fp_text)\b.*?\n\t\)\n',re.S|re.M)
+ndocu=0
+for name in list(fps):
+    t=fps[name]; copies=[]
+    for m in FAB_ITEM.finditer(t):
+        for fab,silk in (('"F.Fab"','"F.SilkS"'),('"B.Fab"','"B.SilkS"')):
+            if '\t\t(layer %s)'%fab in m.group(0) or '\t\t(layer %s knockout)'%fab in m.group(0):
+                copies.append(m.group(0).replace('(layer %s'%fab,'(layer %s'%silk,1))
+    if not copies: continue
+    i=t.index('\t(pad ') if '\t(pad ' in t else t.rindex('\t(embedded_fonts')
+    fps[name]=t[:i]+''.join(copies)+t[i:]; ndocu+=1
 # native footprints: drawn in KiCad, not converted from an Eagle library (native/*.kicad_mod)
 nnative=0; native_names=[]
 for f in sorted(glob.glob(os.path.join(REPO,'native','*.kicad_mod'))):
@@ -673,7 +689,7 @@ p2=os.path.join(tmp,'p2'); shutil.copytree(PRETTY,p2); run(['kicad-cli','fp','up
 s2=os.path.join(tmp,'s2.kicad_sym'); shutil.copy(SYM,s2); run(['kicad-cli','sym','upgrade','--force',s2])
 chg=sum(1 for f in os.listdir(PRETTY) if open(os.path.join(PRETTY,f)).read()!=open(os.path.join(p2,f)).read())
 same=open(SYM).read()==open(s2).read()
-prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).','Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose ('+', '.join(WIRE_RESTRICTS)+').',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
+prov+=['',f'Artwork (logos, {ngr} footprints and symbols): reference LOGO, excluded from the BOM, the position files and simulation, with a description.',f'Through-hole pads grown to Eagle\'s restring ({nrestring}): drill + 2 x max(25 % of the drill, 5 mil), the ring Eagle fabricated whatever the package drew.',f'Milled slots from Eagle layer 46 ({nslot}, in '+', '.join('`%s`'%n for n in slot_notes)+'): KiCad\'s Eagle reader ignores the Milling layer, so each outline around a pad\'s drill becomes that pad\'s oval drill (COLLISIONS.md gives each slot and its ring).','Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose ('+', '.join(WIRE_RESTRICTS)+').',f'Eagle tDocu and bDocu copied from F.Fab and B.Fab to the silkscreen of their side ({ndocu} footprints): the Northern Widget boards printed them.',f'No footprint carries a per-pad solder-mask or paste margin ({nmargin} removed): the converter had written KiCad\'s 4 mil default where Eagle\'s design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board\'s pad-to-mask clearance, not the footprint\'s.',f'Library: **{len(fps)} footprints** in `{LIB}.pretty`, **{len(syms)} symbols** in `{LIB}.kicad_sym`.',
        f'Native footprints, drawn in KiCad and copied from native/ ({nnative}): '+(', '.join('`%s`'%n for n in native_names) or 'none')+'; each names its source in its descr.',
        f'Second pass of kicad-cli upgrade on the output: {chg} footprint files changed, symbol file {"identical" if same else "CHANGED"}.',
        '','Rule: precedence is the order of the table; identical content is kept once; differing content from a PRIMARY source is kept as NAME_key; an EXTRAS source adds only names absent so far. See COLLISIONS.md.']
