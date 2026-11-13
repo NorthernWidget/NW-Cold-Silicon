@@ -34,6 +34,7 @@ Through-hole pads grown to Eagle's restring (135): drill + 2 x max(25 % of the d
 Milled slots from Eagle layer 46 (7, in `USB_C_CUSB31-CFM2AX-01-X`, `USB_MICRO_VERT_MOLEX`): KiCad's Eagle reader ignores the Milling layer, so each outline around a pad's drill becomes that pad's oval drill (COLLISIONS.md gives each slot and its ring).
 Eagle restricts as converted: tRestrict a no-copper keepout on F.Cu, bRestrict on B.Cu, vRestrict a via-only keepout on every copper layer; a restrict drawn as wires becomes the polygon they enclose (SIM_SF72).
 Eagle tDocu and bDocu copied from F.Fab and B.Fab to the silkscreen of their side (428 footprints): the Northern Widget boards printed them.
+Footprint type set where the converter left none: 429 smd, 389 through_hole, 29 without pads left unset, 0 already typed.
 No footprint carries a per-pad solder-mask or paste margin (7605 removed): the converter had written KiCad's 4 mil default where Eagle's design rules on every Northern Widget board set a 2.5 mil stop frame, and in KiCad that is the board's pad-to-mask clearance, not the footprint's.
 Library: **859 footprints** in `nw-cold-silicon.pretty`, **1403 symbols** in `nw-cold-silicon.kicad_sym`.
 Native footprints, drawn in KiCad and copied from native/ (12): `1X02_SCREW_2.54_D1.1`, `1X03_SCREW_2.54_D1.1`, `1X04_SCREW_2.54_D1.1`, `1X05_SCREW_2.54_D1.1`, `1X06_SCREW_2.54_D1.1`, `1X07_SCREW_2.54_D1.1`, `1X08_SCREW_2.54_D1.1`, `1X09_SCREW_2.54_D1.1`, `1X10_SCREW_2.54_D1.1`, `MPD_BK-916`, `R0402_0603`, `VDIV_MARGAY_2026`; each names its source in its descr.
