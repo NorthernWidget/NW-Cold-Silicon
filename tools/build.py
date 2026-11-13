@@ -703,6 +703,18 @@ for name in list(fps):
     if not copies: continue
     i=t.index('\t(pad ') if '\t(pad ' in t else t.rindex('\t(embedded_fonts')
     fps[name]=t[:i]+''.join(copies)+t[i:]; ndocu+=1
+# a pin-1 mark that a fab can print: Eagle drew some inside an exposed pad, where the fab clips the silkscreen away and
+# the part ends up with no orientation mark. The unprintable mark goes; a filled dot outside the package corner by pin 1
+# takes its place: footprint: ((x, y) of the old silkscreen circle's center, (x, y) and radius of the new dot, why)
+PIN1_MARK={'MLF44-TH':((-2.25,-2.25),(-4.0,-4.0,0.25),"ATmega1284P QFN-44: Eagle's pin-1 dot sat on the 5 mm exposed pad (Margay U1, Okapi IC1; Andy, 2026-11-13)")}
+for name,((ox,oy),(nx,ny,r),why) in PIN1_MARK.items():
+    t=fps[name]
+    pat=re.compile(r'^\t\(fp_circle\n\t\t\(center %s %s\)\n(?:.*\n)*?\t\t\(layer "F.SilkS"\)\n(?:.*\n)*?\t\)\n'%(re.escape(fmt6(ox)),re.escape(fmt6(oy))),re.M)
+    t,n=pat.subn('',t,count=1); assert n==1,(name,'old pin-1 circle not found')
+    dot=('\t(fp_circle\n\t\t(center %s %s)\n\t\t(end %s %s)\n\t\t(stroke\n\t\t\t(width 0)\n\t\t\t(type solid)\n\t\t)\n\t\t(fill yes)\n'
+         '\t\t(layer "F.SilkS")\n\t\t(uuid "%s")\n\t)\n')%(fmt6(nx),fmt6(ny),fmt6(nx+r),fmt6(ny),uuid.uuid5(uuid.NAMESPACE_URL,'nw-cold-silicon:%s:pin1'%name))
+    i=t.index('\t(pad '); fps[name]=t[:i]+dot+t[i:]
+    coll.append(f'| {name} | footprint | pin-1 mark | – | dot of radius {r} mm at ({nx}, {ny}), outside the body; the one at ({ox}, {oy}) removed: {why} |')
 # KiCad's footprint type, which the converter never writes: through_hole when any pad is plated through, smd when every
 # pad is surface mount, none for artwork (no pads). The position files' --smd-only and DRC's footprint_type_mismatch read
 # it; without it a KiCad placement file of Okapi held five parts, the native dual lands (Andy, 2026-11-13: ready v0.7.0)
