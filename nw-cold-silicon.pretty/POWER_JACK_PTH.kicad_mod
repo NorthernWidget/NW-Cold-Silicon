@@ -73,6 +73,16 @@
 	)
 	(fp_line
 		(start -4.5 -3)
+		(end -4.5 -0.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "226c6641-93ee-55b6-97be-f69dcac34fe9")
+	)
+	(fp_line
+		(start -4.5 -3)
 		(end 4.5 -3)
 		(stroke
 			(width 0.2032)
@@ -112,6 +122,26 @@
 		(uuid "ce703f31-5d12-520d-ac7c-9b421436e21e")
 	)
 	(fp_line
+		(start 4.5 -0.1)
+		(end -4.5 -0.1)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54dffd50-1140-59f4-8f37-d86709a713d3")
+	)
+	(fp_line
+		(start 4.5 -0.1)
+		(end 4.5 -3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84df324b-d05c-5f83-bf24-cf7c7c3f8304")
+	)
+	(fp_line
 		(start -4.5 -3)
 		(end -4.5 -0.1)
 		(stroke
@@ -148,7 +178,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "226c6641-93ee-55b6-97be-f69dcac34fe9")
+		(uuid "f4b126f9-bdd6-57e0-87f9-911c523d9244")
 	)
 	(pad "GNDBREAK" thru_hole circle
 		(at 4.7 -10.7 90)
@@ -157,7 +187,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "54dffd50-1140-59f4-8f37-d86709a713d3")
+		(uuid "24f3e67b-94a1-5450-abe8-474c8db587c6")
 	)
 	(pad "PWR" thru_hole circle
 		(at 0 -13.7)
@@ -166,7 +196,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "84df324b-d05c-5f83-bf24-cf7c7c3f8304")
+		(uuid "6561927c-953c-5e27-ac5f-cdd3f87399f5")
 	)
 	(embedded_fonts no)
 )

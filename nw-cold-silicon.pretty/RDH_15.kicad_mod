@@ -52,6 +52,16 @@
 	)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
+		(start -7.62 0)
+		(end -6.858 0)
+		(stroke
+			(width 0.8128)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9259d8cb-cf3d-53cc-9128-1e10440c1c47")
+	)
+	(fp_line
 		(start -6.477 -1.016)
 		(end -6.477 -2.667)
 		(stroke
@@ -60,6 +70,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "b3579c23-d596-52ee-9332-c95e99e8574e")
+	)
+	(fp_line
+		(start -6.477 -1.016)
+		(end -6.477 1.016)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3d179371-f0e2-58ff-8f01-024bf7469af3")
 	)
 	(fp_line
 		(start -6.477 2.667)
@@ -182,6 +202,16 @@
 		(uuid "db763b2c-a73a-59e1-aede-f32ed721937c")
 	)
 	(fp_line
+		(start 6.477 -1.016)
+		(end 6.477 1.016)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bf64e3fd-1b06-510d-b6d5-08be3dfccc93")
+	)
+	(fp_line
 		(start 6.477 2.667)
 		(end 6.477 1.016)
 		(stroke
@@ -190,6 +220,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "75b5ec3e-66aa-5e54-94c0-09d572c6224f")
+	)
+	(fp_line
+		(start 6.858 0)
+		(end 7.62 0)
+		(stroke
+			(width 0.8128)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d8df8933-5c66-50e0-9a6d-e5617aa4b5ab")
 	)
 	(fp_arc
 		(start -6.477 -2.667)
@@ -234,6 +274,30 @@
 		)
 		(layer "F.SilkS")
 		(uuid "1f3d5d10-91e6-5fb4-8d3f-1c26c253be65")
+	)
+	(fp_poly
+		(pts
+			(xy -6.7564 0.4064) (xy -6.4516 0.4064) (xy -6.4516 -0.4064) (xy -6.7564 -0.4064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "4f3eb096-be90-5c97-97db-a77315806259")
+	)
+	(fp_poly
+		(pts
+			(xy 6.4516 0.4064) (xy 6.7564 0.4064) (xy 6.7564 -0.4064) (xy 6.4516 -0.4064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "9b775d70-145c-55cf-8d28-5e0b6b5908a4")
 	)
 	(fp_line
 		(start -7.62 0)
@@ -301,6 +365,18 @@
 	)
 	(fp_text user "RDH"
 		(at 4.572 1.7272 90)
+		(layer "F.SilkS")
+		(uuid "515ce52f-076b-5a98-98bf-b9c20abb4c86")
+		(effects
+			(font
+				(size 1.143 1.143)
+				(thickness 0.127)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "RDH"
+		(at 4.572 1.7272 90)
 		(layer "F.Fab")
 		(uuid "d8942a3f-85eb-5138-a1b5-a0e8883505c5")
 		(effects
@@ -321,7 +397,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "9259d8cb-cf3d-53cc-9128-1e10440c1c47")
+		(uuid "92e562af-6690-5509-84df-71a6297d0563")
 	)
 	(pad "2" thru_hole roundrect
 		(at 7.62 0)
@@ -333,7 +409,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "3d179371-f0e2-58ff-8f01-024bf7469af3")
+		(uuid "bf776368-1050-506f-9729-56cb7fa12120")
 	)
 	(embedded_fonts no)
 )

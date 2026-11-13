@@ -121,6 +121,17 @@
 		(layer "F.SilkS")
 		(uuid "7e7b2005-93ce-5f89-a54e-e3905919c031")
 	)
+	(fp_circle
+		(center 2 -3)
+		(end 2.2828 -3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2b9fa844-9ffe-5de2-be2d-1a0d8c5368b8")
+	)
 	(fp_line
 		(start -2.25 1.35)
 		(end -2.25 2.35)
@@ -199,7 +210,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "2b9fa844-9ffe-5de2-be2d-1a0d8c5368b8")
+		(uuid "107dc03b-5e9d-5e83-bfc5-5258f8028387")
 	)
 	(pad "2" thru_hole circle
 		(at 3.5 0)
@@ -208,7 +219,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "107dc03b-5e9d-5e83-bfc5-5258f8028387")
+		(uuid "f8a748e8-52f3-5f21-82cb-bd1eb6d996d7")
 	)
 	(embedded_fonts no)
 )

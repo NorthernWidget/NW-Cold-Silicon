@@ -52,6 +52,26 @@
 	)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
+		(start -3.7 1.35)
+		(end -3.7 2.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "65bb9d76-2b1e-5e01-835c-6c6d2994200f")
+	)
+	(fp_line
+		(start -3.7 2.35)
+		(end -3.1 2.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3d6d5cf9-6151-581c-a56b-1614f2c92a0e")
+	)
+	(fp_line
 		(start -3.1 -4.2)
 		(end 8.1 -4.2)
 		(stroke
@@ -60,6 +80,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "60d9f533-23bb-54f0-a122-a3f0d7ff7c4e")
+	)
+	(fp_line
+		(start -3.1 1.35)
+		(end -3.7 1.35)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84ede31a-f847-5159-92d4-06ec3a00645c")
 	)
 	(fp_line
 		(start -3.1 2.3)
@@ -92,6 +122,16 @@
 		(uuid "ff7853d1-bab2-59ba-9bf4-dcb884b1dcb4")
 	)
 	(fp_line
+		(start 8.1 -4)
+		(end 8.7 -4)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "685a5bf6-191b-5256-b530-32b0075dffa6")
+	)
+	(fp_line
 		(start 8.1 2.3)
 		(end -3.1 2.3)
 		(stroke
@@ -120,6 +160,37 @@
 		)
 		(layer "F.SilkS")
 		(uuid "340d850e-0df2-5f9e-b9ed-1a17681f7732")
+	)
+	(fp_line
+		(start 8.7 -4)
+		(end 8.7 -3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "18709d07-2dda-5467-9584-489d84a9f17b")
+	)
+	(fp_line
+		(start 8.7 -3)
+		(end 8.1 -3)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2191046c-2f2a-5401-8071-4fe0ba62c676")
+	)
+	(fp_circle
+		(center 2.5 -3.7)
+		(end 2.7828 -3.7)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "bf7ac20f-b6d8-5c3f-a015-b15b6dae0a0f")
 	)
 	(fp_line
 		(start -3.7 1.35)
@@ -199,7 +270,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "65bb9d76-2b1e-5e01-835c-6c6d2994200f")
+		(uuid "6d5fd027-c9f8-523d-b9cf-5b1803c2555c")
 	)
 	(pad "2" thru_hole circle
 		(at 5 0)
@@ -208,7 +279,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "3d6d5cf9-6151-581c-a56b-1614f2c92a0e")
+		(uuid "1ad1a77e-da6c-5f0b-8481-87439ede8c7f")
 	)
 	(embedded_fonts no)
 )

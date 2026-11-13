@@ -51,6 +51,17 @@
 		)
 	)
 	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 1.016 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b2a22eee-07da-5902-8229-8c9a9682871b")
+	)
 	(fp_arc
 		(start -2.286 -1.016)
 		(mid -1.768905 -1.768905)
@@ -113,7 +124,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "b2a22eee-07da-5902-8229-8c9a9682871b")
+		(uuid "4e1cfd05-32bd-5537-81f5-7e2f09ff3e34")
 	)
 	(embedded_fonts no)
 )

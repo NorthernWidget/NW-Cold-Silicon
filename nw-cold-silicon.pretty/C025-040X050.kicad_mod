@@ -72,6 +72,16 @@
 		(uuid "72c45073-7c99-5dbe-973c-a47b8c8d859b")
 	)
 	(fp_line
+		(start -0.381 0)
+		(end -0.762 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "19adbad0-01bc-52e9-ade4-bc214deb60a0")
+	)
+	(fp_line
 		(start -0.254 -0.762)
 		(end -0.254 0)
 		(stroke
@@ -130,6 +140,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "69df0b74-a943-50e6-b4df-9fda1154bffb")
+	)
+	(fp_line
+		(start 0.762 0)
+		(end 0.381 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "57618840-affa-5591-b65c-a15a82c3fcaf")
 	)
 	(fp_line
 		(start 2.159 1.905)
@@ -225,7 +245,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "19adbad0-01bc-52e9-ade4-bc214deb60a0")
+		(uuid "e49444d0-6229-5aeb-aa41-b6538bf6d1cb")
 	)
 	(pad "2" thru_hole roundrect
 		(at 1.27 0)
@@ -237,7 +257,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "57618840-affa-5591-b65c-a15a82c3fcaf")
+		(uuid "761608cd-3c40-54ed-9753-e96374ec65a9")
 	)
 	(embedded_fonts no)
 )

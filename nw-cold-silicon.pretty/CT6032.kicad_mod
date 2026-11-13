@@ -51,6 +51,86 @@
 		)
 	)
 	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.073 -1.067)
+		(end -3.073 1.067)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d3949bd6-276d-58ef-9115-c2e91002456d")
+	)
+	(fp_line
+		(start -2.932 1.637)
+		(end -2.932 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "71c05581-04b0-516a-87e0-f68c213c3834")
+	)
+	(fp_line
+		(start -1.8 -0.63)
+		(end -1.8 0.64)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1f0c603e-a9c6-52bf-88ac-34a1719c3bfb")
+	)
+	(fp_line
+		(start -1.18 0)
+		(end -2.45 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6f9a78b4-8de5-511f-8407-33d3ee9dbcdf")
+	)
+	(fp_line
+		(start 2.957 -1.637)
+		(end -2.932 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "311672ba-c0ef-58d8-b831-387326fdbbdc")
+	)
+	(fp_line
+		(start 2.957 1.637)
+		(end -2.932 1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "481d92f2-edd4-558b-878f-fdbb96fb8eb4")
+	)
+	(fp_line
+		(start 2.957 1.637)
+		(end 2.957 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c654bd91-cd10-5116-b899-38348918d074")
+	)
+	(fp_line
+		(start 3.073 -1.067)
+		(end 3.073 1.067)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "15c47d04-3682-5dc0-ad47-435c80721e8f")
+	)
 	(fp_poly
 		(pts
 			(xy -0.5001 1) (xy 0.5001 1) (xy 0.5001 -1) (xy -0.5001 -1)
@@ -188,14 +268,14 @@
 		(size 2.6 2.2)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 0)
-		(uuid "d3949bd6-276d-58ef-9115-c2e91002456d")
+		(uuid "b2c36335-1363-5460-862f-aa5c88f0fff5")
 	)
 	(pad "-" smd rect
 		(at 2.5 0)
 		(size 2.6 2.2)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 0)
-		(uuid "71c05581-04b0-516a-87e0-f68c213c3834")
+		(uuid "3ab18d83-3efd-588b-bebc-6e346eaf16f2")
 	)
 	(embedded_fonts no)
 )

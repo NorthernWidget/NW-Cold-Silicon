@@ -82,6 +82,16 @@
 		(uuid "ebf7684f-796b-5471-bc24-dd104af7da5c")
 	)
 	(fp_line
+		(start -1.651 0)
+		(end -0.635 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "04028032-ee84-5644-9cf2-8e71e4eadd7d")
+	)
+	(fp_line
 		(start -1.651 2.286)
 		(end -2.413 1.524)
 		(stroke
@@ -110,6 +120,66 @@
 		)
 		(layer "F.SilkS")
 		(uuid "669a504a-1016-50f2-b8e7-e7dcc41e80ac")
+	)
+	(fp_line
+		(start -0.635 -1.2192)
+		(end -0.635 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "64bed8cc-3c1f-58ca-bd7f-994ccf1a897b")
+	)
+	(fp_line
+		(start -0.635 0)
+		(end -0.635 1.2192)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f7bc29e-442b-5a1f-840d-c2994813bc4c")
+	)
+	(fp_line
+		(start -0.635 1.2192)
+		(end -0.127 1.2192)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b43d8c9-d788-51c3-95a0-97166f715842")
+	)
+	(fp_line
+		(start -0.127 -1.2192)
+		(end -0.635 -1.2192)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "365f5efb-7e50-58c0-85e8-0967d2ca7978")
+	)
+	(fp_line
+		(start -0.127 1.2192)
+		(end -0.127 -1.2192)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0febd7c6-37c9-565e-889d-c1389f69a5d5")
+	)
+	(fp_line
+		(start 0.635 0)
+		(end 1.651 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "86d2918e-0328-57c6-bb2e-ece9ad63d192")
 	)
 	(fp_line
 		(start 2.032 -2.286)
@@ -152,6 +222,18 @@
 		)
 		(layer "F.SilkS")
 		(uuid "86ec702d-2ba7-57f0-ac95-c92987e4019a")
+	)
+	(fp_poly
+		(pts
+			(xy 0.254 1.27) (xy 0.762 1.27) (xy 0.762 -1.27) (xy 0.254 -1.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "2dc9793b-be1e-52d0-a8ba-6fc1d27f175c")
 	)
 	(fp_line
 		(start -1.651 0)
@@ -242,7 +324,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "04028032-ee84-5644-9cf2-8e71e4eadd7d")
+		(uuid "e1c5172f-3468-5c23-b707-a8f68180b725")
 	)
 	(pad "-" thru_hole roundrect
 		(at 1.27 0)
@@ -254,7 +336,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "64bed8cc-3c1f-58ca-bd7f-994ccf1a897b")
+		(uuid "b9d9cbe3-0949-5ac8-b357-44bc2fa8c4d8")
 	)
 	(embedded_fonts no)
 )

@@ -123,6 +123,30 @@
 	)
 	(fp_text user "-"
 		(at -1.4 -0.7 0)
+		(layer "F.SilkS")
+		(uuid "f632942a-c7c0-5e14-b750-b9b7cce2b8b7")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "+"
+		(at 0.6 -0.7 0)
+		(layer "F.SilkS")
+		(uuid "f9c2737c-7573-56ec-9b49-dcfa7d5bee7a")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "-"
+		(at -1.4 -0.7 0)
 		(layer "F.Fab")
 		(uuid "cdb3a680-af81-5354-8d44-55d7db9ce27b")
 		(effects
@@ -152,7 +176,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "f632942a-c7c0-5e14-b750-b9b7cce2b8b7")
+		(uuid "4048136e-5a0c-5e5e-85f5-a96fee95870a")
 	)
 	(pad "2" thru_hole circle
 		(at 1 0)
@@ -161,7 +185,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "f9c2737c-7573-56ec-9b49-dcfa7d5bee7a")
+		(uuid "12158cf0-16f8-5939-8bf1-06fb32dad417")
 	)
 	(embedded_fonts no)
 )

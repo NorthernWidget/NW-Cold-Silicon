@@ -71,6 +71,76 @@
 		(layer "F.SilkS")
 		(uuid "54d77bd9-36fa-53b9-a0de-315c5334e58a")
 	)
+	(fp_line
+		(start -1.651 0)
+		(end -0.762 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa894d11-2945-5a9c-b4e8-1dedaa05e463")
+	)
+	(fp_line
+		(start -0.762 -1.27)
+		(end -0.762 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b7560f0-0129-58eb-93d6-ebae80cc1cad")
+	)
+	(fp_line
+		(start -0.762 0)
+		(end -0.762 1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "084b76b9-677d-506f-98e9-192047a368fa")
+	)
+	(fp_line
+		(start -0.762 1.27)
+		(end -0.254 1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "642babbd-8c02-58b3-81e8-71f9c32ae613")
+	)
+	(fp_line
+		(start -0.254 -1.27)
+		(end -0.762 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "58feaa20-02be-5969-89d9-5edf885aa3dd")
+	)
+	(fp_line
+		(start -0.254 1.27)
+		(end -0.254 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "92f9a6ba-1aa3-5bf2-8c88-9ecf3c1a4cf0")
+	)
+	(fp_line
+		(start 0.635 0)
+		(end 1.651 0)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "35c0695d-b77f-56a0-8a7a-701da8f3e9f7")
+	)
 	(fp_circle
 		(center 0 0)
 		(end 2.794 0)
@@ -81,6 +151,18 @@
 		(fill no)
 		(layer "F.SilkS")
 		(uuid "78650500-b0f6-5ae4-9b8f-92a6133449e0")
+	)
+	(fp_poly
+		(pts
+			(xy 0.254 1.27) (xy 0.762 1.27) (xy 0.762 -1.27) (xy 0.254 -1.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "25ead6ed-9879-5f7a-aefe-ff79f593e4da")
 	)
 	(fp_line
 		(start -1.651 0)
@@ -171,7 +253,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "fa894d11-2945-5a9c-b4e8-1dedaa05e463")
+		(uuid "494d466f-0f1b-5a91-a4dc-581263ef0f78")
 	)
 	(pad "-" thru_hole roundrect
 		(at 1.27 0)
@@ -183,7 +265,7 @@
 		(chamfer_ratio 0.2928932188)
 		(chamfer top_left top_right bottom_left bottom_right)
 		(thermal_bridge_angle 0)
-		(uuid "0b7560f0-0129-58eb-93d6-ebae80cc1cad")
+		(uuid "52419a84-7cd4-591c-be14-e6e48e31a77b")
 	)
 	(embedded_fonts no)
 )

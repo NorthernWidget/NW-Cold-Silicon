@@ -80,6 +80,18 @@
 			(type default)
 		)
 		(fill yes)
+		(layer "F.SilkS")
+		(uuid "0e344d04-b1e5-5751-b57e-8e59b45edb9f")
+	)
+	(fp_poly
+		(pts
+			(xy -0.254 0.254) (xy 0.254 0.254) (xy 0.254 -0.254) (xy -0.254 -0.254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
 		(layer "F.Fab")
 		(uuid "3111f062-a974-5029-8d32-82b30482da62")
 	)
@@ -90,7 +102,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "0e344d04-b1e5-5751-b57e-8e59b45edb9f")
+		(uuid "44f1a823-7cb8-5ef7-8385-bf7eb3cebfe5")
 	)
 	(embedded_fonts no)
 )

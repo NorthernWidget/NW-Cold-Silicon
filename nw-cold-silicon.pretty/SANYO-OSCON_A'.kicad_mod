@@ -51,6 +51,16 @@
 		)
 	)
 	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.55 0.4)
+		(end -1.55 -0.4)
+		(stroke
+			(width 0.4064)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ecfc6b2-eb83-5dbd-9b04-0578950c9c30")
+	)
 	(fp_circle
 		(center 0 0)
 		(end 1.9 0)
@@ -79,7 +89,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "2ecfc6b2-eb83-5dbd-9b04-0578950c9c30")
+		(uuid "cf7a222a-23fe-5145-bd41-5b44bb2a18c7")
 	)
 	(pad "-" thru_hole circle
 		(at -0.75 0)
@@ -88,7 +98,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 0)
-		(uuid "cf7a222a-23fe-5145-bd41-5b44bb2a18c7")
+		(uuid "53534812-044e-588a-b6ed-e010e01ec99e")
 	)
 	(embedded_fonts no)
 )

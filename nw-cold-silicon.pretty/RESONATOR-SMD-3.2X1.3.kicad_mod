@@ -134,6 +134,46 @@
 		(uuid "1c8e08c7-b202-5350-b9f0-d0ed7447c372")
 	)
 	(fp_line
+		(start -1.6 -0.65)
+		(end 1.6 -0.65)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a949efd0-7b35-5017-9bd2-fcbea732940f")
+	)
+	(fp_line
+		(start -1.6 0.65)
+		(end -1.6 -0.65)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cc6d280a-1821-5f76-b6df-3d2414e9796f")
+	)
+	(fp_line
+		(start 1.6 -0.65)
+		(end 1.6 0.65)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "940d0606-52b7-5df1-b41a-610efcca7166")
+	)
+	(fp_line
+		(start 1.6 0.65)
+		(end -1.6 0.65)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6914d72b-6594-5e5e-b345-cca3d127669c")
+	)
+	(fp_line
 		(start 1.871118 -0.660159)
 		(end 1.871118 0.63984)
 		(stroke
@@ -189,7 +229,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.5)
 		(thermal_bridge_angle 0)
-		(uuid "a949efd0-7b35-5017-9bd2-fcbea732940f")
+		(uuid "df628a46-cab9-5111-92b3-97dc0fbc7f4c")
 	)
 	(pad "2" smd roundrect
 		(at 0 0)
@@ -197,7 +237,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.5)
 		(thermal_bridge_angle 0)
-		(uuid "cc6d280a-1821-5f76-b6df-3d2414e9796f")
+		(uuid "f4bc591f-8a0b-58a7-807c-b404fc5e8c7c")
 	)
 	(pad "3" smd roundrect
 		(at 1.2 0)
@@ -205,11 +245,11 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.5)
 		(thermal_bridge_angle 0)
-		(uuid "940d0606-52b7-5df1-b41a-610efcca7166")
+		(uuid "df9fd718-64ce-59fc-9e97-ce79bea2140f")
 	)
 	(zone
 		(layer "F.Cu")
-		(uuid "6914d72b-6594-5e5e-b345-cca3d127669c")
+		(uuid "05bf9cb3-11c8-5b66-9bae-1f7ccce5ff45")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
@@ -239,7 +279,7 @@
 	)
 	(zone
 		(layer "F.Cu")
-		(uuid "df628a46-cab9-5111-92b3-97dc0fbc7f4c")
+		(uuid "80b6c5d4-9f58-5e95-812c-db230ae4e1dc")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
@@ -269,7 +309,7 @@
 	)
 	(zone
 		(layer "F.Cu")
-		(uuid "f4bc591f-8a0b-58a7-807c-b404fc5e8c7c")
+		(uuid "df93be7a-0e79-5ad0-a356-5d9a245a3fa5")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
@@ -299,7 +339,7 @@
 	)
 	(zone
 		(layer "F.Cu")
-		(uuid "df9fd718-64ce-59fc-9e97-ce79bea2140f")
+		(uuid "0509bb70-2e93-5536-affe-8085eb032b28")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
