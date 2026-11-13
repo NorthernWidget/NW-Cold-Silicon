@@ -1776,11 +1776,18 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | VDIV_GENERIC | footprint | awickert as `VDIV_GENERIC` | board okapi (awickert, 2 placed) | same pads, KiCad board copy draws graphics differently |
+| DCK_R-PDSO-G5 | footprint | bschulz as `DCK_R-PDSO-G5` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| DCU_(R-PDSO-G8) | footprint | bschulz as `DCU_(R-PDSO-G8)` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board margay (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
+| MLF44-TH | footprint | bschulz as `MLF44-TH` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board margay (None) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
 | SMT-JUMPER_3_1-NC_PASTE_SILK | footprint | bschulz | board margay (bschulz) | unchecked: no front-side instance |
+| SO08 | footprint | bschulz as `SO08` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| SOD323-R | footprint | bschulz as `SOD323-R` | board margay (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| SOD323-R | footprint | bschulz as `SOD323-R` | board margay (None, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| SOT23-6L | footprint | bschulz as `SOT23-6L` | board margay (bschulz, 2 placed) | same pads, KiCad board copy draws graphics differently |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board margay (microbuilder, 1 placed) | pads differ: KiCad board copy not taken over |
 | PWR_FLAG | symbol | – | kicad | lifted verbatim from the KiCad symbol library (power.kicad_sym) |
 | USB_MICROVERT | symbol | pins P$2, P$4, P$6 | – | dropped: the shell's second hole of each pair shares its pad number with the first |
@@ -1885,3 +1892,4 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | USB_MICRO_VERT_MOLEX | footprint | 3 milled slots | – | oval drills from Eagle layer 46: P$1 0.5x1.2 at (-2.8, -1) in 1.1x1.8 copper, ring 0.3 across and 0.3 at the ends; P$5 0.5x1.6 at (0, 1.15) in 1.1x2.2 copper, ring 0.3 across and 0.3 at the ends; P$3 0.5x1.2 at (2.8, -1) in 1.1x1.8 copper, ring 0.3 across and 0.3 at the ends. Molex 105133-0001 vertical micro-USB shell (Okapi USB2): three milled slots, 0.5 x 1.2, 0.5 x 1.2 and 0.5 x 1.6, each around a pair of 0.5 mm drills |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | courtyard | – | F.CrtYd rectangle (-5.07, -8.18) to (5.07, 0.25), 0.25 mm beyond body and pads: USB-C receptacle (Okapi J10, Margay J4): Eagle drew no tKeepout |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | descr | – | USB 2.0 Type-C receptacle, 16 contacts, top mount, horizontal. Laid out by Andy Wickert (Project-Margay 364c9ef, 2022) to fit both the CUI (Same Sky) CUSB31-CFM2AX-01-X and the GCT USB4105-GF-A (Andy, 2026-11-11). Shell slots 0.6 x 1.7 mm (rear) and 0.6 x 1.4 mm (front), each the longer of Andy's layout and GCT's drawing; courtyard 0.25 mm beyond body and pads. |
+| MLF44-TH | footprint | pin-1 mark | – | dot of radius 0.25 mm at (-4.0, -4.0), outside the body; the one at (-2.25, -2.25) removed: ATmega1284P QFN-44: Eagle's pin-1 dot sat on the 5 mm exposed pad (Margay U1, Okapi IC1; Andy, 2026-11-13) |
