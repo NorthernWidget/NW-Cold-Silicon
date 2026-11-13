@@ -21,17 +21,17 @@ drawn with.
 
 ## Use it
 
-Add the two libraries to a project's `fp-lib-table` and `sym-lib-table`, or
-to the global tables, under the nickname `nw-cold-silicon`:
+Clone the repository (`git clone https://github.com/NorthernWidget/NW-Cold-Silicon.git`) and add the two libraries to a project's `fp-lib-table` and `sym-lib-table`, or
+to the global tables, under the nickname `nw-cold-silicon`. The Northern Widget boards clone it beside their own repositories and point at `${KIPRJMOD}/../../../NW-Cold-Silicon`:
 
 ```
-(lib (name "nw-cold-silicon") (type "KiCad") (uri "${NW_LIBS}/nw-cold-silicon/nw-cold-silicon.pretty") (options "") (descr ""))
-(lib (name "nw-cold-silicon") (type "KiCad") (uri "${NW_LIBS}/nw-cold-silicon/nw-cold-silicon.kicad_sym") (options "") (descr ""))
+(lib (name "nw-cold-silicon") (type "KiCad") (uri "${NW_LIBS}/NW-Cold-Silicon/nw-cold-silicon.pretty") (options "") (descr ""))
+(lib (name "nw-cold-silicon") (type "KiCad") (uri "${NW_LIBS}/NW-Cold-Silicon/nw-cold-silicon.kicad_sym") (options "") (descr ""))
 ```
 
 The nickname must be `nw-cold-silicon`: every symbol's Footprint field names
 it. In the project file, set `page_layout_descr_file` under both `schematic`
-and `pcbnew` to `${NW_LIBS}/nw-cold-silicon/nw-cold-silicon.kicad_wks` and
+and `pcbnew` to `${NW_LIBS}/NW-Cold-Silicon/nw-cold-silicon.kicad_wks` and
 give `text_variables` a `PROJECT` and a `DESIGNER`.
 
 ## Where it comes from
