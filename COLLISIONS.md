@@ -1759,13 +1759,23 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | 3V3_CORE | symbol | – | Project-Okapi | power symbol for the rail, from the import's supply symbol |
 | 4_40_CLOSE | footprint | board margay | bschulz | taken from the board's Eagle file by decision: Margay.brd (2024-11-01) draws the mounting hole's outer circle on the Reference layer; bschulz.lbr (2022-12-15) draws it on silkscreen, where it is clipped by the board edge on Margay. The board's is the later drawing. |
 | LINX_BAT-HLD-012-SMT | footprint | board okapi | bschulz, awickert, fork | taken from the board's Eagle file by decision: Okapi.brd (2024-11-02) carries Bobby's later drawing with the silkscreen outline; bschulz.lbr (2022-12-15) has the same pads and no outline. Andy, 2026-11-02: bschulz's. |
+| 1X04_SCREW | footprint | bschulz as `1X04_SCREW` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| 1X08_SCREW | footprint | bschulz as `1X08_SCREW` | board okapi (bschulz, 2 placed) | same pads, KiCad board copy draws graphics differently |
+| 1X10_SCREW | footprint | bschulz as `1X10_SCREW` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| DCK_R-PDSO-G5 | footprint | bschulz as `DCK_R-PDSO-G5` | board okapi (bschulz, 3 placed) | same pads, KiCad board copy draws graphics differently |
+| DCU_(R-PDSO-G8) | footprint | bschulz as `DCU_(R-PDSO-G8)` | board okapi (bschulz, 3 placed) | same pads, KiCad board copy draws graphics differently |
 | LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
+| MLF44-TH | footprint | bschulz as `MLF44-TH` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
 | NWLOGO_MED | footprint | awickert | board okapi (None) | unchecked: no front-side instance |
-| PARTICLE_M.2EKEY_NOPROG | footprint | – | board okapi (bschulz) | added from the Eagle board; KiCad board copy identical |
+| PARTICLE_M.2EKEY_NOPROG | footprint | board:okapi as `PARTICLE_M.2EKEY_NOPROG` | board okapi (bschulz, 1 placed) | added from the Eagle board; same pads, KiCad board copy draws graphics differently |
 | RSA_S-PVQFN-N16 | footprint | bschulz as `RSA_S-PVQFN-N16` | board okapi (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | SMT-JUMPER_2_NO_SILK | footprint | bschulz | board okapi (SparkFun-Jumpers) | unchecked: no front-side instance |
+| SO08 | footprint | bschulz as `SO08` | board okapi (bschulz, 2 placed) | same pads, KiCad board copy draws graphics differently |
+| SOD323-R | footprint | bschulz as `SOD323-R` | board okapi (bschulz, 1 placed) | same pads, KiCad board copy draws graphics differently |
+| SOT23-6L | footprint | bschulz as `SOT23-6L` | board okapi (bschulz, 2 placed) | same pads, KiCad board copy draws graphics differently |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | board:okapi as `USB_C_CUSB31-CFM2AX-01-X` | board okapi (microbuilder, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
 | USB_MICRO_VERT_MOLEX | footprint | board:okapi as `USB_MICRO_VERT_MOLEX` | board okapi (bschulz, 1 placed) | added from the Eagle board; pads differ: KiCad board copy not taken over |
+| VDIV_GENERIC | footprint | awickert as `VDIV_GENERIC` | board okapi (awickert, 2 placed) | same pads, KiCad board copy draws graphics differently |
 | LINX_BAT-HLD-012-SMT | footprint | board:okapi as `LINX_BAT-HLD-012-SMT` | board margay (bschulz, 1 placed) | pads differ: KiCad board copy not taken over |
 | NWLOGO_MED | footprint | awickert | board margay (None) | unchecked: no front-side instance |
 | SD_WURTH_WR-CRD | footprint | board:margay | board margay (bschulz) | added from the Eagle board; unchecked: no front-side instance |
@@ -1841,6 +1851,16 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | BME280 | symbol | pin SDO | – | electrical type input: Bosch BST-BME280-DS002: I2C address select input in I2C mode (SPI data out otherwise; Okapi uses I2C) |
 | MLX90393 | symbol | pin MS/CS | – | electrical type input: Melexis MLX90393 datasheet: mode select / chip select input |
 | LTC4412S6 | symbol | pin CTL | – | electrical type input: ADI LTC4412 datasheet: control input |
+| TPS6282DLC | symbol | pin PG | – | electrical type open_collector: TI SLVSDV6C pin table: PG is O, an open-drain power-good output (Okapi U2) |
+| TPS797 | symbol | pin PG | – | electrical type open_collector: TI SLVS350 pin table: PG is O, open drain (Okapi U9) |
+| TPS6103RSA | symbol | pin LBO | – | electrical type open_collector: TI SLUS534 pin table: LBO, low-battery output, open drain (Okapi U3) |
+| LTC4412S6 | symbol | pin STAT | – | electrical type open_collector: ADI LTC4412 Pin Functions: STAT (Pin 4) is an open-drain output (Okapi U7) |
+| ADS111 | symbol | pin ALERT | – | electrical type open_collector: TI SBAS444 Table 4-1: ALERT/RDY, open-drain output (Okapi U33) |
+| DS3231M | symbol | pin SQW | – | electrical type open_collector: Maxim DS3231M pin description: INT/SQW, an open-drain pin that requires an external pullup (Okapi and Margay RTC1) |
+| ATMEGA1284M | symbol | pin (PCINT16/SCL)PC0 | – | electrical type bidirectional: Microchip ATmega1284P: PC0 is the TWI clock, driven and read (Okapi and Margay IC1) |
+| ATMEGA1284M | symbol | pin (PCINT17/SDA)PC1 | – | electrical type bidirectional: Microchip ATmega1284P: PC1 is the TWI data line, driven and read (Okapi and Margay IC1) |
+| PCA9634QFN | symbol | pin SCL | – | electrical type input: NXP PCA9634 Table 3: SCL is I (Okapi U45; the import had SCL and SDA's types the other way round) |
+| PCA9634QFN | symbol | pin SDA | – | electrical type bidirectional: NXP PCA9634 Table 3: SDA is I/O (Okapi U45) |
 | TPS22916YFP | symbol | pin VOUT | – | electrical type power_out: TI SLVSCT1 (TPS22916): load switch output (Margay U8) |
 | MAX6070AAUT | symbol | pin VIN | – | electrical type power_in: Maxim MAX6070 datasheet: supply input (Margay U13); the import typed every pin bidirectional |
 | MAX6070AAUT | symbol | pin GND | – | electrical type power_in: Maxim MAX6070: ground |
@@ -1848,6 +1868,16 @@ Names that occur in more than one source. "kept once" means the later copy was i
 | MAX6070AAUT | symbol | pin FILT | – | electrical type passive: Maxim MAX6070: noise-reduction capacitor pin |
 | MAX6070AAUT | symbol | pin OUTF | – | electrical type output: Maxim MAX6070: reference output, force (an output, not a supply: it feeds an ADC input on Margay) |
 | MAX6070AAUT | symbol | pin OUTS | – | electrical type passive: Maxim MAX6070: reference output, sense |
+| BMA456 | symbol | pin 1 | – | named SDO, type bidirectional: Bosch BMA456 pin table: pin 1 is SDO, the I2C address select (GND gives 0x18); the symbol called it GND |
+| BMA456 | symbol | pin 10 | – | named CSB, type input: Bosch BMA456 pin table: pin 10 is CSB, at VDDIO for I2C mode; the symbol called it VCC |
+| MLX90393 | symbol | pin 4 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C, 'recommended to connect the N/C pins to Ground'; the symbol called it VSS |
+| MLX90393 | symbol | pin 9 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C |
+| MLX90393 | symbol | pin 10 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C |
+| MLX90393 | symbol | pin 14 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C |
+| MLX90393 | symbol | pin 16 | – | named NC, type passive: Melexis MLX90393 Table 3: N/C |
+| MOSFET_PCH-FDN360P | symbol | MF | – | onsemi: Fairchild has been part of onsemi since 2016; onsemi lists the FDN360P as active (Okapi Q3, Q5; Margay) |
+| MOSFET-PCH-FDN360P | symbol | MF | – | onsemi: the same part under its other Eagle name |
+| MOSFET_PCH-IRLML2244 | symbol | MF | – | Infineon: the IRLML2244 is an International Rectifier part, now Infineon; the Eagle device said Fairchild |
 | SWITCH_2.6X1.6 | footprint | keepout | – | F.Cu, tracks allowed, vias not_allowed, pads not_allowed, copperpour not_allowed, footprints allowed: Panasonic EVP-BB datasheet, 'Land pattern plan': no land pattern or via holes in the No soldering area under the switch, or resist over them (solder balls short; extra pattern tilts the switch); a top-side rule, so Bobby's via restrict becomes a F.Cu keepout of pads and vias and masked tracks stay allowed (Okapi S5) |
 | SIM_SF72 | footprint | keepout | – | F.Cu and B.Cu, vias not allowed: Bobby's vRestrict over the SIM card, six 0.127 mm wires on layer 43 enclosing 10.39 x 14.35 mm (library only, on no board) |
 | USB_C_CUSB31-CFM2AX-01-X | footprint | slots lengthened | – | (-4.32, 2.6) to 1.4, (4.32, 2.6) to 1.4: GCT USB4105 drawing (4 October 2019): front pair 0.6 x 1.40 where Eagle milled 1.2; the longer slot takes stakes of either length (Andy, 2026-11-11) |
